@@ -2,16 +2,17 @@
 
 <html lang="en">
 	<head>
-    		<title> Flappy Bird - Jacob Sommer&#8217s Site</title>
-    		<meta charset="utf-8">
+    	<title> Flappy Bird - Jacob Sommer&#8217s Site</title>
+    	<meta charset="utf-8">
 		<link rel="stylesheet" href="/style.css" type="text/css">
 		<link rel="shortcut icon" type="image/png" href="/favicon.png">
 		<meta http-equiv="content-language" content="en">
 		<meta name="author" content="Jacob Sommer">
 		<meta name="language" content="en">
 		<meta name="description" content="Jacob's Website!">
-    		<script type="text/javascript" src="phaser.min.js"></script>
-    		<script type="text/javascript" src="main.js"></script>
+    	<script type="text/javascript" src="phaser.min.js"></script>
+    	<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="/mobile.js"></script>
 	</head>
 	<body>
 		<center>
@@ -51,11 +52,6 @@
 		</div>
 	</body>
 	<script>
- 	  if(screen.width <= 800) {
-  	    document.body.style.backgroundImage = 'none';
-  	    document.getElementById('nav1').style.width = '100%';
-  	    document.getElementById('body1').style.width = '100%';
-  	    document.getElementById('search_bar').style.width = '100%';
-  	  }
-  	</script>
+		mobile();
+	</script>
 </html>

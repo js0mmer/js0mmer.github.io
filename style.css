@@ -28,7 +28,7 @@ body {
   -moz-border-radius-topleft: 0px;
   -moz-border-radius-topright: 0px;
   color: #000000;
-  }
+}
 
 #nav1 {
   margin-left: auto ;
@@ -49,7 +49,7 @@ body {
   -webkit-border-top-right-radius: 0px;
   -moz-border-radius-topleft: 0px;
   -moz-border-radius-topright: 0px;
-  }
+}
 
 #nav1 span {
   padding: 0;
@@ -60,85 +60,51 @@ body {
   text-transform: none;
   text-shadow: 0px 0px 0px #;
   color: #FF0000;  
-  }
+ }
 
-#nav1 span:hover{
+#nav1 span:hover{ 
   background-color: #FF0000;	
   background-image: url("#");
   background-repeat: repeat-x;
   background-position: 0px 0px;
-  text-decoration:none;
-  
-	}
+  text-decoration:none;  
+}
 
 #nav1 span a{
-height: 45px;
-line-height: 33px;
-display: block;
-padding:3px 10px;
-color: #FF0000;
-text-decoration:none;
-
+	height: 45px;
+	line-height: 33px;
+	display: block;
+	padding:3px 10px;
+	color: #FF0000;
+	text-decoration:none;
 }
 
 #nav1 span:hover a,
-#nav1 span a:hover{
-color: #ffffff;
-text-decoration:none;
+#nav1 span a:hover {
+	color: #ffffff;
+	text-decoration:none;
 }
 
 /* Links on the left side of the navigation bar */
 #nav1 span.left{
 	float: left;
 	border-right: 1px solid #d8d8d8;
-	}
+}
 
 #nav1 span.left a{
 	border-right: 0px solid #003566;
-	}
+}
 
 
 /* Links on the right side of the navigation bar */
 #nav1 span.right{
-	float:right;
+	float: right;
 	border-left: 1px solid #d8d8d8;
-	}
+}
 
 #nav1 span.right a{
 	border-left: 0px solid #003566;
 	font-size: 12px;
-	}
-	
-table {
-    display: table;
-    border-collapse: separate;
-    border-spacing: 2px;
-    border-color: grey;
-    font-size: 100%
-}
-	
-table.wikitable {
-  margin: 1em 0;
-    margin-top: 1em;
-    margin-right: 0px;
-    margin-bottom: 1em;
-    margin-left: 0px;
-  background-color: #f9f9f9;
-  border: 1px #aaa solid;
-    border-top-color: rgb(170, 170, 170);
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-right-color: rgb(170, 170, 170);
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-bottom-color: rgb(170, 170, 170);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-left-color: rgb(170, 170, 170);
-    border-left-style: solid;
-    border-left-width: 1px;
-  border-collapse: collapse;
-  color: black;
 }
 
 #search_bar{
@@ -147,4 +113,19 @@ table.wikitable {
   border-right: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
+}
+
+button {
+	border: 1px solid #003566;
+	background-color: #ededed;
+	color: #ff0000;
+	width: 150px;
+	height: 50px;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+button:hover {
+	background-color: #ff0000;
+	color: #ffffff;
 }

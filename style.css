@@ -1,131 +1,83 @@
 body {
-  font: normal 14px/16px Open Sans, helvetica, sans-serif;
-  background-image:
-	url('../images/background.jpg');
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  padding: 0px;
-  margin: 0px;
-  color: #ff0000;
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+    color: #ff0000;
+}
+
+h1 {
+    text-align: center;
 }
 
 #body1 {
-  margin-left: auto ;
-  margin-right: auto ;
-  margin-top: 0px ;
-  text-decoration:none;
-  overflow: hidden;
-  border-bottom: 1px solid #d8d8d8;
-  border-right: 1px solid #d8d8d8;
-  border-left: 1px solid #d8d8d8;
-  width: 60%;
-  background: url("#");
-  background-color: #ffffff;
-   background-position: 0px 0px;
-  -webkit-border-top-left-radius: 0px;
-  -webkit-border-top-right-radius: 0px;
-  -moz-border-radius-topleft: 0px;
-  -moz-border-radius-topright: 0px;
-  color: #000000;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0px;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: white;
+    color: black;
 }
 
 #nav1 {
-  margin-left: auto ;
-  margin-right: auto ;
-  margin-top: -5px ;	
-  text-decoration:none;
-  overflow: hidden;
-  width: 60%;
-  height: 40px;
-  border-top: 1px solid #d8d8d8;
-  border-right: 1px solid #d8d8d8;
-  border-left: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
-  background: url("#") repeat-x 0 0 #;
-  background-color: #ffffff;
-   background-position: 0px 0px;
-  -webkit-border-top-left-radius: 0px;
-  -webkit-border-top-right-radius: 0px;
-  -moz-border-radius-topleft: 0px;
-  -moz-border-radius-topright: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: whitesmoke;
+}
+
+#tabs {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 #nav1 span {
-  padding: 0;
-  font-weight: bold;
-  text-decoration:none;
-  font-size: 18px;
-  line-height: 40px;
-  text-transform: none;
-  text-shadow: 0px 0px 0px #;
-  color: #FF0000;  
+    padding: 0;
+    font-weight: bold;
+    text-decoration:none;
+    font-size: 18px;
+    line-height: 40px;
+    color: #FF0000;
  }
 
-#nav1 span:hover{ 
-  background-color: #FF0000;	
-  background-image: url("#");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
-  text-decoration:none;  
-}
-
-#nav1 span a{
+#nav1 span a {
 	height: 45px;
 	line-height: 33px;
 	display: block;
-	padding:3px 10px;
+	padding: 3px 10px;
 	color: #FF0000;
 	text-decoration:none;
+}
+
+#nav1 span:hover { 
+    background-color: #FF0000;
+    text-decoration: none;  
 }
 
 #nav1 span:hover a,
 #nav1 span a:hover {
 	color: #ffffff;
-	text-decoration:none;
+	text-decoration: none;
 }
 
-/* Links on the left side of the navigation bar */
-#nav1 span.left{
+#nav1 span.left {
 	float: left;
-	border-right: 1px solid #d8d8d8;
 }
 
-#nav1 span.left a{
-	border-right: 0px solid #003566;
-}
-
-
-/* Links on the right side of the navigation bar */
-#nav1 span.right{
+#nav1 span.right {
 	float: right;
-	border-left: 1px solid #d8d8d8;
 }
 
-#nav1 span.right a{
-	border-left: 0px solid #003566;
+#nav1 span.right a {
 	font-size: 12px;
 }
 
-#search_bar{
-  margin: auto;
-  width: 60%;
-  border-right: 1px solid #d8d8d8;
-  border-left: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
-}
-
-button {
-	border: 1px solid #003566;
-	background-color: #ededed;
-	color: #ff0000;
+#button1 {
 	width: 150px;
-	height: 50px;
-	font-weight: bold;
-	font-size: 2em;
-}
-
-button:hover {
-	background-color: #ff0000;
-	color: #ffffff;
+	height: auto;
+    font-size: 2em;
 }

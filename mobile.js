@@ -1,11 +1,11 @@
 var mobile = function() {
 	if(screen.width <= 800) {
-		document.body.style.backgroundImage = 'none';
-		document.getElementById('nav1').style.width = '100%';
-		document.getElementById('search_bar').style.width = '100%';
+        document.getElementById('tabs').style.marginLeft = '0px';
+        document.getElementById('tabs').style.marginRight = '0px';
 		
 		if(document.getElementById('body1') != null) {
-			document.getElementById('body1').style.width='100%';
+            document.getElementById('body1').style.marginLeft = 'auto';
+            document.getElementById('body1').style.marginRight = 'auto';
 		}
 		
 		document.p.style.fontSize = '1em';

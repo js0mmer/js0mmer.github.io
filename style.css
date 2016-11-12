@@ -9,6 +9,14 @@ h1 {
     text-align: center;
 }
 
+a:link, a:visited {
+    color: #ff0000;
+}
+
+a:hover {
+    color: #990000;
+}
+
 #body1 {
     margin-left: 20%;
     margin-right: 20%;

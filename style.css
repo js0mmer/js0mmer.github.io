@@ -77,7 +77,8 @@ h1 {
 }
 
 #button1 {
-	width: 150px;
-	height: auto;
+	width: auto;
+	height: 75px;
     font-size: 2em;
+    background: #ff0000;
 }

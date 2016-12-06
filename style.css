@@ -90,3 +90,8 @@ a:hover {
     font-size: 2em;
     background: #ff0000;
 }
+
+#disqus_thread {
+    width: 60%;
+    margin: auto;
+}

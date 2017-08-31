@@ -51,28 +51,28 @@
             (d.head || d.body).appendChild(s);
             })();
         </script>
-				<script type="text/javascript">
-					String.prototype.replaceAll = function(search, replacement) {
-						var target = this;
-						return target.replace(new RegExp(search, 'g'), replacement);
-					};
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		String.prototype.replaceAll = function(search, replacement) {
+			var target = this;
+			return target.replace(new RegExp(search, 'g'), replacement);
+		};
 
-			    $(document).ready(function () {
-			        GetLatestReleaseInfo();
-			    });
+		$(document).ready(function () {
+			GetLatestReleaseInfo();
+	    });
 
-			    function GetLatestReleaseInfo() {
-		        $.getJSON("https://api.github.com/repos/js0mmer/BlockRunner/releases/latest").done(function (release) {
+	    function GetLatestReleaseInfo() {
+	        $.getJSON("https://api.github.com/repos/js0mmer/BlockRunner/releases/latest").done(function (release) {
 	            var asset = release.assets[0];
 	            $("#download-android").attr("href", release.assets[0].browser_download_url);
 	            $("#qr-android").attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + release.assets[0].browser_download_url.replaceAll(":", "%3A").replaceAll("/", "%2F") + &chs=180x180&choe=UTF-8&chld=L|2);
 	            $("#download-windows").attr("href", release.assets[1].browser_download_url);
-		        });
-			    }
-				</script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	</body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	        });
+	    }
+	</script>
 	<script>
 		mobile();
 	</script>

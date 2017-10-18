@@ -1,27 +1,157 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
 		<title>Home - Jacob&#8217s Website</title>
-		<link rel="stylesheet" href="/style.css" type="text/css">
-		<link rel="stylesheet" href="https://unpkg.com/wingcss"/>
-		<link rel="shortcut icon" type="image/png" href="/favicon.png">
-		<script type="text/javascript" src="/mobile.js"></script>
+		<link rel="stylesheet" href="home.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
 	</head>
 	<body>
-		<div id="nav1">
-      <div id="tabs">
-        <span class="left"><a href="/">Home</a></span>
-        <span class="left"><a href="https://www.youtube.com/user/JGSBroadcast">YouTube</a></span>
-        <span class="left"><a href="/androidapps">Android Apps</a></span>
-        <span class="left"><a href="/games">Games</a></span>
-        <span class="left"><a href="/jgsbot">JGS Bot</a></span>
-        <span class="right"><a href="/about">About</a></span>
+		<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			      <span class="sr-only">Toggle navigation</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			    </button>
+			    <a class="navbar-brand" href="#">Jacob</a>
+			  </div>
+			
+			  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+			      <li class="dropdown">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Android Apps <span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a href="/androidapps/apphockey">App Hockey</a></li>
+			          <li><a href="/androidapps/digitaldoodle">Digital Doodle</a></li>
+			          <li><a href="/androidapps/magic8ball">Magic 8-Ball</a></li>
+			          <li><a href="/androidapps/tomatotapper">Tomato Tapper</a></li>
+			          <li><a href="/games/blockrunner">Block Runner</a></li>
+			        </ul>
+			      </li>
+			      <li class="dropdown">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a href="/games/snake">Snake</a></li>
+			          <li><a href="/games/flappybird">Flappy Bird</a></li>
+			          <li><a href="/hangman">Hangman</a></li>
+			          <li><a href="/games/blockrunner">Block Runner</a></li>
+			        </ul>
+			      </li>
+			      <li><a href="/jgsbot">JGS Bot</a></li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+			      <li><a id="about-link" href="#">About</a></li>
+			    </ul>
+			  </div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+    <section id="main" class="col-md-12">
+      <div class="col-sm-4 col-sm-offset-5">
+        <div>
+          <h1>Hi<br>I'm Jacob</h1>
+          <a href="#" id="about-me-btn">About Me</a>
+        </div>
       </div>
-		</div>
-    <h1>Welcome to Jacob&#8217s Website!</h1>
+    </section>
+    <section id="about" class="col-md-12">
+      <h3>About Me</h3>
+      <p>I'm a student in the San Francisco Bay Area. I code games and other stuff in my free time. I am currently a freshman in high school. Scroll down to see some of the projects I have worked on.</p>
+    </section>
+    <section id="projects" class="col-md-12">
+    	<h3>Projects</h3>
+    	<ul>
+	      <li><a href="/jgsbot">JGS Bot</a></li>
+        <li><a href="/androidapps/apphockey">App Hockey</a></li>
+        <li><a href="/androidapps/digitaldoodle">Digital Doodle</a></li>
+        <li><a href="/androidapps/magic8ball">Magic 8-Ball</a></li>
+        <li><a href="/androidapps/tomatotapper">Tomato Tapper</a></li>
+        <li><a href="/games/blockrunner">Block Runner</a></li>
+        <li><a href="/games/snake">Snake</a></li>
+        <li><a href="/games/flappybird">Flappy Bird</a></li>
+        <li><a href="/hangman">Hangman</a></li>
+        <li><a href="/games/blockrunner">Block Runner</a></li>
+        <li><a href="/school-projects/history-bill-of-rights">Bill of Rights Project</a></li>
+        <li><a href="/school-projects/history-sectionalism">Sectionalism Project Game</a></li>
+    	</ul>
+    </section>
+    <section id="featured" class="col-md-12">
+      <h3>Featured</h3>
+      <div class="row">
+	      <div class="col-md-5">
+	        <img class="col-md-12" src="images/blockrunneringame.jpg">
+	      </div>
+	      <div class="col-md-7">
+	      	<h4>Block Runner</h4>
+	      	<p>Block Runner is a 3-D game powered by the Unity Engine where you are controlling a block that has to dodge obstacles. The game is infinite and your score is based on how far you have traveled. There are three difficulties: easy, medium, and hard.</p>
+	      </div>
+	    </div>
+      <div class="row">
+	      <div class="col-md-5">
+	        <img class="col-md-12" src="images/snake.jpg">
+	      </div>
+	      <div class="col-md-7">
+	      	<h4>Snake</h4>
+	      	<p>Snake is a 2-D game that runs on Java. The game is infinite and your score is based on the length of your snake. You can grow your snake by eating the red "food". <!-- Press O while ingame for a secret --></p>
+	      </div>
+	    </div>
+      <div class="row">
+	      <div class="col-md-5">
+	        <img class="col-md-12" src="images/hangman.jpg">
+	      </div>
+	      <div class="col-md-7">
+	      	<h4>Hangman</h4>
+	      	<p>Hangman is an HTML/JavaScript remake of the classic hangman. You have the option of playing against a bot with randomly generated words or with a friend who choses the words.</p>
+	      </div>
+	    </div>
+    </section>
+    <footer class="col-md-12">
+    	<div class="row">
+	    	<p class="col-sm-4">Made with <span class="fa fa-heart" style="color: #ffffff"></span> by Jacob</p>
+	    	<div class="col-sm-8">
+	    		<a href="https://github.com/js0mmer"><svg aria-hidden="true" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+	    	</div>
+    	</div>
+    </footer>
+    <!--jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/6d136cce45.js"></script>
+    <script>
+    	$(function() {
+    		$('#about-link').on('click', function(e) {
+    			e.preventDefault();
+    			$('html, body').animate({
+    				scrollTop: $('#about').offset().top - $('nav').height()
+    			}, 500, 'linear');
+    		});
+    	});
+    	
+    	$(function() {
+    		$('#about-me-btn').on('click', function(e) {
+    			e.preventDefault();
+    			// console.log($('#about').offset().top + " - " + $('nav').height() + " = " + ($('#about').offset().top - $('nav').height()));
+    			$('html, body').animate({
+    				scrollTop: $('#about').offset().top - $('nav').height()
+    			}, 500, 'linear');
+    		});
+    	});
+    	
+    	$(function() {
+    		$('.navbar-brand').on('click', function(e) {
+    			e.preventDefault();
+    			$('html, body').animate({
+    				scrollTop: 0
+    			}, 500, 'linear');
+    		});
+    	});
+    	
+    </script>
 	</body>
-	<script>
-		mobile();
-	</script>
 </html>

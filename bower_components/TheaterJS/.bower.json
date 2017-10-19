@@ -1,0 +1,28 @@
+{
+  "name": "TheaterJS",
+  "description": "Typing effect mimicking human behavior.",
+  "main": "dist/theater.js",
+  "license": "MIT",
+  "ignore": [
+    ".gitignore"
+  ],
+  "devDependencies": {},
+  "keywords": [
+    "typing",
+    "animation",
+    "mimic",
+    "human"
+  ],
+  "homepage": "https://github.com/Zhouzi/TheaterJS",
+  "version": "3.1.0",
+  "_release": "3.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.1.0",
+    "commit": "54e871ff8bb6e2c9a61b6294d06ea7acbe20153e"
+  },
+  "_source": "https://github.com/Zhouzi/TheaterJS.git",
+  "_target": "^3.1.0",
+  "_originalSource": "theaterjs",
+  "_direct": true
+}

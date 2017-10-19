@@ -1,0 +1,106 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+a:link, a:visited {
+  color: #ff0000;
+}
+
+section a:hover, section a:active {
+  color: #990000;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  background-color: #ff3a3a;
+  padding-top: 28px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+section {
+  padding: 0!important;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#home {
+  background-image: url("images/background.jpg");
+}
+
+#blockrunner {
+  background-image: url("images/blockrunnerblurred.jpg");
+}
+
+#about-btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 110px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none;
+  line-height: 100%!important;
+  margin-top: 0px!important;
+  letter-spacing: 0.8px;
+  color: black;
+  transition: all ease-in-out 0.7s;
+  background-color: white;
+}
+
+#about-btn:hover {
+    transition: all ease-in-out 0.7s;
+    color: white;
+    background-color: #ff3a3a;
+}
+
+#featured img {
+  margin-left: 15px;
+  border: 5px solid lightgray;
+  padding: 0!important; width: 400px
+}
+
+#featured .col-md-5 {
+  padding: 0!important;
+}
+
+#featured .row {
+  padding-bottom: 15px;
+}
+
+.container {
+  padding: 0!important;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 5rem!important;
+}
+
+.jumboWrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100vh;
+}

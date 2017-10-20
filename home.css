@@ -37,6 +37,10 @@ footer .col-sm-8 {
   background-image: url("images/blockrunnerblurred.jpg");
 }
 
+#snake {
+  background-image: url("images/snake.jpg");
+}
+
 #about-btn {
   font-weight: 600;
   text-transform: uppercase;

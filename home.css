@@ -87,6 +87,7 @@ form textarea {
   color: white;
   transition: all ease-in-out 0.7s;
   background-color: #ff3a3a;
+  border: 0;
 }
 
 #about-btn:hover {

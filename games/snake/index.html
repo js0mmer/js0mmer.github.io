@@ -1,96 +1,117 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
-  	<title> Snake - Jacob&#8217s Website</title>
-	<link rel="stylesheet" href="../../home.css" type="text/css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<link rel="shortcut icon" type="image/png" href="../../favicon.png">
+		<title>Snake - Jacob&#8217s Website</title>
+		<link rel="stylesheet" href="../../style.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png">
 	</head>
 	<body>
-	<nav id="nav" class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-		  <!-- Brand and toggle get grouped for better mobile display -->
-		  <div class="navbar-header">
-		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		      <span class="sr-only">Toggle navigation</span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		    </button>
-		    <a class="navbar-brand" href="#">Jacob</a>
-		  </div>
-		
-		  <!-- Collect the nav links, forms, and other content for toggling -->
-		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		    <ul class="nav navbar-nav">
-		      <li><a href="../../">Home</a></li>
-		      <li class="dropdown">
-		        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Android Apps <span class="caret"></span></a>
-		        <ul class="dropdown-menu">
-		          <li><a href="../../androidapps/apphockey/">App Hockey</a></li>
-		          <li><a href="../../androidapps/digitaldoodle">Digital Doodle</a></li>
-		          <li><a href="../../androidapps/magic8ball">Magic 8-Ball</a></li>
-		          <li><a href="../../androidapps/tomatotapper">Tomato Tapper</a></li>
-		          <li><a href="../blockrunner">Block Runner</a></li>
-		        </ul>
-		      </li>
-		      <li class="dropdown active">
-		        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
-		        <ul class="dropdown-menu">
-		          <li class="active"><a href="../snake">Snake <span class="sr-only">(current)</span></a></li>
-		          <li><a href="http://jsommer.tk/hangman">Hangman</a></li>
-		          <li><a href="../blockrunner">Block Runner</a></li>
-		        </ul>
-		      </li>
-		    </ul>
-		    <ul class="nav navbar-nav navbar-right">
-		      <li><a id="about-link" href="../../index.html?about=true">About</a></li>
-		    </ul>
-		  </div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
-	<section id="snake" class="main jumbotron">
-  	<div class="jumboWrap"></div>
+		<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			      <span class="sr-only">Toggle navigation</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			    </button>
+			    <a class="navbar-brand" href="#">Jacob</a>
+			  </div>
+			
+			  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav">
+			      <li><a href="../../">Home</a></li>
+			      <li class="dropdown active">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li class="active"><a href="../snake">Snake <span class="sr-only">(current)</span></a></li>
+			          <li><a href="http://jsommer.tk/hangman">Hangman</a></li>
+			          <li><a href="../blockrunner">Block Runner</a></li>
+			          <li><a href="../tomatotapper">Tomato Tapper</a></li>
+			          <li><a href="../flappybird">Flappy Bird</a></li>
+			        </ul>
+			      </li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+			      <li><a id="about-link" href="../../index.html?about=true">About</a></li>
+			      <li><a id="contact-link" href="../../index.html?contact=true">Contact</a></li>
+			    </ul>
+			  </div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<section id="snake" class="main jumbotron">
+	  	<div class="jumboWrap"></div>
 		  <div class="col-sm-4 col-sm-offset-5">
 		    <div>
-		      <h1>Snake</h1>
-		      <a href="#" id="about-btn">About</a>
+		      <h1 id="snake1"></h1>
+		      <a href="#" id="about-btn" style="opacity: 0">About</a>
 		    </div>
 		  </div>
-	</section>
-	<div class="container">
-		<section id="about">
-			<h3>About</h3>
-			<p>Snake is a 2-D game that runs on Java. The game is infinite and your score is based on the length of your snake. You can grow your snake by eating the red "food".<!-- Press O while ingame for a secret --> The maximum length is 100. Snake is also available for 2 players. The person who lasts the longest or makes it to 100 first wins.</p>
 		</section>
-		<section id="download">
-			<h3>Download</h3>
-		  <a href="http://jsommer.tk/download/games/Snake%20Installer.jar"><button type="button" class="btn btn-danger">Windows</button></a>
-		</section>
-		<div id="disqus_thread"></div>
-	</div>
-  <!--jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/6d136cce45.js"></script>
-  <script src="main.js"></script>
-  <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    var disqus_config = function () {
-      this.page.url = 'http://jsommer.tk/index.html';  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = '/games/snake'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//jsommer.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<div class="container">
+			<section id="about">
+				<h3>About</h3>
+				<p>Snake is a 2-D game that runs on Java. The game is infinite and your score is based on the length of your snake. You can grow your snake by eating the red "food".<!-- Press O while ingame for a secret --> The maximum length is 100. Snake is also available for 2 players. The person who lasts the longest or makes it to 100 first wins.</p>
+			</section>
+			<section id="download">
+				<h3>Download</h3>
+			  <a href="../../download/games/Snake%20Installer.jar"><button type="button" class="btn btn-danger">PC</button></a>
+			</section>
+			<div id="disqus_thread"></div>
+		</div>
+	  <script>
+	    /**
+	    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+	    var disqus_config = function () {
+	      this.page.url = 'http://jsommer.tk/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+	      this.page.identifier = '/games/snake'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	    };
+	    (function() { // DON'T EDIT BELOW THIS LINE
+	    var d = document, s = d.createElement('script');
+	    s.src = '//jsommer.disqus.com/embed.js';
+	    s.setAttribute('data-timestamp', +new Date());
+	    (d.head || d.body).appendChild(s);
+	    })();
+	  </script>
+	  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  <!--jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <!-- Include all compiled plugins (below), or include individual files as needed -->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="../../bower_components/TheaterJS/dist/theater.min.js"></script>
+	  <script src="../../main.js"></script>
+    <script>
+    	/* global theaterJS */
+    	var theater = theaterJS()
+
+			theater
+          .on('type:start, erase:start', () => {
+          // add a class to actor's dom element when he starts typing/erasing
+              const actor = theater.getCurrentActor();
+              actor.$element.classList.add('typing');
+          })
+          .on('type:end, erase:end', () => {
+          // and then remove it when he's done
+              const actor = theater.getCurrentActor();
+              actor.$element.classList.remove('typing');
+          });
+    	
+    	$(document).ready(function() {
+				theater
+				  .addActor('snake1', { speed: 0.5, accuracy: 0.8 })
+				  .addScene('snake1:Snake')
+				  .addScene(function(done) {
+				  	setTimeout(function() {
+					  	document.getElementById("about-btn").style.opacity = '1';
+				  	}, 300);
+				  	
+				  	done();
+				  })
+    	});
+    </script>
 	</body>
 </html>

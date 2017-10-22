@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 		<title>Home - Jacob&#8217s Website</title>
-		<link rel="stylesheet" href="home.css" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 		<link rel="shortcut icon" type="image/png" href="favicon.png" />
 	</head>
 	<body>
@@ -25,24 +25,19 @@
 			    <ul class="nav navbar-nav">
 			      <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
 			      <li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Android Apps <span class="caret"></span></a>
-			        <ul class="dropdown-menu">
-			          <li><a href="androidapps/digitaldoodle">Digital Doodle</a></li>
-			          <li><a href="androidapps/tomatotapper">Tomato Tapper</a></li>
-			          <li><a href="games/blockrunner">Block Runner</a></li>
-			        </ul>
-			      </li>
-			      <li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="games/snake">Snake</a></li>
-			          <li><a href="http://jsommer.tk/hangman">Hangman</a></li>
+			          <li><a href="/hangman">Hangman</a></li>
 			          <li><a href="games/blockrunner">Block Runner</a></li>
+			          <li><a href="games/tomatotapper">Tomato Tapper</a></li>
+			          <li><a href="games/flappybird">Flappy Bird</a></li>
 			        </ul>
 			      </li>
 			    </ul>
 			    <ul class="nav navbar-nav navbar-right">
 			      <li><a id="about-link" href="#">About</a></li>
+			      <li><a id="contact-link" href="#">Contact</a></li>
 			    </ul>
 			  </div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -58,18 +53,17 @@
     <div class="container">
 	    <section id="about" class="col-md-12">
 	      <h3>About Me</h3>
-	      <p>I'm a developer in the San Francisco Bay Area. I code games and other stuff in my free time. I am currently a freshman in high school. Some of the things I can do include: front-end web development, game development, and programming. Scroll down to see some of the projects I have worked on.</p>
+	      <p>I'm a developer in the San Francisco Bay Area. I code games and other stuff in my free time. I am currently a freshman in high school. Some of the things I can do include: front-end web development, game development, android app development, <a href="http://discordapp.com" target="_blank">Discord</a> bot development, and programming. I know HTML, CSS, JavaScript, Java, some Python, and a little bit of C#. Scroll down to see some of the projects I have worked on.</p>
 	    </section>
 	    <section id="projects" class="col-md-12">
 	    	<h3>Projects</h3>
 	    	<ul>
-	        <li><a href="/androidapps/digitaldoodle">Digital Doodle</a></li>
-	        <li><a href="/androidapps/tomatotapper">Tomato Tapper</a></li>
-	        <li><a href="/games/blockrunner">Block Runner</a></li>
+	        <li><a href="games/tomatotapper">Tomato Tapper</a></li>
+	        <li><a href="games/flappybird">Flappy Bird Remake</a></li>
 	        <li><a href="/hangman">Hangman</a></li>
-	        <li><a href="/games/blockrunner">Block Runner</a></li>
-	        <li><a href="/school-projects/history-bill-of-rights">Bill of Rights Project</a></li>
-	        <li><a href="/school-projects/history-sectionalism">Sectionalism Project Game</a></li>
+	        <li><a href="games/blockrunner">Block Runner</a></li>
+	        <li><a href="/school-projects/history-bill-of-rights">Bill of Rights Project</a> <span class="label label-default">School</span></li>
+	        <li><a href="/school-projects/history-sectionalism">Sectionalism Project Game</a> <span class="label label-default">School</span></li>
 	    	</ul>
 	    </section>
 	    <section id="featured" class="col-md-12">
@@ -133,6 +127,11 @@
     			$('html, body').animate({
     				scrollTop: $('#about').offset().top - $('nav').height()
     			}, 500, 'linear');
+    		} else if(location.href.includes("index.html?contact=true")) {
+    			location.href.replace("index.html?contact=true", "");
+    			$('html, body').animate({
+    				scrollTop: $('#contact').offset().top - $('nav').height()
+    			}, 500, 'linear');
     		}
     	});
     
@@ -144,9 +143,18 @@
     			}, 500, 'linear');
     		});
     	});
+    
+    	$(function() {
+    		$('#contact-link').on('click', function(e) {
+    			e.preventDefault();
+    			$('html, body').animate({
+    				scrollTop: $('#contact').offset().top - $('nav').height()
+    			}, 500, 'linear');
+    		});
+    	});
     </script>
     <script src="main.js"></script>
-    <script>
+		<script>
     	/* global theaterJS */
     	var theater = theaterJS()
 
@@ -161,24 +169,26 @@
               const actor = theater.getCurrentActor();
               actor.$element.classList.remove('typing');
           });
-			
-			theater
-			  .addActor('hi', { speed: 0.5, accuracy: 0.8 })
-			  .addActor('jacob', { speed: 0.5, accuracy: 0.8 })
-			  .addScene('hi:Hi.')
-			  .addScene(function(done) {
-			  	setTimeout(function() {
+    	
+    	$(document).ready(function() {
+				theater
+				  .addActor('hi', { speed: 0.5, accuracy: 0.8 })
+				  .addActor('jacob', { speed: 0.5, accuracy: 0.8 })
+				  .addScene('hi:Hi.')
+				  .addScene(function(done) {
+				  	setTimeout(function() {
+					  	done();
+				  	}, 500);
+				  })
+				  .addScene('jacob:I\'m Jacob.')
+				  .addScene(function(done) {
+				  	setTimeout(function() {
+					  	document.getElementById("about-btn").style.opacity = '1';
+				  	}, 300);
+				  	
 				  	done();
-			  	}, 500);
-			  })
-			  .addScene('jacob:I\'m Jacob.')
-			  .addScene(function(done) {
-			  	setTimeout(function() {
-				  	document.getElementById("about-btn").style.opacity = '1';
-			  	}, 300);
-			  	
-			  	done();
-			  })
-    </script>
+				  })
+    	});
+		</script>
 	</body>
 </html>

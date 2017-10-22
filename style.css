@@ -1,97 +1,164 @@
-body {
-  background-color: white;
-  padding: 0px;
-  margin: 0px;
-  color: #ff0000;
-}
-
-h1 {
-  text-align: center;
+html, body {
+  padding: 0;
+  margin: 0;
 }
 
 a:link, a:visited {
   color: #ff0000;
 }
 
-a:hover {
+section a:hover, section a:active {
   color: #990000;
 }
 
-#body1 {
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 0px;
-  text-decoration: none;
-  overflow: hidden;
-  background-color: white;
-  color: black;
-}
-
-#nav1 {
-  margin-left: auto;
-  margin-right: auto;
-  text-decoration: none;
-  overflow: hidden;
-  width: 100%;
-  height: 40px;
-  border-bottom: 1px solid #d8d8d8;
-  background-color: whitesmoke;
-}
-
-#tabs {
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-#nav1 span {
+footer {
+  margin: 0;
   padding: 0;
-  font-weight: bold;
-  text-decoration:none;
-  font-size: 18px;
-  line-height: 40px;
-  color: #FF0000;
- }
-
-#nav1 span a {
-	height: 45px;
-	line-height: 33px;
-	display: block;
-	padding: 3px 10px;
-	color: #FF0000;
-	text-decoration:none;
+  background-color: #ff3a3a;
+  padding-top: 28px;
+  padding-bottom: 20px;
+  margin-top: 20px;
 }
 
-#nav1 span:hover {
-  background-color: #FF0000;
-  text-decoration: none;  
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
 }
 
-#nav1 span:hover a,
-#nav1 span a:hover {
-	color: #ffffff;
-	text-decoration: none;
+form input, textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 35%;
+  min-width: 180px;
+  border-top: 0;
+  border-bottom: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  padding: 5px;
+  outline: 0;
 }
 
-#nav1 span.left {
-	float: left;
+form textarea {
+  min-height: 51px;
+  max-width: 100%;
 }
 
-#nav1 span.right {
-	float: right;
+#home {
+  background-image: url("images/background.jpg");
 }
 
-#nav1 span.right a {
-	font-size: 12px;
+#blockrunner {
+  background-image: url("images/blockrunnerblurred.jpg");
 }
 
-#button1 {
-	width: auto;
-	height: 75px;
-  font-size: 2em;
-  background: #ff0000;
+#snake {
+  background-image: url("images/snake.jpg");
 }
 
-#disqus_thread {
-  width: 60%;
-  margin: auto;
+#flappybird {
+  background-image: url("images/flappybird.jpg");
+}
+
+#tomatotapper {
+  background-image: url("images/tomatotapper.jpg");
+}
+
+#about-btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 110px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none;
+  line-height: 100%!important;
+  margin-top: 0px!important;
+  letter-spacing: 0.8px;
+  color: black;
+  transition: all ease-in-out 0.7s;
+  background-color: white;
+}
+
+#send-btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 80px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none;
+  line-height: 100%!important;
+  margin-top: 10px!important;
+  letter-spacing: 0.8px;
+  color: white;
+  transition: all ease-in-out 0.7s;
+  background-color: #ff3a3a;
+  border: 0;
+}
+
+#about-btn:hover {
+    transition: all ease-in-out 0.7s;
+    color: white;
+    background-color: #ff3a3a;
+}
+
+#send-btn:hover {
+    transition: all ease-in-out 0.7s;
+    color: white;
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+#featured img {
+  margin-left: 15px;
+  border: 5px solid lightgray;
+  padding: 0!important; width: 400px
+}
+
+#featured .col-md-5 {
+  padding: 0!important;
+}
+
+#featured .row {
+  padding-bottom: 15px;
+}
+
+.typing::after {
+  content: '|';
+  -webkit-animation: blink 0.5s infinite;
+          animation: blink 0.5s infinite;
+  font-weight: 300;
+}
+
+.container {
+  padding: 0!important;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 5rem!important;
+}
+
+.jumboWrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100vh;
 }

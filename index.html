@@ -123,15 +123,15 @@
     <script>
     	$(document).ready(function() {
     		if(location.href.includes("index.html?about=true")) {
-    			location.href = location.href.replace("index.html?about=true", "");
     			$('html, body').animate({
     				scrollTop: $('#about').offset().top - $('nav').height()
     			}, 500, 'linear');
+    			location.href = location.href.replace("index.html?about=true", "");
     		} else if(location.href.includes("index.html?contact=true")) {
-    			location.href = location.href.replace("index.html?contact=true", "");
     			$('html, body').animate({
     				scrollTop: $('#contact').offset().top - $('nav').height()
     			}, 500, 'linear');
+    			location.href = location.href.replace("index.html?contact=true", "");
     		}
     	});
     

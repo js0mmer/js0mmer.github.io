@@ -53,7 +53,7 @@
     <div class="container">
 	    <section id="about" class="col-md-12">
 	      <h3>About Me</h3>
-	      <p>I'm a developer in the San Francisco Bay Area. I code games and other stuff in my free time. I am currently a freshman in high school. Some of the things I can do include: front-end web development, game development, android app development, <a href="http://discordapp.com" target="_blank">Discord</a> bot development, and programming. I know HTML, CSS, JavaScript, Java, some Python, and a little bit of C#. Scroll down to see some of the projects I have worked on.</p>
+	      <p>I'm a developer in the San Francisco Bay Area. I have a passion for anything related to computers. I code games and other stuff in my free time. I am currently a freshman in high school. Some of the things I can do include: front-end web development, game development, android app development, Discord bot development, and programming. I know HTML, CSS, JavaScript, Java, some Python, and a little bit of C#. I build computers as well. Scroll down to see some of the projects I have worked on.</p>
 	    </section>
 	    <section id="projects" class="col-md-12">
 	    	<h3>Projects</h3>
@@ -152,6 +152,16 @@
     			}, 500, 'linear');
     		});
     	});
+    	
+    	$(function() {
+    		$('#send-btn').on('click', function(e) {
+    			$.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+			      function(json) {
+			        console.log("My public IP address is: ", json.ip);
+			      }
+			    );
+    		});
+    	});
     </script>
     <script src="main.js"></script>
 		<script>
@@ -159,16 +169,16 @@
     	var theater = theaterJS()
 
 			theater
-          .on('type:start, erase:start', () => {
-          // add a class to actor's dom element when he starts typing/erasing
-              const actor = theater.getCurrentActor();
-              actor.$element.classList.add('typing');
-          })
-          .on('type:end, erase:end', () => {
-          // and then remove it when he's done
-              const actor = theater.getCurrentActor();
-              actor.$element.classList.remove('typing');
-          });
+        .on('type:start, erase:start', () => {
+        // add a class to actor's dom element when he starts typing/erasing
+            const actor = theater.getCurrentActor();
+            actor.$element.classList.add('typing');
+        })
+        .on('type:end, erase:end', () => {
+        // and then remove it when he's done
+            const actor = theater.getCurrentActor();
+            actor.$element.classList.remove('typing');
+        });
     	
     	$(document).ready(function() {
 				theater

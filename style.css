@@ -12,17 +12,33 @@ section a:hover, section a:active {
 }
 
 footer {
-  margin: 0;
-  padding: 0;
   background-color: #ff3a3a;
   padding-top: 28px;
   padding-bottom: 20px;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 
-footer .col-sm-8 {
+footer div {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+footer .fa-heart, footer .fa-circle {
+  color: white !important;
+}
+
+footer .fa-github, footer .fa-envelope {
+  color: black !important;
+}
+
+footer a {
+  color: white;
 }
 
 form input, textarea {
@@ -98,17 +114,40 @@ form textarea {
   border: 0;
 }
 
+#home-btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 150px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none;
+  line-height: 100%!important;
+  margin-top: 0px!important;
+  letter-spacing: 0.8px;
+  color: black;
+  transition: all ease-in-out 0.7s;
+  background-color: white;
+}
+
 #about-btn:hover {
-    transition: all ease-in-out 0.7s;
-    color: white;
-    background-color: #ff3a3a;
+  transition: all ease-in-out 0.7s;
+  color: white;
+  background-color: #ff3a3a;
 }
 
 #send-btn:hover {
-    transition: all ease-in-out 0.7s;
-    color: white;
-    background-color: #ff0000;
-    cursor: pointer;
+  transition: all ease-in-out 0.7s;
+  color: white;
+  background-color: #ff0000;
+  cursor: pointer;
+}
+
+#home-btn:hover {
+  transition: all ease-in-out 0.7s;
+  color: white;
+  background-color: #ff3a3a;
 }
 
 #featured img {

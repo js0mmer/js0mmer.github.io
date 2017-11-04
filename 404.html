@@ -1,25 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>404 - Jacob&#8217s Website</title>
-		<link rel="stylesheet" href="style.css" type="text/css">
-		<link rel="stylesheet" href="http://usewing.ml/dist/wing.min.css"/>
-		<link rel="shortcut icon" type="image/png" href="/favicon.png">
-		<script type="text/javascript" src="mobile.js"></script>
+		<title>Home - Jacob&#8217s Website</title>
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
 	</head>
 	<body>
-		<div id="nav1">
-			<span class="left"><a href="/">Home</a></span>
-			<span class="left"><a href="https://www.youtube.com/user/JGSBroadcast">YouTube</a></span>
-			<span class="left"><a href="/androidapps">Android Apps</a></span>
-			<span class="left"><a href="/games">Games</a></span>
-			<span class="left"><a href="/jgsbot">JGS Bot</a></span>
-			<span class="right"><a href="/about">About</a></span>
-		</div>
-    <h1> Error 404: Page Not Found </h1>
-    <h3 style="text-align: center"> I think you goofed </h3>
+		<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			      <span class="sr-only">Toggle navigation</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			    </button>
+			    <a class="navbar-brand" href="#">Jacob</a>
+			  </div>
+			
+			  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+			      <li class="dropdown">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a href="games/snake">Snake</a></li>
+			          <li><a href="/hangman">Hangman</a></li>
+			          <li><a href="games/blockrunner">Block Runner</a></li>
+			          <li><a href="games/tomatotapper">Tomato Tapper</a></li>
+			          <li><a href="games/flappybird">Flappy Bird</a></li>
+			        </ul>
+			      </li>
+			      <li><a id="contact-link" href="#">Contact</a></li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+			      <li><a id="about-link" href="#">About</a></li>
+			    </ul>
+			  </div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+    <section id="home" class="main jumbotron">
+      <div class="col-sm-4 col-sm-offset-5">
+        <div>
+        	<h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
+          <a href="./" style="opacity: 0" id="home-btn">Return to Home</a>
+        </div>
+      </div>
+    </section>
+    <!--jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="bower_components/TheaterJS/dist/theater.min.js"></script>
+    <script src="https://use.fontawesome.com/6d136cce45.js"></script>
+    <script src="main.js"></script>
+		<script>
+    	/* global theaterJS */
+    	var theater = theaterJS()
+
+			theater
+        .on('type:start, erase:start', () => {
+        // add a class to actor's dom element when he starts typing/erasing
+            const actor = theater.getCurrentActor();
+            actor.$element.classList.add('typing');
+        })
+        .on('type:end, erase:end', () => {
+        // and then remove it when he's done
+            const actor = theater.getCurrentActor();
+            actor.$element.classList.remove('typing');
+        });
+    	
+    	$(document).ready(function() {
+				theater
+				  .addActor('error', { speed: 0.6, accuracy: 0.8 })
+				  .addActor('pagenotfound', { speed: 0.6, accuracy: 0.8 })
+				  .addScene('error:Error 404')
+				  .addScene(function(done) {
+				  	setTimeout(function() {
+					  	done();
+				  	}, 500);
+				  })
+				  .addScene('pagenotfound:Page Not Found')
+				  .addScene(function(done) {
+				  	setTimeout(function() {
+					  	document.getElementById("home-btn").style.opacity = '1';
+				  	}, 300);
+				  	
+				  	done();
+				  })
+    	});
+		</script>
 	</body>
-	<script>
-		mobile();
-	</script>
 </html>

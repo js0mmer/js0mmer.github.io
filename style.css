@@ -16,17 +16,16 @@ footer {
   padding-top: 28px;
   padding-bottom: 20px;
   margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-
-footer div {
-  display: flex;
-  align-items: center;
 }
 
 footer p {
   font-weight: bold;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .fa-heart, footer .fa-circle {
@@ -37,11 +36,13 @@ footer .fa-github, footer .fa-envelope {
   color: black !important;
 }
 
-footer a {
-  color: white;
+footer .col-sm-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-form input, textarea {
+form input, form textarea {
   display: block;
   margin-bottom: 10px;
   width: 35%;
@@ -52,6 +53,10 @@ form input, textarea {
   border-right: 0;
   padding: 5px;
   outline: 0;
+}
+
+form input:focus, form textarea:focus {
+  border-bottom: 2px solid red;
 }
 
 form textarea {

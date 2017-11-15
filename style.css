@@ -31,7 +31,7 @@ footer .fa-github, footer .fa-envelope {
   color: black !important;
 }
 
-footer .col-sm-6 {
+footer .col-md-6 {
   display: flex;
   align-items: center;
   justify-content: center;

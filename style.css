@@ -37,6 +37,16 @@ footer .col-md-6 {
   justify-content: center;
 }
 
+@media only screen and (min-width: 992px) {
+  footer .text {
+    justify-content: flex-start;
+  }
+  
+  footer .icons {
+    justify-content: flex-end;
+  }
+}
+
 form input, form textarea {
   display: block;
   margin-bottom: 10px;

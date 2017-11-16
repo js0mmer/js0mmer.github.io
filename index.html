@@ -100,9 +100,18 @@
 	    <section id="contact" class="col-md-12">
 	    	<h3>Contact</h3>
 	    	<form method="POST" action="http://formspree.io/jacob.sommer@comcast.net">
-				  <input type="name" name="Name" placeholder="Your name">
-				  <input type="email" name="Mail" placeholder="Your email">
-				  <textarea name="Message" placeholder="Your message"></textarea>
+	    		<div class="group">
+			      <input type="name" name="Name" placeholder="Your name">
+			      <span class="bar"></span>
+			    </div>
+			    <div class="group">
+				  	<input type="email" name="Mail" placeholder="Your email">
+			      <span class="bar"></span>
+			    </div>
+			    <div class="group">
+				  	<textarea name="Message" placeholder="Your message"></textarea>
+			      <span class="bar"></span>
+			    </div>
 				  <button type="submit" id="send-btn">Send</button>
 				</form>
 	    </section>

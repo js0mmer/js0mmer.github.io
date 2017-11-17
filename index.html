@@ -100,15 +100,15 @@
 	    <section id="contact" class="col-md-12">
 	    	<h3>Contact</h3>
 	    	<form method="POST" action="http://formspree.io/jacob.sommer@comcast.net">
-	    		<div class="group">
+	    		<div class="input">
 			      <input type="name" name="Name" placeholder="Your name">
 			      <span class="bar"></span>
 			    </div>
-			    <div class="group">
+			    <div class="input">
 				  	<input type="email" name="Mail" placeholder="Your email">
 			      <span class="bar"></span>
 			    </div>
-			    <div class="group">
+			    <div class="input">
 				  	<textarea name="Message" placeholder="Your message"></textarea>
 			      <span class="bar"></span>
 			    </div>
@@ -183,12 +183,10 @@
 
 			theater
         .on('type:start, erase:start', () => {
-        // add a class to actor's dom element when he starts typing/erasing
             const actor = theater.getCurrentActor();
             actor.$element.classList.add('typing');
         })
         .on('type:end, erase:end', () => {
-        // and then remove it when he's done
             const actor = theater.getCurrentActor();
             actor.$element.classList.remove('typing');
         });

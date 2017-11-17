@@ -153,18 +153,6 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   background-color: #ff3a3a;
 }
 
-#featured img {
-  margin-left: 15px;
-  border: 5px solid lightgray;
-  padding: 0 !important;
-  width: 400px;
-  max-width: 100%;
-}
-
-#featured .col-md-5 {
-  padding: 0 !important;
-}
-
 #featured .row {
   padding-bottom: 15px;
 }
@@ -176,7 +164,7 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   -moz-animation: blink 0.5s infinite;
 }
 
-.main {
+.banner {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -188,8 +176,17 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   align-items: center;
 }
 
-.main h1 {
+.banner {
   font-size: 5rem !important;
+}
+
+.thumbnail {
+  width: 400px;
+  max-width: 100%;
+}
+
+a.thumbnail:hover {
+  border: 1px solid red !important;
 }
 
 .jumboWrap {

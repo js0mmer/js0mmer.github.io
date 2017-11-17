@@ -228,3 +228,11 @@ a.thumbnail:hover {
 .bar:after {
   right: 50%;
 }
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}

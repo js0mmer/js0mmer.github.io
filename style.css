@@ -174,9 +174,6 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   background-position: center;
   display: flex;
   align-items: center;
-}
-
-.banner {
   font-size: 5rem !important;
 }
 

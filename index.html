@@ -183,12 +183,10 @@
 
 			theater
         .on('type:start, erase:start', () => {
-            const actor = theater.getCurrentActor();
-            actor.$element.classList.add('typing');
+            theater.getCurrentActor().$element.classList.add('cursor');
         })
         .on('type:end, erase:end', () => {
-            const actor = theater.getCurrentActor();
-            actor.$element.classList.remove('typing');
+            theater.getCurrentActor().$element.classList.remove('cursor');
         });
     	
     	$(document).ready(function() {

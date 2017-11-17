@@ -169,7 +169,7 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   padding-bottom: 15px;
 }
 
-.typing::after {
+.cursor::after {
   content: '|';
   animation: blink 0.5s infinite;
   -webkit-animation: blink 0.5s infinite;

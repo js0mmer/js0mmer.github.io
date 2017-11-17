@@ -146,7 +146,7 @@
 	  <script src="bower_components/TheaterJS/dist/theater.min.js"></script>
     <script src="https://use.fontawesome.com/6d136cce45.js"></script>
     <script>
-    	$(document).ready(function() {
+    	$(document).ready(() => {
     		if(location.href.includes("?about=true")) {
     			$('html, body').animate({
     				scrollTop: $('#about').offset().top - $('nav').height()
@@ -159,7 +159,7 @@
     	});
     
     	$(function() {
-    		$('#about-link').on('click', function(e) {
+    		$('#about-link').on('click', (e) => {
     			e.preventDefault();
     			$('html, body').animate({
     				scrollTop: $('#about').offset().top - $('nav').height()
@@ -168,7 +168,7 @@
     	});
     
     	$(function() {
-    		$('#contact-link').on('click', function(e) {
+    		$('#contact-link').on('click', (e) => {
     			e.preventDefault();
     			$('html, body').animate({
     				scrollTop: $('#contact').offset().top - $('nav').height()
@@ -178,8 +178,7 @@
     </script>
     <script src="main.js"></script>
 		<script>
-    	/* global theaterJS */
-    	var theater = theaterJS()
+    	var theater = theaterJS();
 
 			theater
         .on('type:start, erase:start', () => {
@@ -189,19 +188,19 @@
             theater.getCurrentActor().$element.classList.remove('cursor');
         });
     	
-    	$(document).ready(function() {
+    	$(document).ready(() => {
 				theater
 				  .addActor('hi', { speed: 0.5, accuracy: 0.8 })
 				  .addActor('jacob', { speed: 0.5, accuracy: 0.8 })
 				  .addScene('hi:Hi.')
-				  .addScene(function(done) {
-				  	setTimeout(function() {
+				  .addScene((done) => {
+				  	setTimeout(() => {
 					  	done();
 				  	}, 500);
 				  })
 				  .addScene('jacob:I\'m Jacob.')
-				  .addScene(function(done) {
-				  	setTimeout(function() {
+				  .addScene((done) => {
+				  	setTimeout(() => {
 					  	document.getElementById("about-btn").style.opacity = '1';
 				  	}, 300);
 				  	

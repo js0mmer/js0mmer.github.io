@@ -18,11 +18,11 @@ footer p {
   padding-top: 7px;
 }
 
-footer .fa-heart, footer .fa-circle {
+.fa-heart, .fa-circle {
   color: white;
 }
 
-footer .fa-github, footer .fa-envelope {
+.fa-github, .fa-envelope {
   color: black;
 }
 

@@ -18,14 +18,6 @@ footer p {
   padding-top: 7px;
 }
 
-.fa-heart, .fa-circle {
-  color: white;
-}
-
-.fa-github, .fa-envelope {
-  color: black;
-}
-
 footer .col-md-6 {
   display: flex;
   align-items: center;
@@ -153,8 +145,25 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   background-color: #ff3a3a;
 }
 
+#featured img {
+  transition: 0.2s linear all;
+}
+
+#featured img:hover {
+  transform: scale(1.2);
+  transition: 0.2s linear all;
+}
+
 #featured .row {
   padding-bottom: 15px;
+}
+
+.fa-heart, .fa-circle {
+  color: white;
+}
+
+.fa-github, .fa-envelope {
+  color: black;
 }
 
 .cursor::after {
@@ -181,6 +190,7 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   width: 400px;
   max-width: 100%;
   background-color: lightgray !important;
+  overflow: hidden;
 }
 
 a.thumbnail:hover {

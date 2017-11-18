@@ -88,6 +88,8 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   letter-spacing: 0.8px;
   color: black;
   transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
   background-color: white;
 }
 
@@ -105,6 +107,8 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   letter-spacing: 0.8px;
   color: white;
   transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
   background-color: #ff3a3a;
   border: none;
 }
@@ -123,17 +127,23 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   letter-spacing: 0.8px;
   color: black;
   transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
   background-color: white;
 }
 
 #about-btn:hover {
   transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
   color: white;
   background-color: #ff3a3a;
 }
 
 #send-btn:hover {
   transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
   color: white;
   background-color: #ff0000;
   cursor: pointer;
@@ -141,17 +151,23 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
 
 #home-btn:hover {
   transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
   color: white;
   background-color: #ff3a3a;
 }
 
 #featured img {
   transition: 0.2s linear all;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
 }
 
 #featured img:hover {
   transform: scale(1.2);
   transition: 0.2s linear all;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
 }
 
 #featured .row {

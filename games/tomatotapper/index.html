@@ -130,20 +130,15 @@
 		  }
 		</script>
     <script>
-    	/* global theaterJS */
-    	var theater = theaterJS()
+    	var theater = theaterJS();
 
 			theater
-          .on('type:start, erase:start', () => {
-          // add a class to actor's dom element when he starts typing/erasing
-              const actor = theater.getCurrentActor();
-              actor.$element.classList.add('typing');
-          })
-          .on('type:end, erase:end', () => {
-          // and then remove it when he's done
-              const actor = theater.getCurrentActor();
-              actor.$element.classList.remove('typing');
-          });
+        .on('type:start, erase:start', () => {
+            theater.getCurrentActor().$element.classList.add('cursor');
+        })
+        .on('type:end, erase:end', () => {
+            theater.getCurrentActor().$element.classList.remove('cursor');
+        });
     	
     	$(document).ready(function() {
 				theater

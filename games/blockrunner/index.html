@@ -47,8 +47,8 @@
 	  	<div class="jumboWrap"></div>
 		  <div class="col-sm-4 col-sm-offset-5">
 		    <div>
-		      <h1><span id="block"></span><br><span id="runner"></span></h1>
-		      <a href="#" id="about-btn" style="opacity: 0">About</a>
+		      <h1>Block<br>Runner</h1>
+		      <a href="#" id="about-btn">About</a>
 		    </div>
 		  </div>
 		</section>
@@ -60,6 +60,7 @@
 			<section id="download">
 				<h3>Download</h3>
 			  <a id="download-windows" href="https://github.com/js0mmer/BlockRunner/releases"><button type="button" class="btn btn-danger">Windows</button></a>
+			  <a id="download-linux" href="https://github.com/js0mmer/BlockRunner/releases"><button type="button" class="btn btn-danger">Linux</button></a>
 			  <a id="download-android" href="https://github.com/js0mmer/BlockRunner/releases"><button type="button" class="btn btn-danger">Android</button></a>
 			  <p>Block Runner is also available to be played online in your browser using WebGL.</p>
 			  <a href="webgl"><button type="button" class="btn btn-danger">WebGL</button></a>
@@ -112,7 +113,6 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/6d136cce45.js"></script>
-	  <script src="../../bower_components/TheaterJS/dist/theater.min.js"></script>
 		<script src="../../main.js"></script>
 		<script type="text/javascript">
 			String.prototype.replaceAll = function(search, replacement) {
@@ -127,42 +127,12 @@
 		  function GetLatestReleaseInfo() {
 		    $.getJSON("https://api.github.com/repos/js0mmer/BlockRunner/releases/latest").done(function (release) {
 		      var asset = release.assets[0];
-		      $("#download-android").attr("href", release.assets[0].browser_download_url);
-		      $("#qr-android").attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + release.assets[0].browser_download_url.replaceAll(":", "%3A").replaceAll("/", "%2F") + "&chs=180x180&choe=UTF-8&chld=L|2");
-		      $("#download-windows").attr("href", release.assets[1].browser_download_url);
+		      $("#download-android").attr("href", release.assets[1].browser_download_url);
+		      $("#qr-android").attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + release.assets[1].browser_download_url.replaceAll(":", "%3A").replaceAll("/", "%2F") + "&chs=180x180&choe=UTF-8&chld=L|2");
+		      $("#download-windows").attr("href", release.assets[2].browser_download_url);
+		      $("#download-linux").attr("href", release.assets[0].browser_download_url);
 		    });
 		  }
 		</script>
-    <script>
-    	var theater = theaterJS();
-
-			theater
-        .on('type:start, erase:start', () => {
-            theater.getCurrentActor().$element.classList.add('cursor');
-        })
-        .on('type:end, erase:end', () => {
-            theater.getCurrentActor().$element.classList.remove('cursor');
-        });
-    	
-    	$(document).ready(function() {
-				theater
-				  .addActor('block', { speed: 0.5, accuracy: 0.8 })
-				  .addActor('runner', { speed: 0.5, accuracy: 0.8 })
-				  .addScene('block:Block')
-				  .addScene(function(done) {
-				  	setTimeout(function() {
-					  	done();
-				  	}, 500);
-				  })
-				  .addScene('runner:Runner')
-				  .addScene(function(done) {
-				  	setTimeout(function() {
-					  	document.getElementById("about-btn").style.opacity = '1';
-				  	}, 300);
-				  	
-				  	done();
-				  })
-    	});
-    </script>
 	</body>
 </html>

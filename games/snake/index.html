@@ -47,8 +47,8 @@
 	  	<div class="jumboWrap"></div>
 		  <div class="col-sm-4 col-sm-offset-5">
 		    <div>
-		      <h1 id="snake1"></h1>
-		      <a href="#" id="about-btn" style="opacity: 0">About</a>
+		      <h1>Snake</h1>
+		      <a href="#" id="about-btn">About</a>
 		    </div>
 		  </div>
 		</section>
@@ -107,31 +107,6 @@
 	  <!-- Include all compiled plugins (below), or include individual files as needed -->
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/6d136cce45.js"></script>
-	  <script src="../../bower_components/TheaterJS/dist/theater.min.js"></script>
 	  <script src="../../main.js"></script>
-    <script>
-    	var theater = theaterJS();
-
-			theater
-        .on('type:start, erase:start', () => {
-            theater.getCurrentActor().$element.classList.add('cursor');
-        })
-        .on('type:end, erase:end', () => {
-            theater.getCurrentActor().$element.classList.remove('cursor');
-        });
-    	
-    	$(document).ready(function() {
-				theater
-				  .addActor('snake1', { speed: 0.5, accuracy: 0.8 })
-				  .addScene('snake1:Snake')
-				  .addScene(function(done) {
-				  	setTimeout(function() {
-					  	document.getElementById("about-btn").style.opacity = '1';
-				  	}, 300);
-				  	
-				  	done();
-				  })
-    	});
-    </script>
 	</body>
 </html>

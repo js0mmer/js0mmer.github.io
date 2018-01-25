@@ -106,19 +106,21 @@ a:link, a:visited {
 /* NAVBAR */
 /* ====== */
 
-.navbar-nav {
-  height: 50px;
-}
+@media only screen and (min-width: 992px) {
+  .navbar-nav {
+    height: 50px;
+  }
 
-.navbar-nav li {
-  transition: all ease-in-out 0.2s;
-  -webkit-transition: all ease-in-out 0.2s;
-  -moz-transition: all ease-in-out 0.2s;
-}
+  .navbar-nav li {
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+  }
 
-.navbar-nav li:hover {
-  border-bottom: 5px solid red;
-  transform: translateY(-5px);
+  .navbar-nav li:hover {
+    border-bottom: 5px solid red;
+    transform: translateY(-5px);
+  }
 }
 
 /* ====== */

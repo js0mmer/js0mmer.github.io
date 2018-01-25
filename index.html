@@ -1,120 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Home - Jacob&#8217s Website</title>
+		<title>Home - Jacob Sommer</title>
 		<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
-		<link rel="stylesheet" href="style.css" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+		<meta charset="utf-8" />
 	</head>
 	<body>
-		<nav id="nav" class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid">
-			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-			      <span class="sr-only">Toggle navigation</span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			    </button>
-			    <a class="navbar-brand" href="#">Jacob Sommer</a>
-			  </div>
-			
-			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse" id="navbar-collapse">
-			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-			      <li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
-			        <ul class="dropdown-menu">
-			          <li><a href="games/snake">Snake</a></li>
-			          <li><a href="/hangman" target="_blank">Hangman</a></li>
-			          <li><a href="games/blockrunner">Block Runner</a></li>
-			          <li><a href="games/tomatotapper">Tomato Tapper</a></li>
-		            <li><a href="games/flappybird">Flappy Bird</a></li>		
-			        </ul>
-			      </li>
-			      <li><a id="contact-link" href="#">Contact</a></li>
-			    </ul>
-			    <ul class="nav navbar-nav navbar-right">
-			      <li><a id="about-link" href="#">About</a></li>
-			    </ul>
-			  </div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
-    <section id="home" class="banner jumbotron">
-      <div class="col-sm-4 col-sm-offset-5">
-        <div>
-        	<h1><span id="hi"></span><br/><span id="jacob"></span></h1>
-          <a href="#" style="opacity: 0" id="about-btn">About Me</a>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Jacob Sommer</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="#" id="about-link">About Me</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#" id="contact-link">Contact</a></li>
+          </ul>
         </div>
       </div>
+    </nav>
+    <!--<div class="banner"></div>-->
+    <section class="jumbotron" id="home">
+    	<h1 class="banner-text"><span id="hi"></span> <span id="jacob"></span></h1>
     </section>
     <div class="main container">
 	    <section id="about" class="col-md-12">
-	      <h3>About Me</h3>
-	      <p>I'm a developer in the San Francisco Bay Area. I have a passion for anything related to computers. I code games and other stuff in my free time. I am currently a freshman in high school. Some of the things I can do include: front-end web development, game development, android app development, Discord bot development, and programming. I know HTML, CSS, JavaScript, Java, some Python, and a little bit of C#. I build computers as well. Scroll down to see some of the projects I have worked on.</p>
-	    </section>
-	    <section id="projects" class="col-md-12">
-	    	<h3>Projects</h3>
-	    	<ul>
-	        <li><a href="games/tomatotapper">Tomato Tapper</a></li>
-	        <li><a href="games/snake">Snake</a></li>
-	        <li><a href="/hangman">Hangman</a></li>
-	        <li><a href="games/blockrunner">Block Runner</a></li>
-	        <li><a href="games/flappybird">Flappy Bird Remake</a></li>
-	        <li><a href="/school-projects/history-bill-of-rights">Bill of Rights Project</a> <span class="label label-default">School</span></li>
-	        <li><a href="/school-projects/history-sectionalism">Sectionalism Project Game</a> <span class="label label-default">School</span></li>
-	    	</ul>
-	    </section>
-	    <section id="featured" class="col-md-12">
-	      <h3>Featured</h3>
-	      <div class="row">
-		      <div class="col-md-5">
-		        <a href="games/blockrunner" class="thumbnail" target="_blank"><img src="images/blockrunneringame.jpg"></a>
-		      </div>
-		      <div class="col-md-7">
-		      	<h4>Block Runner</h4>
-		      	<p>Block Runner is a 3-D game powered by the Unity Engine where you are controlling a block that has to dodge obstacles. The game is infinite and your score is based on how far you have traveled. There are three difficulties: easy, medium, and hard.</p>
-		      </div>
-		    </div>
-	      <div class="row">
-		      <div class="col-md-5">
-		        <a href="games/snake" class="thumbnail" target="_blank"><img src="images/snake.jpg"></a>
-		      </div>
-		      <div class="col-md-7">
-		      	<h4>Snake</h4>
-		      	<p>Snake is a 2-D game that runs on Java. The game is infinite and your score is based on the length of your snake. You can grow your snake by eating the red "food". <!-- Press O while ingame for a secret --></p>
-		      </div>
-		    </div>
-	      <div class="row">
-		      <div class="col-md-5">
-		        <a href="hangman" class="thumbnail" target="_blank"><img src="images/hangman.jpg"></a>
-		      </div>
-		      <div class="col-md-7">
-		      	<h4>Hangman</h4>
-		      	<p>Hangman is an HTML/JavaScript remake of the classic hangman. You have the option of playing against a bot with randomly generated words or with a friend who choses the words.</p>
-		      </div>
-		    </div>
-			</section>
+        <div class="row">
+          <div class="profile-picture center"></div>
+        </div>
+        <div class="row">
+          <section class="col-md-12">
+        		<h1 class="center">About Me</h1>
+            <p>Hello, I am Jacob, a student with a passion for technology. I plan to be a Software Engineer or a Web Developer. I am currently a freshman in high school and I have been taking as many computer science related electives at my school as I can and plan to take more. I am eager to learn more about computers. I plan to apply to Dublin High School’s Engineering and Design Academy.</p>
+            <p>I am currently participating in two clubs related to technology. They are known as the Computer Science Association and the Tech Enthusiasts Club.  I have been coding for four years. I know several different coding languages. I have experience with graphics design, animation, and video editing. I built my own computer two years ago. I am a Principal’s Honor Roll student with a 4.0 GPA. I am taking Geometry in my freshman year.</p>
+            <p>I am innovative and always working on new projects individually. Some of the coding languages I know include Java, HTML, CSS, JavaScript, Python, and C#. I also have experience developing games. I have created a few websites. I am currently in the Computer Science/Software Engineering class at my school and I have completed two projects in this class where I collaborated with other people to code a game. One of the games was for Android devices and the other was on <a href="http://scratch.mit.edu" target="_blank">Scratch</a>.</p>
+            <p>Coding is one of my favorite activities. I am constantly exploring new languages and working on personal projects in my free time. Feel free to explore the rest of my website and/or contact me if you have any offers or requests. Thank you for visiting my portfolio.</p>
+          </section>
+        </div>
+       </section>
 			<section id="contact" class="col-md-12">
-				<h3>Contact</h3>
-				<form method="POST" action="http://formspree.io/jacob.sommer@comcast.net">
-				<div class="input">
-    		  <input type="name" name="Name" placeholder="Your name">
-    		  <span class="bar"></span>
+				<h1 class="center">Contact</h1>
+				<div class="flex-center">
+					<form method="POST" action="http://formspree.io/jacob.sommer@comcast.net">
+						<div class="input">
+		    		  <input type="name" name="Name" placeholder="Your name">
+		    		  <span class="bar"></span>
+						</div>
+						<div class="input">
+							<input type="email" name="Mail" placeholder="Your email">
+						  <span class="bar"></span>
+						</div>
+						<div class="input">
+							<textarea name="Message" placeholder="Your message"></textarea>
+						  <span class="bar"></span>
+						</div>
+						<button type="submit" class="send-btn btn-outline center">Send <span class="fa fa-paper-plane" aria-hidden="true"></span></button>
+					</form>
 				</div>
-				<div class="input">
-					<input type="email" name="Mail" placeholder="Your email">
-				  <span class="bar"></span>
-				</div>
-				<div class="input">
-					<textarea name="Message" placeholder="Your message"></textarea>
-				  <span class="bar"></span>
-				</div>
-				  <button type="submit" id="send-btn">Send</button>
-				</form>
 	    </section>
     </div>
     <footer>
@@ -140,19 +94,20 @@
         </div>
       </div>
     </footer>
-    <!--jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="bower_components/TheaterJS/dist/theater.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/theater.min.js"></script>
     <script src="https://use.fontawesome.com/6d136cce45.js"></script>
+    <!--Navbar-->
+    <script src="js/navbar.js"></script>
+    <!--Scroll animations-->
     <script>
     	$(document).ready(() => {
-    		if(location.href.includes("?about=true")) {
+    		if(location.href.includes("action=about")) {
     			$('html, body').animate({
     				scrollTop: $('#about').offset().top - $('nav').height()
     			}, 500, 'linear');
-    		} else if(location.href.includes("?contact=true")) {
+    		} else if(location.href.includes("action=contact")) {
     			$('html, body').animate({
     				scrollTop: $('#contact').offset().top - $('nav').height()
     			}, 500, 'linear');
@@ -176,8 +131,12 @@
     			}, 500, 'linear');
     		});
     	});
+    	
+    	window.onscroll = function() {
+    		document.getElementById("banner").style.transform = 'translate(0px, ' + (document.body.scrollTop) + 'px)'
+    	}
     </script>
-    <script src="main.js"></script>
+    <!--Typing Animation-->
 		<script>
     	var theater = theaterJS();
 

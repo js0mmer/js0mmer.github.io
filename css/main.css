@@ -19,7 +19,7 @@
   min-height: -moz-calc(100vh - 105px);
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 768px) {
   .main {
     min-height: calc(100vh - 142px);
     min-height: -webkit-calc(100vh - 142px);
@@ -106,7 +106,7 @@ a:link, a:visited {
 /* NAVBAR */
 /* ====== */
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .navbar-nav {
     height: 50px;
   }
@@ -139,13 +139,13 @@ footer p {
   padding-top: 7px;
 }
 
-footer .col-md-6 {
+footer .col-sm-6 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   footer .text {
     justify-content: flex-start;
   }

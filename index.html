@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<title>Home - Jacob Sommer</title>
 		<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/main.css" type="text/css" />
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 		<meta charset="utf-8" />
+    <script defer src="js/fontawesome-all.min.js"></script>
 	</head>
 	<body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -32,7 +33,7 @@
       </div>
     </nav>
     <!--<div class="banner"></div>-->
-    <section class="jumbotron" id="home">
+    <section class="jumbotron banner" id="home">
     	<h1 class="banner-text"><span id="hi"></span> <span id="jacob"></span></h1>
     </section>
     <div class="main container">
@@ -53,7 +54,7 @@
 			<section id="contact" class="col-md-12">
 				<h1 class="center">Contact</h1>
 				<div class="flex-center">
-					<form method="POST" action="http://formspree.io/jacob.sommer@comcast.net">
+					<form method="POST" action="https://formspree.io/jacob.sommer@comcast.net">
 						<div class="input">
 		    		  <input type="name" name="Name" placeholder="Your name">
 		    		  <span class="bar"></span>
@@ -87,7 +88,7 @@
           <a href="https://github.com/js0mmer">
             <span class="fa-stack fa-lg">
               <span class="fa fa-circle fa-stack-2x"></span>
-              <span class="fa fa-github fa-stack-1x"></span>
+              <span class="fab fa-github fa-stack-1x"></span>
             </span>
             <span class="sr-only">GitHub</span>
           </a>
@@ -97,7 +98,6 @@
     <script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/theater.min.js"></script>
-    <script src="https://use.fontawesome.com/6d136cce45.js"></script>
     <!--Navbar-->
     <script src="js/navbar.js"></script>
     <!--Scroll animations-->
@@ -132,9 +132,9 @@
     		});
     	});
     	
-    	window.onscroll = function() {
-    		document.getElementById("banner").style.transform = 'translate(0px, ' + (document.body.scrollTop) + 'px)'
-    	}
+    	// window.onscroll = function() {
+    	// 	document.getElementById("banner").style.transform = 'translate(0px, ' + (document.body.scrollTop) + 'px)'
+    	// }
     </script>
     <!--Typing Animation-->
 		<script>
@@ -150,8 +150,13 @@
     	
     	$(document).ready(() => {
 				theater
-				  .addActor('hi', { speed: 0.5, accuracy: 0.8 })
-				  .addActor('jacob', { speed: 0.5, accuracy: 0.8 })
+				  .addActor('hi', { speed: 0.6, accuracy: 0.8 })
+				  .addActor('jacob', { speed: 0.6, accuracy: 0.8 })
+				  .addScene((done) => {
+				  	setTimeout(() => {
+					  	done();
+				  	}, 500);
+				  })
 				  .addScene('hi:Hi.')
 				  .addScene((done) => {
 				  	setTimeout(() => {
@@ -159,13 +164,6 @@
 				  	}, 500);
 				  })
 				  .addScene('jacob:I\'m Jacob.')
-				  .addScene((done) => {
-				  	setTimeout(() => {
-					  	document.getElementById("about-btn").style.opacity = '1';
-				  	}, 300);
-				  	
-				  	done();
-				  })
     	});
 		</script>
 	</body>

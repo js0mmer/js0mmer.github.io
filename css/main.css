@@ -110,13 +110,13 @@ a:link, a:visited {
   .navbar-nav {
     height: 50px;
   }
-
+  
   .navbar-nav li {
     transition: all ease-in-out 0.2s;
     -webkit-transition: all ease-in-out 0.2s;
     -moz-transition: all ease-in-out 0.2s;
   }
-
+  
   .navbar-nav li:hover {
     border-bottom: 5px solid red;
     transform: translateY(-5px);
@@ -168,22 +168,31 @@ footer .col-sm-6 {
 /* ====== */
 
 #home {
-  background-image: url("../images/background.jpg");
+  background-image: url("../images/joshua-sortino-228788.jpg");
+}
+
+#projects-banner {
+  background-image: url("../images/emile-perron-190221.jpg");
+  color: white;
+}
+
+#resume-banner {
+  background-image: url("../images/joanna-kosinska-478198.jpg");
 }
 
 .banner {
-  z-index: -100;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+  /*z-index: -100;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*position: fixed;*/
+  /*display: inline-block;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*align-items: center;*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  position: fixed;
-  display: inline-block;
-  align-items: center;
   font-size: 5rem !important;
 }
 

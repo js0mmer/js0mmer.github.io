@@ -271,7 +271,7 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   height: 2px;
   bottom: 0;
   content: '';
-  background: #ff0000;
+  background: #ff3a3a;
   transition: 0.2s linear all; 
   -webkit-transition: 0.2s linear all;
   -moz-transition: 0.2s linear all;

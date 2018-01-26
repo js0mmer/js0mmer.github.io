@@ -42,6 +42,10 @@
   width: 50%;
 }
 
+#sql {
+  width: 10%;
+}
+
 @media only screen and (max-width: 991px) {
   .progress {
     margin-left: 3.5rem;

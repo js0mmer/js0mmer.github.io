@@ -13,20 +13,41 @@
   justify-content: center;
 }
 
-.main {
-  min-height: calc(100vh - 105px);
-  min-height: -webkit-calc(100vh - 105px);
-  min-height: -moz-calc(100vh - 105px);
+/*.main {*/
+/*  min-height: calc(100vh - 105px);*/
+/*  min-height: -webkit-calc(100vh - 105px);*/
+/*  min-height: -moz-calc(100vh - 105px);*/
+/*}*/
+
+/*@media only screen and (max-width: 768px) {*/
+/*  .main {*/
+/*    min-height: calc(100vh - 142px);*/
+/*    min-height: -webkit-calc(100vh - 142px);*/
+/*    min-height: -moz-calc(100vh - 142px);*/
+/*  }*/
+/*}*/
+
+/* ======= */
+/* IMAGES */
+/* ======= */
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-image: url("../images/me-cropped.jpg");
+  background-origin: center;
+  background-position: center;
+  background-size: cover;
+  border: 5px solid #ff3a3a;
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
 }
 
-@media only screen and (max-width: 768px) {
-  .main {
-    min-height: calc(100vh - 142px);
-    min-height: -webkit-calc(100vh - 142px);
-    min-height: -moz-calc(100vh - 142px);
-  }
+.profile-picture:hover {
+  transform: scale(1.1);
 }
-
 
 /* ======= */
 /* BUTTONS */
@@ -44,19 +65,20 @@
   line-height: 100% !important;
   margin-top: 10px !important;
   letter-spacing: 0.8px;
-  color: #ff3a3a;
+  color: #ff3a3a !important;
   transition: all ease-in-out 0.7s;
   -webkit-transition: all ease-in-out 0.7s;
   -moz-transition: all ease-in-out 0.7s;
   background-color: white;
   border: 3px solid #ff3a3a;
+  border-radius: 25px;
 }
 
 .btn-outline:hover {
   transition: all ease-in-out 0.7s;
   -webkit-transition: all ease-in-out 0.7s;
   -moz-transition: all ease-in-out 0.7s;
-  color: white;
+  color: white !important;
   background-color: #ff3a3a;
   cursor: pointer;
 }
@@ -69,11 +91,11 @@
   width: 100px;
   display: block;
   font-size: 11px;
-  text-decoration: none;
+  text-decoration: none !important;
   line-height: 100% !important;
   margin-top: 10px !important;
   letter-spacing: 0.8px;
-  color: #ff3a3a;
+  color: #ff3a3a !important;
   background-color: white;
   transition: all ease-in-out 0.7s;
   -webkit-transition: all ease-in-out 0.7s;
@@ -85,9 +107,43 @@
   transition: all ease-in-out 0.7s;
   -webkit-transition: all ease-in-out 0.7s;
   -moz-transition: all ease-in-out 0.7s;
-  color: white;
+  color: white !important;
   background-color: #ff3a3a;
   cursor: pointer;
+}
+
+.btn-clear {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 100px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none !important;
+  line-height: 100% !important;
+  margin-top: 10px !important;
+  letter-spacing: 0.8px;
+  color: white !important;
+  background-color: transparent;
+  transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  border: 3px solid white;
+  border-radius: 25px;
+}
+
+.btn-clear:hover {
+  transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  color: black !important;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn-view {
+  width: 150px !important;
 }
 
 /* ===== */
@@ -118,7 +174,7 @@ a:link, a:visited {
   }
   
   .navbar-nav li:hover {
-    border-bottom: 5px solid red;
+    border-bottom: 5px solid #ff3a3a;
     transform: translateY(-5px);
   }
 }
@@ -167,17 +223,28 @@ footer .col-sm-6 {
 /* BANNER */
 /* ====== */
 
-#home {
+.home-bg {
   background-image: url("../images/joshua-sortino-228788.jpg");
 }
 
-#projects-banner {
+.projects-bg {
   background-image: url("../images/emile-perron-190221.jpg");
   color: white;
 }
 
-#resume-banner {
+.resume-bg {
   background-image: url("../images/joanna-kosinska-478198.jpg");
+}
+
+.small-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .banner {
@@ -189,6 +256,7 @@ footer .col-sm-6 {
   /*height: 100%;*/
   /*width: 100%;*/
   /*align-items: center;*/
+  height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -211,22 +279,6 @@ footer .col-sm-6 {
   animation: blink 0.5s infinite;
   -webkit-animation: blink 0.5s infinite;
   -moz-animation: blink 0.5s infinite;
-}
-
-.jumbotron {
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  background-image: url("../images/me-cropped.jpg");
-  background-origin: center;
-  background-position: center;
-  background-size: cover;
-  border: 5px solid #ff3a3a;
 }
 
 /* ===== */

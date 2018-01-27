@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Home - Jacob&#8217s Website</title>
+		<title>404 - Jacob Sommer</title>
 		<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
 		<link rel="stylesheet" href="css/main.css" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 		<meta charset="utf-8" />
+    <script defer src="js/fontawesome-all.min.js"></script>
 	</head>
 	<body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -22,28 +23,25 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="Sommer_Home.html">Home</a><span class="item-bar"></span></li>
-            <li class="active"><a href="#">About Me <span class="sr-only">(current)</span></a></li>
-            <li><a href="Sommer_Resume.html">Resume</a></li>
-            <li><a href="Sommer_Projects.html">Projects</a></li>
-            <li><a href="Sommer_Contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html?action=about">About Me</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html?action=contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="banner" id="banner"></div>
-    <section class="jumbotron" id="home">
+    <!--<div class="banner" id="banner"></div>-->
+    <section class="jumbotron banner home-bg">
     	<div class="banner-404-text">
 	    	<h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
-	      <a href="./" style="opacity: 0" id="home-btn" class="btn-solid">Return to Home</a>
+	      <a href="./" style="opacity: 0" id="home-btn" class="btn-clear">Return to Home</a>
       </div>
     </section>
-    <!--jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	  <script src="bower_components/TheaterJS/dist/theater.min.js"></script>
-    <script src="https://use.fontawesome.com/6d136cce45.js"></script>
+    <script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/theater.min.js"></script>
     <!--Navbar-->
     <script src="js/navbar.js"></script>
     <!--Typing Animation-->

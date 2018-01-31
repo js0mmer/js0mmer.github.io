@@ -3,15 +3,17 @@
 	<head>
 		<title>404 - Jacob Sommer</title>
 		<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
-		<link rel="stylesheet" href="css/main.css" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+		<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="/css/main.css" type="text/css" />
+		<link rel="stylesheet" href="/css/resume.css" type="text/css" />
+		<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
 		<meta charset="utf-8" />
-    <script defer src="js/fontawesome-all.min.js"></script>
+		<!--Icons-->
+    <script defer src="/js/fontawesome-all.min.js"></script>
 	</head>
 	<body>
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
+      <div class="container-fluid animated fadeInLeft">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -23,27 +25,26 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html?action=about">About Me</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="index.html?action=contact">Contact</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html?action=about">About Me</a></li>
+            <li><a href="/resume.html">Resume</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/index.html?action=contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!--<div class="banner" id="banner"></div>-->
     <section class="jumbotron banner home-bg">
     	<div class="banner-404-text">
 	    	<h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
-	      <a href="./" style="opacity: 0" id="home-btn" class="btn-clear">Return to Home</a>
+	      <a href="/" style="opacity: 0" id="home-btn" class="btn-clear">Return to Home</a>
       </div>
     </section>
-    <script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/theater.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/theater.min.js"></script>
     <!--Navbar-->
-    <script src="js/navbar.js"></script>
+    <script src="/js/navbar.js"></script>
     <!--Typing Animation-->
 		<script>
     	var theater = theaterJS();
@@ -58,13 +59,13 @@
     	
     	$(document).ready(() => {
 				theater
-				  .addActor('error', { speed: 0.6, accuracy: 0.8 })
-				  .addActor('pagenotfound', { speed: 0.6, accuracy: 0.8 })
+				  .addActor('error', { speed: 0.8, accuracy: 0.8 })
+				  .addActor('pagenotfound', { speed: 0.8, accuracy: 0.8 })
 				  .addScene('error:Error 404')
 				  .addScene((done) => {
 				  	setTimeout(() => {
 					  	done();
-				  	}, 500);
+				  	}, 800);
 				  })
 				  .addScene('pagenotfound:Page Not Found')
 				  .addScene((done) => {

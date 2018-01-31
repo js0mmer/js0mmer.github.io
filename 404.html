@@ -63,11 +63,16 @@
 				theater
 				  .addActor('error', { speed: 0.8, accuracy: 0.8 })
 				  .addActor('pagenotfound', { speed: 0.8, accuracy: 0.8 })
-				  .addScene('error:Error 404')
 				  .addScene((done) => {
 				  	setTimeout(() => {
 					  	done();
 				  	}, 800);
+				  })
+				  .addScene('error:Error 404')
+				  .addScene((done) => {
+				  	setTimeout(() => {
+					  	done();
+				  	}, 500);
 				  })
 				  .addScene('pagenotfound:Page Not Found')
 				  .addScene((done) => {

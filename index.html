@@ -7,7 +7,10 @@
 		<link rel="stylesheet" href="css/main.css" type="text/css" />
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 		<meta charset="utf-8" />
+		<!--Icons-->
     <script defer src="js/fontawesome-all.min.js"></script>
+    <!--Animations-->
+		<link rel="stylesheet" href="css/animate.min.css" type="text/css" />
 	</head>
 	<body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -32,7 +35,6 @@
         </div>
       </div>
     </nav>
-    <!--<div class="banner"></div>-->
     <div class="jumbotron banner home-bg">
     	<h1 class="banner-text"><span id="hi"></span> <span id="jacob"></span></h1>
     </div>
@@ -43,11 +45,13 @@
         </div>
         <div class="row">
           <section class="col-md-12">
-        		<h1 class="center">About Me</h1>
-            <p>Hello, I am Jacob, a student with a passion for technology. I plan to be a Software Engineer or a Web Developer. I am currently a freshman in high school and I have been taking as many computer science related electives at my school as I can and plan to take more. I am eager to learn more about computers. I plan to apply to Dublin High School’s Engineering and Design Academy.</p>
-            <p>I am currently participating in two clubs related to technology. They are known as the Computer Science Association and the Tech Enthusiasts Club.  I have been coding for four years. I know several different coding languages. I have experience with graphics design, animation, and video editing. I built my own computer two years ago and I built a computer for my brother last month. I am a Principal’s Honor Roll student with a 4.0 GPA. I am taking Geometry in my freshman year as well as my second year of Spanish.</p>
-            <p>I am innovative and always working on new projects individually. Some of the coding languages I know include Java, HTML, CSS, JavaScript, Python, and C#. I also have experience developing games. I have created a few websites. I am currently in the Computer Science/Software Engineering class at my school and I have completed three projects in this course where I collaborated with other people to code a game.</p>
-            <p>Coding is one of my favorite activities. I am constantly exploring new languages and working on personal projects in my free time. Feel free to explore the rest of my website and/or contact me if you have any offers or requests. Thank you for visiting my portfolio.</p>
+        		<h1 class="center" id="about-me-text">About Me</h1>
+        		<div id="about-me-p">
+	            <p>Hello, I am Jacob, a student with a passion for technology. I plan to be a Software Engineer or a Web Developer. I am currently a freshman in high school and I have been taking as many computer science related electives at my school as I can and plan to take more. I am eager to learn more about computers. I plan to apply to Dublin High School’s Engineering and Design Academy.</p>
+	            <p>I am currently participating in two clubs related to technology. They are known as the Computer Science Association and the Tech Enthusiasts Club.  I have been coding for four years. I know several different coding languages. I have experience with graphics design, animation, and video editing. I built my own computer two years ago and I built a computer for my brother last month. I am a Principal’s Honor Roll student with a 4.0 GPA. I am taking Geometry in my freshman year as well as my second year of Spanish.</p>
+	            <p>I am innovative and always working on new projects individually. Some of the coding languages I know include Java, HTML, CSS, JavaScript, Python, and C#. I also have experience developing games. I have created a few websites. I am currently in the Computer Science/Software Engineering class at my school and I have completed three projects in this course where I collaborated with other people to code a game.</p>
+	            <p>Coding is one of my favorite activities. I am constantly exploring new languages and working on personal projects in my free time. Feel free to explore the rest of my website and/or contact me if you have any offers or requests. Thank you for visiting my portfolio.</p>
+            </div>
             <p>&nbsp;</p>
           </section>
         </div>
@@ -67,7 +71,7 @@
     </div>
     <div class="main container">
 			<section id="contact" class="col-md-12">
-				<h1 class="center">Contact</h1>
+				<h1 class="center" id="contact-text">Contact</h1>
 				<div class="flex-center">
 					<form method="POST" action="https://formspree.io/jacob.sommer@comcast.net">
 						<div class="input">
@@ -116,16 +120,54 @@
 		<script src="js/theater.min.js"></script>
     <!--Navbar-->
     <script src="js/navbar.js"></script>
+    <!--Load Animations-->
+    <script>
+    	window.onscroll = function() {
+    		var scrollBottom = $(window).scrollTop() + $(window).height();
+    		
+    		if(scrollBottom >= $('.profile-picture').offset().top) {
+    			$('.profile-picture').addClass('animated zoomIn');
+    		}
+    		
+    		if(scrollBottom >= $('#about-me-text').offset().top) {
+    			$('#about-me-text').addClass('animated fadeInDown');
+    		}
+    		
+    		if(scrollBottom >= $('#about-me-p').offset().top) {
+    			$('#about-me-p').addClass('animated fadeInLeft');
+    		}
+    		
+    		if(scrollBottom >= $('.resume-bg').offset().top) {
+    			$('.resume-bg').addClass('animated fadeInLeft');
+    		}
+    		
+    		if(scrollBottom >= $('.projects-bg').offset().top) {
+    			$('.projects-bg').addClass('animated fadeInLeft');
+    		}
+    		
+    		if(scrollBottom >= $('#contact-text').offset().top) {
+    			$('#contact-text').addClass('animated fadeInDown');
+    		}
+    		
+    		if(scrollBottom >= $('.input').offset().top) {
+    			$('.input').addClass('animated fadeInLeft');
+    		}
+    		
+    		if(scrollBottom >= $('.send-btn').offset().top) {
+    			$('.send-btn').addClass('animated fadeInLeft');
+    		}
+    	}
+    </script>
     <!--Scroll animations-->
     <script>
     	$(document).ready(() => {
     		if(location.href.includes("action=about")) {
     			$('html, body').animate({
-    				scrollTop: $('#about').offset().top - $('nav').height()
+    				scrollTop: $('#about').offset().top - $('nav').height() - 10
     			}, 500, 'linear');
     		} else if(location.href.includes("action=contact")) {
     			$('html, body').animate({
-    				scrollTop: $('#contact').offset().top - $('nav').height()
+    				scrollTop: $('#contact').offset().top - $('nav').height() - 10
     			}, 500, 'linear');
     		}
     	});
@@ -134,7 +176,7 @@
     		$('#about-link').on('click', (e) => {
     			e.preventDefault();
     			$('html, body').animate({
-    				scrollTop: $('#about').offset().top - $('nav').height()
+    				scrollTop: $('#about').offset().top - $('nav').height() - 10
     			}, 500, 'linear');
     		});
     	});
@@ -143,14 +185,10 @@
     		$('#contact-link').on('click', (e) => {
     			e.preventDefault();
     			$('html, body').animate({
-    				scrollTop: $('#contact').offset().top - $('nav').height()
+    				scrollTop: $('#contact').offset().top - $('nav').height() - 10
     			}, 500, 'linear');
     		});
     	});
-    	
-    	// window.onscroll = function() {
-    	// 	document.getElementById("banner").style.transform = 'translate(0px, ' + (document.body.scrollTop) + 'px)'
-    	// }
     </script>
     <!--Typing Animation-->
 		<script>
@@ -166,8 +204,8 @@
     	
     	$(document).ready(() => {
 				theater
-				  .addActor('hi', { speed: 0.6, accuracy: 0.8 })
-				  .addActor('jacob', { speed: 0.6, accuracy: 0.8 })
+				  .addActor('hi', { speed: 0.8, accuracy: 0.8 })
+				  .addActor('jacob', { speed: 0.8, accuracy: 0.8 })
 				  .addScene((done) => {
 				  	setTimeout(() => {
 					  	done();

@@ -13,23 +13,23 @@
   justify-content: center;
 }
 
-/*.main {*/
-/*  min-height: calc(100vh - 105px);*/
-/*  min-height: -webkit-calc(100vh - 105px);*/
-/*  min-height: -moz-calc(100vh - 105px);*/
-/*}*/
+/*.main {
+  min-height: calc(100vh - 105px);
+  min-height: -webkit-calc(100vh - 105px);
+  min-height: -moz-calc(100vh - 105px);
+}
 
-/*@media only screen and (max-width: 768px) {*/
-/*  .main {*/
-/*    min-height: calc(100vh - 142px);*/
-/*    min-height: -webkit-calc(100vh - 142px);*/
-/*    min-height: -moz-calc(100vh - 142px);*/
-/*  }*/
-/*}*/
+@media only screen and (max-width: 768px) {
+  .main {
+    min-height: calc(100vh - 142px);
+    min-height: -webkit-calc(100vh - 142px);
+    min-height: -moz-calc(100vh - 142px);
+  }
+}*/
 
-/* ======= */
+/* ====== */
 /* IMAGES */
-/* ======= */
+/* ====== */
 
 .profile-picture {
   width: 150px;
@@ -40,13 +40,6 @@
   background-position: center;
   background-size: cover;
   border: 5px solid #ff3a3a;
-  transition: all ease-in-out 0.2s;
-  -webkit-transition: all ease-in-out 0.2s;
-  -moz-transition: all ease-in-out 0.2s;
-}
-
-.profile-picture:hover {
-  transform: scale(1.1);
 }
 
 /* ======= */
@@ -355,35 +348,4 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   } to {
     opacity: 1;
   }
-}
-
-/* === */
-/* OLD */
-/* === */
-
-#blockrunner {
-  background-image: url("../images/blockrunnerblurred.jpg");
-}
-
-#flappybird {
-  background-image: url("../images/flappybird.jpg");
-}
-
-#snake {
-  background-image: url("../images/snake.jpg");
-}
-
-#tomatotapper {
-  background-image: url("../images/tomatotapperresized.jpg");
-}
-
-.jumboWrap {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 100vh;
 }

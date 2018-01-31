@@ -3,7 +3,7 @@
 	<head>
 		<title>Home - Jacob Sommer</title>
 		<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" href="css/main.css" type="text/css" />
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 		<meta charset="utf-8" />
@@ -14,7 +14,7 @@
 	</head>
 	<body>
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
+      <div class="container-fluid animated fadeInLeft">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -209,7 +209,7 @@
 				  .addScene((done) => {
 				  	setTimeout(() => {
 					  	done();
-				  	}, 500);
+				  	}, 800);
 				  })
 				  .addScene('hi:Hi.')
 				  .addScene((done) => {

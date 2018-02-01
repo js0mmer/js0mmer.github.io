@@ -125,6 +125,10 @@
     	window.onscroll = function() {
     		var scrollBottom = $(window).scrollTop() + $(window).height();
     		
+    		if($(window).width() <= 768) {
+    			scrollBottom -= 10;
+    		}
+    		
     		if(scrollBottom >= $('.profile-picture').offset().top) {
     			$('.profile-picture').addClass('animated zoomIn');
     		}

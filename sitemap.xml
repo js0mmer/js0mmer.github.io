@@ -4,6 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<<<<<<< HEAD
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
@@ -40,3 +41,15 @@
   <loc>http://jsommer.tk/games/blockrunner/</loc>
 </url>
 </urlset>
+=======
+  <url>
+    <loc>https://jsommer.tk/</loc>
+  </url>
+  <url>
+    <loc>https://jsommer.tk/resume.html</loc>
+  </url>
+  <url>
+    <loc>https://jsommer.tk/projects.html</loc>
+  </url>
+</urlset>
+>>>>>>> 78e363868634a565293675dc0ad16e1e3fdbae75

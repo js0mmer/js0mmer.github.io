@@ -13,6 +13,14 @@
   justify-content: center;
 }
 
+::selection {
+  background: #ff8f8f;
+}
+
+::-moz-selection {
+  background: #ff8f8f;
+}
+
 /*.main {
   min-height: calc(100vh - 105px);
   min-height: -webkit-calc(100vh - 105px);

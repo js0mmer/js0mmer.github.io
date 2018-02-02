@@ -54,6 +54,9 @@
 
 .progress-bar {
   background-color: #ff3a3a;
+}
+
+.animated-bar {
   animation: expand 2s forwards 1;
   -moz-animation: expand 2s forwards 1;
   -webkit-animation: expand 2s forwards 1;

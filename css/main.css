@@ -266,6 +266,10 @@ footer .col-sm-6 {
   width: 100% !important;
 }
 
+.no-margin {
+  margin-bottom: 0 !important;
+}
+
 .cursor::after {
   content: '|';
   animation: blink 0.5s infinite;

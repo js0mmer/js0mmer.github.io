@@ -79,7 +79,7 @@
   border-radius: 25px;
 }
 
-.btn-outline:hover {
+.btn-outline:hover, .btn-outline:focus {
   transition: all ease-in-out 0.7s;
   -webkit-transition: all ease-in-out 0.7s;
   -moz-transition: all ease-in-out 0.7s;
@@ -108,7 +108,7 @@
   border: none;
 }
 
-.btn-solid:hover {
+.btn-solid:hover, .btn-solid:focus {
   transition: all ease-in-out 0.7s;
   -webkit-transition: all ease-in-out 0.7s;
   -moz-transition: all ease-in-out 0.7s;
@@ -138,7 +138,7 @@
   border-radius: 25px;
 }
 
-.btn-clear:hover {
+.btn-clear:hover, .btn-clear:focus {
   transition: all ease-in-out 0.7s;
   -webkit-transition: all ease-in-out 0.7s;
   -moz-transition: all ease-in-out 0.7s;

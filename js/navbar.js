@@ -15,4 +15,12 @@ $(function() {
 	$('.active').on('click', (e) => {
 		scrollTop(e)
 	});
+	
+	$('.navbar-toggle').on('click', (e) => {
+		if($(this).attr("aria-expanded")) {
+			$(this).addClass("active-toggle");
+		} else {
+			$(this).removeClass("active-toggle");
+		}
+	});
 });

@@ -187,16 +187,23 @@ a:link, a:visited {
   }
 }
 
-.navbar-toggle:active:nth-child(2) {
-  transform: skew(0, 5deg);
+.icon-bar {
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
 }
 
-.navbar-toggle:active:nth-child(3) {
-  
+button[class='navbar-toggle'] .icon-bar {
+  transform: rotate(45deg) translate(4px, 4px);
 }
 
-.navbar-toggle:active:nth-child(4) {
-  transform: skew(0, -5deg);
+button[class='navbar-toggle'] .icon-bar + .icon-bar {
+  opacity: 0;
+}
+
+button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
+  opacity: 1 !important;
+  transform: rotate(-45deg) translate(4px, -4px);
 }
 
 /* ====== */

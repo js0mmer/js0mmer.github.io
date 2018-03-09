@@ -8,6 +8,11 @@
   margin-right: auto;
 }
 
+.colored-box {
+  background-color: #ff3a3a;
+  padding: 25px;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;

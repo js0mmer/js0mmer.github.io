@@ -175,16 +175,17 @@ a:link, a:visited {
 @media only screen and (min-width: 768px) {
   .navbar-nav {
     height: 50px;
+    overflow: hidden;
   }
   
   .navbar-nav li {
     transition: all ease-in-out 0.2s;
     -webkit-transition: all ease-in-out 0.2s;
     -moz-transition: all ease-in-out 0.2s;
+    border-bottom: 5px solid #ff3a3a;
   }
   
   .navbar-nav li:hover {
-    border-bottom: 5px solid #ff3a3a;
     transform: translateY(-5px);
     transition: all ease-in-out 0.2s;
     -webkit-transition: all ease-in-out 0.2s;

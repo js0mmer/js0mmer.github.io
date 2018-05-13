@@ -200,7 +200,7 @@ a:link, a:visited {
 }
 
 button[class='navbar-toggle'] .icon-bar {
-  transform: rotate(45deg) translate(4px, 4px);
+  transform: rotate(135deg) translate(4px, -4px);
 }
 
 button[class='navbar-toggle'] .icon-bar + .icon-bar {
@@ -209,7 +209,7 @@ button[class='navbar-toggle'] .icon-bar + .icon-bar {
 
 button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
   opacity: 1 !important;
-  transform: rotate(-45deg) translate(4px, -4px);
+  transform: rotate(-135deg) translate(4px, 4px);
 }
 
 /* ====== */

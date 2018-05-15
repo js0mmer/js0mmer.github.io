@@ -156,6 +156,10 @@
   width: 150px !important;
 }
 
+.btn-references {
+  width: 130px !important;
+}
+
 /* ===== */
 /* LINKS */
 /* ===== */
@@ -383,4 +387,13 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   } to {
     opacity: 1;
   }
+}
+
+/* ===== */
+/* OTHER */
+/* ===== */
+
+#resume iframe {
+  width: 100%;
+  height: 100vh;
 }

@@ -394,6 +394,6 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
 /* ===== */
 
 #resume iframe {
-  width: 100%;
-  height: 100vh;
+  width: 1000px;
+  height: 1030px;
 }

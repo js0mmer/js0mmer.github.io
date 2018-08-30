@@ -394,3 +394,11 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   max-width: 100%;
   height: 1030px;
 }
+
+#flash-prompt a, #flash-prompt a:visited {
+  color: #00E;
+}
+
+#flash-prompt a:hover, #flash-prompt a:active, #flash-prompt a:focus {
+  color: #00a !important;
+}

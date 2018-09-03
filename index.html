@@ -122,6 +122,13 @@
     <script src="js/parallax.js"></script>
     <!--Load Animations-->
     <script>
+    	/* global $ */
+	    var navbar = $('.navbar');
+      var active = $('.active a');
+      
+      navbar.css('background', 'transparent');
+      navbar.css('border-color', 'transparent');
+      active.css('background', 'transparent');
       window.onscroll = function() {
         var scrollBottom = $(window).scrollTop() + $(window).height();
         
@@ -159,6 +166,16 @@
         
         if(scrollBottom >= $('.send-btn').offset().top) {
           $('.send-btn').addClass('animated fadeInLeft');
+        }
+        
+        if($(window).scrollTop() > 20) {
+          navbar.css('background', '#f8f8f8');
+          navbar.css('border-color', '#e7e7e7');
+          active.css('background', 'rgb(231, 231, 231)');
+        } else {
+          navbar.css('background', 'transparent');
+          navbar.css('border-color', 'transparent');
+          active.css('background', 'transparent');
         }
       }
     </script>

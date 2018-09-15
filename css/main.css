@@ -305,6 +305,19 @@ footer .col-sm-6 {
   width: 100% !important;
 }
 
+.banner .glyphicon {
+  display: flex;
+  justify-content: center;
+  padding: 2vh 0 !important;
+  width: 100% !important;
+  transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  animation: bounce 2.5s infinite;
+  -webkit-animation: bounce 2.5s infinite;
+  -moz-animation: bounce 2.5s infinite;
+}
+
 .banner-404-text {
   padding: 34vh 20vw !important;
   width: 100% !important;
@@ -393,6 +406,14 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
     opacity: 0;
   } to {
     opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  from {
+    margin-top: 0;
+  } to {
+    margin-top: 25px;
   }
 }
 

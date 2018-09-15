@@ -36,7 +36,8 @@
       </div>
     </nav>
     <div class="jumbotron banner home-bg">
-      <h1 class="banner-text"><span id="hi"></span> <span id="jacob"></span></h1>
+      <h1 class="banner-text"><span id="hi">&nbsp;</span> <span id="jacob"></span></h1>
+      <span class="glyphicon glyphicon-chevron-down"></span>
     </div>
     <div class="main container">
       <section id="about" class="col-md-12">
@@ -134,6 +135,12 @@
         
         if($(window).width() <= 768) {
           scrollBottom += 70;
+        }
+        
+        if($(window).scrollTop() > 0) {
+          $('.banner .glyphicon').css("opacity", 0);
+        } else {
+          $('.banner .glyphicon').css("opacity", 1);
         }
         
         if(scrollBottom >= $('.profile-picture').offset().top) {

@@ -432,7 +432,7 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
 #resume iframe {
   width: 1000px;
   max-width: 100%;
-  height: 1030px;
+  height: 1200px;
 }
 
 #flash-prompt a, #flash-prompt a:visited {

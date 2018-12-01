@@ -324,6 +324,7 @@ footer .col-sm-6 {
   animation: bounce 2.5s infinite;
   -webkit-animation: bounce 2.5s infinite;
   -moz-animation: bounce 2.5s infinite;
+  opacity: 0;
 }
 
 .banner-404-text {

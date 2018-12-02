@@ -74,19 +74,5 @@
     <script src="js/theater.min.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/navbar.js"></script>
-    <!--Load Animations-->
-    <script>
-      window.onscroll = function() {
-        var scrollBottom = $(window).scrollTop() + $(window).height();
-        
-        if($(window).width() <= 768) {
-          scrollBottom += 60;
-        }
-        
-        if(scrollBottom >= $('.progress-bar').offset().top) {
-          $('.progress-bar').addClass('animated-bar');
-        }
-      }
-    </script>
   </body>
 </html>

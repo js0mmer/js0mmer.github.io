@@ -303,7 +303,7 @@ footer .col-sm-6 {
   height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 110%;
   background-position: center;
   font-size: 5rem !important;
 }

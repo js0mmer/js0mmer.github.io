@@ -309,8 +309,15 @@ footer .col-sm-6 {
 }
 
 .banner-text {
-  padding: 37vh 20vw !important;
+  padding: 34vh 20vw !important;
   width: 100% !important;
+}
+
+@media only screen and (min-height: 768px) {
+  .banner-text {
+    padding: 37vh 20vw !important;
+    width: 100% !important;
+  }
 }
 
 .banner .glyphicon {

@@ -279,7 +279,7 @@ footer .col-sm-6 {
   background-image: url("../images/joshua-sortino-228788.jpg");
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 801px) {
   .home-bg {
     background-size: 102% !important;
   }

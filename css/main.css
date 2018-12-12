@@ -48,6 +48,18 @@
   }
 }*/
 
+/* ===== */
+/* LINKS */
+/* ===== */
+
+a:link, a:visited {
+  color: #ff0000;
+}
+
+.main a:hover, .main a:active, .main a:focus {
+  color: #990000 !important;
+}
+
 /* ====== */
 /* IMAGES */
 /* ====== */
@@ -61,6 +73,96 @@
   background-position: center;
   background-size: cover;
   border: 5px solid #ff3a3a;
+}
+
+/* ====== */
+/* BANNER */
+/* ====== */
+
+.home-bg {
+  background-image: url("../images/joshua-sortino-228788.jpg");
+}
+
+@media only screen and (min-width: 801px) {
+  .home-bg {
+    background-size: 102% !important;
+  }
+}
+
+.projects-bg {
+  background-image: url("../images/emile-perron-190221.jpg");
+  color: white;
+}
+
+.resume-bg {
+  background-image: url("../images/joanna-kosinska-478198.jpg");
+}
+
+.small-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+}
+
+.small-banner h2 {
+  margin-bottom: 0;
+}
+
+.banner {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  font-size: 5rem !important;
+}
+
+.banner-text {
+  padding: 34vh 20vw !important;
+  width: 100% !important;
+}
+
+@media only screen and (min-height: 768px) {
+  .banner-text {
+    padding: 37vh 20vw !important;
+    width: 100% !important;
+  }
+}
+
+.banner .glyphicon {
+  display: flex;
+  justify-content: center;
+  padding: 2vh 0 !important;
+  width: 100% !important;
+  transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  animation: bounce 2.5s infinite;
+  -webkit-animation: bounce 2.5s infinite;
+  -moz-animation: bounce 2.5s infinite;
+  opacity: 0;
+}
+
+.banner-404-text {
+  padding: 34vh 20vw !important;
+  width: 100% !important;
+}
+
+.no-margin {
+  margin-bottom: 0 !important;
+}
+
+.cursor::after {
+  content: '|';
+  animation: blink 0.5s infinite;
+  -webkit-animation: blink 0.5s infinite;
+  -moz-animation: blink 0.5s infinite;
 }
 
 /* ======= */
@@ -164,18 +266,6 @@
   width: 150px !important;
 }
 
-/* ===== */
-/* LINKS */
-/* ===== */
-
-a:link, a:visited {
-  color: #ff0000;
-}
-
-.main a:hover, .main a:active, .main a:focus {
-  color: #990000 !important;
-}
-
 /* ====== */
 /* NAVBAR */
 /* ====== */
@@ -269,96 +359,6 @@ footer .col-sm-6 {
 
 .fa-github, .fa-envelope {
   color: black;
-}
-
-/* ====== */
-/* BANNER */
-/* ====== */
-
-.home-bg {
-  background-image: url("../images/joshua-sortino-228788.jpg");
-}
-
-@media only screen and (min-width: 801px) {
-  .home-bg {
-    background-size: 102% !important;
-  }
-}
-
-.projects-bg {
-  background-image: url("../images/emile-perron-190221.jpg");
-  color: white;
-}
-
-.resume-bg {
-  background-image: url("../images/joanna-kosinska-478198.jpg");
-}
-
-.small-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  flex-direction: column;
-}
-
-.small-banner h2 {
-  margin-bottom: 0;
-}
-
-.banner {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  font-size: 5rem !important;
-}
-
-.banner-text {
-  padding: 34vh 20vw !important;
-  width: 100% !important;
-}
-
-@media only screen and (min-height: 768px) {
-  .banner-text {
-    padding: 37vh 20vw !important;
-    width: 100% !important;
-  }
-}
-
-.banner .glyphicon {
-  display: flex;
-  justify-content: center;
-  padding: 2vh 0 !important;
-  width: 100% !important;
-  transition: 0.5s linear all;
-  -webkit-transition: 0.5s linear all;
-  -moz-transition: 0.5s linear all;
-  animation: bounce 2.5s infinite;
-  -webkit-animation: bounce 2.5s infinite;
-  -moz-animation: bounce 2.5s infinite;
-  opacity: 0;
-}
-
-.banner-404-text {
-  padding: 34vh 20vw !important;
-  width: 100% !important;
-}
-
-.no-margin {
-  margin-bottom: 0 !important;
-}
-
-.cursor::after {
-  content: '|';
-  animation: blink 0.5s infinite;
-  -webkit-animation: blink 0.5s infinite;
-  -moz-animation: blink 0.5s infinite;
 }
 
 /* ===== */

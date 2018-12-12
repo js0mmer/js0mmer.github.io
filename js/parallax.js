@@ -1,5 +1,3 @@
-/* global $ */
-
 var mobile = screen.width <= 800;
 
 if(mobile) {

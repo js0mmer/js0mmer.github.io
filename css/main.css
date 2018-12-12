@@ -312,9 +312,6 @@ footer .col-sm-6 {
   background-size: cover;
   background-position: center;
   font-size: 5rem !important;
-  transition: 0.1s linear background-position-x;
-  -webkit-transition: 0.1s linear background-position-x;
-  -moz-transition: 0.1s linear background-position-x;
 }
 
 .banner-text {

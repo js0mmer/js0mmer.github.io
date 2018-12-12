@@ -303,6 +303,11 @@ footer .col-sm-6 {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  flex-direction: column;
+}
+
+.small-banner h2 {
+  margin-bottom: 0;
 }
 
 .banner {
@@ -455,4 +460,8 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
 
 #flash-prompt a:hover, #flash-prompt a:active, #flash-prompt a:focus {
   color: #00a !important;
+}
+
+#about-me-p {
+  margin-bottom: 30px;
 }

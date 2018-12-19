@@ -112,9 +112,9 @@ a:link, a:visited {
 }
 
 .icon-bar {
-  transition: all ease-in-out 0.2s;
-  -webkit-transition: all ease-in-out 0.2s;
-  -moz-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
 }
 
 button[class='navbar-toggle'] .icon-bar {
@@ -123,6 +123,7 @@ button[class='navbar-toggle'] .icon-bar {
 
 button[class='navbar-toggle'] .icon-bar + .icon-bar {
   opacity: 0;
+  transform: rotate(0) translate(0, 0);
 }
 
 button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {

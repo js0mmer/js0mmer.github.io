@@ -27,10 +27,10 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="#" id="about-link">About Me</a></li>
+            <li><a href="#about" id="about-link">About Me</a></li>
             <li><a href="resume">Resume/Work Experience</a></li>
             <li><a href="projects">Projects</a></li>
-            <li><a href="#" id="contact-link">Contact</a></li>
+            <li><a href="#contact" id="contact-link">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -177,37 +177,23 @@
         }
       }
     </script>
-    <!-- Direct links-->
+    <!-- Anchor links-->
     <script>
-      $(document).ready(() => {
-        if(location.href.includes("action=about")) {
-          $('html, body').animate({
-            scrollTop: $('#about').offset().top - $('nav').height() - 10
-          }, 500, 'linear');
-        } else if(location.href.includes("action=contact")) {
-          $('html, body').animate({
-            scrollTop: $('#contact').offset().top - $('nav').height() - 10
-          }, 500, 'linear');
-        }
+    	$(document).ready(() => {
+      	if(window.location.href.endsWith("?about") || window.location.href.endsWith("?contact")) {
+	        $('html, body').animate({
+	          scrollTop: $('#' + window.location.href.split("?")[1]).offset().top - $('nav').height() - 10
+	        }, 500, 'linear');
+      	}
       });
-    
-      $(function() {
-        $('#about-link').on('click', (e) => {
-          e.preventDefault();
-          $('html, body').animate({
-            scrollTop: $('#about').offset().top - $('nav').height() - 10
-          }, 500, 'linear');
-        });
-      });
-    
-      $(function() {
-        $('#contact-link').on('click', (e) => {
-          e.preventDefault();
-          $('html, body').animate({
-            scrollTop: $('#contact').offset().top - $('nav').height() - 10
-          }, 500, 'linear');
-        });
-      });
+      
+      $(document).on('click', 'a[href^="#"]', function (e) {
+				e.preventDefault();
+				
+				$('html, body').animate({
+					scrollTop: $($.attr(this, 'href')).offset().top - $('nav').height() - 10
+				}, 500);
+			});
     </script>
     <!-- Typing animation -->
     <script>
@@ -248,27 +234,27 @@
 			var offsetX = screen.width * 0.01;
 			var offsetY = screen.height * 0.01;
 			
-			if(mobile) {
-		    $('.banner').css('background-position-y', $(window).scrollTop() / 2);
+			if (mobile) {
+				$('.banner').css('background-position-y', $(window).scrollTop() / 2);
 			} else {
-		    $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
+				$('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
 			}
 			
-			$(window).scroll(function() {
-		    if(mobile) {
-      		$('.banner').css('background-position-y', $(window).scrollTop() / 2);
-		    } else {
-	        $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
-		    }
+			$(window).scroll(() => {
+				if (mobile) {
+					$('.banner').css('background-position-y', $(window).scrollTop() / 2);
+				} else {
+					$('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
+				}
 			});
 			
-			if(!mobile) {
-	    	document.onmousemove = function(e) {
+			if (!mobile) {
+				document.onmousemove = function (e) {
 					var x = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
 					var y = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
 					
 					$('.banner').css('background-position-x', (x - $('.banner').width() / 2) / 100 - offsetX);
-				  $('.banner').css('background-position-y', -$(window).scrollTop() / 2 + (y - $('.banner').height() / 2) / 100 - offsetY);
+					$('.banner').css('background-position-y', -$(window).scrollTop() / 2 + (y - $('.banner').height() / 2) / 100 - offsetY);
 				};
 			}
     </script>

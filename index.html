@@ -124,49 +124,49 @@
       window.onscroll = function() {
         var scrollBottom = $(window).scrollTop() + $(window).height();
         
-        if($(window).width() <= 768) {
+        if ($(window).width() <= 768) {
           scrollBottom += 70;
         }
         
-        if($(window).scrollTop() > 0) {
+        if ($(window).scrollTop() > 0) {
           $('.banner .glyphicon').css("opacity", 0);
         } else {
           $('.banner .glyphicon').css("opacity", 1);
         }
         
-        if(scrollBottom >= $('.profile-picture').offset().top) {
+        if (scrollBottom >= $('.profile-picture').offset().top) {
           $('.profile-picture').addClass('animated zoomIn');
         }
         
-        if(scrollBottom >= $('#about-me-text').offset().top) {
+        if (scrollBottom >= $('#about-me-text').offset().top) {
           $('#about-me-text').addClass('animated fadeInDown');
         }
         
-        if(scrollBottom >= $('#about-me-p').offset().top) {
+        if (scrollBottom >= $('#about-me-p').offset().top) {
           $('#about-me-p').addClass('animated fadeInLeft');
         }
         
-        if(scrollBottom >= $('.resume-bg').offset().top) {
+        if (scrollBottom >= $('.resume-bg').offset().top) {
           $('.resume-bg').addClass('animated fadeInLeft');
         }
         
-        if(scrollBottom >= $('.projects-bg').offset().top) {
+        if (scrollBottom >= $('.projects-bg').offset().top) {
           $('.projects-bg').addClass('animated fadeInLeft');
         }
         
-        if(scrollBottom >= $('#contact-text').offset().top) {
+        if (scrollBottom >= $('#contact-text').offset().top) {
           $('#contact-text').addClass('animated fadeInDown');
         }
         
-        if(scrollBottom >= $('.input').offset().top) {
+        if (scrollBottom >= $('.input').offset().top) {
           $('.input').addClass('animated fadeInLeft');
         }
         
-        if(scrollBottom >= $('.send-btn').offset().top) {
+        if (scrollBottom >= $('.send-btn').offset().top) {
           $('.send-btn').addClass('animated fadeInLeft');
         }
         
-        if($(window).scrollTop() > 20) {
+        if ($(window).scrollTop() > 20) {
           navbar.css('background', '#f8f8f8');
           navbar.css('border-color', '#e7e7e7');
           active.css('background', 'rgb(231, 231, 231)');

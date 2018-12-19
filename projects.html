@@ -107,20 +107,21 @@
     <script src="js/theater.min.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/navbar.js"></script>
+    <!-- Adobe Flash check (for Scratch Project) -->
     <script>
       var hasFlash = false;
       try {
           hasFlash = Boolean(new ActiveXObject('ShockwaveFlash.ShockwaveFlash'));
-      } catch(exception) {
+      } catch (exception) {
           hasFlash = ('undefined' != typeof navigator.mimeTypes['application/x-shockwave-flash']);
       }
       
-      if(!hasFlash) {
-        document.getElementById("scratch").style.display = "none";
-        document.getElementById("flash-prompt").style.display = "block";
+      if (!hasFlash) {
+        $('#scratch').css('display', 'none');
+        $('#flash-prompt').css('display', 'block');
       } else {
-        document.getElementById("scratch").style.display = "block";
-        document.getElementById("flash-prompt").style.display = "none";
+        $('#scratch').css('display', 'block');
+        $('#flash-prompt').css('display', 'none');
       }
     </script>
   </body>

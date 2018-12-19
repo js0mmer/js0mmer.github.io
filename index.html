@@ -129,9 +129,9 @@
         }
         
         if ($(window).scrollTop() > 0) {
-          $('.banner .glyphicon').css("opacity", 0);
+          $('.banner .glyphicon').css('opacity', 0);
         } else {
-          $('.banner .glyphicon').css("opacity", 1);
+          $('.banner .glyphicon').css('opacity', 1);
         }
         
         if (scrollBottom >= $('.profile-picture').offset().top) {
@@ -180,9 +180,9 @@
     <!-- Anchor links-->
     <script>
       $(document).ready(() => {
-        if(window.location.href.endsWith("?about") || window.location.href.endsWith("?contact")) {
+        if(window.location.href.endsWith('?about') || window.location.href.endsWith('?contact')) {
           $('html, body').animate({
-            scrollTop: $('#' + window.location.href.split("?")[1]).offset().top - $('nav').height() - 10
+            scrollTop: $('#' + window.location.href.split('?')[1]).offset().top - $('nav').height() - 10
           }, 500, 'linear');
         }
       });
@@ -224,7 +224,7 @@
           })
           .addScene('jacob:I\'m Jacob.')
           .addScene(() => {
-            $('.glyphicon-chevron-down').css("opacity", 1);
+            $('.glyphicon-chevron-down').css('opacity', 1);
           });
       });
     </script>

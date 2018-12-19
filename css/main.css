@@ -76,6 +76,61 @@ a:link, a:visited {
 }
 
 /* ====== */
+/* NAVBAR */
+/* ====== */
+
+.navbar, .active a {
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-nav {
+    height: 50px;
+    overflow: hidden;
+  }
+  
+  .navbar-nav li {
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    border-bottom: 5px solid #ff3a3a;
+  }
+  
+  .navbar-nav li:hover {
+    transform: translateY(-5px);
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+  }
+}
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.icon-bar {
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+}
+
+button[class='navbar-toggle'] .icon-bar {
+  transform: rotate(135deg) translate(4px, -4px);
+}
+
+button[class='navbar-toggle'] .icon-bar + .icon-bar {
+  opacity: 0;
+}
+
+button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
+  opacity: 1 !important;
+  transform: rotate(-135deg) translate(4px, 4px);
+}
+
+/* ====== */
 /* BANNER */
 /* ====== */
 
@@ -264,61 +319,6 @@ a:link, a:visited {
 
 .btn-view {
   width: 150px !important;
-}
-
-/* ====== */
-/* NAVBAR */
-/* ====== */
-
-.navbar, .active a {
-  transition: all ease-in-out 0.2s;
-  -webkit-transition: all ease-in-out 0.2s;
-  -moz-transition: all ease-in-out 0.2s;
-}
-
-@media only screen and (min-width: 768px) {
-  .navbar-nav {
-    height: 50px;
-    overflow: hidden;
-  }
-  
-  .navbar-nav li {
-    transition: all ease-in-out 0.2s;
-    -webkit-transition: all ease-in-out 0.2s;
-    -moz-transition: all ease-in-out 0.2s;
-    border-bottom: 5px solid #ff3a3a;
-  }
-  
-  .navbar-nav li:hover {
-    transform: translateY(-5px);
-    transition: all ease-in-out 0.2s;
-    -webkit-transition: all ease-in-out 0.2s;
-    -moz-transition: all ease-in-out 0.2s;
-  }
-}
-
-.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.icon-bar {
-  transition: all ease-in-out 0.2s;
-  -webkit-transition: all ease-in-out 0.2s;
-  -moz-transition: all ease-in-out 0.2s;
-}
-
-button[class='navbar-toggle'] .icon-bar {
-  transform: rotate(135deg) translate(4px, -4px);
-}
-
-button[class='navbar-toggle'] .icon-bar + .icon-bar {
-  opacity: 0;
-}
-
-button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
-  opacity: 1 !important;
-  transform: rotate(-135deg) translate(4px, 4px);
 }
 
 /* ====== */

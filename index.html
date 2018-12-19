@@ -115,7 +115,7 @@
     <script src="js/navbar.js"></script>
     <!-- Load animations -->
     <script>
-	    var navbar = $('.navbar');
+      var navbar = $('.navbar');
       var active = $('.active a');
       
       navbar.css('background', 'transparent');
@@ -179,21 +179,21 @@
     </script>
     <!-- Anchor links-->
     <script>
-    	$(document).ready(() => {
-      	if(window.location.href.endsWith("?about") || window.location.href.endsWith("?contact")) {
-	        $('html, body').animate({
-	          scrollTop: $('#' + window.location.href.split("?")[1]).offset().top - $('nav').height() - 10
-	        }, 500, 'linear');
-      	}
+      $(document).ready(() => {
+        if(window.location.href.endsWith("?about") || window.location.href.endsWith("?contact")) {
+          $('html, body').animate({
+            scrollTop: $('#' + window.location.href.split("?")[1]).offset().top - $('nav').height() - 10
+          }, 500, 'linear');
+        }
       });
       
       $(document).on('click', 'a[href^="#"]', function (e) {
-				e.preventDefault();
-				
-				$('html, body').animate({
-					scrollTop: $($.attr(this, 'href')).offset().top - $('nav').height() - 10
-				}, 500);
-			});
+        e.preventDefault();
+        
+        $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top - $('nav').height() - 10
+        }, 500);
+      });
     </script>
     <!-- Typing animation -->
     <script>
@@ -224,39 +224,39 @@
           })
           .addScene('jacob:I\'m Jacob.')
           .addScene(() => {
-          	$('.glyphicon-chevron-down').css("opacity", 1);
+            $('.glyphicon-chevron-down').css("opacity", 1);
           });
       });
     </script>
     <!-- Parallax -->
     <script>
-			var mobile = screen.width <= 800;
-			var offsetX = screen.width * 0.01;
-			var offsetY = screen.height * 0.01;
-			
-			if (mobile) {
-				$('.banner').css('background-position-y', $(window).scrollTop() / 2);
-			} else {
-				$('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
-			}
-			
-			$(window).scroll(() => {
-				if (mobile) {
-					$('.banner').css('background-position-y', $(window).scrollTop() / 2);
-				} else {
-					$('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
-				}
-			});
-			
-			if (!mobile) {
-				document.onmousemove = function (e) {
-					var x = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-					var y = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-					
-					$('.banner').css('background-position-x', (x - $('.banner').width() / 2) / 100 - offsetX);
-					$('.banner').css('background-position-y', -$(window).scrollTop() / 2 + (y - $('.banner').height() / 2) / 100 - offsetY);
-				};
-			}
+      var mobile = screen.width <= 800;
+      var offsetX = screen.width * 0.01;
+      var offsetY = screen.height * 0.01;
+      
+      if (mobile) {
+        $('.banner').css('background-position-y', $(window).scrollTop() / 2);
+      } else {
+        $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
+      }
+      
+      $(window).scroll(() => {
+        if (mobile) {
+          $('.banner').css('background-position-y', $(window).scrollTop() / 2);
+        } else {
+          $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
+        }
+      });
+      
+      if (!mobile) {
+        document.onmousemove = function (e) {
+          var x = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+          var y = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+          
+          $('.banner').css('background-position-x', (x - $('.banner').width() / 2) / 100 - offsetX);
+          $('.banner').css('background-position-y', -$(window).scrollTop() / 2 + (y - $('.banner').height() / 2) / 100 - offsetY);
+        };
+      }
     </script>
   </body>
 </html>

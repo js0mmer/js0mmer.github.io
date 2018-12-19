@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>404 - Jacob Sommer</title>
-		<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
-		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-		<link rel="stylesheet" href="css/main.css" type="text/css" />
-		<link rel="stylesheet" href="css/resume.css" type="text/css" />
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-		<meta charset="utf-8" />
-	</head>
-	<body>
+  <head>
+    <title>404 - Jacob Sommer</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/resume.css" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -33,56 +33,56 @@
       </div>
     </nav>
     <section class="jumbotron banner home-bg no-margin">
-    	<div class="banner-404-text">
-	    	<h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
-	      <a href="./" style="opacity: 0" id="home-btn" class="btn-clear">Return to Home</a>
+      <div class="banner-404-text">
+        <h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
+        <a href="./" style="opacity: 0" id="home-btn" class="btn-clear">Return to Home</a>
       </div>
     </section>
     <script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/theater.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theater.min.js"></script>
     <script src="js/navbar.js"></script>
-		<script>
-			// Clear navbar
+    <script>
+      // Clear navbar
       $('.navbar').css('background', 'transparent');
       $('.navbar').css('border-color', 'transparent');
       $('.active a').css('background', 'transparent');
-		
-			// Typing Animation
-    	var theater = theaterJS();
-
-			theater
+      
+      // Typing Animation
+      var theater = theaterJS();
+      
+      theater
         .on('type:start, erase:start', () => {
             theater.getCurrentActor().$element.classList.add('cursor');
         })
         .on('type:end, erase:end', () => {
             theater.getCurrentActor().$element.classList.remove('cursor');
         });
-    	
-    	$(document).ready(() => {
-				theater
-				  .addActor('error', { speed: 1, accuracy: 0.8 })
-				  .addActor('pagenotfound', { speed: 1, accuracy: 0.8 })
-				  .addScene((done) => {
-				  	setTimeout(() => {
-					  	done();
-				  	}, 800);
-				  })
-				  .addScene('error:Error 404')
-				  .addScene((done) => {
-				  	setTimeout(() => {
-					  	done();
-				  	}, 500);
-				  })
-				  .addScene('pagenotfound:Page Not Found')
-				  .addScene((done) => {
-				  	setTimeout(() => {
-					  	document.getElementById("home-btn").style.opacity = '1';
-				  	}, 300);
-				  	
-				  	done();
-				  })
-    	});
-		</script>
-	</body>
+        
+      $(document).ready(() => {
+        theater
+          .addActor('error', { speed: 1, accuracy: 0.8 })
+          .addActor('pagenotfound', { speed: 1, accuracy: 0.8 })
+          .addScene((done) => {
+            setTimeout(() => {
+              done();
+            }, 800);
+          })
+          .addScene('error:Error 404')
+          .addScene((done) => {
+            setTimeout(() => {
+              done();
+            }, 500);
+          })
+          .addScene('pagenotfound:Page Not Found')
+          .addScene((done) => {
+            setTimeout(() => {
+              $('#home-btn').css('opacity', 1);
+            }, 300);
+            
+            done();
+          })
+      });
+    </script>
+  </body>
 </html>

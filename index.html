@@ -241,7 +241,7 @@
     </script>
     <!-- Parallax -->
     <script>
-    	// offset accounts for extra 1% added to each side of background so no white is shown when moving it
+      // offset accounts for extra 1% added to each side of background so no white is shown when moving it
       function offsetX() {
         return screen.width * 0.01;
       }
@@ -278,15 +278,15 @@
       });
       
       // mouse move effect on desktop
-      if (screen.width > 800) {
-        document.onmousemove = function (e) {
+      document.onmousemove = function (e) {
+        if (screen.width > 800) {
           var x = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
           var y = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
           
           $('.banner').css('background-position-x', (x - $('.banner').width() / 2) / 100 - offsetX());
           $('.banner').css('background-position-y', -$(window).scrollTop() / 2 + (y - $('.banner').height() / 2) / 100 - offsetY());
-        };
-      }
+        }
+      };
     </script>
   </body>
 </html>

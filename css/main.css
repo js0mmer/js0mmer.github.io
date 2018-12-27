@@ -205,6 +205,12 @@ button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .home-bg {
+    background-position-x: auto;
+  }
+}
+
 .projects-bg {
   background-image: url("../images/emile-perron-190221.jpg");
   color: white;

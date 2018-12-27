@@ -17,13 +17,13 @@ $('.active').on('click', (e) => {
 });
 
 // remove blur and make text invisible when mobile nav collapses
-$('nav').on('hide.bs.collapse', function() {
+$('nav').on('hide.bs.collapse', () => {
   $('.content').css('filter', 'none');
   $('.navbar-nav li a').css('color', 'transparent');
 });
 
 // add blur and make text visible when mobile nav expands
-$('nav').on('show.bs.collapse', function() {
+$('nav').on('show.bs.collapse', () => {
   $('.content').css('filter', 'blur(4px) opacity(75%)');
   $('.navbar-nav li a').css('color', '#333');
   // in case window resizes

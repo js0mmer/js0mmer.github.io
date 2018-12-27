@@ -143,6 +143,10 @@ button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
   .home-bg {
     background-size: 102% !important;
   }
+  
+  .banner {
+    background-attachment: fixed;
+  }
 }
 
 .projects-bg {
@@ -173,7 +177,6 @@ button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
 .banner {
   height: 100vh;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   font-size: 5rem !important;

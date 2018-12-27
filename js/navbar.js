@@ -6,12 +6,12 @@ function scrollTop(e) {
   }, 500, 'linear');
 }
 
-// Scroll to top when brand is clicked
+// scroll to top when brand is clicked
 $('.navbar-brand').on('click', (e) => {
   scrollTop(e)
 });
 
-// Scroll to top when active tab is clicked
+// scroll to top when active tab is clicked
 $('.active').on('click', (e) => {
   scrollTop(e)
 });
@@ -26,19 +26,19 @@ $('nav').on('hide.bs.collapse', () => {
 $('nav').on('show.bs.collapse', () => {
   $('.content').css('filter', 'blur(4px) opacity(75%)');
   $('.navbar-nav li a').css('color', '#333');
-  // in case window resizes
+  // in case window was resized make sure this stuff is transparent
   $('.navbar-nav').css('background', 'transparent');
   $('.navbar').css('background', 'transparent');
 });
 
 // fix stuff in case window resizes, convert between mobile & desktop site
 $(window).resize(() => {
-  if(screen.width > 800) {
+  if(screen.width > 800) { // desktop site
     $('.content').css('filter', 'none');
     $('.navbar-nav li a').css('color', '#777');
     $('.navbar').css('background', 'rgb(231, 231, 231)');
     $('.navbar-header').css('background', 'transparent');
-  } else {
+  } else { // mobile site
     $('.navbar-nav').css('background', 'transparent');
     $('.navbar').css('background', 'transparent');
     

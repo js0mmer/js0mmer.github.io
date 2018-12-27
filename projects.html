@@ -112,9 +112,11 @@
     <script>
       var hasFlash = false;
       try {
-          hasFlash = Boolean(new ActiveXObject('ShockwaveFlash.ShockwaveFlash'));
-      } catch (exception) {
-          hasFlash = ('undefined' != typeof navigator.mimeTypes['application/x-shockwave-flash']);
+        hasFlash = Boolean(new ActiveXObject('ShockwaveFlash.ShockwaveFlash'));
+      } catch (e) {
+        hasFlash = navigator.mimeTypes
+              && navigator.mimeTypes['application/x-shockwave-flash'] != undefined
+              && navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin;
       }
       
       if (!hasFlash) {

@@ -15,3 +15,35 @@ $('.navbar-brand').on('click', (e) => {
 $('.active').on('click', (e) => {
   scrollTop(e)
 });
+
+$('nav').on('hide.bs.collapse', function() {
+  $('.content').css('filter', 'none');
+  $('.navbar-nav li a').css('color', 'transparent');
+});
+
+$('nav').on('show.bs.collapse', function() {
+  $('.content').css('filter', 'blur(4px) opacity(75%)');
+  $('.navbar-nav li a').css('color', '#333');
+  // in case window resizes
+  $('.navbar-nav').css('background', 'transparent');
+  $('.navbar').css('background', 'transparent');
+});
+
+// fix stuff in case window resizes
+$(window).resize(() => {
+  if(screen.width > 800) {
+    $('.content').css('filter', 'none');
+    $('.navbar-nav li a').css('color', '#777');
+    $('.navbar').css('background', 'rgb(231, 231, 231)');
+    $('.navbar-header').css('background', 'transparent');
+  } else {
+    $('.navbar-nav').css('background', 'transparent');
+    $('.navbar').css('background', 'transparent');
+    
+    if ($('.navbar-collapse').hasClass('in')) { // if navbar is expanded
+      // make sure blur and colors are correct
+      $('.content').css('filter', 'blur(4px) opacity(75%)');
+      $('.navbar-nav li a').css('color', '#333');
+    }
+  }
+});

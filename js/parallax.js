@@ -1,13 +1,15 @@
-var mobile = screen.width <= 800;
+function isMobile() {
+  return screen.width <= 800;
+}
 
-if (mobile) {
+if (isMobile()) {
   $('.banner').css('background-position-y', $(window).scrollTop() / 2);
 } else {
   $('.banner').css('background-position-y', -$(window).scrollTop() / 2);
 }
 
 $(window).scroll(() => {
-  if (mobile) {
+  if (isMobile()) {
     $('.banner').css('background-position-y', $(window).scrollTop() / 2);
   } else {
     $('.banner').css('background-position-y', -$(window).scrollTop() / 2);

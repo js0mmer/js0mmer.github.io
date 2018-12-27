@@ -129,6 +129,7 @@
       $(window).scroll(() => {
         var scrollBottom = $(window).scrollTop() + $(window).height();
         
+        // stop mobile animations from being delayed
         if ($(window).width() <= 768) {
           scrollBottom += 70;
         }
@@ -171,6 +172,7 @@
           $('.send-btn').addClass('animated fadeInLeft');
         }
         
+        // make navbar bg transparent when scrolled all the way to top & reveal bg once user scrolls down
         if ($(window).scrollTop() > 20) {
           navbar().css('background', '#f8f8f8');
           navbar().css('border-color', '#e7e7e7');
@@ -186,7 +188,7 @@
     <script>
       $(document).ready(() => {
         if(window.location.href.endsWith('?about') || window.location.href.endsWith('?contact')) {
-          $('.collapse').collapse('hide');
+          $('.collapse').collapse('hide'); // collapse the navbar for mobile users
           
           $('html, body').animate({
             scrollTop: $('#' + window.location.href.split('?')[1]).offset().top - $('.navbar-header').height() - 10
@@ -197,7 +199,7 @@
       $(document).on('click', 'a[href^="#"]', function (e) {
         e.preventDefault();
         
-        $('.collapse').collapse('hide');
+        $('.collapse').collapse('hide'); // collapse the navbar for mobile users
         
         $('html, body').animate({
           scrollTop: $($.attr(this, 'href')).offset().top - $('.navbar-header').height() - 10

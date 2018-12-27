@@ -2,6 +2,7 @@ function isMobile() {
   return screen.width <= 800;
 }
 
+// align bg on load
 if (isMobile()) {
   $('.banner').css('background-position-y', $(window).scrollTop() / 2);
 } else {

@@ -128,7 +128,7 @@
       navbar().css('background', 'transparent');
       navbar().css('border-color', 'transparent');
       active.css('background', 'transparent');
-      window.onscroll = function() {
+      $(window).scroll(() => {
         var scrollBottom = $(window).scrollTop() + $(window).height();
         
         if ($(window).width() <= 768) {
@@ -182,7 +182,7 @@
           navbar().css('border-color', 'transparent');
           active.css('background', 'transparent');
         }
-      }
+      });
     </script>
     <!-- Anchor links-->
     <script>
@@ -241,6 +241,7 @@
     </script>
     <!-- Parallax -->
     <script>
+    	// offset accounts for extra 1% added to each side of background so no white is shown when moving it
       function offsetX() {
         return screen.width * 0.01;
       }
@@ -259,7 +260,7 @@
         $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY());
       }
       
-      // update parallax when window changes size
+      // fix bg position when window changes size
       $(window).resize(() => {
         if (isMobile()) {
           $('.banner').css('background-position-y', $(window).scrollTop() / 2);
@@ -276,6 +277,7 @@
         }
       });
       
+      // mouse move effect on desktop
       if (screen.width > 800) {
         document.onmousemove = function (e) {
           var x = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);

@@ -16,11 +16,13 @@ $('.active').on('click', (e) => {
   scrollTop(e)
 });
 
+// remove blur and make text invisible when mobile nav collapses
 $('nav').on('hide.bs.collapse', function() {
   $('.content').css('filter', 'none');
   $('.navbar-nav li a').css('color', 'transparent');
 });
 
+// add blur and make text visible when mobile nav expands
 $('nav').on('show.bs.collapse', function() {
   $('.content').css('filter', 'blur(4px) opacity(75%)');
   $('.navbar-nav li a').css('color', '#333');
@@ -29,7 +31,7 @@ $('nav').on('show.bs.collapse', function() {
   $('.navbar').css('background', 'transparent');
 });
 
-// fix stuff in case window resizes
+// fix stuff in case window resizes, convert between mobile & desktop site
 $(window).resize(() => {
   if(screen.width > 800) {
     $('.content').css('filter', 'none');

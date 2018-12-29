@@ -3,10 +3,10 @@
   <head>
     <title>404 - Jacob Sommer</title>
     <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-    <meta charset="utf-8" />
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -45,6 +45,8 @@
       // Clear navbar
       $('.navbar').css('background', 'transparent');
       $('.navbar').css('border-color', 'transparent');
+      $('.navbar-header').css('background', 'transparent'); // mobile
+      $('.navbar-header').css('border-color', 'transparent'); // mobile
       $('.active a').css('background', 'transparent');
       
       // Typing Animation

@@ -263,6 +263,7 @@
       // fix bg position when window changes size
       $(window).resize(() => {
         if (isMobile()) {
+          $('.banner').css('background-position-x', '50%');
           $('.banner').css('background-position-y', $(window).scrollTop() / 2);
         } else {
           $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY());

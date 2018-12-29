@@ -26,9 +26,6 @@ $('nav').on('hide.bs.collapse', () => {
 $('nav').on('show.bs.collapse', () => {
   $('.content').css('filter', 'blur(4px) opacity(75%)');
   $('.navbar-nav li a').css('color', '#333');
-  // in case window was resized make sure this stuff is transparent
-  $('.navbar-nav').css('background', 'transparent');
-  $('.navbar').css('background', 'transparent');
 });
 
 // fix stuff in case window resizes, convert between mobile & desktop site
@@ -36,11 +33,20 @@ $(window).resize(() => {
   if(screen.width > 800) { // desktop site
     $('.content').css('filter', 'none');
     $('.navbar-nav li a').css('color', '#777');
-    $('.navbar').css('background', 'rgb(231, 231, 231)');
     $('.navbar-header').css('background', 'transparent');
+    
+    if ($('.jumbotron').hasClass('home-bg') && $(window).scrollTop() <= 20) { // if on top of home page
+      $('.navbar').css('background', 'transparent'); // make navbar transparent
+      $('.navbar').css('border-color', 'transparent'); // and remove the border
+    } else {
+      $('.navbar').css('background', 'rgb(231, 231, 231)'); // otherwise give it a bg color
+    }
   } else { // mobile site
     $('.navbar-nav').css('background', 'transparent');
     $('.navbar').css('background', 'transparent');
+    
+    // if its not the home page or the user scrolled then give the navbar a bg color
+    if (!$('.jumbotron').hasClass('home-bg') || $(window).scrollTop() > 20) $('.navbar-header').css('background', 'rgb(231, 231, 231)');
     
     if ($('.navbar-collapse').hasClass('in')) { // if navbar is expanded
       // make sure blur and colors are correct

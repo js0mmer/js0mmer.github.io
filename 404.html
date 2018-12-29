@@ -84,6 +84,42 @@
             done();
           })
       });
+      
+      // Parallax
+      
+      // offset accounts for extra 1% added to each side of background so no white is shown when moving it
+      function offsetX() {
+        return screen.width * 0.01;
+      }
+      
+      function offsetY() {
+        return screen.height * 0.01;
+      }
+      
+      function isMobile() {
+        return screen.width <= 800;
+      }
+      
+      // mouse move effect on desktop
+      document.onmousemove = function (e) {
+        if (screen.width > 800) {
+          var x = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+          var y = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+          
+          $('.banner').css('background-position-x', (x - $('.banner').width() / 2) / 100 - offsetX());
+          $('.banner').css('background-position-y', (y - $('.banner').height() / 2) / 100 - offsetY());
+        }
+      };
+      
+      // fix bg position when window changes size
+      $(window).resize(() => {
+        if (isMobile()) {
+          $('.banner').css('background-position-x', '50%');
+          $('.banner').css('background-position-y', 0);
+        } else {
+          $('.banner').css('background-position-y', -offsetY());
+        }
+      });
     </script>
   </body>
 </html>

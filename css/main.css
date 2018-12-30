@@ -40,30 +40,16 @@
   background: #ff8f8f;
 }
 
-/*.main {
-  min-height: calc(100vh - 105px);
-  min-height: -webkit-calc(100vh - 105px);
-  min-height: -moz-calc(100vh - 105px);
-}
-
-@media only screen and (max-width: 768px) {
-  .main {
-    min-height: calc(100vh - 142px);
-    min-height: -webkit-calc(100vh - 142px);
-    min-height: -moz-calc(100vh - 142px);
-  }
-}*/
-
 /* ===== */
 /* LINKS */
 /* ===== */
 
 a:link, a:visited {
-  color: #ff0000;
+  color: #f00;
 }
 
 .main a:hover, .main a:active, .main a:focus {
-  color: #990000 !important;
+  color: #900 !important;
 }
 
 /* ====== */
@@ -75,8 +61,6 @@ a:link, a:visited {
   height: 150px;
   border-radius: 100%;
   background-image: url("../images/me.jpg");
-  background-origin: center;
-  background-position: center;
   background-size: cover;
   border: 5px solid #ff3a3a;
 }
@@ -86,9 +70,9 @@ a:link, a:visited {
 /* ====== */
 
 .navbar, .active a, .navbar-header {
-  transition: all ease-in-out 0.2s;
-  -webkit-transition: all ease-in-out 0.2s;
-  -moz-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
 }
 
 /* Mobile nav menu */
@@ -316,35 +300,6 @@ button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
 }
 
 .btn-outline:hover, .btn-outline:focus {
-  transition: all ease-in-out 0.7s;
-  -webkit-transition: all ease-in-out 0.7s;
-  -moz-transition: all ease-in-out 0.7s;
-  color: white !important;
-  background-color: #ff3a3a;
-  cursor: pointer;
-}
-
-.btn-solid {
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 10px 19px;
-  text-align: center;
-  width: 100px;
-  display: block;
-  font-size: 11px;
-  text-decoration: none !important;
-  line-height: 100% !important;
-  margin-top: 10px !important;
-  letter-spacing: 0.8px;
-  color: #ff3a3a !important;
-  background-color: white;
-  transition: all ease-in-out 0.7s;
-  -webkit-transition: all ease-in-out 0.7s;
-  -moz-transition: all ease-in-out 0.7s;
-  border: none;
-}
-
-.btn-solid:hover, .btn-solid:focus {
   transition: all ease-in-out 0.7s;
   -webkit-transition: all ease-in-out 0.7s;
   -moz-transition: all ease-in-out 0.7s;

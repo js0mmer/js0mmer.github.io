@@ -197,7 +197,7 @@ button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
 
 @media only screen and (min-width: 801px) {
   .home-bg {
-    background-size: 102% !important;
+    background-size: 102% !important; /* so no white is shown when moving bg */
   }
   
   .banner {

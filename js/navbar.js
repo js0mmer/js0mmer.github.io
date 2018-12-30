@@ -39,14 +39,14 @@ $(window).resize(() => {
       $('.navbar').css('background', 'transparent'); // make navbar transparent
       $('.navbar').css('border-color', 'transparent'); // and remove the border
     } else {
-      $('.navbar').css('background', 'rgb(231, 231, 231)'); // otherwise give it a bg color
+      $('.navbar').css('background', 'rgb(248, 248, 248)'); // otherwise give it a bg color
     }
   } else { // mobile site
     $('.navbar-nav').css('background', 'transparent');
     $('.navbar').css('background', 'transparent');
     
     // if its not the home page or the user scrolled then give the navbar a bg color
-    if (!$('.jumbotron').hasClass('home-bg') || $(window).scrollTop() > 20) $('.navbar-header').css('background', 'rgb(231, 231, 231)');
+    if (!$('.jumbotron').hasClass('home-bg') || $(window).scrollTop() > 20) $('.navbar-header').css('background', 'rgb(248, 248, 248)');
     
     if ($('.navbar-collapse').hasClass('in')) { // if navbar is expanded
       // make sure blur and colors are correct

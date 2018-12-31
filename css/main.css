@@ -216,7 +216,7 @@ button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
   flex-direction: column;
 }
 
-.small-banner h2 {
+.small-banner h2, .no-margin {
   margin-bottom: 0;
 }
 

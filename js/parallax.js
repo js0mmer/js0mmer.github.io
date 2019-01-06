@@ -1,6 +1,6 @@
 var isMobile = () => screen.width <= 800;
 
-function parallax(selector, offsetY) {
+function parallax(selector, offsetY=0) {
   // align bg on load
   adjustBgPos(selector, offsetY);
 

@@ -112,6 +112,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/theater.min.js"></script>
+    <script src="js/parallax.js"></script>
     <script src="js/navbar.js"></script>
     <!-- Load animations -->
     <script>
@@ -241,45 +242,14 @@
     <!-- Parallax -->
     <script>
       // offset accounts for extra 1% added to each side of background so no white is shown when moving it
-      function offsetX() {
-        return screen.width * 0.01;
-      }
+      var offsetX = () => screen.width * 0.01;
+      var offsetY = () => screen.height * 0.01;
       
-      function offsetY() {
-        return screen.height * 0.01;
-      }
+      parallax('.banner', offsetY());
       
-      function isMobile() {
-        return screen.width <= 800;
-      }
-      
-      if (isMobile()) {
-        $('.banner').css('background-position-y', $(window).scrollTop() / 2);
-      } else {
-        $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY());
-      }
-      
-      // fix bg position when window changes size
-      $(window).resize(() => {
-        if (isMobile()) {
-          $('.banner').css('background-position-x', '50%');
-          $('.banner').css('background-position-y', $(window).scrollTop() / 2);
-        } else {
-          $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY());
-        }
-      });
-      
-      $(window).scroll(() => {
-        if (isMobile()) {
-          $('.banner').css('background-position-y', $(window).scrollTop() / 2);
-        } else {
-          $('.banner').css('background-position-y', -$(window).scrollTop() / 2 - offsetY());
-        }
-      });
-      
-      // mouse move effect on desktop
+      // mouse move parallax on desktop
       $('html, body').mousemove((e) => {
-        if (screen.width > 800) {
+        if (!isMobile()) {
           $('.banner').css('background-position-x', (e.pageX - $('.banner').width() / 2) / 100 - offsetX());
           $('.banner').css('background-position-y', -$(window).scrollTop() / 2 + (e.pageY - $('.banner').height() / 2) / 100 - offsetY());
         }

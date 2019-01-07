@@ -10,32 +10,29 @@
     <script defer src="js/fontawesome-all.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Jacob Sommer</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume">Resume/Work Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <button class="nav-toggle">
+      <span class="icon"></span>
+    </button>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="./">Home</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="?about">About Me</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="resume">Resume/Work Experience</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="?contact">Contact</a>
+          <span class="underline"></span>
+        </li>
+      </ul>
+    </div>
     <div class="jumbotron banner resume-bg">
       <h1 class="banner-text">Resume/Work Experience</h1>
     </div>
@@ -80,9 +77,14 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/theater.min.js"></script>
     <script src="js/parallax.js"></script>
-    <script src="js/navbar.js"></script>
     <script>
       parallax('.banner');
+      
+      $('.nav-toggle').on('click', () => {
+        $('.nav-toggle').toggleClass('open');
+        $('.menu').toggleClass('active');
+        $('.banner').toggleClass('blur');
+      });
     </script>
   </body>
 </html>

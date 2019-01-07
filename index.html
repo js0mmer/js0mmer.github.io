@@ -119,9 +119,7 @@
       var active = $('.active a');
       
       // change header bg color instead of nav bg color b/c mobile nav menu
-      function navbar() {
-        return screen.width < 768 ? $('.navbar-header') : $('.navbar');
-      }
+      var navbar = () => screen.width < 768 ? $('.navbar-header') : $('.navbar');
       
       navbar().css('background', 'transparent');
       navbar().css('border-color', 'transparent');

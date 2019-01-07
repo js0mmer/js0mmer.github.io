@@ -114,6 +114,10 @@ a:link, a:visited {
   content: '';
 }
 
+.nav-toggle .icon.white, .nav-toggle .icon.white:before, .nav-toggle .icon.white:after {
+  background-color: #fff;
+}
+
 .nav-toggle .icon:before {
   top: -10px;
   left: 0;

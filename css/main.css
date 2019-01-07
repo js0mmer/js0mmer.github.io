@@ -309,13 +309,13 @@ a:link, a:visited {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-size: 5rem !important;
   transition: filter 0.5s;
 }
 
 .banner-text {
   padding: 34vh 20vw !important;
   width: 100% !important;
+  font-size: 4rem !important;
 }
 
 @media only screen and (min-height: 768px) {

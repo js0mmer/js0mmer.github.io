@@ -10,26 +10,30 @@
     <script defer src="js/fontawesome-all.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Jacob Sommer</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="./">Home</a></li>
-            <li><a href="./?about">About Me</a></li>
-            <li class="active"><a href="#">Resume/Work Experience <span class="sr-only">(current)</span></a></li>
-            <li><a href="projects">Projects</a></li>
-            <li><a href="./?contact">Contact</a></li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Jacob Sommer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume">Resume/Work Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="content">
@@ -40,7 +44,6 @@
         <section id="resume" class="col-md-12">
           <p><a href="files/Resume.pdf" target="_blank">Click to view my resume</a><br /></p>
           <p><a href="files/References.pdf" target="_blank">Click to view my references</a></p>
-          <p>&nbsp;</p>
           <iframe src="files/Resume.pdf"></iframe>
         </section>
         <section id="work-experience">
@@ -50,25 +53,27 @@
       </div>
       <footer>
         <div class="container">
-          <div class="col-sm-6 text">
-            <p>Made with <span class="fa fa-heart fa-lg" aria-hidden="true"></span><span class="sr-only">love</span> by Jacob</p>
-          </div>
-          <div class="col-sm-6 icons">
-            <a href="mailto:jacob.sommer@comcast.net" target="_blank">
-              <span class="fa-stack fa-lg">
-                <span class="fa fa-circle fa-stack-2x"></span>
-                <span class="fa fa-envelope fa-stack-1x"></span>
-              </span>
-              <span class="sr-only">Email</span>
-            </a>
-            <a>&nbsp;</a>
-            <a href="https://github.com/js0mmer" target="_blank">
-              <span class="fa-stack fa-lg">
-                <span class="fa fa-circle fa-stack-2x"></span>
-                <span class="fab fa-github fa-stack-1x"></span>
-              </span>
-              <span class="sr-only">GitHub</span>
-            </a>
+          <div class="row">
+            <div class="col-sm text">
+              <p>Made with <span class="fa fa-heart fa-lg" aria-hidden="true"></span><span class="sr-only">love</span> by Jacob</p>
+            </div>
+            <div class="col-sm icons">
+              <a href="mailto:jacob.sommer@comcast.net" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <span class="fa fa-circle fa-stack-2x"></span>
+                  <span class="fa fa-envelope fa-stack-1x"></span>
+                </span>
+                <span class="sr-only">Email</span>
+              </a>
+              <a>&nbsp;</a>
+              <a href="https://github.com/js0mmer" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <span class="fa fa-circle fa-stack-2x"></span>
+                  <span class="fab fa-github fa-stack-1x"></span>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </div>
           </div>
         </div>
       </footer>

@@ -36,14 +36,14 @@ $(window).resize(() => {
     $('.navbar-header').css('background', 'transparent');
     
     if ($('.jumbotron').hasClass('home-bg') && $(window).scrollTop() <= 20) { // if on top of home page
-      $('.navbar').css('background', 'transparent'); // make navbar transparent
+      $('.navbar').css('background', '#f8f9fa'); // make navbar transparent
       $('.navbar').css('border-color', 'transparent'); // and remove the border
     } else {
       $('.navbar').css('background', 'rgb(248, 248, 248)'); // otherwise give it a bg color
     }
   } else { // mobile site
     $('.navbar-nav').css('background', 'transparent');
-    $('.navbar').css('background', 'transparent');
+    $('.navbar').css('background', '#f8f9fa');
     
     // if its not the home page or the user scrolled then give the navbar a bg color
     if (!$('.jumbotron').hasClass('home-bg') || $(window).scrollTop() > 20) $('.navbar-header').css('background', 'rgb(248, 248, 248)');

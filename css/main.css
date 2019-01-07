@@ -542,3 +542,7 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 #about-me-p {
   margin-bottom: 30px;
 }
+
+#projects .row .col-md-7 {
+  padding: 15px;
+}

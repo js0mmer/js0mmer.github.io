@@ -83,6 +83,7 @@ a:link, a:visited {
   position: fixed;
   width: 100%;
   z-index: 100;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 /* Mobile nav menu */

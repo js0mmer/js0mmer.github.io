@@ -120,12 +120,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/theater.min.js"></script>
     <script src="js/parallax.js"></script>
-    <script src="js/navbar.js"></script>
+    <!-- <script src="js/navbar.js"></script> -->
     <!-- Load animations -->
     <script>
       var navbar = $('.navbar');
       
       navbar.css('background', 'transparent');
+      navbar.css('border-color', 'transparent');
       $(window).scroll(() => {
         var scrollBottom = $(window).scrollTop() + $(window).height();
         
@@ -175,8 +176,10 @@
         // make navbar bg transparent when scrolled all the way to top & reveal bg once user scrolls down
         if ($(window).scrollTop() > 20) {
           navbar.css('background', '#f8f9fa');
+          navbar.css('border-color', '#e7e7e7');
         } else {
           navbar.css('background', 'transparent');
+          navbar.css('border-color', 'transparent');
         }
       });
     </script>

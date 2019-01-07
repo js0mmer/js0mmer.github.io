@@ -15,8 +15,6 @@
 
 .content {
   transition: all ease-in-out 0.3s;
-  -webkit-transition: all ease-in-out 0.3s;
-  -moz-transition: all ease-in-out 0.3s;
 }
 
 .flex-center {
@@ -102,13 +100,9 @@ a:link, a:visited {
   height: 2px;
   background-color: #333;
   transition: all 0.4s ease-out;
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
 }
 .nav-toggle .icon:before, .nav-toggle .icon:after {
   transition: all 0.25s ease-out;
-  -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
   position: absolute;
   width: 32px;
   height: 2px;
@@ -137,25 +131,17 @@ a:link, a:visited {
 .nav-toggle.open .icon {
   background-color: transparent;
   transition: all 0.4s ease-out;
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
   transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
 }
 
 .nav-toggle.open .icon:before {
   top: 0;
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
 }
 
 .nav-toggle.open .icon:after {
   top: 0;
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
 }
 
 /* ======== */
@@ -186,8 +172,6 @@ a:link, a:visited {
   text-transform: uppercase;
   overflow: hidden;
   transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
   border-bottom: 1px solid transparent;
 }
 
@@ -236,8 +220,6 @@ a:link, a:visited {
 .menu li:hover .underline:before, .menu li:hover .underline:after {
   width: 50%;
   transition: 0.2s linear all;
-  -webkit-transition: 0.2s linear all;
-  -moz-transition: 0.2s linear all;
 }
 
 .underline {
@@ -255,8 +237,6 @@ a:link, a:visited {
   content: '';
   background: #000;
   transition: 0.2s linear all;
-  -webkit-transition: 0.2s linear all;
-  -moz-transition: 0.2s linear all;
 }
 
 .underline:before {
@@ -323,8 +303,6 @@ a:link, a:visited {
   background-position: center;
   font-size: 5rem !important;
   transition: filter 0.5s;
-  -webkit-transition: filter 0.5s;
-  -moz-transition: filter 0.5s;
 }
 
 .banner-text {
@@ -345,11 +323,7 @@ a:link, a:visited {
   padding: 2vh 0 !important;
   width: 100% !important;
   transition: 0.5s linear all;
-  -webkit-transition: 0.5s linear all;
-  -moz-transition: 0.5s linear all;
   animation: bounce 2.5s infinite;
-  -webkit-animation: bounce 2.5s infinite;
-  -moz-animation: bounce 2.5s infinite;
   opacity: 0;
 }
 
@@ -361,8 +335,6 @@ a:link, a:visited {
 .cursor::after {
   content: '|';
   animation: blink 0.5s infinite;
-  -webkit-animation: blink 0.5s infinite;
-  -moz-animation: blink 0.5s infinite;
 }
 
 /* ======= */
@@ -387,8 +359,6 @@ a:link, a:visited {
   letter-spacing: 0.8px;
   color: #ff3a3a !important;
   transition: all ease-in-out 0.7s;
-  -webkit-transition: all ease-in-out 0.7s;
-  -moz-transition: all ease-in-out 0.7s;
   background-color: white;
   border: 3px solid #ff3a3a;
   border-radius: 25px;
@@ -396,8 +366,6 @@ a:link, a:visited {
 
 .btn-outline:hover, .btn-outline:focus {
   transition: all ease-in-out 0.7s;
-  -webkit-transition: all ease-in-out 0.7s;
-  -moz-transition: all ease-in-out 0.7s;
   color: white !important;
   background-color: #ff3a3a;
   cursor: pointer;
@@ -418,16 +386,12 @@ a:link, a:visited {
   color: white !important;
   background-color: transparent;
   transition: all ease-in-out 0.7s;
-  -webkit-transition: all ease-in-out 0.7s;
-  -moz-transition: all ease-in-out 0.7s;
   border: 3px solid white;
   border-radius: 25px;
 }
 
 .btn-clear:hover, .btn-clear:focus {
   transition: all ease-in-out 0.7s;
-  -webkit-transition: all ease-in-out 0.7s;
-  -moz-transition: all ease-in-out 0.7s;
   color: black !important;
   background-color: white;
   cursor: pointer;
@@ -500,8 +464,6 @@ input:focus ~ .input-bar:before, input:focus ~ .input-bar:after,
 textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   width: 50%;
   transition: 0.2s linear all;
-  -webkit-transition: 0.2s linear all;
-  -moz-transition: 0.2s linear all;
 }
 
 .input-bar {
@@ -524,8 +486,6 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   content: '';
   background: #ff3a3a;
   transition: 0.2s linear all;
-  -webkit-transition: 0.2s linear all;
-  -moz-transition: 0.2s linear all;
 }
 
 .input-bar:before {

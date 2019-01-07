@@ -220,19 +220,11 @@
       
       $(document).ready(() => {
         theater
-          .addActor('hi', { speed: 0.9, accuracy: 0.8 })
-          .addActor('jacob', { speed: 1, accuracy: 0.8 })
-          .addScene((done) => {
-            setTimeout(() => {
-              done();
-            }, 800);
-          })
+          .addActor('hi', { speed: 0.9, accuracy: 1 })
+          .addActor('jacob', { speed: 1, accuracy: 1 })
+          .addScene(800)
           .addScene('hi:Hi.')
-          .addScene((done) => {
-            setTimeout(() => {
-              done();
-            }, 500);
-          })
+          .addScene(500)
           .addScene('jacob:I\'m Jacob.')
           .addScene(() => {
             $('.glyphicon-chevron-down').css('opacity', 1);

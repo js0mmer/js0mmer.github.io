@@ -221,11 +221,15 @@ a:link, a:visited {
 }
 
 .menu li:nth-child(4) .underline {
+  width: 260px;
+}
+
+.menu li:nth-child(5) .underline {
   width: 240px;
 }
 
 .menu.active ul {
-  height: 400px;
+  height: 480px;
   border-bottom: 1px solid #000;
 }
 

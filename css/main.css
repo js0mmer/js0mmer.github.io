@@ -313,12 +313,12 @@ a:link, a:visited {
 }
 
 .banner-text {
-  padding: 34vh 20vw !important;
+  padding: 33vh 20vw !important;
   width: 100% !important;
   font-size: 4rem !important;
 }
 
-@media only screen and (min-height: 768px) {
+@media only screen and (min-width: 768px) {
   .banner-text {
     padding: 37vh 20vw !important;
     width: 100% !important;
@@ -328,12 +328,12 @@ a:link, a:visited {
 .banner .fa-chevron-down {
   display: flex;
   justify-content: center;
-  padding: 3vh 0 !important;
+  padding: 1vh 0 !important;
   width: 100% !important;
   transition: 0.5s linear all;
   animation: bounce 2.5s infinite;
   opacity: 0;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .banner-404-text {

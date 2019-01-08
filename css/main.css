@@ -329,8 +329,8 @@ a:hover, a:active, a:focus {
 
 @media only screen and (min-width: 768px) and (min-height: 768px) {
   .banner-text {
-    padding: 37vh 20vw !important;
-    width: 100% !important;
+    padding: 37vh 20vw;
+    width: 100%;
     font-size: 4em;
   }
 }
@@ -338,8 +338,8 @@ a:hover, a:active, a:focus {
 .banner .fa-chevron-down {
   display: flex;
   justify-content: center;
-  padding: 1vh 0 !important;
-  width: 100% !important;
+  padding: 1vh 0;
+  width: 100%;
   transition: 0.5s linear all;
   animation: bounce 2.5s infinite;
   opacity: 0;
@@ -347,8 +347,8 @@ a:hover, a:active, a:focus {
 }
 
 .banner-404-text {
-  padding: 34vh 20vw !important;
-  width: 100% !important;
+  padding: 34vh 20vw;
+  width: 100%;
 }
 
 .cursor::after {
@@ -373,8 +373,8 @@ a:hover, a:active, a:focus {
   display: block;
   font-size: 11px;
   text-decoration: none;
-  line-height: 100% !important;
-  margin-top: 10px !important;
+  line-height: 100%;
+  margin-top: 10px;
   letter-spacing: 0.8px;
   color: #ff3a3a !important;
   transition: all ease-in-out 0.7s;
@@ -399,8 +399,8 @@ a:hover, a:active, a:focus {
   display: block;
   font-size: 11px;
   text-decoration: none !important;
-  line-height: 100% !important;
-  margin-top: 10px !important;
+  line-height: 100%;
+  margin-top: 10px;
   letter-spacing: 0.8px;
   color: white !important;
   background-color: transparent;
@@ -417,7 +417,7 @@ a:hover, a:active, a:focus {
 }
 
 .btn-view {
-  width: 150px !important;
+  width: 150px;
 }
 
 /* ====== */
@@ -555,7 +555,7 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 }
 
 #flash-prompt a:hover, #flash-prompt a:active, #flash-prompt a:focus {
-  color: #00a !important;
+  color: #00a;
 }
 
 #about-me-p {

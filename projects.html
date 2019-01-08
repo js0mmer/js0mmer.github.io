@@ -2,88 +2,95 @@
 <html>
   <head>
     <title>Projects - Jacob Sommer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="icon" href="images/favicon.png" type="image/png" />
-    <script defer src="js/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="css/all.min.css" type="text/css" />
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Jacob Sommer</a>
+    <button class="nav-toggle">
+      <span class="icon white"></span>
+    </button>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="./">Home</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="./?about">About Me</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="resume">Resume/Work Experience</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="projects">Projects</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="./?contact">Contact</a>
+          <span class="underline"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="jumbotron banner projects-bg">
+      <h1 class="banner-text">Projects</h1>
+    </div>
+    <div class="main container">
+      <section id="projects">
+        <div class="row">
+          <div class="col-md-5 colored-box">
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe id="scratch" class="embed-responsive-item" allowtransparency="true" src="//scratch.mit.edu/projects/embed/173340577/?autostart=false" allowfullscreen></iframe>
+              <h3 id="flash-prompt">Please install <a href="https://get.adobe.com/flashplayer/">Adobe Flash</a> to run the game.</h3>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <h3>Scratch Project</h3>
+            <h5>CSE (Computer Science/Software Engineering)</h5>
+            <h5>August 29th - September 8th, 2017</h5>
+            <p>The objective of this project was to create a bug-free game that had level progression. My role in this project was a developer. My group and I created a game where two players had to compete to finish a maze. The mazes became more difficult as the game progressed and each one was completed. The two players gained points by collecting "gems" and finishing the mazes quickly. The winner is the player with the highest score after completing all of the mazes. We developed our brainstorming skills by coming up with ideas and using a flow chart to map them. We I also developed our logging and documentation skills by keeping a daily log of what happened each day and adding comments to our code explaining what each piece does. During this project, we had to overcome some limitations of Scratch. Scratch only allows one user at a time to be working on the same project. We solved this issue by creating copies of the game uses Scratch’s remix feature and working on different aspects and features of our game. We each coded in only certain sprites. At the end of the day, we assembled all of the code in our sprites together uses Scratch’s backpack feature. This allowed us to be more efficient as everyone in the group could contribute code to the game simultaneously. You can find the daily log and documentation <a href="files/Scratch_Project.pdf" target="_blank">here</a>.</p>
+          </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="./">Home</a></li>
-            <li><a href="./?about">About Me</a></li>
-            <li><a href="resume">Resume/Work Experience</a></li>
-            <li class="active"><a href="#">Projects <span class="sr-only">(current)</span></a></li>
-            <li><a href="./?contact">Contact</a></li>
-          </ul>
+        <div class="row">
+          <div class="col-md-7">
+            <h3>Hangman Project</h3>
+            <h5>CSE (Computer Science/Software Engineering)</h5>
+            <h5>January 24th - February 2nd, 2018</h5>
+            <p>The objective of this project was to create a themed hangman game that was played in the terminal. My role in this project was a developer. My partner and I created a Spongebob-themed hangman game. All of the words were spongebob related and we included some ASCII art to make the game more aesthetic. We developed our problem-solving skills by finding ways around issues we had when coding our game. During this project we had to overcome limitations of Cloud 9, the main one being that it is a non-GUI environment. Everything had to be played in the terminal but we were still able to show some images using ASCII art. You can download the project <a href="https://repl.it/@js0mmer/Hangman.zip" download="Hangman.zip">here</a>. It is made for Python 2.7.</p>
+          </div>
+          <div class="col-md-5 colored-box">
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe class="embed-responsive-item" height="500px" width="100%" src="https://repl.it/@js0mmer/Hangman?lite=true" scrolling="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
-    <div class="content">
-      <div class="jumbotron banner projects-bg">
-        <h1 class="banner-text">Projects</h1>
-      </div>
-      <div class="main container">
-        <section id="projects">
-          <div class="row">
-            <div class="col-md-5 colored-box">
-              <div class="embed-responsive embed-responsive-4by3">
-                <iframe id="scratch" class="embed-responsive-item" allowtransparency="true" src="//scratch.mit.edu/projects/embed/173340577/?autostart=false" allowfullscreen></iframe>
-                <h3 id="flash-prompt">Please install <a href="https://get.adobe.com/flashplayer/">Adobe Flash</a> to run the game.</h3>
-              </div>
-            </div>
-            <div class="col-md-7">
-              <h4>Scratch Project</h4>
-              <h5>CSE (Computer Science/Software Engineering)</h5>
-              <h5>August 29th - September 8th, 2017</h5>
-              <p>The objective of this project was to create a bug-free game that had level progression. My role in this project was a developer. My group and I created a game where two players had to compete to finish a maze. The mazes became more difficult as the game progressed and each one was completed. The two players gained points by collecting "gems" and finishing the mazes quickly. The winner is the player with the highest score after completing all of the mazes. We developed our brainstorming skills by coming up with ideas and using a flow chart to map them. We I also developed our logging and documentation skills by keeping a daily log of what happened each day and adding comments to our code explaining what each piece does. During this project, we had to overcome some limitations of Scratch. Scratch only allows one user at a time to be working on the same project. We solved this issue by creating copies of the game uses Scratch’s remix feature and working on different aspects and features of our game. We each coded in only certain sprites. At the end of the day, we assembled all of the code in our sprites together uses Scratch’s backpack feature. This allowed us to be more efficient as everyone in the group could contribute code to the game simultaneously. You can find the daily log and documentation <a href="files/Scratch_Project.pdf" target="_blank">here</a>.</p>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="colored-box">
+                <img class="thumbnail" src="images/project-compound.jpg" />
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-7">
-              <h4>Hangman Project</h4>
-              <h5>CSE (Computer Science/Software Engineering)</h5>
-              <h5>January 24th - February 2nd, 2018</h5>
-              <p>The objective of this project was to create a themed hangman game that was played in the terminal. My role in this project was a developer. My partner and I created a Spongebob-themed hangman game. All of the words were spongebob related and we included some ASCII art to make the game more aesthetic. We developed our problem-solving skills by finding ways around issues we had when coding our game. During this project we had to overcome limitations of Cloud 9, the main one being that it is a non-GUI environment. Everything had to be played in the terminal but we were still able to show some images using ASCII art. You can download the project <a href="https://repl.it/@js0mmer/Hangman.zip" download="Hangman.zip">here</a>. It is made for Python 2.7.</p>
-            </div>
-            <div class="col-md-5 colored-box">
-              <div class="embed-responsive embed-responsive-4by3">
-                <iframe class="embed-responsive-item" height="500px" width="100%" src="https://repl.it/@js0mmer/Hangman?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-              </div>
-            </div>
+          <div class="col-md-7">
+            <h3>Project Compound</h3>
+            <h5>POE (Principles of Engineering)</h5>
+            <h5>August 30th - September 7th, 2018</h5>
+            <p>The objective of this project was to create a compound machine that performed a basic task. My role was building a 2nd class lever and helping out on documentation. My group created a machine that pours dog food into a bowl. The input was provided by spinning a wheel which acted like a crank for a simple gear train. The axle of the output gear in the gear train drove another wheel which had a string wrapped around it. This caused the wheel to pull the string when it was spun. The string ran over a pulley and connected to the far end of our lever, next to the cup of dog food. When the string was pulled, it rotated the lever 180 degrees and dumped the dog food into a bowl placed below the dropping point. During the project we ran into issues early on. We found that our small driver gear required a lot of rotations. Our solution was to replace it with a larger gear which ended up requiring us to rebuild the entire gear train because there wasn’t enough space between the bottom of the machine and the 2nd gear. You can view the full project documentation <a href="https://drive.google.com/open?id=1XUbSIuFKQyM65QWXNIqzLKFKb0IdVRaF8hsZDxw60-I" target="_blank">here</a> for more information.</p>
           </div>
-          <div class="row">
-            <div class="col-md-5 colored-box">
-              <img class="thumbnail" src="images/project-compound.jpg" />
-            </div>
-            <div class="col-md-7">
-              <h4>Project Compound</h4>
-              <h5>POE (Principles of Engineering)</h5>
-              <h5>August 30th - September 7th, 2018</h5>
-              <p>The objective of this project was to create a compound machine that performed a basic task. My role was building a 2nd class lever and helping out on documentation. My group created a machine that pours dog food into a bowl. The input was provided by spinning a wheel which acted like a crank for a simple gear train. The axle of the output gear in the gear train drove another wheel which had a string wrapped around it. This caused the wheel to pull the string when it was spun. The string ran over a pulley and connected to the far end of our lever, next to the cup of dog food. When the string was pulled, it rotated the lever 180 degrees and dumped the dog food into a bowl placed below the dropping point. During the project we ran into issues early on. We found that our small driver gear required a lot of rotations. Our solution was to replace it with a larger gear which ended up requiring us to rebuild the entire gear train because there wasn’t enough space between the bottom of the machine and the 2nd gear. You can view the full project documentation <a href="https://drive.google.com/open?id=1XUbSIuFKQyM65QWXNIqzLKFKb0IdVRaF8hsZDxw60-I" target="_blank">here</a> for more information.</p>
-            </div>
-          </div>
-        </section>
-      </div>
-      <footer>
-        <div class="container">
-          <div class="col-sm-6 text">
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm text">
             <p>Made with <span class="fa fa-heart fa-lg" aria-hidden="true"></span><span class="sr-only">love</span> by Jacob</p>
           </div>
-          <div class="col-sm-6 icons">
+          <div class="col-sm icons">
             <a href="mailto:jacob.sommer@comcast.net" target="_blank">
               <span class="fa-stack fa-lg">
                 <span class="fa fa-circle fa-stack-2x"></span>
@@ -101,13 +108,11 @@
             </a>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/theater.min.js"></script>
     <script src="js/parallax.js"></script>
-    <script src="js/navbar.js"></script>
     <!-- Adobe Flash check (for Scratch Project) -->
     <script>
       var hasFlash = false;
@@ -129,6 +134,12 @@
     </script>
     <script>
       parallax('.banner');
+      
+      $('.nav-toggle').on('click', () => {
+        $('.nav-toggle').toggleClass('open');
+        $('.menu').toggleClass('active');
+        $('.banner').toggleClass('blur');
+      });
     </script>
   </body>
 </html>

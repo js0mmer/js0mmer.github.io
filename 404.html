@@ -2,56 +2,50 @@
 <html>
   <head>
     <title>404 - Jacob Sommer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="/css/main.css" type="text/css" />
     <link rel="icon" href="/images/favicon.png" type="image/png" />
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Jacob Sommer</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/?about">About Me</a></li>
-            <li><a href="/resume">Resume</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/?contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="content">
-      <div class="jumbotron banner home-bg no-margin">
-        <div class="banner-404-text">
-          <h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
-          <a href="/" style="opacity: 0" id="home-btn" class="btn-clear">Return to Home</a>
-        </div>
+    <button class="nav-toggle">
+      <span class="icon"></span>
+    </button>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="/">Home</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="/?about">About Me</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="/resume">Resume/Work Experience</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="projects">Projects</a>
+          <span class="underline"></span>
+        </li>
+        <li>
+          <a href="/?contact">Contact</a>
+          <span class="underline"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="jumbotron banner home-bg no-margin">
+      <div class="banner-404-text">
+        <h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
+        <a href="/" style="opacity: 0" id="home-btn" class="btn-clear">Return to Home</a>
       </div>
     </div>
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
     <script src="/js/theater.min.js"></script>
     <script src="/js/parallax.js"></script>
-    <script src="/js/navbar.js"></script>
     <script>
-      // Clear navbar
-      $('.navbar').css('background', 'transparent');
-      $('.navbar').css('border-color', 'transparent');
-      $('.navbar-nav').css('background', 'transparent'); // mobile
-      $('.navbar-header').css('background', 'transparent'); // mobile
-      $('.active a').css('background', 'transparent');
-      
       // Typing Animation
       var theater = theaterJS();
       
@@ -102,6 +96,13 @@
           $('.banner').css('background-position-x', (e.pageX - $('.banner').width() / 2) / 50 - offsetX());
           $('.banner').css('background-position-y', -$(window).scrollTop() / 2 + (e.pageY - $('.banner').height() / 2) / 50 - offsetY());
         }
+      });
+      
+      // Nav
+      $('.nav-toggle').on('click', () => {
+        $('.nav-toggle').toggleClass('open');
+        $('.menu').toggleClass('active');
+        $('.banner').toggleClass('blur');
       });
     </script>
   </body>

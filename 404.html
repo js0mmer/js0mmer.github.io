@@ -61,25 +61,14 @@
         theater
           .addActor('error', { speed: 1, accuracy: 0.8 })
           .addActor('pagenotfound', { speed: 1, accuracy: 0.8 })
-          .addScene((done) => {
-            setTimeout(() => {
-              done();
-            }, 800);
-          })
+          .addScene(800)
           .addScene('error:Error 404')
-          .addScene((done) => {
-            setTimeout(() => {
-              done();
-            }, 500);
-          })
+          .addScene(500)
           .addScene('pagenotfound:Page Not Found')
-          .addScene((done) => {
-            setTimeout(() => {
-              $('#home-btn').css('opacity', 1);
-            }, 300);
-            
-            done();
-          })
+          .addScene(300)
+          .addScene(() => {
+            $('#home-btn').css('opacity', 1);
+          });
       });
       
       // Parallax

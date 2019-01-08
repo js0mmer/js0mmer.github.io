@@ -558,10 +558,6 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   color: #00a !important;
 }
 
-#scratch {
-  overflow: hidden;
-}
-
 #about-me-p {
   margin-bottom: 30px;
 }

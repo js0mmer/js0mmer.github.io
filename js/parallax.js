@@ -1,22 +1,21 @@
 var isMobile = () => screen.width <= 800;
 
-function parallax(selector, offsetY=0) {
+function parallax(selector, offsetY=0, enableOnMobile=true) {
   // align bg on load
-  adjustBgPos(selector, offsetY);
+  adjustBgPos(selector, offsetY, enableOnMobile);
 
   $(window).scroll(() => {
-    adjustBgPos(selector, offsetY);
+    adjustBgPos(selector, offsetY, enableOnMobile);
   });
 
   // fix bg position when window resizes
   $(window).resize(() => {
-    adjustBgPos(selector, offsetY);
-    if (isMobile()) $(selector).css('background-position-x', '50%'); // center bg horizontally on mobile
+    adjustBgPos(selector, offsetY, enableOnMobile);
   });
 }
 
-function adjustBgPos(selector, offsetY) {
-  if (isMobile()) {
+function adjustBgPos(selector, offsetY, enableOnMobile) {
+  if (isMobile() && enableOnMobile) {
     $(selector).css('background-position-y', $(window).scrollTop() / 2);
   } else {
     $(selector).css('background-position-y', -$(window).scrollTop() / 2 - offsetY);

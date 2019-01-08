@@ -17,7 +17,7 @@ function parallax(selector, offsetY=0, enableOnMobile=true) {
 function adjustBgPos(selector, offsetY, enableOnMobile) {
   if (isMobile() && enableOnMobile) {
     $(selector).css('background-position-y', $(window).scrollTop() / 2);
-  } else {
+  } else if(!isMobile()) {
     $(selector).css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
   }
 }

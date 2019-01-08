@@ -157,7 +157,7 @@ a:link, a:visited {
 /* ======== */
 
 .menu {
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   margin: 0 auto;
   top: 0;
@@ -200,34 +200,13 @@ a:link, a:visited {
   padding-left: 0.5em;
 }
 
-.menu li:nth-child(1) .underline {
-  width: 150px;
-}
-
-.menu li:nth-child(2) .underline {
-  width: 280px;
-}
-
-.menu li:nth-child(3) .underline {
-  width: 390px;
-}
-
-.menu li:nth-child(4) .underline {
-  width: 260px;
-}
-
-.menu li:nth-child(5) .underline {
-  width: 240px;
+.menu.active {
+  z-index: 2;
 }
 
 .menu.active ul {
   height: 480px;
   border-bottom: 1px solid #000;
-}
-
-.menu li:hover .underline:before, .menu li:hover .underline:after {
-  width: 50%;
-  transition: 0.2s linear all;
 }
 
 .underline {
@@ -253,6 +232,31 @@ a:link, a:visited {
 
 .underline:after {
   right: 50%;
+}
+
+.menu li:hover .underline:before, .menu li:hover .underline:after {
+  width: 50%;
+  transition: 0.2s linear all;
+}
+
+.menu li:nth-child(1) .underline {
+  width: 150px;
+}
+
+.menu li:nth-child(2) .underline {
+  width: 280px;
+}
+
+.menu li:nth-child(3) .underline {
+  width: 390px;
+}
+
+.menu li:nth-child(4) .underline {
+  width: 260px;
+}
+
+.menu li:nth-child(5) .underline {
+  width: 240px;
 }
 
 /* ====== */

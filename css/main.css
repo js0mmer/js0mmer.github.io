@@ -64,8 +64,8 @@ a:link, a:visited {
   color: #f00;
 }
 
-.main a:hover, .main a:active, .main a:focus {
-  color: #900 !important;
+a:hover, a:active, a:focus {
+  color: #900;
 }
 
 /* ====== */

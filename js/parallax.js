@@ -19,5 +19,7 @@ function adjustBgPos(selector, offsetY, enableOnMobile) {
     $(selector).css('background-position-y', $(window).scrollTop() / 2);
   } else if(!isMobile()) {
     $(selector).css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
+  } else {
+    $(selector).css('background-position-y', 0);
   }
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/animate.min.css" type="text/css" />
-    <script defer src="js/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="css/all.min.css" type="text/css" />
   </head>
   <body>
     <button class="nav-toggle">
@@ -128,9 +128,9 @@
         }
         
         if ($(window).scrollTop() > 0) {
-          $('.banner .glyphicon').css('opacity', 0);
+          $('.banner .fa-chevron-down').css('opacity', 0);
         } else {
-          $('.banner .glyphicon').css('opacity', 1);
+          $('.banner .fa-chevron-down').css('opacity', 1);
         }
         
         if (scrollBottom >= $('.profile-picture').offset().top) {
@@ -211,7 +211,7 @@
           .addScene(500)
           .addScene('jacob:I\'m Jacob.')
           .addScene(() => {
-            $('.glyphicon-chevron-down').css('opacity', 1);
+            $('.fa-chevron-down').css('opacity', 1);
           });
       });
     </script>

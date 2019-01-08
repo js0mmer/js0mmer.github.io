@@ -325,14 +325,15 @@ a:link, a:visited {
   }
 }
 
-.banner .glyphicon {
+.banner .fa-chevron-down {
   display: flex;
   justify-content: center;
-  padding: 2vh 0 !important;
+  padding: 3vh 0 !important;
   width: 100% !important;
   transition: 0.5s linear all;
   animation: bounce 2.5s infinite;
   opacity: 0;
+  font-size: 3rem;
 }
 
 .banner-404-text {

@@ -8,22 +8,28 @@
   margin-right: auto;
 }
 
-.colored-box {
-  background-color: #ff3a3a;
-  padding: 15px;
-}
-
 .content {
   transition: all ease-in-out 0.3s;
 }
 
 .embed-responsive {
-  height: 100%;
+  height: 450px;
+}
+
+@media only screen and (min-width: 768px) {
+  .embed-responsive {
+    height: 100%;
+  }
 }
 
 .flex-center {
   display: flex;
   justify-content: center;
+}
+
+.red-border {
+  background-color: #ff3a3a !important;
+  border: 15px solid #ff3a3a !important;
 }
 
 .thumbnail {

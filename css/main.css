@@ -189,6 +189,12 @@ a:hover, a:active, a:focus {
   border-bottom: 1px solid transparent;
 }
 
+@media only screen and (max-width: 767px) {
+  .menu ul {
+    font-size: 1.75rem;
+  }
+}
+
 .menu li:first-child {
   margin-top: 0;
 }

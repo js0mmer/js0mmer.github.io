@@ -206,6 +206,7 @@ a:hover, a:active, a:focus {
 }
 
 .menu li a {
+  display: block;
   color: #212529;
   text-decoration: none;
   letter-spacing: 0.5em;
@@ -217,7 +218,7 @@ a:hover, a:active, a:focus {
 }
 
 .menu.active ul {
-  height: 480px;
+  height: 600px;
   border-bottom: 1px solid #000;
 }
 
@@ -252,23 +253,27 @@ a:hover, a:active, a:focus {
 }
 
 .menu li:nth-child(1) .underline {
-  width: 150px;
+  width: 140px;
 }
 
 .menu li:nth-child(2) .underline {
-  width: 280px;
+  width: 270px;
 }
 
 .menu li:nth-child(3) .underline {
-  width: 390px;
+  width: 200px;
 }
 
 .menu li:nth-child(4) .underline {
-  width: 260px;
+  width: 320px;
 }
 
 .menu li:nth-child(5) .underline {
-  width: 240px;
+  width: 250px;
+}
+
+.menu li:nth-child(6) .underline {
+  width: 230px;
 }
 
 /* ====== */

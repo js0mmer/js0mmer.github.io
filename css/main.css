@@ -383,7 +383,7 @@ a:hover, a:active, a:focus {
   width: 100px;
   display: block;
   font-size: 11px;
-  text-decoration: none;
+  text-decoration: none !important;
   line-height: 100%;
   margin-top: 10px;
   letter-spacing: 0.8px;
@@ -575,4 +575,19 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 
 #projects .row .col-md-7 {
   padding: 15px;
+}
+
+.construction {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  transition: filter 0.5s;
+}
+
+.construction h1 {
+  margin-bottom: 25px;
 }

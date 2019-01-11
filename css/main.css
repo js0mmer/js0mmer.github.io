@@ -374,10 +374,6 @@ a:hover, a:active, a:focus {
 /* BUTTONS */
 /* ======= */
 
-#home-btn {
-  width: 160px;
-}
-
 .btn-outline {
   font-weight: 600;
   text-transform: uppercase;

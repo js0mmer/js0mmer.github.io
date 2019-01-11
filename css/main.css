@@ -2,6 +2,10 @@
 /* GENERAL */
 /* ======= */
 
+body {
+  overflow-x: hidden;
+}
+
 .center {
   text-align: center;
   margin-left: auto;
@@ -329,25 +333,31 @@ a:hover, a:active, a:focus {
   background-size: cover;
   background-position: center;
   transition: filter 0.5s;
+  border-left: 100vw solid transparent;
+  border-bottom: 5vw solid #fff;
+  box-sizing: content-box;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.banner-text {
-  padding: 33vh 20vw;
-  width: 100%;
+.banner h1 {
+  position: absolute;
+  top: 45%;
+  left: 20%;
 }
 
 @media only screen and (min-width: 768px) and (min-height: 768px) {
-  .banner-text {
-    padding: 37vh 20vw;
-    width: 100%;
+  .banner h1 {
     font-size: 4em;
   }
 }
 
 .banner .fa-chevron-down {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
   display: flex;
   justify-content: center;
-  padding: 1vh 0;
   width: 100%;
   transition: 0.5s linear all;
   animation: bounce 2.5s infinite;

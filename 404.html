@@ -81,13 +81,13 @@
       var offsetX = () => screen.width * 0.02;
       var offsetY = () => screen.height * 0.02;
       
-      parallax('.banner', offsetY());
+      parallax('.banner-404', offsetY());
       
       // mouse move parallax on desktop
       $('html, body').mousemove((e) => {
         if (!isMobile()) {
-          $('.banner').css('background-position-x', (e.pageX - $('.banner').width() / 2) / 50 - offsetX());
-          $('.banner').css('background-position-y', -$(window).scrollTop() / 2 + (e.pageY - $('.banner').height() / 2) / 50 - offsetY());
+          $('.banner-404').css('background-position-x', (e.pageX - $('.banner').width() / 2) / 50 - offsetX());
+          $('.banner-404').css('background-position-y', -$(window).scrollTop() / 2 + (e.pageY - $('.banner').height() / 2) / 50 - offsetY());
         }
       });
       

@@ -282,51 +282,6 @@ a:hover, a:active, a:focus {
 /* BANNER */
 /* ====== */
 
-.home-bg {
-  background-image: url("../images/joshua-sortino-228788.jpg");
-}
-
-@media only screen and (min-width: 801px) {
-  .home-bg {
-    background-size: 104% !important; /* so no white is shown when moving bg */
-  }
-  
-  .banner {
-    background-attachment: fixed;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .home-bg {
-    background-position-x: auto;
-  }
-}
-
-.projects-bg {
-  background-image: url("../images/emile-perron-190221.jpg");
-  color: white;
-}
-
-.resume-bg {
-  background-image: url("../images/joanna-kosinska-478198.jpg");
-}
-
-.small-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  flex-direction: column;
-}
-
-.small-banner h2, .no-margin {
-  margin-bottom: 0;
-}
-
 .banner {
   height: 100vh;
   background-repeat: no-repeat;
@@ -365,14 +320,54 @@ a:hover, a:active, a:focus {
   font-size: 3.5rem;
 }
 
-.banner-404-text {
-  padding: 34vh 20vw;
-  width: 100%;
+.small-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+}
+
+.small-banner h2 {
+  margin-bottom: 0;
 }
 
 .cursor::after {
   content: '|';
   animation: blink 0.5s infinite;
+}
+
+.home-bg {
+  background-image: url("../images/joshua-sortino-228788.jpg");
+}
+
+.projects-bg {
+  background-image: url("../images/emile-perron-190221.jpg");
+  color: white;
+}
+
+.resume-bg {
+  background-image: url("../images/joanna-kosinska-478198.jpg");
+}
+
+@media only screen and (min-width: 801px) {
+  .home-bg {
+    background-size: 104% !important; /* so no white is shown when moving bg */
+  }
+  
+  .banner {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .home-bg {
+    background-position-x: auto;
+  }
 }
 
 /* ======= */
@@ -591,4 +586,29 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 
 .construction h1 {
   margin-bottom: 25px;
+}
+
+/* ======== */
+/* 404 PAGE */
+/* ======== */
+
+.banner-404 {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.5s;
+  margin-bottom: 0;
+}
+
+.banner-404 div {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+@media only screen and (min-width: 768px) and (min-height: 768px) {
+  .banner-404 h1 {
+    font-size: 4em;
+  }
 }

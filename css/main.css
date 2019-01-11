@@ -320,22 +320,6 @@ a:hover, a:active, a:focus {
   font-size: 3.5rem;
 }
 
-.small-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  flex-direction: column;
-}
-
-.small-banner h2 {
-  margin-bottom: 0;
-}
-
 .cursor::after {
   content: '|';
   animation: blink 0.5s infinite;
@@ -549,6 +533,108 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   }
 }
 
+/* ============= */
+/* SMALL BANNERS */
+/* ============= */
+
+.small-banner {
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  box-sizing: content-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.small-banner .wrapper {
+  position: relative;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 50vw;
+}
+
+.slant {
+  width: 100%;
+  height: 0px;
+}
+
+.slant .thing {
+  transform: translateY(-100%);
+  border-bottom: 5vw solid white;
+  border-left: 100vw solid transparent;
+}
+
+.slant .thing2 {
+  transform: translateY(-100%);
+  border-top: 5vw solid white;
+  border-right: 100vw solid transparent;
+}
+
+.small-banner h2 {
+  margin-bottom: 0;
+}
+
+.small-banner.resume-bg {
+  border-top: 5vw solid white;
+  border-right: 100vw solid transparent;
+  margin-bottom: 0px;
+}
+
+.small-banner.resume-bg .wrapper {
+  top: -20px;
+  left: 50vw;
+}
+
+.small-banner.resume-bg h2, .small-banner.resume-bg a {
+  transform: translateY(-50%);
+}
+
+.small-banner.projects-bg {
+  border-left: 100vw solid transparent;
+  border-bottom: 5vw solid white;
+}
+
+.small-banner.projects-bg .wrapper {
+  top: 20px;
+  left: -50vw;
+}
+
+.small-banner.projects-bg h2, .small-banner.projects-bg a {
+  transform: translateY(50%);
+}
+
+/* ======== */
+/* 404 PAGE */
+/* ======== */
+
+.banner-404 {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.5s;
+  margin-bottom: 0;
+}
+
+.banner-404 div {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+@media only screen and (min-width: 768px) and (min-height: 768px) {
+  .banner-404 h1 {
+    font-size: 4em;
+  }
+}
+
 /* ===== */
 /* OTHER */
 /* ===== */
@@ -582,29 +668,4 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 
 .construction h1 {
   margin-bottom: 25px;
-}
-
-/* ======== */
-/* 404 PAGE */
-/* ======== */
-
-.banner-404 {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transition: filter 0.5s;
-  margin-bottom: 0;
-}
-
-.banner-404 div {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-}
-
-@media only screen and (min-width: 768px) and (min-height: 768px) {
-  .banner-404 h1 {
-    font-size: 4em;
-  }
 }

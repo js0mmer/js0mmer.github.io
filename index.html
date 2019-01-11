@@ -63,14 +63,22 @@
       </section>
     </div>
     <div class="jumbotron small-banner resume-bg">
-      <h2 class="center">Resume</h2>
-      <a href="files/Resume.pdf" target="_blank" class="btn-view btn-clear center">Click to View</a>
+      <div class="wrapper">
+        <h2>Resume</h2>
+        <a href="files/Resume.pdf" target="_blank" class="btn-view btn-clear">Click to View</a>
+      </div>
+    </div>
+    <div class="slant">
+      <div class="thing"></div>
+      <div class="thing2"></div>
     </div>
     <div class="jumbotron small-banner projects-bg">
-      <h2 class="center">Projects</h2>
-      <a href="projects" class="btn-view btn-clear center">Click to View</a>
+      <div class="wrapper">
+        <h2>Projects</h2>
+        <a href="projects" class="btn-view btn-clear">Click to View</a>
+      </div>
     </div>
-    <section id="contact" class="container">
+    <section id="contact" class="container" style="margin-bottom: 5vw;">
       <h1 class="center" id="contact-text">Contact</h1>
       <div class="flex-center">
         <form method="POST" action="https://formspree.io/jacob.sommer@comcast.net">
@@ -144,14 +152,6 @@
           $('#about-me-p').addClass('animated fadeInLeft');
         }
         
-        if (scrollBottom >= $('.resume-bg').offset().top) {
-          $('.resume-bg').addClass('animated fadeInLeft');
-        }
-        
-        if (scrollBottom >= $('.projects-bg').offset().top) {
-          $('.projects-bg').addClass('animated fadeInLeft');
-        }
-        
         if (scrollBottom >= $('#contact-text').offset().top) {
           $('#contact-text').addClass('animated fadeInDown');
         }
@@ -220,7 +220,7 @@
       
       parallax('.banner', offsetY());
       parallax('.resume-bg', -500, false);
-      parallax('.projects-bg', -500, false);
+      parallax('.projects-bg', -800, false);
       
       // mouse move parallax on desktop
       $('html, body').mousemove((e) => {

@@ -350,7 +350,7 @@ a:hover, a:active, a:focus {
 
 @media only screen and (max-width: 800px) {
   .home-bg {
-    background-position-x: auto;
+    background-position-x: 65%;
   }
 }
 

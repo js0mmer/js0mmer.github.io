@@ -547,7 +547,6 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   background-size: cover;
   background-position: center;
   flex-direction: column;
-  box-sizing: content-box;
   padding-left: 0;
   padding-right: 0;
 }
@@ -573,6 +572,10 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 }
 
 @media only screen and (min-width: 768px) {
+  .small-banner {
+    box-sizing: content-box;
+  }
+
   .small-banner.resume-bg {
     margin-bottom: 0;
   }

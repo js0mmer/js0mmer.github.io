@@ -666,6 +666,10 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   padding: 15px;
 }
 
+#home-btn {
+  width: 160px;
+}
+
 .construction {
   position: absolute;
   top: 50%;

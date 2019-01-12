@@ -10,7 +10,6 @@ body {
   filter: blur(4px) opacity(75%);
 }
 
-
 .center {
   text-align: center;
   margin-left: auto;
@@ -198,6 +197,15 @@ a:hover, a:active, a:focus {
   }
 }
 
+.menu.active {
+  z-index: 2;
+}
+
+.menu.active ul {
+  height: 600px;
+  border-bottom: 1px solid #000;
+}
+
 .menu li:first-child {
   margin-top: 0;
 }
@@ -214,40 +222,6 @@ a:hover, a:active, a:focus {
   text-decoration: none;
   letter-spacing: 0.5em;
   padding-left: 0.5em;
-}
-
-.menu.active {
-  z-index: 2;
-}
-
-.menu.active ul {
-  height: 600px;
-  border-bottom: 1px solid #000;
-}
-
-.underline {
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  width: 500px;
-}
-
-.underline:before, .underline:after {
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  content: '';
-  background: #000;
-  transition: 0.2s linear all;
-}
-
-.underline:before {
-  left: 50%;
-}
-
-.underline:after {
-  right: 50%;
 }
 
 .menu li:hover .underline:before, .menu li:hover .underline:after {
@@ -277,6 +251,31 @@ a:hover, a:active, a:focus {
 
 .menu li:nth-child(6) .underline {
   width: 230px;
+}
+
+.underline {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.underline:before, .underline:after {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  content: '';
+  background: #000;
+  transition: 0.2s linear all;
+}
+
+.underline:before {
+  left: 50%;
+}
+
+.underline:after {
+  right: 50%;
 }
 
 /* ======= */
@@ -365,32 +364,6 @@ a:hover, a:active, a:focus {
 /* BUTTONS */
 /* ======= */
 
-.btn-outline {
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 10px 19px;
-  text-align: center;
-  width: 100px;
-  display: block;
-  font-size: 11px;
-  text-decoration: none !important;
-  line-height: 100%;
-  margin-top: 10px;
-  letter-spacing: 0.8px;
-  color: #ff3a3a !important;
-  transition: all ease-in-out 0.7s;
-  background-color: white;
-  border: 3px solid #ff3a3a;
-  border-radius: 25px;
-}
-
-.btn-outline:hover, .btn-outline:focus {
-  transition: all ease-in-out 0.7s;
-  color: white !important;
-  background-color: #ff3a3a;
-  cursor: pointer;
-}
-
 .btn-clear {
   font-weight: 600;
   text-transform: uppercase;
@@ -414,6 +387,32 @@ a:hover, a:active, a:focus {
   transition: all ease-in-out 0.7s;
   color: black !important;
   background-color: white;
+  cursor: pointer;
+}
+
+.btn-outline {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 100px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none !important;
+  line-height: 100%;
+  margin-top: 10px;
+  letter-spacing: 0.8px;
+  color: #ff3a3a !important;
+  transition: all ease-in-out 0.7s;
+  background-color: white;
+  border: 3px solid #ff3a3a;
+  border-radius: 25px;
+}
+
+.btn-outline:hover, .btn-outline:focus {
+  transition: all ease-in-out 0.7s;
+  color: white !important;
+  background-color: #ff3a3a;
   cursor: pointer;
 }
 
@@ -652,16 +651,16 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 /* OTHER */
 /* ===== */
 
+#about-me-p {
+  margin-bottom: 30px;
+}
+
 #flash-prompt a, #flash-prompt a:visited {
   color: #00E;
 }
 
 #flash-prompt a:hover, #flash-prompt a:active, #flash-prompt a:focus {
   color: #00a;
-}
-
-#about-me-p {
-  margin-bottom: 30px;
 }
 
 #projects .row .col-md-7 {

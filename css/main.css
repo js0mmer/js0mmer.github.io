@@ -288,8 +288,6 @@ a:hover, a:active, a:focus {
   background-size: cover;
   background-position: center;
   transition: filter 0.5s;
-  border-left: 100vw solid transparent;
-  border-bottom: 5vw solid #fff;
   box-sizing: content-box;
   padding-left: 0;
   padding-right: 0;
@@ -302,6 +300,11 @@ a:hover, a:active, a:focus {
 }
 
 @media only screen and (min-width: 768px) and (min-height: 768px) {
+  .banner {
+    border-left: 100vw solid transparent;
+    border-bottom: 5vw solid #fff;
+  }
+
   .banner h1 {
     font-size: 4em;
   }
@@ -350,7 +353,7 @@ a:hover, a:active, a:focus {
 
 @media only screen and (max-width: 800px) {
   .home-bg {
-    background-position-x: 65%;
+    background-position-x: 50%;
   }
 }
 
@@ -552,12 +555,16 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 .small-banner .wrapper {
   position: relative;
   top: 0;
+  left: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  left: 50vw;
+}
+
+.small-banner h2 {
+  margin-bottom: 0;
 }
 
 .slant {
@@ -565,49 +572,50 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   height: 0px;
 }
 
-.slant .thing {
-  transform: translateY(-100%);
-  border-bottom: 5vw solid white;
-  border-left: 100vw solid transparent;
-}
+@media only screen and (min-width: 768px) {
+  .small-banner.resume-bg {
+    margin-bottom: 0;
+  }
 
-.slant .thing2 {
-  transform: translateY(-100%);
-  border-top: 5vw solid white;
-  border-right: 100vw solid transparent;
-}
+  .small-banner.resume-bg {
+    border-top: 5vw solid white;
+    border-right: 100vw solid transparent;
+  }
 
-.small-banner h2 {
-  margin-bottom: 0;
-}
+  .small-banner.projects-bg {
+    border-left: 100vw solid transparent;
+    border-bottom: 5vw solid white;
+  }
 
-.small-banner.resume-bg {
-  border-top: 5vw solid white;
-  border-right: 100vw solid transparent;
-  margin-bottom: 0px;
-}
+  .small-banner.resume-bg h2, .small-banner.resume-bg a {
+    transform: translateY(-50%);
+  }
 
-.small-banner.resume-bg .wrapper {
-  top: -20px;
-  left: 50vw;
-}
+  .small-banner.resume-bg .wrapper {
+    top: -20px;
+    left: 50vw;
+  }
 
-.small-banner.resume-bg h2, .small-banner.resume-bg a {
-  transform: translateY(-50%);
-}
+  .small-banner.projects-bg .wrapper {
+    top: 20px;
+    left: -50vw;
+  }
+  
+  .small-banner.projects-bg h2, .small-banner.projects-bg a {
+    transform: translateY(50%);
+  }
 
-.small-banner.projects-bg {
-  border-left: 100vw solid transparent;
-  border-bottom: 5vw solid white;
-}
-
-.small-banner.projects-bg .wrapper {
-  top: 20px;
-  left: -50vw;
-}
-
-.small-banner.projects-bg h2, .small-banner.projects-bg a {
-  transform: translateY(50%);
+  .slant .thing {
+    transform: translateY(-100%);
+    border-bottom: 5vw solid white;
+    border-left: 100vw solid transparent;
+  }
+  
+  .slant .thing2 {
+    transform: translateY(-100%);
+    border-top: 5vw solid white;
+    border-right: 100vw solid transparent;
+  }
 }
 
 /* ======== */

@@ -283,37 +283,24 @@ a:hover, a:active, a:focus {
 /* ====== */
 
 .banner {
-  height: 100vh;
+  height: calc(100vh + 5vw);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   transition: filter 0.5s;
-  box-sizing: content-box;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .banner h1 {
-  position: absolute;
+  position: relative;
   top: 45%;
   left: 20%;
-}
-
-@media only screen and (min-width: 768px) and (min-height: 768px) {
-  .banner {
-    border-left: 100vw solid transparent;
-    border-bottom: 5vw solid #fff;
-  }
-
-  .banner h1 {
-    font-size: 4em;
-  }
+  transform: translateY(-50%);
 }
 
 .banner .fa-chevron-down {
-  position: absolute;
+  position: relative;
   left: 0;
-  bottom: 5%;
+  bottom: -75vh;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -321,6 +308,22 @@ a:hover, a:active, a:focus {
   animation: bounce 2.5s infinite;
   opacity: 0;
   font-size: 3.5rem;
+}
+
+@media only screen and (min-width: 768px) and (min-height: 768px) {
+  .banner:after {
+    position: absolute;
+    left: 0;
+    bottom: -5vw;
+    width: 100vw;
+    content: '';
+    border-left: 100vw solid transparent;
+    border-bottom: 5vw solid #fff;
+  }
+
+  .banner h1 {
+    font-size: 4em;
+  }
 }
 
 .cursor::after {

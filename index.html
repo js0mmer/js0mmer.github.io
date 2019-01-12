@@ -52,7 +52,7 @@
           <div class="profile-picture center"></div>
         </div>
         <div class="row">
-          <h1 class="center" id="about-me-text">About Me</h1>
+          <h1 class="center">About Me</h1>
           <div id="about-me-p">
             <p>Hello, I am Jacob, a student with a passion for technology. I plan to be a Software Developer. I am currently a sophomore in high school and I have been taking as many computer science related electives at my school as I can and plan to take more. I am eager to learn more about computers. I am part of Dublin High School’s Engineering and Design Academy.</p>
             <p>I have been coding for five years. I know several different coding languages. I have experience with graphics design, animation, and video editing. I built my own computer two years ago and I built a computer for my brother last year. I am a Principal’s Honor Roll student with a 4.3 GPA. I am currently taking Honors Principles of Engineering and Honors Chemistry.</p>
@@ -65,17 +65,17 @@
     <div class="jumbotron small-banner resume-bg">
       <div class="wrapper">
         <h2>Resume</h2>
-        <a href="files/Resume.pdf" target="_blank" class="btn-view btn-clear">Click to View</a>
+        <a href="files/Resume.pdf" target="_blank" class="view-btn btn-clear">Click to View</a>
       </div>
     </div>
     <div class="slant">
-      <div class="thing"></div>
-      <div class="thing2"></div>
+      <div class="slant-top"></div>
+      <div class="slant-bottom"></div>
     </div>
     <div class="jumbotron small-banner projects-bg">
       <div class="wrapper">
         <h2>Projects</h2>
-        <a href="projects" class="btn-view btn-clear">Click to View</a>
+        <a href="projects" class="view-btn btn-clear">Click to View</a>
       </div>
     </div>
     <section id="contact" class="container" style="margin-bottom: 5vw;">
@@ -144,16 +144,16 @@
           $('.profile-picture').addClass('animated zoomIn');
         }
         
-        if (scrollBottom >= $('#about-me-text').offset().top) {
-          $('#about-me-text').addClass('animated fadeInDown');
+        if (scrollBottom >= $('#about h1').offset().top) {
+          $('#about h1').addClass('animated fadeInDown');
         }
         
         if (scrollBottom >= $('#about-me-p').offset().top) {
           $('#about-me-p').addClass('animated fadeInLeft');
         }
         
-        if (scrollBottom >= $('#contact-text').offset().top) {
-          $('#contact-text').addClass('animated fadeInDown');
+        if (scrollBottom >= $('#contact h1').offset().top) {
+          $('#contact h1').addClass('animated fadeInDown');
         }
         
         if (scrollBottom >= $('.input').offset().top) {

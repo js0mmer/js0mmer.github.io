@@ -43,7 +43,7 @@
     <div class="jumbotron banner-404 home-bg">
       <div>
         <h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
-        <a href="/" style="opacity: 0; margin-top: 20px;" id="home-btn" class="btn-clear">Return to Home</a>
+        <a href="/" style="opacity: 0; margin-top: 20px;" class="home-btn btn-clear">Return to Home</a>
       </div>
     </div>
     <script src="/js/jquery.min.js"></script>
@@ -71,7 +71,7 @@
           .addScene('pagenotfound:Page Not Found')
           .addScene(300)
           .addScene(() => {
-            $('#home-btn').css('opacity', 1);
+            $('.home-btn').css('opacity', 1);
           });
       });
       

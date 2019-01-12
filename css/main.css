@@ -6,6 +6,11 @@ body {
   overflow-x: hidden;
 }
 
+.blur {
+  filter: blur(4px) opacity(75%);
+}
+
+
 .center {
   text-align: center;
   margin-left: auto;
@@ -27,17 +32,13 @@ body {
   justify-content: center;
 }
 
+.jumbotron {
+  border-radius: 0%;
+}
+
 .red-border {
   background-color: #ff3a3a !important;
   border: 15px solid #ff3a3a !important;
-}
-
-.thumbnail {
-  max-width: 100%;
-  max-height: 100%;
-  background-color: transparent;
-  border: none;
-  margin-bottom: 0;
 }
 
 ::selection {
@@ -46,14 +47,6 @@ body {
 
 ::-moz-selection {
   background: #ff8f8f;
-}
-
-.jumbotron {
-  border-radius: 0%;
-}
-
-.blur {
-  filter: blur(4px) opacity(75%);
 }
 
 /* ===== */
@@ -79,6 +72,14 @@ a:hover, a:active, a:focus {
   background-image: url("../images/me.jpg");
   background-size: cover;
   border: 5px solid #ff3a3a;
+}
+
+.thumbnail {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 0;
 }
 
 /* ========== */
@@ -278,9 +279,9 @@ a:hover, a:active, a:focus {
   width: 230px;
 }
 
-/* ====== */
-/* BANNER */
-/* ====== */
+/* ======= */
+/* BANNERS */
+/* ======= */
 
 .banner {
   height: calc(100vh + 5vw);
@@ -326,7 +327,7 @@ a:hover, a:active, a:focus {
   }
 }
 
-.cursor::after {
+.cursor:after {
   content: '|';
   animation: blink 0.5s infinite;
 }
@@ -344,17 +345,17 @@ a:hover, a:active, a:focus {
   background-image: url("../images/joanna-kosinska-478198.jpg");
 }
 
-@media only screen and (min-width: 801px) {
-  .home-bg {
-    background-size: 104% !important; /* so no white is shown when moving bg */
-  }
-  
+@media only screen and (min-width: 801px) { /* enable parallax on desktop */
   .banner {
     background-attachment: fixed;
   }
+
+  .home-bg {
+    background-size: 104% !important; /* so no white is shown when doing parallax */
+  }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) { /* center bg on mobile (when parallax is disabled) */
   .home-bg {
     background-position-x: 50%;
   }
@@ -416,7 +417,16 @@ a:hover, a:active, a:focus {
   cursor: pointer;
 }
 
-.btn-view {
+.home-btn {
+  width: 160px;
+}
+
+.send-btn {
+  width: 100px;
+  margin-top: 15px;
+}
+
+.view-btn {
   width: 150px;
 }
 
@@ -486,13 +496,9 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 }
 
 .input-bar {
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.input-bar {
   display: block;
   position: relative;
+  margin-bottom: 10px;
   width: 300px;
   max-width: 100%;
 }
@@ -515,33 +521,14 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   right: 50%;
 }
 
-.send-btn {
-  width: 100px;
-}
-
-/* ========== */
-/* ANIMATIONS */
-/* ========== */
-
-@keyframes blink {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
-}
-
-@keyframes bounce {
-  from {
-    margin-top: 0;
-  } to {
-    margin-top: 25px;
-  }
-}
-
 /* ============= */
 /* SMALL BANNERS */
 /* ============= */
+
+.slant {
+  width: 100%;
+  height: 0px;
+}
 
 .small-banner {
   height: 25vh;
@@ -552,6 +539,10 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   flex-direction: column;
   padding-left: 0;
   padding-right: 0;
+}
+
+.small-banner h2 {
+  margin-bottom: 0;
 }
 
 .small-banner .wrapper {
@@ -565,32 +556,27 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   align-items: center;
 }
 
-.small-banner h2 {
-  margin-bottom: 0;
-}
-
-.slant {
-  width: 100%;
-  height: 0px;
-}
-
 @media only screen and (min-width: 768px) {
+  .slant-top {
+    transform: translateY(-100%);
+    border-bottom: 5vw solid white;
+    border-left: 100vw solid transparent;
+  }
+  
+  .slant-bottom {
+    transform: translateY(-100%);
+    border-top: 5vw solid white;
+    border-right: 100vw solid transparent;
+  }
+
   .small-banner {
     box-sizing: content-box;
   }
 
   .small-banner.resume-bg {
-    margin-bottom: 0;
-  }
-
-  .small-banner.resume-bg {
     border-top: 5vw solid white;
     border-right: 100vw solid transparent;
-  }
-
-  .small-banner.projects-bg {
-    border-left: 100vw solid transparent;
-    border-bottom: 5vw solid white;
+    margin-bottom: 0;
   }
 
   .small-banner.resume-bg h2, .small-banner.resume-bg a {
@@ -602,25 +588,18 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
     left: 50vw;
   }
 
-  .small-banner.projects-bg .wrapper {
-    top: 20px;
-    left: -50vw;
+  .small-banner.projects-bg {
+    border-left: 100vw solid transparent;
+    border-bottom: 5vw solid white;
   }
   
   .small-banner.projects-bg h2, .small-banner.projects-bg a {
     transform: translateY(50%);
   }
 
-  .slant .thing {
-    transform: translateY(-100%);
-    border-bottom: 5vw solid white;
-    border-left: 100vw solid transparent;
-  }
-  
-  .slant .thing2 {
-    transform: translateY(-100%);
-    border-top: 5vw solid white;
-    border-right: 100vw solid transparent;
+  .small-banner.projects-bg .wrapper {
+    top: 20px;
+    left: -50vw;
   }
 }
 
@@ -649,6 +628,26 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   }
 }
 
+/* ========== */
+/* ANIMATIONS */
+/* ========== */
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  from {
+    margin-top: 0;
+  } to {
+    margin-top: 25px;
+  }
+}
+
 /* ===== */
 /* OTHER */
 /* ===== */
@@ -667,10 +666,6 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 
 #projects .row .col-md-7 {
   padding: 15px;
-}
-
-#home-btn {
-  width: 160px;
 }
 
 .construction {

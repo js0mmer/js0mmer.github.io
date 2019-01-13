@@ -47,7 +47,7 @@
       <span class="fas fa-chevron-down"></span>
     </div>
     <div class="container">
-      <section id="about" class="col">
+      <section id="about" class="col" style="margin-bottom: 30px;">
         <div class="row">
           <div class="profile-picture center"></div>
         </div>
@@ -82,17 +82,17 @@
       <h1 class="center">Contact</h1>
       <div class="flex-center">
         <form method="POST" action="https://formspree.io/jacob.sommer@comcast.net">
-          <div class="input">
+          <div>
             <input type="name" name="Name" placeholder="Your name" />
-            <span class="input-bar"></span>
+            <span class="input-underline"></span>
           </div>
-          <div class="input">
+          <div>
             <input type="email" name="Mail" placeholder="Your email" />
-            <span class="input-bar"></span>
+            <span class="input-underline"></span>
           </div>
-          <div class="input">
+          <div>
             <textarea name="Message" placeholder="Your message"></textarea>
-            <span class="input-bar"></span>
+            <span class="input-underline"></span>
           </div>
           <button type="submit" class="send-btn btn-outline center">Send <span class="fa fa-paper-plane"></span></button>
         </form>
@@ -156,8 +156,8 @@
           $('#contact h1').addClass('animated fadeInDown');
         }
         
-        if (scrollBottom >= $('.input').offset().top) {
-          $('.input').addClass('animated fadeInLeft');
+        if (scrollBottom >= $('form div').offset().top) {
+          $('form div').addClass('animated fadeInLeft');
         }
         
         if (scrollBottom >= $('.send-btn').offset().top) {

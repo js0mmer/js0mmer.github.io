@@ -488,13 +488,13 @@ textarea {
   resize: vertical;
 }
 
-input:focus ~ .input-bar:before, input:focus ~ .input-bar:after,
-textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
+input:focus ~ .input-underline:before, input:focus ~ .input-underline:after,
+textarea:focus ~ .input-underline:before, textarea:focus ~ .input-underline:after {
   width: 50%;
   transition: 0.2s linear all;
 }
 
-.input-bar {
+.input-underline {
   display: block;
   position: relative;
   margin-bottom: 10px;
@@ -502,7 +502,7 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   max-width: 100%;
 }
 
-.input-bar:before, .input-bar:after {
+.input-underline:before, .input-underline:after {
   position: absolute;
   width: 0;
   height: 2px;
@@ -512,11 +512,11 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
   transition: 0.2s linear all;
 }
 
-.input-bar:before {
+.input-underline:before {
   left: 50%;
 }
 
-.input-bar:after {
+.input-underline:after {
   right: 50%;
 }
 
@@ -650,10 +650,6 @@ textarea:focus ~ .input-bar:before, textarea:focus ~ .input-bar:after {
 /* ===== */
 /* OTHER */
 /* ===== */
-
-#about-me-p {
-  margin-bottom: 30px;
-}
 
 #flash-prompt a, #flash-prompt a:visited {
   color: #00E;

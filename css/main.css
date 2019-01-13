@@ -2,7 +2,7 @@
 /* GENERAL */
 /* ======= */
 
-body {
+body, .banner {
   overflow-x: hidden;
 }
 

@@ -6,10 +6,6 @@ body, .banner {
   overflow-x: hidden;
 }
 
-.blur {
-  filter: blur(4px) opacity(75%);
-}
-
 .center {
   text-align: center;
   margin-left: auto;
@@ -310,6 +306,10 @@ a:hover, a:active, a:focus {
   font-size: 3.5rem;
 }
 
+.blur {
+  filter: blur(4px) opacity(75%);
+}
+
 @media only screen and (min-width: 768px) and (min-height: 768px) {
   .banner:after {
     position: absolute;
@@ -323,6 +323,10 @@ a:hover, a:active, a:focus {
 
   .banner h1 {
     font-size: 4em;
+  }
+
+  .blur:after {
+    bottom: 0;
   }
 }
 

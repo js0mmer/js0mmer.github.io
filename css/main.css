@@ -2,7 +2,7 @@
 /* GENERAL */
 /* ======= */
 
-body, .banner {
+body {
   overflow-x: hidden;
 }
 
@@ -284,6 +284,7 @@ a:hover, a:active, a:focus {
   background-size: cover;
   background-position: center;
   transition: filter 0.5s;
+  overflow: hidden;
 }
 
 .banner h1 {
@@ -327,6 +328,7 @@ a:hover, a:active, a:focus {
 
   .blur:after {
     bottom: 0;
+    transition-delay: 0.1s;
   }
 }
 

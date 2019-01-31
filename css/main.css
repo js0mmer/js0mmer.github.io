@@ -305,6 +305,11 @@ a:hover, a:active, a:focus {
   animation: bounce 2.5s infinite;
   opacity: 0;
   font-size: 3.5rem;
+  color: #212529;
+}
+
+.banner a {
+  text-decoration: none;
 }
 
 .blur {

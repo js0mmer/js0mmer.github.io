@@ -331,7 +331,7 @@ img {
 
 .btn-red {
   border: 3px solid #ff3a3a;
-  color: #ff3a3a !important
+  color: #ff3a3a
 }
 
 .btn-red:after {
@@ -339,7 +339,7 @@ img {
 }
 
 .btn-red:hover, .btn-red:focus {
-  color: white !important;
+  color: white;
 }
 
 .button {
@@ -383,7 +383,7 @@ img {
 
 .btn-white {
   border: 3px solid white;
-  color: white !important
+  color: white
 }
 
 .btn-white:after {
@@ -391,7 +391,7 @@ img {
 }
 
 .btn-white:hover, .btn-white:focus {
-  color: black !important;
+  color: black;
 }
 
 .home-btn {
@@ -403,7 +403,7 @@ img {
 }
 
 .sending {
-  width: 20px !important;
+  width: 20px;
   padding-left: 0;
   padding-right: 0;
   border-color: #bbb;
@@ -414,7 +414,7 @@ img {
 }
 
 .sending:after {
-  background-color: white !important;
+  background-color: white;
 }
 
 .view-btn {

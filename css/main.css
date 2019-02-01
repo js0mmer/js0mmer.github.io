@@ -108,7 +108,7 @@ img {
 }
 
 .nav-toggle .icon.white, .nav-toggle .icon.white:before, .nav-toggle .icon.white:after {
-  background-color: #fff;
+  background-color: white;
 }
 
 .nav-toggle .icon:before {
@@ -188,7 +188,7 @@ img {
 
 .menu.active ul {
   height: 600px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid black;
 }
 
 .menu li:first-child {
@@ -301,7 +301,7 @@ img {
     width: 100vw;
     content: '';
     border-left: 100vw solid transparent;
-    border-bottom: 5vw solid #fff;
+    border-bottom: 5vw solid white;
   }
 
   .banner h1 {

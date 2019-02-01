@@ -387,7 +387,7 @@ a:hover, a:active, a:focus {
   text-align: center;
   text-transform: uppercase;
   overflow: hidden;
-  transition: .3s;
+  transition: 0.3s;
   box-sizing: content-box;
   border-radius: 25px;
   background-color: transparent;
@@ -397,7 +397,7 @@ a:hover, a:active, a:focus {
 
 .btn-special:after {
   position: absolute;
-  transition: .3s;
+  transition: 0.3s;
   content: '';
   width: 0;
   height: 120%;
@@ -518,7 +518,7 @@ textarea {
 input:focus ~ .input-underline:before, input:focus ~ .input-underline:after,
 textarea:focus ~ .input-underline:before, textarea:focus ~ .input-underline:after {
   width: 50%;
-  transition: 0.2s linear all;
+  transition: 0.3s;
 }
 
 .input-underline {
@@ -536,7 +536,7 @@ textarea:focus ~ .input-underline:before, textarea:focus ~ .input-underline:afte
   bottom: 0;
   content: '';
   background: #ff3a3a;
-  transition: 0.2s linear all;
+  transition: 0.3s;
 }
 
 .input-underline:before {

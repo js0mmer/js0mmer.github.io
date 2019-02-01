@@ -23,15 +23,11 @@ body {
 }
 
 .red-border {
-  background-color: #ff3a3a !important;
-  border: 15px solid #ff3a3a !important;
+  background-color: #ff3a3a;
+  border: 15px solid #ff3a3a;
 }
 
 ::selection {
-  background: #ff8f8f;
-}
-
-::-moz-selection {
   background: #ff8f8f;
 }
 

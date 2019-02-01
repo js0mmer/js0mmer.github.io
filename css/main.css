@@ -39,12 +39,17 @@ body {
 /* LINKS */
 /* ===== */
 
-a:link, a:visited {
-  color: #f00;
+.link {
+  color: #ff3a3a;
+  box-shadow: 0 -1px #ff3a3a inset;
+  transition: 0.3s;
 }
 
-a:hover, a:active, a:focus {
-  color: #900;
+.link:hover, .link:active, .link:focus {
+  color: white;
+  box-shadow: 0 -50px #ff3a3a inset;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 /* ====== */

@@ -24,7 +24,8 @@ body {
 
 .flex-center {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .jumbotron {
@@ -375,69 +376,80 @@ a:hover, a:active, a:focus {
 /* BUTTONS */
 /* ======= */
 
-.btn-clear {
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 10px 19px;
-  text-align: center;
-  width: 100px;
-  display: block;
-  font-size: 11px;
-  text-decoration: none !important;
-  line-height: 100%;
-  margin-top: 10px;
-  letter-spacing: 0.8px;
-  color: white !important;
-  background-color: transparent;
-  transition: all ease-in-out 0.7s;
-  border: 3px solid white;
-  border-radius: 25px;
-}
-
-.btn-clear:hover, .btn-clear:focus {
-  transition: all ease-in-out 0.7s;
-  color: black !important;
-  background-color: white;
-  cursor: pointer;
-}
-
-.btn-outline {
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 10px 19px;
-  text-align: center;
-  width: 100px;
-  display: block;
-  font-size: 11px;
-  text-decoration: none !important;
-  line-height: 100%;
-  margin-top: 10px;
-  letter-spacing: 0.8px;
-  color: #ff3a3a !important;
-  transition: all ease-in-out 0.7s;
-  background-color: white;
+.btn-red {
   border: 3px solid #ff3a3a;
-  border-radius: 25px;
+  color: #ff3a3a !important
 }
 
-.btn-outline:hover, .btn-outline:focus {
-  transition: all ease-in-out 0.7s;
-  color: white !important;
+.btn-red:after {
   background-color: #ff3a3a;
+}
+
+.btn-red:hover, .btn-red:focus {
+  color: white !important;
+}
+
+.btn-white {
+  border: 3px solid white;
+  color: white !important
+}
+
+.btn-white:after {
+  background-color: white;
+}
+
+.btn-white:hover, .btn-white:focus {
+  color: black !important;
+}
+
+.btn-special {
+  margin: 10px;
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .3s;
+  box-sizing: content-box;
+  border-radius: 25px;
+  background-color: transparent;
   cursor: pointer;
+  position: relative;
+}
+
+.btn-special:after {
+  position: absolute;
+  transition: .3s;
+  content: '';
+  width: 0;
+  height: 120%;
+  left: -10%;
+  bottom: -1px;
+  transform: skewX(15deg);
+  z-index: -1;
+}
+
+.btn-special:hover, .btn-special:focus {
+  text-decoration: none;
+}
+
+.btn-special:hover:after, .btn-special:focus:after {
+  width: 120%;
 }
 
 .home-btn {
-  width: 160px;
+  width: 130px;
 }
 
 .send-btn {
-  width: 100px;
-  margin-top: 15px;
+  width: 75px;
 }
 
 .view-btn {
-  width: 150px;
+  width: 120px;
 }
 
 /* ====== */
@@ -680,7 +692,6 @@ textarea:focus ~ .input-underline:before, textarea:focus ~ .input-underline:afte
   transform: translateY(-50%);
   left: 0;
   right: 0;
-  margin: 0 auto;
   text-align: center;
   transition: filter 0.5s;
 }

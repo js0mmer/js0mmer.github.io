@@ -163,12 +163,8 @@
           $('#contact h1').addClass('animated fadeInDown');
         }
         
-        if (scrollBottom >= $('form div').offset().top) {
-          $('form div').addClass('animated fadeInLeft');
-        }
-        
-        if (scrollBottom >= $('.send-btn').offset().top) {
-          $('.send-btn').addClass('animated fadeInLeft');
+        if (scrollBottom >= $('form').offset().top) {
+          $('form').addClass('animated fadeInLeft');
         }
       });
     </script>
@@ -241,12 +237,16 @@
         if (isMobile()) $('.banner').css('background-position-x', '50%'); // center bg horizontally on mobile
       });
     </script>
-    <!-- Nav -->
+    <!-- Button click events -->
     <script>
       $('.nav-toggle').on('click', () => {
         $('.nav-toggle').toggleClass('open');
         $('.menu').toggleClass('active');
         $('.banner').toggleClass('blur');
+      });
+
+      $('.send-btn').click(function() {
+        $(this).addClass('sending');
       });
     </script>
   </body>

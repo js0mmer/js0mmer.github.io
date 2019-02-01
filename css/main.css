@@ -191,14 +191,14 @@ img {
   border-bottom: 1px solid black;
 }
 
-.menu li:first-child {
-  margin-top: 0;
-}
-
 .menu li {
   margin: 30px 0;
   padding: 5px 0;
   cursor: pointer;
+}
+
+.menu li:first-child {
+  margin-top: 0;
 }
 
 .menu li a {

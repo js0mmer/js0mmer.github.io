@@ -43,7 +43,8 @@
     <div class="jumbotron banner-404 home-bg">
       <div>
         <h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
-        <a href="/" style="opacity: 0; margin-top: 20px;" class="home-btn btn-special btn-white">Return to Home</a>
+        <br />
+        <a href="/" style="opacity: 0; margin-left: 0;" class="home-btn btn-special btn-white">Return to Home</a>
       </div>
     </div>
     <script src="/js/jquery.min.js"></script>
@@ -63,8 +64,8 @@
         
       $(document).ready(() => {
         theater
-          .addActor('error', { speed: 1, accuracy: 0.8 })
-          .addActor('pagenotfound', { speed: 1, accuracy: 0.8 })
+          .addActor('error', { speed: 1, accuracy: 1 })
+          .addActor('pagenotfound', { speed: 1, accuracy: 1 })
           .addScene(800)
           .addScene('error:Error 404')
           .addScene(500)
@@ -86,8 +87,8 @@
       // mouse move parallax on desktop
       $('html, body').mousemove((e) => {
         if (!isMobile()) {
-          $('.banner-404').css('background-position-x', (e.pageX - $('.banner').width() / 2) / 50 - offsetX());
-          $('.banner-404').css('background-position-y', -$(window).scrollTop() / 2 + (e.pageY - $('.banner').height() / 2) / 50 - offsetY());
+          $('.banner-404').css('background-position-x', (e.pageX - $('.banner-404').width() / 2) / 50 - offsetX());
+          $('.banner-404').css('background-position-y', -$(window).scrollTop() / 2 + (e.pageY - $('.banner-404').height() / 2) / 50 - offsetY());
         }
       });
       

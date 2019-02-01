@@ -233,13 +233,13 @@
     </script>
     <!-- Button click events -->
     <script>
-      $('.nav-toggle').on('click', () => {
+      $('.nav-toggle').click(() => {
         $('.nav-toggle').toggleClass('open');
         $('.menu').toggleClass('active');
         $('.banner').toggleClass('blur');
       });
 
-      $('.send-btn').click(function() {
+      $('.send-btn').click(function () {
         $(this).addClass('sending');
       });
     </script>

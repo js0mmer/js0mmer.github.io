@@ -400,7 +400,7 @@ img {
   outline: none;
 }
 
-.btn-special:hover:after, .btn-special:focus:after {
+.btn-special:hover:after {
   width: 120%;
 }
 

@@ -300,13 +300,13 @@ img {
   background-image: url("../images/joshua-sortino-228788.jpg");
 }
 
+.resume-bg {
+  background-image: url("../images/joanna-kosinska-478198.jpg");
+}
+
 .projects-bg {
   background-image: url("../images/emile-perron-190221.jpg");
   color: white;
-}
-
-.resume-bg {
-  background-image: url("../images/joanna-kosinska-478198.jpg");
 }
 
 @media only screen and (min-width: 801px) { /* enable parallax on desktop */

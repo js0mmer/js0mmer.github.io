@@ -342,7 +342,7 @@ img {
   color: white !important;
 }
 
-.btn-special {
+.button {
   margin: 10px;
   padding: 10px 18px;
   font-size: 11px;
@@ -360,7 +360,7 @@ img {
   position: relative;
 }
 
-.btn-special:after {
+.button:after {
   position: absolute;
   transition: 0.3s;
   content: '';
@@ -372,12 +372,12 @@ img {
   z-index: -1;
 }
 
-.btn-special:hover, .btn-special:focus {
+.button:hover, .button:focus {
   text-decoration: none;
   outline: none;
 }
 
-.btn-special:hover:after, .btn-special:focus:after {
+.button:hover:after, .button:focus:after {
   width: 120%;
 }
 

@@ -361,7 +361,7 @@ img {
   background-color: #ff3a3a;
 }
 
-.btn-red:hover, .btn-red:focus {
+.btn-red:hover {
   color: white !important;
 }
 
@@ -413,7 +413,7 @@ img {
   background-color: white;
 }
 
-.btn-white:hover, .btn-white:focus {
+.btn-white:hover {
   color: black !important;
 }
 

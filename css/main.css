@@ -214,6 +214,7 @@ a:hover, a:active, a:focus {
 }
 
 .menu li a {
+  position: relative;
   display: block;
   color: #212529;
   text-decoration: none;
@@ -221,58 +222,45 @@ a:hover, a:active, a:focus {
   padding-left: 0.5em;
 }
 
-.menu li:hover .underline:before, .menu li:hover .underline:after {
-  width: 50%;
-  transition: 0.2s linear all;
+.menu li a:after {
+  position: absolute;
+  transition: 0.3s;
+  content: '';
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  background-color: black;
 }
 
-.menu li:nth-child(1) .underline {
+.menu li:nth-child(1) a:hover:after {
+  left: calc(50% - 70px);
   width: 140px;
 }
 
-.menu li:nth-child(2) .underline {
+.menu li:nth-child(2) a:hover:after {
+  left: calc(50% - 135px);
   width: 270px;
 }
 
-.menu li:nth-child(3) .underline {
+.menu li:nth-child(3) a:hover:after {
+  left: calc(50% - 100px);
   width: 200px;
 }
 
-.menu li:nth-child(4) .underline {
+.menu li:nth-child(4) a:hover:after {
+  left: calc(50% - 160px);
   width: 320px;
 }
 
-.menu li:nth-child(5) .underline {
+.menu li:nth-child(5) a:hover:after {
+  left: calc(50% - 125px);
   width: 250px;
 }
 
-.menu li:nth-child(6) .underline {
+.menu li:nth-child(6) a:hover:after {
+  left: calc(50% - 115px);
   width: 230px;
-}
-
-.underline {
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  width: 500px;
-}
-
-.underline:before, .underline:after {
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  content: '';
-  background: #000;
-  transition: 0.2s linear all;
-}
-
-.underline:before {
-  left: 50%;
-}
-
-.underline:after {
-  right: 50%;
 }
 
 /* ======= */

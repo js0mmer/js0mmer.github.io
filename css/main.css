@@ -188,7 +188,7 @@ img {
 
 .menu.active ul {
   height: 550px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #212529;
 }
 
 .menu li {
@@ -218,7 +218,7 @@ img {
   left: 50%;
   bottom: 0;
   height: 2px;
-  background-color: black;
+  background-color: #212529;
 }
 
 @media only screen and (min-width: 768px) {

@@ -255,7 +255,7 @@ img {
 .banner .fa-chevron-down {
   position: relative;
   left: 0;
-  bottom: -75vh;
+  bottom: -70vh;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -288,12 +288,6 @@ img {
   .blur:after {
     bottom: 0;
     transition-delay: 0.1s;
-  }
-}
-
-@media only screen and (max-height: 767px) {
-  .banner .fa-chevron-down {
-    bottom: -70vh;
   }
 }
 

@@ -291,6 +291,12 @@ img {
   }
 }
 
+@media only screen and (max-height: 767px) {
+  .banner .fa-chevron-down {
+    bottom: -70vh;
+  }
+}
+
 .cursor:after {
   content: '|';
   animation: blink 0.5s infinite;

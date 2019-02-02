@@ -94,7 +94,7 @@ img {
   margin: 0 auto;
   width: 32px;
   height: 2px;
-  background-color: #333;
+  background-color: #212529;
   transition: 0.4s ease-out;
 }
 
@@ -103,7 +103,7 @@ img {
   position: absolute;
   width: 32px;
   height: 2px;
-  background-color: #333;
+  background-color: #212529;
   content: '';
 }
 
@@ -391,7 +391,7 @@ img {
 }
 
 .btn-white:hover, .btn-white:focus {
-  color: black;
+  color: #212529;
 }
 
 .home-btn {

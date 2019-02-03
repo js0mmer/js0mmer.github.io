@@ -94,7 +94,7 @@ img {
   margin: 0 auto;
   width: 32px;
   height: 2px;
-  background-color: #333;
+  background-color: #212529;
   transition: 0.4s ease-out;
 }
 
@@ -103,7 +103,7 @@ img {
   position: absolute;
   width: 32px;
   height: 2px;
-  background-color: #333;
+  background-color: #212529;
   content: '';
 }
 
@@ -187,8 +187,8 @@ img {
 }
 
 .menu.active ul {
-  height: 600px;
-  border-bottom: 1px solid black;
+  height: 550px;
+  border-bottom: 1px solid #212529;
 }
 
 .menu li {
@@ -218,7 +218,7 @@ img {
   left: 50%;
   bottom: 0;
   height: 2px;
-  background-color: black;
+  background-color: #212529;
 }
 
 @media only screen and (min-width: 768px) {
@@ -255,7 +255,7 @@ img {
 .banner .fa-chevron-down {
   position: relative;
   left: 0;
-  bottom: -75vh;
+  bottom: -70vh;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -270,7 +270,7 @@ img {
   filter: blur(4px) opacity(75%);
 }
 
-@media only screen and (min-width: 768px) and (min-height: 768px) {
+@media only screen and (min-width: 768px) {
   .banner:after {
     position: absolute;
     left: 0;
@@ -391,7 +391,7 @@ img {
 }
 
 .btn-white:hover, .btn-white:focus {
-  color: black;
+  color: #212529;
 }
 
 .home-btn {

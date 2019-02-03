@@ -325,6 +325,12 @@ img {
   }
 }
 
+@media only screen and (min-height: 768px) {
+  .banner .fa-chevron-down {
+    bottom: -75vh;
+  }
+}
+
 /* ======= */
 /* BUTTONS */
 /* ======= */

@@ -520,7 +520,7 @@ footer .col-sm {
 
 .fa-stack  {
   overflow: hidden;
-  clip: rect(0, 2em, 2em, 0);
+  clip-path: circle(1em);
 }
 
 .slide-up-effect span {

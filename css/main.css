@@ -518,6 +518,27 @@ footer .col-sm {
   color: black;
 }
 
+.fa-stack  {
+  overflow: hidden;
+  clip: rect(0, 2em, 2em, 0);
+}
+
+.slide-up-effect span {
+  transition: 0.3s;
+}
+
+.slide-up-effect span:last-child {
+  transform: translateY(100%);
+}
+
+.slide-up-effect:hover span:first-child {
+  transform: translateY(-100%);
+}
+
+.slide-up-effect:hover span:last-child {
+  transform: translateY(0%);
+}
+
 /* ============= */
 /* SMALL BANNERS */
 /* ============= */

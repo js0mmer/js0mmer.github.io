@@ -679,14 +679,6 @@ footer .col-sm {
 /* PROJECTS PAGE */
 /* ============= */
 
-#flash-prompt a, #flash-prompt a:visited {
-  color: #00E;
-}
-
-#flash-prompt a:hover, #flash-prompt a:active, #flash-prompt a:focus {
-  color: #00a;
-}
-
 #projects .row .col-md-7 {
   padding: 15px;
 }

@@ -124,25 +124,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/theater.min.js"></script>
     <script src="js/parallax.js"></script>
-    <!-- Adobe Flash check (for Scratch Project) -->
-    <script>
-      var hasFlash = false;
-      try {
-        hasFlash = Boolean(new ActiveXObject('ShockwaveFlash.ShockwaveFlash'));
-      } catch (e) {
-        hasFlash = navigator.mimeTypes
-              && navigator.mimeTypes['application/x-shockwave-flash'] != undefined
-              && navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin;
-      }
-      
-      if (!hasFlash) {
-        $('#scratch').css('display', 'none');
-        $('#flash-prompt').css('display', 'block');
-      } else {
-        $('#scratch').css('display', 'block');
-        $('#flash-prompt').css('display', 'none');
-      }
-    </script>
     <script>
       parallax('.banner');
       

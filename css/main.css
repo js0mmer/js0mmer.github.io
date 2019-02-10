@@ -677,6 +677,11 @@ footer .col-sm {
   left: 20%;
 }
 
+.banner-404 .button {
+  opacity: 0;
+  margin-left: 0;
+}
+
 @media only screen and (min-width: 768px) and (min-height: 768px) {
   .banner-404 h1 {
     font-size: 4em;
@@ -717,4 +722,16 @@ footer .col-sm {
 
 .construction h1 {
   margin-bottom: 25px;
+}
+
+/* ========= */
+/* HOME PAGE */
+/* ========= */
+
+#about {
+  margin-bottom: 30px;
+}
+
+#contact {
+  margin-bottom: 5vw;
 }

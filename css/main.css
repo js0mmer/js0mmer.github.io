@@ -194,7 +194,6 @@ img {
 .menu li {
   margin: 30px 0;
   padding: 5px 0;
-  cursor: pointer;
 }
 
 .menu li:first-child {

@@ -565,7 +565,7 @@ footer .col-sm {
   margin-bottom: 0;
 }
 
-.small-banner .wrapper {
+.small-banner div {
   position: relative;
   top: 0;
   left: 0;
@@ -577,13 +577,13 @@ footer .col-sm {
 }
 
 @media only screen and (min-width: 768px) {
-  .slant-top {
+  .slant div:first-child {
     transform: translateY(-100%);
     border-bottom: 5vw solid white;
     border-left: 100vw solid transparent;
   }
   
-  .slant-bottom {
+  .slant div:last-child {
     transform: translateY(-100%);
     border-top: 5vw solid white;
     border-right: 100vw solid transparent;
@@ -603,7 +603,7 @@ footer .col-sm {
     transform: translateY(-50%);
   }
 
-  .small-banner.resume-bg .wrapper {
+  .small-banner.resume-bg div {
     top: -20px;
     left: 50vw;
   }
@@ -617,7 +617,7 @@ footer .col-sm {
     transform: translateY(50%);
   }
 
-  .small-banner.projects-bg .wrapper {
+  .small-banner.projects-bg div {
     top: 20px;
     left: -50vw;
   }

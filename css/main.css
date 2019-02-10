@@ -366,6 +366,7 @@ img {
   background: none;
   cursor: pointer;
   position: relative;
+  user-select: none;
 }
 
 .button:after {
@@ -448,13 +449,13 @@ textarea {
   resize: vertical;
 }
 
-input:focus ~ .input-underline:before, input:focus ~ .input-underline:after,
-textarea:focus ~ .input-underline:before, textarea:focus ~ .input-underline:after {
+input:focus ~ .underline:before, input:focus ~ .underline:after,
+textarea:focus ~ .underline:before, textarea:focus ~ .underline:after {
   width: 50%;
   transition: 0.3s;
 }
 
-.input-underline {
+.underline {
   display: block;
   position: relative;
   margin-bottom: 10px;
@@ -462,7 +463,7 @@ textarea:focus ~ .input-underline:before, textarea:focus ~ .input-underline:afte
   max-width: 100%;
 }
 
-.input-underline:before, .input-underline:after {
+.underline:before, .underline:after {
   position: absolute;
   width: 0;
   height: 2px;
@@ -472,11 +473,11 @@ textarea:focus ~ .input-underline:before, textarea:focus ~ .input-underline:afte
   transition: 0.3s;
 }
 
-.input-underline:before {
+.underline:before {
   left: 50%;
 }
 
-.input-underline:after {
+.underline:after {
   right: 50%;
 }
 
@@ -563,6 +564,7 @@ footer .col-sm {
 
 .small-banner h2 {
   margin-bottom: 0;
+  user-select: none;
 }
 
 .small-banner div {
@@ -665,6 +667,10 @@ footer .col-sm {
   margin-bottom: 0;
 }
 
+.banner-404 h1 {
+  user-select: none;
+}
+
 .banner-404 div {
   position: absolute;
   top: 40%;
@@ -711,5 +717,4 @@ footer .col-sm {
 
 .construction h1 {
   margin-bottom: 25px;
-  user-select: none;
 }

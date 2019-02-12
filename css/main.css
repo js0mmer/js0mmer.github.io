@@ -249,17 +249,14 @@ img {
   user-select: none;
 }
 
-.banner a {
-  text-decoration: none;
-}
-
 .banner .fa-chevron-down {
   position: relative;
-  left: 0;
-  bottom: -70vh;
   display: flex;
   justify-content: center;
-  width: 100%;
+  text-decoration: none;
+  left: 0;
+  text-align: center;
+  bottom: -70vh;
   transition: 0.5s linear all;
   animation: bounce 2.5s infinite;
   opacity: 0;

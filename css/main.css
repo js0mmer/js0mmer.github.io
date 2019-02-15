@@ -215,7 +215,8 @@ img {
   transition: 0.3s;
   content: '';
   width: 0;
-  left: 50%;
+  left: auto;
+  right: 0.4em;
   bottom: 0;
   height: 2px;
   background: #212529;

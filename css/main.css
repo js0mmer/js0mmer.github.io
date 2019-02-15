@@ -215,8 +215,7 @@ img {
   transition: 0.3s;
   content: '';
   width: 0;
-  left: auto;
-  right: 0.4em;
+  left: 50%;
   bottom: 0;
   height: 2px;
   background: #212529;
@@ -446,36 +445,22 @@ textarea {
   resize: vertical;
 }
 
-input:focus ~ .underline:before, input:focus ~ .underline:after,
-textarea:focus ~ .underline:before, textarea:focus ~ .underline:after {
-  width: 50%;
-  transition: 0.3s;
+input:focus ~ .underline, textarea:focus ~ .underline {
+  width: 100%;
+  left: 0;
 }
 
 .underline {
   display: block;
   position: relative;
   margin-bottom: 10px;
-  width: 300px;
-  max-width: 100%;
-}
-
-.underline:before, .underline:after {
-  position: absolute;
   width: 0;
+  max-width: 100%;
   height: 2px;
-  bottom: 0;
-  content: '';
+  margin-top: -2px;
   background: #ff3a3a;
   transition: 0.3s;
-}
-
-.underline:before {
   left: 50%;
-}
-
-.underline:after {
-  right: 50%;
 }
 
 /* ====== */

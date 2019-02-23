@@ -163,7 +163,12 @@
             theater.getCurrentActor().$element.classList.remove('cursor');
         });
       
-      $(document).ready(() => {
+      // wait for background image to load before displaying banner and doing typing
+      var src = $('.banner').css('background-image');
+      var url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+
+      var img = new Image();
+      img.onload = function() {
         theater
           .addActor('hi', { speed: 0.9, accuracy: 1 })
           .addActor('jacob', { speed: 1, accuracy: 1 })
@@ -179,7 +184,9 @@
           .addScene(() => {
             $('.fa-chevron-down').css('opacity', 1);
           });
-      });
+      }
+      img.src = url;
+      if (img.complete) img.onload();
 
       // Slide in animations
       $(window).scroll(() => {

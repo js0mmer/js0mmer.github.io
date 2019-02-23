@@ -636,15 +636,6 @@ footer .col-sm {
   }
 }
 
-@keyframes loading {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* ======== */
 /* 404 PAGE */
 /* ======== */
@@ -760,5 +751,5 @@ footer .col-sm {
   border-left-color: #ff3a3a;
   border-radius: 100%;
   z-index: 30;
-  animation: loading 2s linear infinite;
+  animation: rotate 2s linear infinite;
 }

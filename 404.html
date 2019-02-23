@@ -73,19 +73,7 @@
       
       // Parallax
       
-      // offset accounts for extra 2% added to each side of background so no white is shown when moving it
-      var offsetX = () => screen.width * 0.02;
-      var offsetY = () => screen.height * 0.02;
-      
-      parallax('.banner-404', offsetY());
-      
-      // mouse move parallax on desktop
-      $('html, body').mousemove((e) => {
-        if (!isMobile()) {
-          $('.banner-404').css('background-position-x', (e.pageX - $('.banner-404').width() / 2) / 50 - offsetX());
-          $('.banner-404').css('background-position-y', -$(window).scrollTop() / 2 + (e.pageY - $('.banner-404').height() / 2) / 50 - offsetY());
-        }
-      });
+      parallax('.banner-404');
       
       // Nav
       $('.nav-toggle').click(() => {

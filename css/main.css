@@ -311,16 +311,6 @@ img {
   .banner {
     background-attachment: fixed;
   }
-
-  .home-bg {
-    background-size: 104% !important; /* so no white is shown when doing parallax */
-  }
-}
-
-@media only screen and (max-width: 800px) { /* center bg on mobile (when parallax is disabled) */
-  .home-bg {
-    background-position-x: 50%;
-  }
 }
 
 @media only screen and (min-height: 768px) {

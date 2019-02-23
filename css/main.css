@@ -620,8 +620,7 @@ footer .col-sm {
 @keyframes rotate {
   from {
     transform: rotate(0deg);
-  }
-  to {
+  } to {
     transform: rotate(360deg);
   }
 }
@@ -636,22 +635,20 @@ footer .col-sm {
   background-size: cover;
   background-position: center;
   transition: filter 0.5s;
-  margin-bottom: 0;
-}
-
-.banner-404 h1 {
-  user-select: none;
+  margin: 0;
+  background: white;
 }
 
 .banner-404 div {
   position: absolute;
   top: 40%;
   left: 20%;
+  z-index: 0;
 }
 
 .banner-404 .button {
-  opacity: 0;
-  margin-left: 0;
+  margin: 0;
+  float: left;
 }
 
 @media only screen and (min-width: 768px) and (min-height: 768px) {
@@ -726,9 +723,6 @@ footer .col-sm {
   transform: translate(-50%, -50%) skewY(3deg);
   width: 50px;
   height: 50px;
-}
-
-.loading .icon {
   transition: 0.2s;
 }
 

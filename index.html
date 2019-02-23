@@ -140,7 +140,7 @@
         }
       });
       
-      $(document).on('click', 'a[href^="#"]', function (e) {
+      $(document).on('click', 'a[href^="#"]', function(e) {
         e.preventDefault();
         
         $('.nav-toggle').removeClass('open');
@@ -231,21 +231,18 @@
         }
       });
     </script>
-    <!-- Parallax -->
     <script>
       parallax('.banner');
       parallax('.resume-bg', -500, false);
       parallax('.projects-bg', -800, false);
-    </script>
-    <!-- Button click events -->
-    <script>
+      
       $('.nav-toggle').click(() => {
         $('.nav-toggle').toggleClass('open');
         $('.menu').toggleClass('active');
         $('.banner').toggleClass('blur');
       });
 
-      $('.send-btn').click(function () {
+      $('.send-btn').click(function() {
         $(this).addClass('sending');
       });
     </script>

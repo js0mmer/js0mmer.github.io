@@ -35,18 +35,16 @@
         </li>
       </ul>
     </nav>
-    <div class="jumbotron banner-404 home-bg">
+    <div class="jumbotron banner-404">
       <div>
-        <h1><span id="error"></span><br/><span id="pagenotfound"></span></h1>
+        <h1><span id="error"></span><br/><span id="pagenotfound">&nbsp;</span></h1>
         <br />
-        <a href="./" class="home-btn button btn-white">Return to Home</a>
+        <a href="./" class="home-btn button btn-red">Return to Home</a>
       </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/theater.min.js"></script>
-    <script src="js/parallax.js"></script>
     <script>
-      // Typing Animation
       var theater = theaterJS();
       
       theater
@@ -61,21 +59,11 @@
         theater
           .addActor('error', { speed: 1, accuracy: 1 })
           .addActor('pagenotfound', { speed: 1, accuracy: 1 })
-          .addScene(800)
           .addScene('error:Error 404')
-          .addScene(500)
+          .addScene(400)
           .addScene('pagenotfound:Page Not Found')
-          .addScene(300)
-          .addScene(() => {
-            $('.home-btn').css('opacity', 1);
-          });
       });
-      
-      // Parallax
-      
-      parallax('.banner-404');
-      
-      // Nav
+
       $('.nav-toggle').click(() => {
         $('.nav-toggle').toggleClass('open');
         $('.menu').toggleClass('active');

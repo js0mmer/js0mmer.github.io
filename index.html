@@ -128,8 +128,60 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/theater.min.js"></script>
     <script src="js/parallax.js"></script>
-    <!-- Load animations -->
+    <!-- Anchor links-->
     <script>
+      $(document).ready(() => {
+        if(window.location.href.endsWith('?about') || window.location.href.endsWith('?contact')) {
+          $('html, body').animate({
+            scrollTop: $('#' + window.location.href.split('?')[1]).offset().top - 32
+          }, 500, 'linear');
+        }
+      });
+      
+      $(document).on('click', 'a[href^="#"]', function (e) {
+        e.preventDefault();
+        
+        $('.nav-toggle').removeClass('open');
+        $('.menu').removeClass('active');
+        $('.banner').removeClass('blur');
+        
+        $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top - 32
+        }, 500);
+      });
+    </script>
+    <!-- Animations -->
+    <script>
+      // Typing animation
+      var theater = theaterJS();
+      
+      theater
+        .on('type:start, erase:start', () => {
+            theater.getCurrentActor().$element.classList.add('cursor');
+        })
+        .on('type:end, erase:end', () => {
+            theater.getCurrentActor().$element.classList.remove('cursor');
+        });
+      
+      $(document).ready(() => {
+        theater
+          .addActor('hi', { speed: 0.9, accuracy: 1 })
+          .addActor('jacob', { speed: 1, accuracy: 1 })
+          .addScene(100)
+          .addScene((done) => {
+            $('.loading').css('height', 0);
+            done();
+          })
+          .addScene(550)
+          .addScene('hi:Hi.')
+          .addScene(500)
+          .addScene('jacob:I\'m Jacob.')
+          .addScene(() => {
+            $('.fa-chevron-down').css('opacity', 1);
+          });
+      });
+
+      // Slide in animations
       $(window).scroll(() => {
         var scrollBottom = $(window).scrollTop() + $(window).height();
         
@@ -163,58 +215,6 @@
         if (scrollBottom >= $('form').offset().top) {
           $('form').addClass('animated fadeInLeft');
         }
-      });
-    </script>
-    <!-- Anchor links-->
-    <script>
-      $(document).ready(() => {
-        if(window.location.href.endsWith('?about') || window.location.href.endsWith('?contact')) {
-          $('html, body').animate({
-            scrollTop: $('#' + window.location.href.split('?')[1]).offset().top - 32
-          }, 500, 'linear');
-        }
-      });
-      
-      $(document).on('click', 'a[href^="#"]', function (e) {
-        e.preventDefault();
-        
-        $('.nav-toggle').removeClass('open');
-        $('.menu').removeClass('active');
-        $('.banner').removeClass('blur');
-        
-        $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top - 32
-        }, 500);
-      });
-    </script>
-    <!-- Typing animation -->
-    <script>
-      var theater = theaterJS();
-      
-      theater
-        .on('type:start, erase:start', () => {
-            theater.getCurrentActor().$element.classList.add('cursor');
-        })
-        .on('type:end, erase:end', () => {
-            theater.getCurrentActor().$element.classList.remove('cursor');
-        });
-      
-      $(document).ready(() => {
-        theater
-          .addActor('hi', { speed: 0.9, accuracy: 1 })
-          .addActor('jacob', { speed: 1, accuracy: 1 })
-          .addScene(100)
-          .addScene((done) => {
-            $('.loading').css('height', 0);
-            done();
-          })
-          .addScene(550)
-          .addScene('hi:Hi.')
-          .addScene(500)
-          .addScene('jacob:I\'m Jacob.')
-          .addScene(() => {
-            $('.fa-chevron-down').css('opacity', 1);
-          });
       });
     </script>
     <!-- Parallax -->

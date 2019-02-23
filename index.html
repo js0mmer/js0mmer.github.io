@@ -130,7 +130,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/theater.min.js"></script>
     <script src="js/parallax.js"></script>
-    <!-- Anchor links-->
+    <script src="js/anchors.js"></script>
     <script>
       $(document).ready(() => {
         if(window.location.href.endsWith('?about') || window.location.href.endsWith('?contact')) {
@@ -140,21 +140,6 @@
         }
       });
       
-      $(document).on('click', 'a[href^="#"]', function(e) {
-        e.preventDefault();
-        
-        $('.nav-toggle').removeClass('open');
-        $('.menu').removeClass('active');
-        $('.banner').removeClass('blur');
-        
-        $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top - 32
-        }, 500);
-      });
-    </script>
-    <!-- Animations -->
-    <script>
-      // Typing animation
       var theater = theaterJS();
       
       theater
@@ -170,7 +155,7 @@
       var url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
 
       var img = new Image();
-      img.onload = function() {
+      img.onload = () => {
         theater
           .addActor('hi', { speed: 0.9, accuracy: 1 })
           .addActor('jacob', { speed: 1, accuracy: 1 })
@@ -187,7 +172,7 @@
           .addScene(550)
           .addScene('hi:Hi.')
           .addScene(500)
-          .addScene('jacob:I\'m Jacob.')
+          .addScene("jacob:I'm Jacob.")
           .addScene(() => {
             $('.fa-chevron-down').css('opacity', 1);
           });
@@ -195,13 +180,11 @@
       img.src = url;
       if (img.complete) img.onload();
 
-      // Slide in animations
-      $(window).scroll(() => {
-        var scrollBottom = $(window).scrollTop() + $(window).height();
+      function slideInAnimations() {
+        var scrollBottom = $(window).scrollTop() + $(window).height() + 50; // add 50 to stop late loading
         
-        // stop mobile animations from being delayed
         if ($(window).width() <= 768) {
-          scrollBottom += 100;
+          scrollBottom += 50; // add another 50 if on mobile to stop late loading
         }
         
         if ($(window).scrollTop() > 0) {
@@ -229,9 +212,14 @@
         if (scrollBottom >= $('form').offset().top) {
           $('form').addClass('animated fadeInLeft');
         }
+      }
+
+      slideInAnimations(); // in case user already scrolled down and refreshes
+
+      $(window).scroll(() => {
+        slideInAnimations();
       });
-    </script>
-    <script>
+      
       parallax('.banner');
       parallax('.resume-bg', -500, false);
       parallax('.projects-bg', -800, false);

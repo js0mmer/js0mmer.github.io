@@ -4,6 +4,7 @@ function parallax(selector, offsetY=0, enableOnMobile=true) {
   // align bg on load
   adjustBgPos(selector, offsetY, enableOnMobile);
 
+  // do the parallax effect on scroll
   $(window).scroll(() => {
     adjustBgPos(selector, offsetY, enableOnMobile);
   });
@@ -17,7 +18,7 @@ function parallax(selector, offsetY=0, enableOnMobile=true) {
 function adjustBgPos(selector, offsetY, enableOnMobile) {
   if (isMobile() && enableOnMobile) {
     $(selector).css('background-position-y', $(window).scrollTop() / 2);
-  } else if(!isMobile()) {
+  } else if (!isMobile()) {
     $(selector).css('background-position-y', -$(window).scrollTop() / 2 - offsetY);
   } else {
     $(selector).css('background-position-y', 0);

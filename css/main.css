@@ -717,3 +717,14 @@ footer .col-sm {
 #contact {
   margin-bottom: 5vw;
 }
+
+.loading {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  height: calc(100vh + 100px);
+  background: white;
+  z-index: 20;
+  transform: skewY(-3deg);
+  transition: 0.5s;
+}

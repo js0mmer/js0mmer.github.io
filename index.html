@@ -20,6 +20,7 @@
     </script>
   </head>
   <body>
+    <div class="loading"></div>
     <button class="nav-toggle">
       <span class="icon"></span>
     </button>
@@ -202,7 +203,12 @@
         theater
           .addActor('hi', { speed: 0.9, accuracy: 1 })
           .addActor('jacob', { speed: 1, accuracy: 1 })
-          .addScene(800)
+          .addScene(100)
+          .addScene((done) => {
+            $('.loading').css('height', 0);
+            done();
+          })
+          .addScene(550)
           .addScene('hi:Hi.')
           .addScene(500)
           .addScene('jacob:I\'m Jacob.')

@@ -636,6 +636,15 @@ footer .col-sm {
   }
 }
 
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* ======== */
 /* 404 PAGE */
 /* ======== */
@@ -727,4 +736,29 @@ footer .col-sm {
   z-index: 20;
   transform: skewY(-3deg);
   transition: 0.5s;
+}
+
+.loading .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(3deg);
+  width: 50px;
+  height: 50px;
+}
+
+.loading .icon {
+  transition: 0.2s;
+}
+
+.loading .icon:after {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 3px solid #bbb;
+  border-left-color: #ff3a3a;
+  border-radius: 100%;
+  z-index: 30;
+  animation: loading 2s linear infinite;
 }

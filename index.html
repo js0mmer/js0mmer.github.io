@@ -180,14 +180,14 @@
       img.src = url;
       if (img.complete) img.onload();
 
-      function slideInAnimations() {
+      function slideInAnimations(onLoad=false) {
         var scrollBottom = $(window).scrollTop() + $(window).height() + 50; // add 50 to stop late loading
         
         if ($(window).width() <= 768) {
           scrollBottom += 50; // add another 50 if on mobile to stop late loading
         }
         
-        if ($(window).scrollTop() > 0) {
+        if ($(window).scrollTop() > 0 || onLoad) {
           $('.banner .fa-chevron-down').css('opacity', 0);
         } else {
           $('.banner .fa-chevron-down').css('opacity', 1);
@@ -214,7 +214,7 @@
         }
       }
 
-      slideInAnimations(); // in case user already scrolled down and refreshes
+      slideInAnimations(true); // in case user already scrolled down and refreshes
 
       $(window).scroll(() => {
         slideInAnimations();

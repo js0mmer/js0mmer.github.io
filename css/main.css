@@ -259,7 +259,6 @@ img {
   bottom: -70vh;
   transition: 0.5s linear all;
   animation: bounce 2.5s infinite;
-  opacity: 0;
   font-size: 3.5rem;
   color: #212529;
 }

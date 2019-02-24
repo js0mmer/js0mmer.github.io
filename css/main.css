@@ -121,11 +121,11 @@ img {
   left: 0;
 }
 
-.nav-toggle:hover .icon:before, .nav-toggle:focus .icon:before {
+.nav-toggle:hover .icon:before {
   top: -15px;
 }
 
-.nav-toggle:hover .icon:after, .nav-toggle:focus .icon:after {
+.nav-toggle:hover .icon:after {
   top: 15px;
 }
 
@@ -222,7 +222,7 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  .menu li a:hover:after, .menu li a:focus:after {
+  .menu li a:hover:after {
     left: 0;
     width: calc(100% - 0.4em);
   }
@@ -505,11 +505,11 @@ footer .col-sm {
   transform: translateY(100%);
 }
 
-.slide-up-effect:hover span:first-child, .fa-stack:focus .slide-up-effect span:first-child {
+.slide-up-effect:hover span:first-child {
   transform: translateY(-100%);
 }
 
-.slide-up-effect:hover span:last-child, .fa-stack:focus .slide-up-effect span:last-child {
+.slide-up-effect:hover span:last-child {
   transform: translateY(0%);
 }
 

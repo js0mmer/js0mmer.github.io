@@ -88,11 +88,11 @@
       <h1>Contact</h1>
       <form class="flex-center" action="https://formspree.io/jacob.sommer@comcast.net" method="POST">
         <div>
-          <input type="text" name="Name" placeholder="Your name" />
+          <input type="text" name="Name" placeholder="Your name" required />
           <span class="underline"></span>
         </div>
         <div>
-          <input type="email" name="Mail" placeholder="Your email" />
+          <input type="email" name="Mail" placeholder="Your email" required />
           <span class="underline"></span>
         </div>
         <div>
@@ -231,7 +231,7 @@
       });
 
       $('.send-btn').click(function() {
-        $(this).addClass('sending');
+        if($('input[type=text]').val().length > 0 && $('input[type=email]').val().length > 0 && $('input[type=email]').val().includes("@")) $(this).addClass('sending');
       });
     </script>
   </body>

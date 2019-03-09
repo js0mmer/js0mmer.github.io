@@ -14,7 +14,7 @@ $(document).on('click', 'a[href^="#"]', function(e) {
     }, 500);
   } else {
     $('html, body').animate({
-      scrollTop: $().offset().top - 32
+      scrollTop: $(href).offset().top - 32
     }, 500);
   }
 });

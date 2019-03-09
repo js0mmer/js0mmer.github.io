@@ -5,8 +5,16 @@ $(document).on('click', 'a[href^="#"]', function(e) {
   $('.menu').removeClass('active');
   $('.banner').removeClass('blur');
   $('.construction').toggleClass('blur');
-  
-  $('html, body').animate({
-    scrollTop: $($.attr(this, 'href')).offset().top - 32
-  }, 500);
+
+  var href = $(this).attr('href');
+
+  if (href == '#') {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+  } else {
+    $('html, body').animate({
+      scrollTop: $().offset().top - 32
+    }, 500);
+  }
 });

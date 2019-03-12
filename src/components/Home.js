@@ -128,7 +128,7 @@ class Home extends Component {
               I'm Jacob.
             </Typist>
           </h1>
-          <AnchorLink section="about" className="fas fa-chevron-down"></AnchorLink>
+          <AnchorLink to="#about" className="fas fa-chevron-down"></AnchorLink>
         </header>
         <section id="about" className="container">
           <div className="col-md-12">

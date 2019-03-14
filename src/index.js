@@ -8,6 +8,7 @@ import Home from './components/Home';
 import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
 import * as serviceWorker from './serviceWorker';
+import ReactGA from 'react-ga';
 
 const AppRouter = () => (
   <Router>
@@ -21,6 +22,8 @@ const AppRouter = () => (
 );
 
 ReactDOM.render(<AppRouter />, document.getElementById('root'));
+ReactGA.initialize('UA-133013455-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -33,7 +33,7 @@ function BannerText(props) {
 }
 
 function SendBtn() {
-  function handleClick(e) {
+  function handleClick() {
     if(document.querySelector('input[type=text]').value.length > 0 && document.querySelector('input[type=email]').value.length > 0 && document.querySelector('input[type=email]').value.includes("@")) document.querySelector('.send-btn').classList.add('sending');
   }
 
@@ -84,11 +84,11 @@ class Home extends Component {
   }
 
   handleScroll() {
+    var scrollTop = document.documentElement.scrollTop;
+    this.arrow.style.opacity = scrollTop > 0 ? 0 : 1;
+    
     if (this.state.firstLaunch) {
-      var scrollTop = document.documentElement.scrollTop;
       var scrollBottom = scrollTop + window.innerHeight;
-
-      this.arrow.style.opacity = scrollTop > 0 ? 0 : 1;
 
       if (scrollBottom >= this.profilePic.offsetTop) this.profilePic.classList.add('animated', 'zoomIn');
       if (scrollBottom >= this.aboutH1.offsetTop) this.aboutH1.classList.add('animated', 'fadeInDown');

@@ -231,7 +231,7 @@
       });
 
       $('.send-btn').click(function() {
-        if($('input[type=text]').val().length > 0 && $('input[type=email]').val().length > 0 && $('input[type=email]').val().includes("@")) $(this).addClass('sending');
+        if($('input[type=text]').val().length > 0 && $('input[type=email]').val().length > 0 && $('input[type=email]').val().includes("@") && $('input[type=email]').val().split("@")[1].length > 0) $(this).addClass('sending');
       });
     </script>
   </body>

@@ -83,7 +83,7 @@ class Projects extends Component {
               </div>
               <div className="col-md-5">
                 <div className="embed-responsive embed-responsive-4by3 red-border">
-                  <iframe title="Hangman" className="embed-responsive-item" height="500px" width="100%" src="https://repl.it/@js0mmer/Hangman?lite=true" scrolling="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                  <iframe title="Hangman" className="embed-responsive-item" height="500px" width="100%" src="https://repl.it/@js0mmer/Hangman?lite=true" scrolling="no" allowTransparency="true" allowFullScreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
                 </div>
               </div>
             </article>

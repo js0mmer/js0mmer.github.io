@@ -133,12 +133,14 @@ img {
   left: 0;
 }
 
-.nav-toggle:hover .icon:before {
-  top: -15px;
-}
+@media only screen and (min-width: 768px) {
+  .nav-toggle:hover .icon:before {
+    top: -15px;
+  }
 
-.nav-toggle:hover .icon:after {
-  top: 15px;
+  .nav-toggle:hover .icon:after {
+    top: 15px;
+  }
 }
 
 .nav-toggle.open .icon {

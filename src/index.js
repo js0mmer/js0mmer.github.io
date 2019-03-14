@@ -10,18 +10,14 @@ import Projects from './components/Projects';
 import * as serviceWorker from './serviceWorker';
 
 const AppRouter = () => (
-  <div>
-    <div className="transition">
-      <span className="icon"></span>
+  <Router>
+    <div className="app">
+      <div className="transition"></div>
+      <Route path="/" exact component={Home} />
+      <Route path="/work-experience" component={WorkExperience} />
+      <Route path="/projects" component={Projects} />
     </div>
-    <Router>
-      <div className="app">
-        <Route path={`/`} exact component={Home} />
-        <Route path={`/work-experience`} component={WorkExperience} />
-        <Route path={`/projects`} component={Projects} />
-      </div>
-    </Router>
-  </div>
+  </Router>
 );
 
 ReactDOM.render(<AppRouter />, document.getElementById('root'));

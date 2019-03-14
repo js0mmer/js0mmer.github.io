@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { NavToggle, Link, AnchorLink } from './Nav';
-import { parallax } from './Parallax';
+import Parallax from './Parallax';
 import Footer from './Footer';
 import scratch from '../images/scratch.jpg';
 import projComp from '../images/project-compound.jpg';
@@ -9,8 +9,6 @@ import projComp from '../images/project-compound.jpg';
 class Projects extends Component {
   constructor(props) {
     super(props);
-    this.handleScroll = this.handleScroll.bind(this);
-    this.updateDimensions = this.updateDimensions.bind(this);
     this.transition = this.transition.bind(this);
     this.state = { redirect: false }
   }
@@ -18,7 +16,6 @@ class Projects extends Component {
   componentDidMount() {
     document.title = 'Projects | Jacob Sommer';
     window.scrollTo(0, 0);
-    document.querySelector('.transition .icon').style.opacity = 0;
     document.querySelector('.transition').style.top = 'auto';
     document.querySelector('.transition').style.bottom = '-50px';
     document.querySelector('.transition').style.height = 0;
@@ -27,21 +24,6 @@ class Projects extends Component {
     window.addEventListener('resize', this.updateDimensions);
 
     this.banner = document.querySelector('.banner');
-
-    parallax(this.banner); // align banner on load
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('resize', this.updateDimensions);
-  }
-
-  updateDimensions() {
-    parallax(this.banner);
-  }
-
-  handleScroll() {
-    parallax(this.banner);
   }
 
   transition(to) {
@@ -76,14 +58,14 @@ class Projects extends Component {
             </li>
           </ul>
         </nav>
-        <header className="jumbotron banner projects-bg">
+        <Parallax className="jumbotron banner projects-bg">
           <h1>Projects</h1>
-        </header>
+        </Parallax>
         <main className="container">
           <section id="projects" className="col-md-12">
             <article className="row">
               <div className="col-md-5">
-                <img className="red-border" src={scratch} />
+                <img className="red-border" src={scratch} alt="Scratch" />
               </div>
               <div className="col-md-7">
                 <h3>Scratch Project</h3>
@@ -101,19 +83,19 @@ class Projects extends Component {
               </div>
               <div className="col-md-5">
                 <div className="embed-responsive embed-responsive-4by3 red-border">
-                  <iframe className="embed-responsive-item" height="500px" width="100%" src="https://repl.it/@js0mmer/Hangman?lite=true" scrolling="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                  <iframe title="Hangman" className="embed-responsive-item" height="500px" width="100%" src="https://repl.it/@js0mmer/Hangman?lite=true" scrolling="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
                 </div>
               </div>
             </article>
             <article className="row">
               <div className="col-md-5">
-                <img className="red-border" src={projComp} />
+                <img className="red-border" src={projComp} alt="Project Compound" />
               </div>
               <div className="col-md-7">
                 <h3>Project Compound</h3>
                 <h5>POE (Principles of Engineering)</h5>
                 <h5>August 30th - September 7th, 2018</h5>
-                <p>The objective of this project was to create a compound machine that performed a basic task. My role was building a 2nd class lever and helping out on documentation. My group created a machine that pours dog food into a bowl. The input was provided by spinning a wheel which acted like a crank for a simple gear train. The axle of the output gear in the gear train drove another wheel which had a string wrapped around it. This caused the wheel to pull the string when it was spun. The string ran over a pulley and connected to the far end of our lever, next to the cup of dog food. When the string was pulled, it rotated the lever 180 degrees and dumped the dog food into a bowl placed below the dropping point. During the project we ran into issues early on. We found that our small driver gear required a lot of rotations. Our solution was to replace it with a larger gear which ended up requiring us to rebuild the entire gear train because there wasn’t enough space between the bottom of the machine and the 2nd gear. You can view the full project documentation <a className="link" href="https://drive.google.com/open?id=1XUbSIuFKQyM65QWXNIqzLKFKb0IdVRaF8hsZDxw60-I" target="_blank">here</a> for more information.</p>
+                <p>The objective of this project was to create a compound machine that performed a basic task. My role was building a 2nd class lever and helping out on documentation. My group created a machine that pours dog food into a bowl. The input was provided by spinning a wheel which acted like a crank for a simple gear train. The axle of the output gear in the gear train drove another wheel which had a string wrapped around it. This caused the wheel to pull the string when it was spun. The string ran over a pulley and connected to the far end of our lever, next to the cup of dog food. When the string was pulled, it rotated the lever 180 degrees and dumped the dog food into a bowl placed below the dropping point. During the project we ran into issues early on. We found that our small driver gear required a lot of rotations. Our solution was to replace it with a larger gear which ended up requiring us to rebuild the entire gear train because there wasn’t enough space between the bottom of the machine and the 2nd gear. You can view the full project documentation <a className="link" href="https://drive.google.com/open?id=1XUbSIuFKQyM65QWXNIqzLKFKb0IdVRaF8hsZDxw60-I" target="_blank" rel="noopener noreferrer">here</a> for more information.</p>
               </div>
             </article>
           </section>

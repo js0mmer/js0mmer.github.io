@@ -2,10 +2,35 @@ import React, { Component } from 'react';
 import Typist from 'react-typist';
 import { Redirect } from 'react-router-dom';
 import { NavToggle, Link, AnchorLink } from './Nav';
-import { parallax } from './Parallax';
+import Parallax from './Parallax';
 import Footer from './Footer';
 import me from '../images/me.jpg';
 import '../css/animate.min.css';
+
+function BannerText(props) {
+  if (props.firstLaunch) {
+    return (
+      <h1>
+        <Typist cursor={
+          {
+            show: true,
+            blink: true,
+            element: '',
+            hideWhenDone: true,
+            hideWhenDoneDelay: 100,
+          }
+        } stdTypingDelay={0} >
+          <Typist.Delay ms={550} />
+          <span>Hi. </span>
+          <Typist.Delay ms={400} />
+          I'm Jacob.
+        </Typist>
+      </h1>
+    );
+  } else {
+    return <h1>Hi. I'm Jacob.</h1>
+  }
+}
 
 function SendBtn() {
   function handleClick(e) {
@@ -19,9 +44,8 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
-    this.updateDimensions = this.updateDimensions.bind(this);
     this.transition = this.transition.bind(this);
-    this.state = { redirect: false }
+    this.state = { redirect: false, firstLaunch: true }
   }
 
   componentDidMount() {
@@ -29,8 +53,14 @@ class Home extends Component {
 
     if (window.location.href.includes('?')) document.getElementById(window.location.href.split('?')[1]).scrollIntoView({ behavior: 'smooth' });
 
+    if (sessionStorage.getItem('alreadyLaunched') != null) {
+      this.setState({ firstLaunch: false });
+    } else {
+      sessionStorage.setItem('alreadyLaunched', 'true');
+      this.setState({ firstLaunch: true });
+    }
+
     window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.updateDimensions);
 
     this.arrow = document.querySelector('.fa-chevron-down');
     this.mainBanner = document.querySelector('.banner');
@@ -42,41 +72,30 @@ class Home extends Component {
     this.contactH1 = document.querySelector('#contact h1');
     this.form = document.querySelector('form');
 
-    document.querySelector('.transition .icon').style.opacity = 0;
     document.querySelector('.transition').style.top = 'auto';
     document.querySelector('.transition').style.bottom = '-50px';
     document.querySelector('.transition').style.height = 0;
 
-    parallax(this.mainBanner); // align banner on load
     this.arrow.style.opacity = document.documentElement.scrollTop > 0 ? 0 : 1;
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('resize', this.updateDimensions);
-  }
-
-  updateDimensions() {
-    parallax(this.mainBanner);
-    parallax(this.resumeBanner, -500, false);
-    parallax(this.projectsBanner, -800, false);
   }
 
   handleScroll() {
-    var scrollTop = document.documentElement.scrollTop;
-    var scrollBottom = scrollTop + window.innerHeight;
+    if (this.state.firstLaunch) {
+      var scrollTop = document.documentElement.scrollTop;
+      var scrollBottom = scrollTop + window.innerHeight;
 
-    this.arrow.style.opacity = scrollTop > 0 ? 0 : 1;
+      this.arrow.style.opacity = scrollTop > 0 ? 0 : 1;
 
-    if (scrollBottom >= this.profilePic.offsetTop) this.profilePic.classList.add('animated', 'zoomIn');
-    if (scrollBottom >= this.aboutH1.offsetTop) this.aboutH1.classList.add('animated', 'fadeInDown');
-    if (scrollBottom >= this.aboutMeP.offsetTop) this.aboutMeP.classList.add('animated', 'fadeInLeft');
-    if (scrollBottom >= this.contactH1.offsetTop) this.contactH1.classList.add('animated', 'fadeInDown');
-    if (scrollBottom >= this.form.offsetTop) this.form.classList.add('animated', 'fadeInLeft');
-
-    parallax(this.mainBanner);
-    parallax(this.resumeBanner, -500, false);
-    parallax(this.projectsBanner, -800, false);
+      if (scrollBottom >= this.profilePic.offsetTop) this.profilePic.classList.add('animated', 'zoomIn');
+      if (scrollBottom >= this.aboutH1.offsetTop) this.aboutH1.classList.add('animated', 'fadeInDown');
+      if (scrollBottom >= this.aboutMeP.offsetTop) this.aboutMeP.classList.add('animated', 'fadeInLeft');
+      if (scrollBottom >= this.contactH1.offsetTop) this.contactH1.classList.add('animated', 'fadeInDown');
+      if (scrollBottom >= this.form.offsetTop) this.form.classList.add('animated', 'fadeInLeft');
+    }
   }
 
   transition(to) {
@@ -111,29 +130,14 @@ class Home extends Component {
             </li>
           </ul>
         </nav>
-        <header className="jumbotron banner home-bg">
-          <h1>
-            <Typist cursor={
-              {
-                show: true,
-                blink: true,
-                element: '',
-                hideWhenDone: true,
-                hideWhenDoneDelay: 100,
-              }
-            } stdTypingDelay={0} >
-              <Typist.Delay ms={550} />
-              <span>Hi. </span>
-              <Typist.Delay ms={400} />
-              I'm Jacob.
-            </Typist>
-          </h1>
+        <Parallax className="jumbotron banner home-bg">
+          <BannerText firstLaunch={this.state.firstLaunch} />
           <AnchorLink to="#about" className="fas fa-chevron-down"></AnchorLink>
-        </header>
+        </Parallax>
         <section id="about" className="container">
           <div className="col-md-12">
             <div className="row">
-              <img className="profile-picture center" src={me} />
+              <img className="profile-picture center" src={me} alt="Me" />
             </div>
             <div className="row">
               <h1 className="center">About Me</h1>
@@ -146,22 +150,22 @@ class Home extends Component {
             </div>
           </div>
         </section>
-        <div className="jumbotron small-banner resume-bg">
+        <Parallax className="jumbotron small-banner resume-bg" offsetY={-500} enableOnMobile={false}>
           <div>
             <h2>Resume</h2>
-            <a href="files/Resume.pdf" target="_blank" className="view-btn button btn-white">Click to View</a>
+            <a href="Resume.pdf" target="_blank" className="view-btn button btn-white">Click to View</a>
           </div>
-        </div>
+        </Parallax>
         <div className="slant">
           <div></div>
           <div></div>
         </div>
-        <div className="jumbotron small-banner projects-bg">
+        <Parallax className="jumbotron small-banner projects-bg" offsetY={-800} enableOnMobile={false}>
           <div>
             <h2>Projects</h2>
             <Link to="projects" className="view-btn button btn-white" transition={this.transition}>Click to View</Link>
           </div>
-        </div>
+        </Parallax>
         <section id="contact" className="container flex-center">
           <h1>Contact</h1>
           <form className="flex-center" action="https://formspree.io/jacob.sommer@comcast.net" method="POST">

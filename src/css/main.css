@@ -27,6 +27,18 @@ body {
   border: 15px solid #ff3a3a;
 }
 
+.transition {
+  position: fixed;
+  top: -50px;
+  bottom: auto;
+  width: 100%;
+  height: calc(100vh + 100px);
+  background: white;
+  z-index: 20;
+  transform: skewY(-3deg);
+  transition: 0.5s;
+}
+
 ::selection {
   background: #ff8f8f;
 }
@@ -703,38 +715,4 @@ footer .col-sm {
 
 #contact {
   margin-bottom: 5vw;
-}
-
-.transition {
-  position: fixed;
-  top: -50px;
-  bottom: auto;
-  width: 100%;
-  height: calc(100vh + 100px);
-  background: white;
-  z-index: 20;
-  transform: skewY(-3deg);
-  transition: 0.5s;
-}
-
-.transition .icon {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) skewY(3deg);
-  width: 50px;
-  height: 50px;
-  transition: 0.2s;
-}
-
-.transition .icon:after {
-  position: absolute;
-  content: '';
-  width: 50px;
-  height: 50px;
-  border: 3px solid #bbb;
-  border-left-color: #ff3a3a;
-  border-radius: 100%;
-  z-index: 30;
-  animation: rotate 2s linear infinite;
 }

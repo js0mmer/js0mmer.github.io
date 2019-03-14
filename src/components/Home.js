@@ -34,7 +34,11 @@ function BannerText(props) {
 
 function SendBtn() {
   function handleClick() {
-    if(document.querySelector('input[type=text]').value.length > 0 && document.querySelector('input[type=email]').value.length > 0 && document.querySelector('input[type=email]').value.includes("@")) document.querySelector('.send-btn').classList.add('sending');
+    if (document.querySelector('input[type=text]').value.length > 0 &&
+      document.querySelector('input[type=email]').value.length > 0 &&
+      document.querySelector('input[type=email]').value.includes("@") &&
+      document.querySelector('input[type=email]').value.split("@")[1].length > 0)
+      document.querySelector('.send-btn').classList.add('sending');
   }
 
   return <button type="submit" className="send-btn button btn-red" onClick={handleClick}>Send <span className="fa fa-paper-plane"></span></button>;
@@ -86,7 +90,7 @@ class Home extends Component {
   handleScroll() {
     var scrollTop = document.documentElement.scrollTop;
     this.arrow.style.opacity = scrollTop > 0 ? 0 : 1;
-    
+
     if (this.state.firstLaunch) {
       var scrollBottom = scrollTop + window.innerHeight;
 

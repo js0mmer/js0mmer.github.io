@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import Typist from 'react-typist';
 import { Redirect } from 'react-router-dom';
 import { NavToggle, Link, AnchorLink } from './Nav';
@@ -53,6 +54,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Jacob Sommer';
 
     if (window.location.href.includes('?')) document.getElementById(window.location.href.split('?')[1]).scrollIntoView({ behavior: 'smooth' });

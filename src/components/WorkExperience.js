@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
 import { Link, AnchorLink } from './Nav';
 
@@ -35,6 +36,7 @@ class WorkExperience extends Component {
   }
 
   componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Work Experience | Jacob Sommer';
     document.querySelector('.transition').style.top = 'auto';
     document.querySelector('.transition').style.bottom = '-50px';

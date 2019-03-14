@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
 import { NavToggle, Link, AnchorLink } from './Nav';
 import Parallax from './Parallax';
@@ -14,6 +15,7 @@ class Projects extends Component {
   }
 
   componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Projects | Jacob Sommer';
     window.scrollTo(0, 0);
     document.querySelector('.transition').style.top = 'auto';

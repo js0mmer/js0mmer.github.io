@@ -5,11 +5,8 @@ var isMobile = () => window.innerWidth <= 800;
 function parallax(props) {
   var scrollTop = document.documentElement.scrollTop;
   var offsetY = props.offsetY | 0;
-  var enableOnMobile = props.enableOnMobile | true;
 
-  if (isMobile() && enableOnMobile) {
-    return { backgroundPositionY: `${scrollTop / 2}px` };
-  } else if (!isMobile()) {
+  if (!isMobile()) {
     return { backgroundPositionY: `${-scrollTop / 2 - offsetY}px` };
   } else {
     return { backgroundPositionY: 0 };

@@ -21,8 +21,8 @@ const AppRouter = () => (
   </Router>
 );
 
-ReactDOM.render(<AppRouter />, document.getElementById('root'));
 ReactGA.initialize('UA-133013455-2');
+ReactDOM.render(<AppRouter />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

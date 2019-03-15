@@ -156,7 +156,7 @@ class Home extends Component {
             </div>
           </div>
         </section>
-        <Parallax className="jumbotron small-banner resume-bg" offsetY={-500} enableOnMobile={false}>
+        <Parallax className="jumbotron small-banner resume-bg" offsetY={-500}>
           <div>
             <h2>Resume</h2>
             <a href="Resume.pdf" target="_blank" className="view-btn button btn-white">Click to View</a>
@@ -166,7 +166,7 @@ class Home extends Component {
           <div></div>
           <div></div>
         </div>
-        <Parallax className="jumbotron small-banner projects-bg" offsetY={-800} enableOnMobile={false}>
+        <Parallax className="jumbotron small-banner projects-bg" offsetY={-800}>
           <div>
             <h2>Projects</h2>
             <Link to="projects" className="view-btn button btn-white" transition={this.transition}>Click to View</Link>

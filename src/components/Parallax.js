@@ -18,7 +18,7 @@ class Parallax extends Component {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
-    this.state = {style: {}};
+    this.state = { style: {} };
   }
 
   componentDidMount() {

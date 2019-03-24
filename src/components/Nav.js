@@ -1,4 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+export function closeNav() {
+  document.querySelector('.nav-toggle').classList.remove('open');
+  document.querySelector('.menu').classList.remove('active');
+  document.querySelector('.banner').classList.remove('blur');
+}
 
 export function NavToggle(props) {
   function handleClick(e) {
@@ -15,46 +21,26 @@ export function NavToggle(props) {
   );
 }
 
-export function closeNav() {
-  document.querySelector('.nav-toggle').classList.remove('open');
-  document.querySelector('.menu').classList.remove('active');
-  document.querySelector('.banner').classList.remove('blur');
-}
-
-export class AnchorLink extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
+export function AnchorLink(props) {
+  function handleClick(e) {
     e.preventDefault();
-    if (this.props.to) document.querySelector(this.props.to).scrollIntoView({ behavior: 'smooth' });
-    if (this.props.closeNav) this.props.closeNav();
+    if (props.to) document.querySelector(props.to).scrollIntoView({ behavior: 'smooth' });
+    if (props.closeNav) props.closeNav();
     else closeNav();
   }
-
-  render() {
-    return <a href={this.props.to ? this.props.to : '#'} className={this.props.className} onClick={this.handleClick}>{this.props.children}</a>;
-  }
+  
+  return <a href={props.to ? props.to : '#'} className={props.className} onClick={handleClick}>{props.children}</a>;
 }
 
-export class Link extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
+export function Link(props) {
+  function handleClick(e) {
     e.preventDefault();
     document.querySelector('.transition').style.top = '-50px';
     document.querySelector('.transition').style.bottom = 'auto';
     document.querySelector('.transition').style.height = 'calc(100vh + 100px)';
 
-    this.props.transition(this.props.to);
+    props.transition(props.to);
   }
-
-  render() {
-    return <a href={this.props.to} className={this.props.className} style={this.props.style} onClick={this.handleClick}>{this.props.children}</a>;
-  }
+  
+  return <a href={props.to} className={props.className} style={props.style} onClick={handleClick}>{props.children}</a>;
 }

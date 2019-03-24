@@ -351,6 +351,7 @@ img {
   cursor: pointer;
   position: relative;
   user-select: none;
+  z-index: 1;
 }
 
 .button:after {
@@ -516,20 +517,18 @@ footer .col-sm {
 /* SMALL BANNERS */
 /* ============= */
 
-.slant {
-  width: 100%;
-  height: 0;
-}
-
 .small-banner {
-  height: 25vh;
+  position: relative;
+  box-sizing: content-box;
+  height: 25vw;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  display: flex;
   flex-direction: column;
-  padding-left: 0;
-  padding-right: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .small-banner h2 {
@@ -537,61 +536,31 @@ footer .col-sm {
   user-select: none;
 }
 
-.small-banner div {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 @media only screen and (min-width: 768px) {
-  .slant div:first-child {
-    transform: translateY(-100%);
-    border-bottom: 5vw solid white;
-    border-left: 100vw solid transparent;
-  }
-  
-  .slant div:last-child {
-    transform: translateY(-100%);
+  .small-banner::before {
+    position: absolute;
+    content: '';
+    top: 0;
     border-top: 5vw solid white;
     border-right: 100vw solid transparent;
   }
 
+  .small-banner::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 5vw solid white;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .small-banner {
-    box-sizing: content-box;
+    height: 30vh;
   }
 
   .small-banner.resume-bg {
-    border-top: 5vw solid white;
-    border-right: 100vw solid transparent;
-    margin-bottom: 0;
-  }
-
-  .small-banner.resume-bg h2, .small-banner.resume-bg a {
-    transform: translateY(-50%);
-  }
-
-  .small-banner.resume-bg div {
-    top: -20px;
-    left: 50vw;
-  }
-
-  .small-banner.projects-bg {
-    border-left: 100vw solid transparent;
-    border-bottom: 5vw solid white;
-  }
-  
-  .small-banner.projects-bg h2, .small-banner.projects-bg a {
-    transform: translateY(50%);
-  }
-
-  .small-banner.projects-bg div {
-    top: 20px;
-    left: -50vw;
+    margin-bottom: 2rem;
   }
 }
 
@@ -700,5 +669,6 @@ footer .col-sm {
 }
 
 #contact {
+  margin-top: 2rem;
   margin-bottom: 5vw;
 }

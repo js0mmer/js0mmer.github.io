@@ -167,7 +167,6 @@ img {
   z-index: -1;
   position: absolute;
   margin: 0 auto;
-  top: 0;
   left: 0;
   right: 0;
   width: 500px;
@@ -177,7 +176,6 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: 0.5s;
 }
 
 .menu ul {
@@ -203,7 +201,7 @@ img {
 
 .menu.active ul {
   height: 550px;
-  border-bottom: 1px solid #212529;
+  border-color: #212529;
 }
 
 .menu li {
@@ -249,7 +247,8 @@ img {
 
 .banner {
   position: relative;
-  height: calc(100vh + 5vw);
+  box-sizing: content-box;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -259,7 +258,7 @@ img {
 }
 
 .banner h1 {
-  position: relative;
+  position: absolute;
   top: 45%;
   left: 20%;
   transform: translateY(-50%);
@@ -267,13 +266,14 @@ img {
 }
 
 .banner .fa-chevron-down {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  position: absolute;
   text-decoration: none;
   left: 0;
+  right: 0;
+  bottom: 18vh;
+  width: 56px;
   text-align: center;
-  bottom: -70vh;
+  margin: 0 auto;
   transition: 0.5s linear all;
   animation: bounce 2.5s infinite;
   font-size: 3.5rem;
@@ -298,10 +298,6 @@ img {
   .banner h1 {
     font-size: 4em;
   }
-
-  .blur:after {
-    transition-delay: 0.1s;
-  }
 }
 
 .Cursor:after {
@@ -320,12 +316,6 @@ img {
 .projects-bg {
   background-image: url("../images/emile-perron-190221.jpg");
   color: white;
-}
-
-@media only screen and (min-height: 768px) {
-  .banner .fa-chevron-down {
-    bottom: -75vh;
-  }
 }
 
 /* ======= */

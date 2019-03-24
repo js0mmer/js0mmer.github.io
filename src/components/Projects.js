@@ -21,11 +21,6 @@ class Projects extends Component {
     document.querySelector('.transition').style.top = 'auto';
     document.querySelector('.transition').style.bottom = '-50px';
     document.querySelector('.transition').style.height = 0;
-
-    window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.updateDimensions);
-
-    this.banner = document.querySelector('.banner');
   }
 
   transition(to) {

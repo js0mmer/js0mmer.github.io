@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './css/bootstrap.min.css';
 import './css/main.css';
 import './css/all.min.css';
 import Home from './components/Home';
 import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
+import Page404 from './components/404';
 import * as serviceWorker from './serviceWorker';
 import ReactGA from 'react-ga';
 
@@ -14,9 +15,12 @@ const AppRouter = () => (
   <Router>
     <div className="app">
       <div className="transition"></div>
-      <Route path="/" exact component={Home} />
-      <Route path="/work-experience" component={WorkExperience} />
-      <Route path="/projects" component={Projects} />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/work-experience" component={WorkExperience} />
+        <Route path="/projects" component={Projects} />
+        <Route component={Page404} />
+      </Switch>
     </div>
   </Router>
 );

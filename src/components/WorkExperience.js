@@ -3,10 +3,6 @@ import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
 import { Link, AnchorLink } from './Nav';
 
-const btn = {
-  margin: '35px auto'
-}
-
 function NavToggle() {
   function handleClick(e) {
     e.preventDefault();
@@ -52,7 +48,7 @@ class WorkExperience extends Component {
 
     return (
       <div>
-        <NavToggle />
+        <NavToggle blur=".construction" />
         <nav className="menu">
           <ul>
             <li>
@@ -93,7 +89,7 @@ class WorkExperience extends Component {
                 c2.053-0.438,4.045-1.136,5.927-2.079l4.093,4.817c1.55-0.865,3.026-1.87,4.414-2.999l-2.995-5.572
                 c1.537-1.385,2.914-2.98,4.093-4.772l5.953,2.127c0.448-0.761,0.878-1.545,1.268-2.356c0.388-0.808,0.729-1.631,1.047-2.458
                 l-5.378-3.324C55.268,42.615,55.655,40.542,55.777,38.473z M42.302,42.435c-3.002,6.243-10.495,8.872-16.737,5.866
-                c-6.244-2.999-8.872-10.493-5.867-16.736c3.002-6.244,10.495-8.873,16.736-5.869C42.676,28.698,45.306,36.19,42.302,42.435z" fill="none" stroke="#ff3a3a"/>
+                c-6.244-2.999-8.872-10.493-5.867-16.736c3.002-6.244,10.495-8.873,16.736-5.869C42.676,28.698,45.306,36.19,42.302,42.435z" fill="none" stroke="#ff3a3a" />
               <animateTransform
                 attributeName="transform"
                 begin="0s"
@@ -101,8 +97,7 @@ class WorkExperience extends Component {
                 type="rotate"
                 from="0 31 37"
                 to="360 31 37"
-                repeatCount="indefinite">
-              </animateTransform>
+                repeatCount="indefinite" />
             </g>
             <g id="small">
               <path d="M93.068,19.253L99,16.31c-0.371-1.651-0.934-3.257-1.679-4.776l-6.472,1.404c-0.902-1.436-2.051-2.735-3.42-3.819
@@ -116,7 +111,7 @@ class WorkExperience extends Component {
                 c-0.425-1.952-0.912-4.194-1.404-6.473c1.439-0.902,2.744-2.057,3.835-3.436l6.273,2.11c0.444-0.7,0.856-1.43,1.225-2.197
                 c0.372-0.777,0.691-1.569,0.963-2.361l-5.568-3.586C93.181,22.677,93.269,20.939,93.068,19.253z M84.365,24.062
                 c-1.693,3.513-5.908,4.991-9.418,3.302c-3.513-1.689-4.99-5.906-3.301-9.419c1.688-3.513,5.906-4.991,9.417-3.302
-                C84.573,16.331,86.05,20.549,84.365,24.062z" fill="none" stroke="#ff3a3a"/>
+                C84.573,16.331,86.05,20.549,84.365,24.062z" fill="none" stroke="#ff3a3a" />
               <animateTransform 
                 attributeName="transform"
                 begin="0s"
@@ -124,12 +119,11 @@ class WorkExperience extends Component {
                 type="rotate"
                 from="0 78 21"
                 to="-360 78 21"
-                repeatCount="indefinite">
-              </animateTransform>
+                repeatCount="indefinite" />
             </g>
           </svg>
           </div>
-          <Link to="/" className="home-btn button btn-red" style={btn} transition={this.transition}>Return to Home</Link>
+          <Link to="/" className="home-btn button btn-red" transition={this.transition}>Return to Home</Link>
         </div>
       </div>
     );

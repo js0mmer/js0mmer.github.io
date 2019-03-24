@@ -577,10 +577,12 @@ footer .col-sm {
 }
 
 @keyframes bounce {
-  from {
-    margin-top: 0;
-  } to {
-    margin-top: 25px;
+  0% {
+    transform: translateY(0);
+  } 50% {
+    transform: translateY(-25px);
+  } 100% {
+    transform: translateY(0);
   }
 }
 
@@ -659,6 +661,10 @@ footer .col-sm {
 
 .construction h1 {
   margin-bottom: 25px;
+}
+
+.construction .button {
+  margin: 35px auto;
 }
 
 /* ========= */

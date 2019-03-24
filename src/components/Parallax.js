@@ -41,7 +41,7 @@ class Parallax extends Component {
   }
 
   render() {
-    return <div className={this.props.className} style={this.state.style}>{this.props.children}</div>;
+    return <div className={this.props.className}>{this.props.children}</div>;
   }
 }
 

@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './css/bootstrap.min.css';
-import './css/main.css';
-import './css/all.min.css';
+import * as serviceWorker from './serviceWorker';
 import Home from './components/Home';
 import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
 import Page404 from './components/404';
-import * as serviceWorker from './serviceWorker';
-import ReactGA from 'react-ga';
+import './css/bootstrap.min.css';
+import './css/main.css';
+import './css/all.min.css';
 
 const AppRouter = () => (
   <Router>

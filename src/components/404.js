@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Link } from './Nav';
-
-function NavToggle() {
-  function handleClick(e) {
-    e.preventDefault();
-    document.querySelector('.nav-toggle').classList.toggle('open');
-    document.querySelector('.menu').classList.toggle('active');
-    document.querySelector('.banner-404').classList.toggle('blur');
-  }
-
-  return (
-    <button className="nav-toggle" onClick={handleClick}>
-      <span className="icon"></span>
-    </button>
-  );
-}
+import { NavToggle, Link } from './Nav';
 
 class Page404 extends Component {
   constructor(props) {
@@ -41,7 +26,7 @@ class Page404 extends Component {
 
     return (
       <div>
-        <NavToggle />
+        <NavToggle blur=".banner-404" />
         <nav className="menu">
           <ul>
             <li>

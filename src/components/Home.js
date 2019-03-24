@@ -20,7 +20,7 @@ function BannerText(props) {
             hideWhenDone: true,
             hideWhenDoneDelay: 100,
           }
-        } stdTypingDelay={0} >
+        } stdTypingDelay={0}>
           <Typist.Delay ms={550} />
           <span>Hi. </span>
           <Typist.Delay ms={400} />
@@ -56,6 +56,7 @@ class Home extends Component {
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Jacob Sommer';
+    window.addEventListener('scroll', this.handleScroll);
 
     if (window.location.href.includes('?')) document.getElementById(window.location.href.split('?')[1]).scrollIntoView({ behavior: 'smooth' });
 
@@ -66,23 +67,20 @@ class Home extends Component {
       this.setState({ firstLaunch: true });
     }
 
-    window.addEventListener('scroll', this.handleScroll);
-
     this.arrow = document.querySelector('.fa-chevron-down');
-    this.mainBanner = document.querySelector('.banner');
-    this.resumeBanner = document.querySelector('.resume-bg');
-    this.projectsBanner = document.querySelector('.projects-bg');
-    this.profilePic = document.querySelector('.profile-picture');
-    this.aboutH1 = document.querySelector('#about h1');
-    this.aboutMeP = document.querySelector('#about-me-p');
-    this.contactH1 = document.querySelector('#contact h1');
-    this.form = document.querySelector('form');
+    this.arrow.style.opacity = document.documentElement.scrollTop > 0 ? 0 : 1;
+
+    if (this.state.firstLaunch) {
+      this.profilePic = document.querySelector('.profile-picture');
+      this.aboutH1 = document.querySelector('#about h1');
+      this.aboutMeP = document.querySelector('#about-me-p');
+      this.contactH1 = document.querySelector('#contact h1');
+      this.form = document.querySelector('form');
+    }
 
     document.querySelector('.transition').style.top = 'auto';
     document.querySelector('.transition').style.bottom = '-50px';
     document.querySelector('.transition').style.height = 0;
-
-    this.arrow.style.opacity = document.documentElement.scrollTop > 0 ? 0 : 1;
   }
 
   componentWillUnmount() {

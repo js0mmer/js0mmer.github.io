@@ -11,7 +11,7 @@ export function NavToggle(props) {
     e.preventDefault();
     document.querySelector('.nav-toggle').classList.toggle('open');
     document.querySelector('.menu').classList.toggle('active');
-    document.querySelector('.banner').classList.toggle('blur');
+    document.querySelector(props.blur ? props.blur : '.banner').classList.toggle('blur');
   }
 
   return (
@@ -42,5 +42,5 @@ export function Link(props) {
     props.transition(props.to);
   }
   
-  return <a href={props.to} className={props.className} style={props.style} onClick={handleClick}>{props.children}</a>;
+  return <a href={props.to} className={props.className} onClick={handleClick}>{props.children}</a>;
 }

@@ -248,6 +248,7 @@ img {
 /* ======= */
 
 .banner {
+  position: relative;
   height: calc(100vh + 5vw);
   background-repeat: no-repeat;
   background-size: cover;
@@ -287,7 +288,7 @@ img {
   .banner:after {
     position: absolute;
     left: 0;
-    bottom: -5vw;
+    bottom: 0;
     width: 100vw;
     content: '';
     border-left: 100vw solid transparent;
@@ -299,7 +300,6 @@ img {
   }
 
   .blur:after {
-    bottom: 0;
     transition-delay: 0.1s;
   }
 }

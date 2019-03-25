@@ -43,6 +43,12 @@ body {
   background: #ff8f8f;
 }
 
+@media only screen and (min-width: 768px) {
+  .jumbotron h1 {
+    font-size: 4em;
+  }
+}
+
 /* ===== */
 /* LINKS */
 /* ===== */
@@ -256,6 +262,16 @@ img {
   overflow: hidden;
 }
 
+.banner::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  content: '';
+  border-left: 100vw solid transparent;
+  border-bottom: 5vw solid white;
+}
+
 .banner h1 {
   position: absolute;
   top: 45%;
@@ -281,22 +297,6 @@ img {
 
 .blur {
   filter: blur(4px) opacity(75%);
-}
-
-@media only screen and (min-width: 768px) {
-  .banner:after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    content: '';
-    border-left: 100vw solid transparent;
-    border-bottom: 5vw solid white;
-  }
-
-  .banner h1 {
-    font-size: 4em;
-  }
 }
 
 .Cursor:after {
@@ -536,31 +536,25 @@ footer .col-sm {
   user-select: none;
 }
 
-@media only screen and (min-width: 768px) {
-  .small-banner::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    border-top: 5vw solid white;
-    border-right: 100vw solid transparent;
-  }
+.small-banner::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  border-top: 5vw solid white;
+  border-right: 100vw solid transparent;
+}
 
-  .small-banner::after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    border-left: 100vw solid transparent;
-    border-bottom: 5vw solid white;
-  }
+.small-banner::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  border-left: 100vw solid transparent;
+  border-bottom: 5vw solid white;
 }
 
 @media only screen and (max-width: 768px) {
   .small-banner {
     height: 30vh;
-  }
-
-  .small-banner.resume-bg {
-    margin-bottom: 2rem;
   }
 }
 
@@ -619,12 +613,6 @@ footer .col-sm {
 
 .banner-404 .button {
   margin: 1rem 0;
-}
-
-@media only screen and (min-width: 768px) and (min-height: 768px) {
-  .banner-404 h1 {
-    font-size: 4em;
-  }
 }
 
 /* ============= */

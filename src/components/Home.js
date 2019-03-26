@@ -73,7 +73,6 @@ class Home extends Component {
     if (this.state.firstLaunch) {
       this.profilePic = document.querySelector('.profile-picture');
       this.aboutH1 = document.querySelector('#about h1');
-      this.aboutMeP = document.querySelector('#about-me-p');
       this.contactH1 = document.querySelector('#contact h1');
       this.form = document.querySelector('form');
     }
@@ -96,7 +95,6 @@ class Home extends Component {
 
       if (scrollBottom >= this.profilePic.offsetTop) this.profilePic.classList.add('animated', 'zoomIn');
       if (scrollBottom >= this.aboutH1.offsetTop) this.aboutH1.classList.add('animated', 'fadeInDown');
-      if (scrollBottom >= this.aboutMeP.offsetTop) this.aboutMeP.classList.add('animated', 'fadeInLeft');
       if (scrollBottom >= this.contactH1.offsetTop) this.contactH1.classList.add('animated', 'fadeInDown');
       if (scrollBottom >= this.form.offsetTop) this.form.classList.add('animated', 'fadeInLeft');
     }

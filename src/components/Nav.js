@@ -24,7 +24,7 @@ export function NavToggle(props) {
 export function AnchorLink(props) {
   function handleClick(e) {
     e.preventDefault();
-    if (props.to) document.querySelector(props.to).scrollIntoView({ behavior: 'smooth' });
+    if (props.to) document.querySelector(props.to).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
     if (props.closeNav) props.closeNav();
     else closeNav();
   }

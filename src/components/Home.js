@@ -58,7 +58,7 @@ class Home extends Component {
     document.title = 'Jacob Sommer';
     window.addEventListener('scroll', this.handleScroll);
 
-    if (window.location.href.includes('?')) document.getElementById(window.location.href.split('?')[1]).scrollIntoView({ behavior: 'smooth' });
+    if (window.location.href.includes('?')) document.getElementById(window.location.href.split('?')[1]).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
 
     if (sessionStorage.getItem('alreadyLaunched') != null) {
       this.setState({ firstLaunch: false });

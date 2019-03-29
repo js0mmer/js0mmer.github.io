@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/static/media/joshua-sortino-228788.3b2bafec.jpg"
   },
   {
-    "revision": "e8180045063aeaf4e5c4213af24183da",
-    "url": "/static/media/joanna-kosinska-478198.e8180045.jpg"
-  },
-  {
     "revision": "3ace8af402c12c4d134114f8f512dea4",
     "url": "/static/media/emile-perron-190221.3ace8af4.jpg"
+  },
+  {
+    "revision": "e8180045063aeaf4e5c4213af24183da",
+    "url": "/static/media/joanna-kosinska-478198.e8180045.jpg"
   },
   {
     "revision": "4b218302f9057d02864d4909661831e9",
@@ -84,12 +84,12 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.26d8edc8.svg"
   },
   {
-    "revision": "2e302fa4c6eeb1bc06149067bae3e7b4",
-    "url": "/static/media/fa-solid-900.2e302fa4.eot"
-  },
-  {
     "revision": "80c404ff42e52d9e7589e83fe21307b4",
     "url": "/static/media/fa-solid-900.80c404ff.ttf"
+  },
+  {
+    "revision": "2e302fa4c6eeb1bc06149067bae3e7b4",
+    "url": "/static/media/fa-solid-900.2e302fa4.eot"
   },
   {
     "revision": "4568b5b5034960068b1cd0f69dab2039",

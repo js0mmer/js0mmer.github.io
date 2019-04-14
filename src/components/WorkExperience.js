@@ -1,28 +1,9 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
-import { Link, AnchorLink } from './Nav';
-
-function NavToggle() {
-  function handleClick(e) {
-    e.preventDefault();
-    document.querySelector('.nav-toggle').classList.toggle('open');
-    document.querySelector('.menu').classList.toggle('active');
-    document.querySelector('.construction').classList.toggle('blur');
-  }
-
-  return (
-    <button className="nav-toggle" onClick={handleClick}>
-      <span className="icon"></span>
-    </button>
-  );
-}
-
-function closeNav() {
-  document.querySelector('.nav-toggle').classList.toggle('open');
-  document.querySelector('.menu').classList.toggle('active');
-  document.querySelector('.construction').classList.toggle('blur');
-}
+import { NavToggle, Link, AnchorLink } from './Nav';
+import Parallax from './Parallax';
+import Footer from './Footer';
 
 class WorkExperience extends Component {
   constructor(props) {
@@ -34,6 +15,7 @@ class WorkExperience extends Component {
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Work Experience | Jacob Sommer';
+    window.scrollTo(0, 0);
     document.querySelector('.transition').style.top = 'auto';
     document.querySelector('.transition').style.bottom = '-50px';
     document.querySelector('.transition').style.height = 0;
@@ -48,7 +30,7 @@ class WorkExperience extends Component {
 
     return (
       <div>
-        <NavToggle blur=".construction" />
+        <NavToggle />
         <nav className="menu">
           <ul>
             <li>
@@ -61,7 +43,7 @@ class WorkExperience extends Component {
               <a href="Resume.pdf" target="_blank">Resume</a>
             </li>
             <li>
-              <AnchorLink closeNav={closeNav}>Work Experience</AnchorLink>
+              <AnchorLink>Work Experience</AnchorLink>
             </li>
             <li>
               <Link to="projects" transition={this.transition}>Projects</Link>
@@ -71,60 +53,20 @@ class WorkExperience extends Component {
             </li>
           </ul>
         </nav>
-        <div className="construction flex-center">
-          <h1>Under Construction</h1>
-          <div className="gears">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100.001px" height="70px" viewBox="0 0 100 68">
-            <g id="large">
-              <path d="M55.777,38.473l6.221-1.133c0.017-1.791-0.123-3.573-0.41-5.324l-6.321-0.19c-0.438-2.053-1.135-4.048-2.076-5.931
-                l4.82-4.094c-0.868-1.552-1.874-3.028-3.005-4.417l-5.569,2.999c-1.385-1.54-2.98-2.921-4.771-4.099l2.124-5.954
-                c-0.759-0.452-1.543-0.878-2.357-1.269c-0.811-0.39-1.625-0.732-2.449-1.046l-3.325,5.381c-2.038-0.665-4.113-1.052-6.183-1.174
-                L31.34,6.002c-1.792-0.02-3.571,0.119-5.32,0.406l-0.191,6.32c-2.056,0.439-4.051,1.137-5.936,2.08l-4.097-4.82
-                c-1.546,0.872-3.022,1.875-4.407,3.006l2.996,5.566c-1.54,1.384-2.925,2.985-4.104,4.778c-2.16-0.771-4.196-1.498-5.953-2.127
-                c-0.449,0.765-0.875,1.544-1.265,2.354c-0.39,0.811-0.733,1.63-1.049,2.457c1.587,0.981,3.424,2.119,5.377,3.325
-                c-0.662,2.037-1.049,4.117-1.172,6.186l-6.218,1.136c-0.021,1.789,0.12,3.566,0.407,5.321l6.32,0.188
-                c0.442,2.06,1.143,4.057,2.082,5.937l-4.818,4.095c0.872,1.549,1.873,3.026,3.009,4.412l5.563-2.998
-                c1.392,1.54,2.989,2.92,4.777,4.099l-2.121,5.954c0.756,0.446,1.538,0.871,2.348,1.258c0.813,0.394,1.633,0.739,2.462,1.05
-                l3.326-5.375c2.033,0.662,4.109,1.05,6.175,1.17l1.137,6.221c1.791,0.019,3.569-0.123,5.323-0.407l0.194-6.324
-                c2.053-0.438,4.045-1.136,5.927-2.079l4.093,4.817c1.55-0.865,3.026-1.87,4.414-2.999l-2.995-5.572
-                c1.537-1.385,2.914-2.98,4.093-4.772l5.953,2.127c0.448-0.761,0.878-1.545,1.268-2.356c0.388-0.808,0.729-1.631,1.047-2.458
-                l-5.378-3.324C55.268,42.615,55.655,40.542,55.777,38.473z M42.302,42.435c-3.002,6.243-10.495,8.872-16.737,5.866
-                c-6.244-2.999-8.872-10.493-5.867-16.736c3.002-6.244,10.495-8.873,16.736-5.869C42.676,28.698,45.306,36.19,42.302,42.435z" fill="none" stroke="#ff3a3a" />
-              <animateTransform
-                attributeName="transform"
-                begin="0s"
-                dur="3s"
-                type="rotate"
-                from="0 31 37"
-                to="360 31 37"
-                repeatCount="indefinite" />
-            </g>
-            <g id="small">
-              <path d="M93.068,19.253L99,16.31c-0.371-1.651-0.934-3.257-1.679-4.776l-6.472,1.404c-0.902-1.436-2.051-2.735-3.42-3.819
-                l2.115-6.273c-0.706-0.448-1.443-0.867-2.213-1.238c-0.774-0.371-1.559-0.685-2.351-0.958l-3.584,5.567
-                c-1.701-0.39-3.432-0.479-5.118-0.284L73.335,0c-1.652,0.367-3.256,0.931-4.776,1.672l1.404,6.47
-                c-1.439,0.899-2.744,2.047-3.835,3.419c-2.208-0.746-4.38-1.476-6.273-2.114c-0.451,0.71-0.874,1.448-1.244,2.229
-                c-0.371,0.764-0.68,1.541-0.954,2.329c1.681,1.078,3.612,2.323,5.569,3.579c-0.399,1.711-0.486,3.449-0.291,5.145
-                c-2.086,1.034-4.143,2.055-5.936,2.945c0.368,1.648,0.929,3.25,1.67,4.769c1.954-0.426,4.193-0.912,6.468-1.405
-                c0.906,1.449,2.06,2.758,3.442,3.853l-2.117,6.27c0.708,0.449,1.439,0.865,2.218,1.236c0.767,0.371,1.551,0.685,2.338,0.96
-                c1.081-1.68,2.319-3.612,3.583-5.574c1.714,0.401,3.457,0.484,5.156,0.288L82.695,42c1.651-0.371,3.252-0.931,4.773-1.676
-                c-0.425-1.952-0.912-4.194-1.404-6.473c1.439-0.902,2.744-2.057,3.835-3.436l6.273,2.11c0.444-0.7,0.856-1.43,1.225-2.197
-                c0.372-0.777,0.691-1.569,0.963-2.361l-5.568-3.586C93.181,22.677,93.269,20.939,93.068,19.253z M84.365,24.062
-                c-1.693,3.513-5.908,4.991-9.418,3.302c-3.513-1.689-4.99-5.906-3.301-9.419c1.688-3.513,5.906-4.991,9.417-3.302
-                C84.573,16.331,86.05,20.549,84.365,24.062z" fill="none" stroke="#ff3a3a" />
-              <animateTransform 
-                attributeName="transform"
-                begin="0s"
-                dur="2s"
-                type="rotate"
-                from="0 78 21"
-                to="-360 78 21"
-                repeatCount="indefinite" />
-            </g>
-          </svg>
-          </div>
-          <Link to="/" className="home-btn button btn-red" transition={this.transition}>Return to Home</Link>
-        </div>
+        <Parallax className="jumbotron banner workexp-bg">
+          <h1>Work Experience</h1>
+        </Parallax>
+          <section id="work-experience" className="container">
+            <div class="col-md-12">
+              <p>Dublin High’s Engineering and Design Academy has provided me with many opportunities and experiences that I’m thankful for. A lot of these opportunities have been field trips and guest speakers. One of my favorite field trips I took was a field trip to the NASA Ames Research Center. The main focus of this tour was the wind tunnels. There are a lot of wind tunnels there, of all speeds and sizes. They have not only the largest wind tunnel but also the fastest wind tunnels. I learned that wind tunnels are an important asset for testing the aerodynamics of aircraft. Some of the smaller, faster wind tunnels are used to test model aircraft while their largest one can fit a whole full-sized airplane. These wind tunnels are used to see how air flows over aircraft. The scales of a lot of these wind tunnels were huge. Overall, it was very fascinating to get to see what goes on in one of NASA’s research centers. It is not something you get to do every day and it was a very memorable trip.</p>
+              <p>One memorable guest speaker was Dr. Maher Salloum. He talked about the two different careers he has had. In his first career, he worked on developing Magnetic Nanoparticle Hyperthermia as a way to kill cancer cells. This was really interesting because it was something I had never heard of in my life. In his second career, he worked with data compression. Being someone who is interested in Computer Science, his work with data compression interested me. I learned about the two approaches for data compression. The first one is lossless. With lossless data compression, data is fully recoverable after decompression, however, it has a low compression ratio of about 4-10. The most common example of this type of compression is zip files on Windows. The second approach for data compression is lossy. Lossy data compression has large ratios of about 10-1000, however, losses can occur in data after decompression. An example of this type of compression is wavelets, which are often used to compress images we send over social media without us even knowing. His talk was really inspiring because he showed us how you do not have to stay in just one field of engineering. Often times, you end up having multiple careers.</p>
+            </div>
+          </section>
+        <Parallax className="small-banner resume-bg" offsetY={-800}>
+          <h2>Resume</h2>
+          <a href="Resume.pdf" className="view-btn button btn-white" target="_blank">Click to View</a>
+        </Parallax>
+        <Footer />
       </div>
     );
   }

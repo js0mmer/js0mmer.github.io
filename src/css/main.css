@@ -308,13 +308,18 @@ img {
   background-image: url("../images/joshua-sortino-228788.jpg");
 }
 
-.resume-bg {
-  background-image: url("../images/joanna-kosinska-478198.jpg");
-}
-
 .projects-bg {
   background-image: url("../images/emile-perron-190221.jpg");
   color: white;
+}
+
+.resume-bg {
+  background-image: url("../images/joanna-kosinska-129039-unsplash.jpg");
+  margin-bottom: 4rem;
+}
+
+.workexp-bg {
+  background-image: url("../images/joanna-kosinska-478198.jpg");
 }
 
 /* ======= */
@@ -633,26 +638,12 @@ footer .col-sm {
   }
 }
 
-/* ================= */
-/* CONSTRUCTION PAGE */
-/* ================= */
+/* ==================== */
+/* WORK EXPERIENCE PAGE */
+/* ==================== */
 
-.construction {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  text-align: center;
-  transition: filter 0.5s;
-}
-
-.construction h1 {
-  margin-bottom: 25px;
-}
-
-.construction .button {
-  margin-top: 35px;
+#work-experience {
+  margin-bottom: 2rem;
 }
 
 /* ========= */

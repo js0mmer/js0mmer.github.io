@@ -11,7 +11,7 @@ export function NavToggle(props) {
     e.preventDefault();
     document.querySelector('.nav-toggle').classList.toggle('open');
     document.querySelector('.menu').classList.toggle('active');
-    document.querySelector(props.blur ? props.blur : '.banner').classList.toggle('blur');
+    document.querySelector('.banner').classList.toggle('blur');
   }
 
   return (
@@ -25,8 +25,7 @@ export function AnchorLink(props) {
   function handleClick(e) {
     e.preventDefault();
     if (props.to) document.querySelector(props.to).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
-    if (props.closeNav) props.closeNav();
-    else closeNav();
+    closeNav();
   }
   
   return <a href={props.to ? props.to : '#'} className={props.className} onClick={handleClick}>{props.children}</a>;

@@ -6,6 +6,7 @@ import Parallax from './Parallax';
 import Footer from './Footer';
 import scratch from '../images/scratch.jpg';
 import projComp from '../images/project-compound.jpg';
+import aerodynamic from '../images/aerodynamic.jpg';
 
 class Projects extends Component {
   constructor(props) {
@@ -93,6 +94,17 @@ class Projects extends Component {
                 <h5>POE (Principles of Engineering)</h5>
                 <h5>August 30th - September 7th, 2018</h5>
                 <p>The objective of this project was to create a compound machine that performed a basic task. My role was building a 2nd class lever and helping out on documentation. My group created a machine that pours dog food into a bowl. The input was provided by spinning a wheel which acted like a crank for a simple gear train. The axle of the output gear in the gear train drove another wheel which had a string wrapped around it. This caused the wheel to pull the string when it was spun. The string ran over a pulley and connected to the far end of our lever, next to the cup of dog food. When the string was pulled, it rotated the lever 180 degrees and dumped the dog food into a bowl placed below the dropping point. During the project we ran into issues early on. We found that our small driver gear required a lot of rotations. Our solution was to replace it with a larger gear which ended up requiring us to rebuild the entire gear train because there wasn’t enough space between the bottom of the machine and the 2nd gear. You can view the full project documentation <a className="link" href="https://drive.google.com/open?id=1XUbSIuFKQyM65QWXNIqzLKFKb0IdVRaF8hsZDxw60-I" target="_blank" rel="noopener noreferrer">here</a> for more information.</p>
+              </div>
+            </article>
+            <article className="row">
+              <div className="col-md-7">
+                <h3>Aerodynamic Design</h3>
+                <h5>POE (Principles of Engineering)</h5>
+                <h5>January 8th - January 28th, 2019</h5>
+                <p>The objective of this project was to design paper prototypes of projectiles to understand which designs produce projectiles that fly the furthest. Each of the members in my group, including myself, was responsible for designing two projectiles and creating prototypes using only paper products and tape. The projectiles were fitted onto a PVC pipe and launched with a pressure of 75 psi. My first design was a simple design with a long paper body, a short cone, and four curved fins at the end of it. This design was not very successful, it flew a measly 7 yards. However, after analyzing what went wrong and observing other people’s launches, I was able to design a rocket that performed much better. My second design flew 122 yards. I found that a tight fit around the PVC pipe was necessary to keep the air from escaping. I also found that smaller fins were better because they were a lot sturdier and did not flop and skew the flight path. I ended up using 3 fins instead of 4 since I learned that would decrease the amount of drag. Additionally, I learned that it is necessary to keep the projectile’s centroid, center of mass, at its center of geometry. On my first design, it was too far back so it flipped and fell straight down. On my second design, I used the combination of 3 smaller fins and a layered cone, made out of card stock, to bring more mass to the front of the projectile and push the centroid forward. This way the projectile would not flip over and instead, it would fly in a nice arc. You can view the full project documentation <a href="https://docs.google.com/document/d/1FTdER9cB3btk29j8Muf68F-MoZCXfV6ldJkELkzjiAs/edit?usp=sharing" class="link" target="_blank" rel="noopener noreferrer">here</a> for more information.</p>
+              </div>
+              <div className="col-md-5">
+                <img className="red-border" src={aerodynamic} alt="Aerodynamic Project" />
               </div>
             </article>
           </section>

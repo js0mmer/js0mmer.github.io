@@ -7,7 +7,7 @@ function parallax(props) {
   var offsetY = props.offsetY | 0;
 
   if (!isMobile()) {
-    return { backgroundPositionY: `${-scrollTop / 2 - offsetY}px` };
+    return { backgroundPositionY: `${-scrollTop / 2 + offsetY}px` };
   } else {
     return { backgroundPositionY: 0 };
   }

@@ -23,7 +23,7 @@ function BannerText(props) {
         } stdTypingDelay={0}>
           <Typist.Delay ms={550} />
           <span>Hi. </span>
-          <Typist.Delay ms={400} />
+          <Typist.Delay ms={500} />
           I'm Jacob.
         </Typist>
       </h1>

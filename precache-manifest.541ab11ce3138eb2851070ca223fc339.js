@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.8c1f0780.eot"
   },
   {
-    "revision": "57489eda7b64e261351d",
+    "revision": "17762ca9e0950f19f9b6",
     "url": "/static/css/main.a1c0b8d6.chunk.css"
   },
   {
@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/static/media/joshua-sortino-228788.3b2bafec.jpg"
   },
   {
-    "revision": "e8180045063aeaf4e5c4213af24183da",
-    "url": "/static/media/joanna-kosinska-478198.e8180045.jpg"
-  },
-  {
     "revision": "3ace8af402c12c4d134114f8f512dea4",
     "url": "/static/media/emile-perron-190221.3ace8af4.jpg"
+  },
+  {
+    "revision": "e8180045063aeaf4e5c4213af24183da",
+    "url": "/static/media/joanna-kosinska-478198.e8180045.jpg"
   },
   {
     "revision": "4b218302f9057d02864d4909661831e9",
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/static/media/fa-regular-400.e32cb360.woff"
   },
   {
-    "revision": "57489eda7b64e261351d",
-    "url": "/static/js/main.cd2b2101.chunk.js"
+    "revision": "17762ca9e0950f19f9b6",
+    "url": "/static/js/main.09178423.chunk.js"
   },
   {
     "revision": "f1994ecd58b56afa035ae3da39213357",
@@ -80,12 +80,12 @@ self.__precacheManifest = [
     "url": "/static/media/fa-solid-900.a8eedaad.woff"
   },
   {
-    "revision": "cbd387d93e253048800dc9ee22b85c24",
-    "url": "/static/media/fa-brands-400.cbd387d9.eot"
-  },
-  {
     "revision": "d6ac6c968cff1abcbf5d548828b9f6c6",
     "url": "/static/media/fa-brands-400.d6ac6c96.ttf"
+  },
+  {
+    "revision": "cbd387d93e253048800dc9ee22b85c24",
+    "url": "/static/media/fa-brands-400.cbd387d9.eot"
   },
   {
     "revision": "26d8edc83280c58a277393d469e7b26f",
@@ -108,7 +108,7 @@ self.__precacheManifest = [
     "url": "/static/media/fa-solid-900.b7c60297.svg"
   },
   {
-    "revision": "a1c858fffdb3b3cbd442fb960122c422",
+    "revision": "0da18194e69c0716ac8c537ea473aa25",
     "url": "/index.html"
   }
 ];

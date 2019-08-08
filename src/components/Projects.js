@@ -37,22 +37,22 @@ class Projects extends Component {
         <nav className="menu">
           <ul>
             <li>
-              <Link to="/" transition={this.transition}>Home</Link>
+              <Link to="/" transition={this.transition}>Hom<span className="no-space">e</span></Link>
             </li>
             <li>
-              <Link to="/?about" transition={this.transition}>About Me</Link>
+              <Link to="/?about" transition={this.transition}>About M<span className="no-space">e</span></Link>
             </li>
             <li>
-              <a href="Resume.pdf" target="_blank">Resume</a>
+              <a href="Resume.pdf" target="_blank">Resum<span className="no-space">e</span></a>
             </li>
             <li>
-              <Link to="work-experience" transition={this.transition}>Work Experience</Link>
+              <Link to="work-experience" transition={this.transition}>Work Experienc<span className="no-space">e</span></Link>
             </li>
             <li>
-              <AnchorLink>Projects</AnchorLink>
+              <AnchorLink>Project<span className="no-space">s</span></AnchorLink>
             </li>
             <li>
-              <Link to="/?contact" transition={this.transition}>Contact</Link>
+              <Link to="/?contact" transition={this.transition}>Contac<span className="no-space">t</span></Link>
             </li>
           </ul>
         </nav>

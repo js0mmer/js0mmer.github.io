@@ -113,22 +113,22 @@ class Home extends Component {
         <nav className="menu">
           <ul>
             <li>
-              <AnchorLink>Home</AnchorLink>
+              <AnchorLink>Hom<span className="no-space">e</span></AnchorLink>
             </li>
             <li>
-              <AnchorLink to="#about">About Me</AnchorLink>
+              <AnchorLink to="#about">About M<span className="no-space">e</span></AnchorLink>
             </li>
             <li>
-              <a href="Resume.pdf" target="_blank">Resume</a>
+              <a href="Resume.pdf" target="_blank">Resum<span className="no-space">e</span></a>
             </li>
             <li>
-              <Link to="work-experience" transition={this.transition}>Work Experience</Link>
+              <Link to="work-experience" transition={this.transition}>Work Experienc<span className="no-space">e</span></Link>
             </li>
             <li>
-              <Link to="projects" transition={this.transition}>Projects</Link>
+              <Link to="projects" transition={this.transition}>Project<span className="no-space">s</span></Link>
             </li>
             <li>
-              <AnchorLink to="#contact">Contact</AnchorLink>
+              <AnchorLink to="#contact">Contac<span className="no-space">t</span></AnchorLink>
             </li>
           </ul>
         </nav>

@@ -187,15 +187,14 @@ img {
 
 .menu ul {
   list-style: none;
-  height: 550px;
-  max-height: 0;
+  height: 0;
   padding: 0;
   font-size: 2rem;
   text-transform: uppercase;
   overflow: hidden;
   transition: 0.5s;
   border-bottom: 1px solid transparent;
-  will-change: max-height;
+  will-change: height;
 }
 
 @media only screen and (max-width: 767px) {
@@ -209,7 +208,7 @@ img {
 }
 
 .menu.active ul {
-  max-height: 550px;
+  height: 550px;
   border-color: #212529;
 }
 

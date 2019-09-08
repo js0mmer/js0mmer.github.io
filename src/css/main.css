@@ -133,22 +133,22 @@ img {
 }
 
 .nav-toggle .icon:before {
-  top: -10px;
+  transform: translateY(-10px);
   left: 0;
 }
 
 .nav-toggle .icon:after {
-  top: 10px;
+  transform: translateY(10px);
   left: 0;
 }
 
 @media only screen and (min-width: 768px) {
   .nav-toggle:hover .icon:before {
-    top: -15px;
+    transform: translateY(-15px);
   }
 
   .nav-toggle:hover .icon:after {
-    top: 15px;
+    transform: translateY(15px);
   }
 }
 
@@ -159,12 +159,10 @@ img {
 }
 
 .nav-toggle.open .icon:before {
-  top: 0;
   transform: rotate(45deg);
 }
 
 .nav-toggle.open .icon:after {
-  top: 0;
   transform: rotate(-45deg);
 }
 
@@ -189,13 +187,15 @@ img {
 
 .menu ul {
   list-style: none;
-  height: 0;
+  height: 550px;
+  max-height: 0;
   padding: 0;
   font-size: 2rem;
   text-transform: uppercase;
   overflow: hidden;
   transition: 0.5s;
   border-bottom: 1px solid transparent;
+  will-change: max-height;
 }
 
 @media only screen and (max-width: 767px) {
@@ -209,7 +209,7 @@ img {
 }
 
 .menu.active ul {
-  height: 550px;
+  max-height: 550px;
   border-color: #212529;
 }
 
@@ -263,6 +263,7 @@ img {
   background-attachment: fixed;
   transition: filter 0.5s;
   overflow: hidden;
+  will-change: filter;
 }
 
 .banner::after {

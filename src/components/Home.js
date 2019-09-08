@@ -156,7 +156,7 @@ class Home extends Component {
           <h2>Work Experience</h2>
           <Link to="work-experience" className="view-btn button btn-white" transition={this.transition}>Click to View</Link>
         </Parallax>
-        <Parallax className="small-banner projects-bg" offsetY={1000}>
+        <Parallax className="small-banner projects-bg" offsetY={800}>
           <h2>Projects</h2>
           <Link to="projects" className="view-btn button btn-white" transition={this.transition}>Click to View</Link>
         </Parallax>

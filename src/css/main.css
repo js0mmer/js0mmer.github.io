@@ -25,6 +25,7 @@ body {
 .red-border {
   background: #ff3a3a;
   border: 15px solid #ff3a3a;
+  border-radius: 1%;
 }
 
 .no-space {

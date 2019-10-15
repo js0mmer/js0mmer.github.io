@@ -205,11 +205,11 @@ img {
   }
 }
 
-.menu-is-active .menu {
+.menu.active {
   transform: none;
 }
 
-.menu-is-active .menu ul {
+.menu.active ul {
   border-color: #212529;
 }
 

@@ -19,6 +19,7 @@ class WorkExperience extends Component {
     document.querySelector('.transition').style.top = 'auto';
     document.querySelector('.transition').style.bottom = '-50px';
     document.querySelector('.transition').style.height = 0;
+    document.querySelector('body').classList.remove('menu-is-active');
   }
 
   transition(to) {

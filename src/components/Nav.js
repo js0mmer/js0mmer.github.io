@@ -2,7 +2,12 @@ import React from 'react';
 
 export function closeNav() {
   document.querySelector('.nav-toggle').classList.remove('open');
+  document.querySelector('body').classList.remove('menu-is-active');
   document.querySelector('.menu').classList.remove('active');
+  document.querySelectorAll('.menu ul li').forEach((element, i) => {
+    element.classList.toggle('animated')
+    element.classList.toggle('slideInLeft')
+  });
   document.querySelector('.banner').classList.remove('blur');
 }
 
@@ -11,12 +16,16 @@ export function NavToggle(props) {
     e.preventDefault();
     document.querySelector('.nav-toggle').classList.toggle('open');
     document.querySelector('.menu').classList.toggle('active');
-    document.querySelector('.banner').classList.toggle('blur');
+    document.querySelector('body').classList.toggle('menu-is-active');
+    document.querySelectorAll('.menu ul li').forEach((element, i) => setTimeout(() => {
+      element.classList.toggle('animated')
+      element.classList.toggle('slideInLeft')
+    }, 75 * i));
   }
 
   return (
     <button className="nav-toggle" onClick={handleClick}>
-      <span className={'icon' + (props.white ? ' white' : '')}></span>
+      <span className="icon"></span>
     </button>
   );
 }

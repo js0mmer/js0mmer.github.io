@@ -93,7 +93,7 @@ img {
 /* ========== */
 
 .nav-toggle {
-  position: absolute;
+  position: fixed;
   top: 0.5rem;
   left: 0.5rem;
   width: 40px;
@@ -114,7 +114,7 @@ img {
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 32px;
+  width: 22px;
   height: 2px;
   background: #212529;
   transition: 0.4s ease-out;
@@ -123,24 +123,21 @@ img {
 .nav-toggle .icon:before, .nav-toggle .icon:after {
   transition: 0.25s ease-out;
   position: absolute;
-  width: 32px;
   height: 2px;
   background: #212529;
   content: '';
 }
 
-.nav-toggle .icon.white, .nav-toggle .icon.white:before, .nav-toggle .icon.white:after {
-  background: white;
-}
-
 .nav-toggle .icon:before {
   transform: translateY(-10px);
+  width: 32px;
   left: 0;
 }
 
 .nav-toggle .icon:after {
   transform: translateY(10px);
   left: 0;
+  width: 12px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -160,11 +157,15 @@ img {
 }
 
 .nav-toggle.open .icon:before {
+  width: 22px;
   transform: rotate(45deg);
+  background: #212529;
 }
 
 .nav-toggle.open .icon:after {
+  width: 22px;
   transform: rotate(-45deg);
+  background: #212529;
 }
 
 /* ======== */
@@ -172,30 +173,30 @@ img {
 /* ======== */
 
 .menu {
-  z-index: -1;
-  position: absolute;
+  z-index: 2;
+  position: fixed;
   margin: 0 auto;
   left: 0;
   right: 0;
-  width: 500px;
   max-width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transform: translateX(-100vw);
+  transition: 0.5s;
+  background: white;
 }
 
 .menu ul {
   list-style: none;
-  height: 0;
+  height: 550px;
   padding: 0;
   font-size: 2rem;
   text-transform: uppercase;
-  overflow: hidden;
   transition: 0.5s;
   border-bottom: 1px solid transparent;
-  will-change: height;
 }
 
 @media only screen and (max-width: 767px) {
@@ -205,17 +206,21 @@ img {
 }
 
 .menu.active {
-  z-index: 2;
+  transform: none;
 }
 
 .menu.active ul {
-  height: 550px;
   border-color: #212529;
 }
 
 .menu li {
   margin: 30px 0;
   padding: 5px 0;
+  opacity: 0;
+}
+
+.menu li.animated {
+  opacity: 1;
 }
 
 .menu li:first-child {
@@ -247,6 +252,10 @@ img {
     left: 0;
     width: 100%;
   }
+}
+
+.menu-is-active {
+  overflow: hidden;
 }
 
 /* ======= */

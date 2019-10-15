@@ -3,7 +3,6 @@ import React from 'react';
 export function closeNav() {
   document.querySelector('.nav-toggle').classList.remove('open');
   document.querySelector('body').classList.remove('menu-is-active');
-  document.querySelector('.menu').classList.remove('active');
   document.querySelectorAll('.menu ul li').forEach((element, i) => {
     element.classList.remove('animated')
     element.classList.remove('slideInLeft')
@@ -15,7 +14,6 @@ export function NavToggle(props) {
   function handleClick(e) {
     e.preventDefault();
     document.querySelector('.nav-toggle').classList.toggle('open');
-    document.querySelector('.menu').classList.toggle('active');
     document.querySelector('body').classList.toggle('menu-is-active');
     document.querySelectorAll('.menu ul li').forEach((element, i) => setTimeout(() => {
       element.classList.toggle('animated')

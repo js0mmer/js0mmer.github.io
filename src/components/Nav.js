@@ -5,8 +5,8 @@ export function closeNav() {
   document.querySelector('body').classList.remove('menu-is-active');
   document.querySelector('.menu').classList.remove('active');
   document.querySelectorAll('.menu ul li').forEach((element, i) => {
-    element.classList.toggle('animated')
-    element.classList.toggle('slideInLeft')
+    element.classList.remove('animated')
+    element.classList.remove('slideInLeft')
   });
   document.querySelector('.banner').classList.remove('blur');
 }

@@ -150,19 +150,19 @@ img {
   }
 }
 
-.nav-toggle.open .icon {
+.menu-is-active .nav-toggle .icon {
   background: transparent;
   transition: 0.4s ease-out;
   transform: rotate(180deg);
 }
 
-.nav-toggle.open .icon:before {
+.menu-is-active .nav-toggle .icon:before {
   width: 22px;
   transform: rotate(45deg);
   background: #212529;
 }
 
-.nav-toggle.open .icon:after {
+.menu-is-active .nav-toggle .icon:after {
   width: 22px;
   transform: rotate(-45deg);
   background: #212529;

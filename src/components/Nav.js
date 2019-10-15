@@ -7,7 +7,6 @@ export function closeNav() {
     element.classList.remove('animated')
     element.classList.remove('slideInLeft')
   });
-  document.querySelector('.banner').classList.remove('blur');
 }
 
 export function NavToggle(props) {

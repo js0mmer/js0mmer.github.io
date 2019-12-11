@@ -7,6 +7,7 @@ import Footer from './Footer';
 import scratch from '../images/scratch.jpg';
 import projComp from '../images/project-compound.jpg';
 import aerodynamic from '../images/aerodynamic.jpg';
+import magpie from '../images/magpie.jpg';
 
 class Projects extends Component {
   constructor(props) {
@@ -106,6 +107,17 @@ class Projects extends Component {
               </div>
               <div className="col-md-5">
                 <img className="red-border" src={aerodynamic} alt="Aerodynamic Project" />
+              </div>
+            </article>
+            <article className="row">
+              <div className="col-md-5">
+                <img className="red-border" src={magpie} alt="Magpie" />
+              </div>
+              <div className="col-md-7">
+                <h3>Magpie</h3>
+                <h5>CSA (AP Computer Science Applications)</h5>
+                <h5>November 4th - November 12th, 2019</h5>
+                <p>For this project, the objective was to create a functional chatbot that was as realistic as you could make it. It also had to be unique from the rest of the class in some way and be focused on a certain topic or have a certain personality. My group of three created a chatbot that mimics the speech pattern of Yoda from Star Wars. Yoda has a very unique speech pattern and we thought it would be entertaining to try and mimic that. We had a given set of requirements that we had to carry over from our template chatbot we had been developing the past few days. These included simple questions such as “How many brothers do you have?” if the user mentions their siblings. In addition we had to add many more phrases that could be recognized and appropriate reactions by recognizing certain terms in the input. To extend further on the project, I decided to incorporate the natural language processing library wit.ai. Wit.ai is able to take an input and identify the intent of it as well as other traits by training it. For this chatbot, I trained wit.ai to be able to recognize compliments. I train the bot by manually entering phrases such as “you are nice”, “you are kind”, and “how thoughtful of you” so that eventually the bot was able to recognize different phrases that were also compliments. I did this for a variety of different intents such as compliments and insults. The Java code makes a GET request to the API when no other response in the code fits and the JSON object returned tells the code the intent of the user’s input. From there, a fitting response is chosen using a switch statement. You can view the <a href="https://docs.google.com/document/d/1HeAVF-roVqSm-oUJYFKFya0-TEg_9Qk6Y3QBJNZg6l0/edit?usp=sharing" class="link">documentation</a> and the <a class="link" href="https://github.com/js0mmer/magpie">GitHub repository</a> for more information.</p>
               </div>
             </article>
           </section>

@@ -57,7 +57,7 @@ p {
 
 ::selection {
   background: #ff8f8f;
-  /* background: #a1a1a1; */
+  color: #212529;
 }
 
 @media only screen and (min-width: 768px) {
@@ -78,6 +78,7 @@ p {
   background: var(--red);
   /* box-shadow: 0 -1px #ff3a3a inset; */
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .link:hover, .link:active, .link:focus {
@@ -348,10 +349,15 @@ img {
   border-bottom: 5vw solid white;
 }
 
+@media only screen and (min-width: 768px) {
+  .home h1 {
+    font-size: 4rem;
+  }
+}
+
 .home h1 {
   font-family: 'Helvetica Neue';
   font-weight: bold;
-  font-size: 4rem;
   text-shadow: 1px 1px 5px #212529;
 }
 
@@ -359,6 +365,12 @@ img {
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.home .col-md-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home .fa-chevron-down {
@@ -380,10 +392,11 @@ img {
   height: 100vh;
 }
 
-.home .col-md-6 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+@media only screen and (max-width: 768px) {
+  .home .particles {
+    display: none;
+  }
 }
 
 header {
@@ -398,6 +411,13 @@ header {
   background-position: center;
   color: white;
   text-shadow: 1px 1px 2px #eee;
+}
+
+
+@media only screen and (max-width: 768px) {
+  header {
+    height: 30vh;
+  }
 }
 
 header::after {

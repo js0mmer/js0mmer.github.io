@@ -11,7 +11,7 @@ class Error404 extends Component {
   }
 
   componentDidMount() {
-    document.title = 'Jacob Sommer | Page Not Found';
+    document.title = 'Page Not Found | Jacob Sommer';
     document.querySelector('.transition').classList.add('out');
   }
 

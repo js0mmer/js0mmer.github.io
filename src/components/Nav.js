@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 export function closeNav() {
   document.querySelector('body').classList.remove('menu-is-active');
@@ -27,25 +27,68 @@ export function NavToggle(props) {
   );
 }
 
-export function AnchorLink(props) {
-  function handleClick(e) {
-    e.preventDefault();
-    if (props.to) document.querySelector(props.to).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
-    closeNav();
-  }
-  
-  return <a href={props.to ? props.to : '#'} className={props.className} onClick={handleClick}>{props.children}</a>;
-}
-
 export function Link(props) {
   function handleClick(e) {
     e.preventDefault();
+    if (props.props && props.id === props.props.active) {
+      window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+      return;
+    } else if (props.to.startsWith('/#') && props.props.active === 0) {
+      document.querySelector(props.to.substring(1)).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
+      return;
+    }
     document.querySelector('.transition').style.top = '-50px';
     document.querySelector('.transition').style.bottom = 'auto';
     document.querySelector('.transition').style.height = 'calc(100vh + 100px)';
 
-    props.transition(props.to);
+    props.props.transition(props.to);
   }
   
-  return <a href={props.to} className={props.className} onClick={handleClick}>{props.children}</a>;
+  return <a href={props.props && props.id === props.props.active ? '#' : props.to} className={props.className} onClick={handleClick}>{props.children}</a>;
+}
+
+export default class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.navbarNav = React.createRef();
+  }
+
+  componentDidMount() {
+    this.navbarNav.current.children[this.props.active].className='nav-item active';
+  }
+
+  render() {
+    return (
+      <nav class="navbar navbar-expand-lg navbar-fixed">
+        <div className="container">
+          <Link props={this.props} id={0} className="navbar-brand" to="/">
+            <img src="./js.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+            {/* JS */}
+          </Link>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div className="pull-right collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
+            <ul className="navbar-nav" ref={this.navbarNav}>
+              <li className="nav-item">
+                <Link props={this.props} id={0} className="nav-link" to="/">Home</Link>
+              </li>
+              <li class="nav-item">
+                <Link props={this.props} id={1} className="nav-link" to="/#about">About</Link>
+              </li>
+              <li class="nav-item">
+                <Link props={this.props} id={2} className="nav-link" to="work-experience">Work Experience</Link>
+              </li>
+              <li class="nav-item">
+                <Link props={this.props} id={3} className="nav-link" to="projects">Projects</Link>
+              </li>
+              <li class="nav-item">
+                <Link props={this.props} id={4} className="nav-link" to="/#contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    );
+  }
 }

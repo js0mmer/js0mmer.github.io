@@ -3,7 +3,6 @@ import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
 import Nav from './Nav';
 import Header from './Header';
-import Parallax from './Parallax';
 import Footer from './Footer';
 
 class WorkExperience extends Component {

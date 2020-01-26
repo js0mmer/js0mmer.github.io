@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import Home from './components/Home';
 import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
-import Page404 from './components/404';
+import Error404 from './components/404';
 import './css/bootstrap.min.css';
 import './css/main.css';
 import './css/all.min.css';
@@ -19,7 +19,7 @@ const AppRouter = () => (
         <Route path="/" exact component={Home} />
         <Route path="/work-experience" component={WorkExperience} />
         <Route path="/projects" component={Projects} />
-        <Route component={Page404} />
+        <Route component={Error404} />
       </Switch>
     </div>
   </Router>

@@ -373,6 +373,15 @@ img {
   justify-content: center;
 }
 
+.home.error-404 {
+  margin: 0;
+  padding: 0;
+}
+
+.home.error-404::after {
+  content: none;
+}
+
 .home .fa-chevron-down {
   position: absolute;
   text-decoration: none;
@@ -391,7 +400,6 @@ img {
 .home .row {
   height: 100vh;
 }
-
 
 @media only screen and (max-width: 768px) {
   .home .particles {

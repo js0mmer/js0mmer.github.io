@@ -41,10 +41,14 @@ export function Link(props) {
     document.querySelector('.transition').style.bottom = 'auto';
     document.querySelector('.transition').style.height = 'calc(100vh + 100px)';
 
-    props.props.transition(props.to);
+    if (props.props) {
+      props.props.transition(props.to);
+    } else {
+      props.transition(props.to);
+    }
   }
   
-  return <a href={props.props && props.id === props.props.active ? '#' : props.to} className={props.className} onClick={handleClick}>{props.children}</a>;
+  return <a href={props.props && props.props.active && props.id === props.props.active ? '#' : props.to} className={props.className} onClick={handleClick}>{props.children}</a>;
 }
 
 export default class Nav extends Component {
@@ -54,7 +58,8 @@ export default class Nav extends Component {
   }
 
   componentDidMount() {
-    this.navbarNav.current.children[this.props.active].className='nav-item active';
+    if (this.props.active)
+      this.navbarNav.current.children[this.props.active].className='nav-item active';
   }
 
   render() {
@@ -62,7 +67,7 @@ export default class Nav extends Component {
       <nav class="navbar navbar-expand-lg navbar-fixed">
         <div className="container">
           <Link props={this.props} id={0} className="navbar-brand" to="/">
-            <img src="./js.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+            <img src="./favicon.png" width="30" height="30" class="d-inline-block align-top" alt="" />
             {/* JS */}
           </Link>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">

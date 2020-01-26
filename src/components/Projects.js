@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
-import Nav, { NavToggle, Link, AnchorLink } from './Nav';
+import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
 import scratch from '../images/scratch.jpg';

@@ -368,8 +368,6 @@ header::after {
   background-image: url("../images/banner-white.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 .home::after {
@@ -446,7 +444,7 @@ header::after {
 }
 
 .resume-bg {
-  background-image: url("../images/joanna-kosinska-129039-unsplash.jpg");
+  background-image: url("../images/resume-bg.png");
   margin-bottom: 4rem;
 }
 
@@ -458,14 +456,18 @@ header::after {
 /* SMALL BANNERS */
 /* ============= */
 
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .small-banner {
   position: relative;
   box-sizing: content-box;
   height: 25vw;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -568,6 +570,19 @@ header::after {
 
 .btn-white:hover, .btn-white:focus {
   color: #212529;
+}
+
+.btn-black {
+  border: 3px solid #212529;
+  color: #212529
+}
+
+.btn-black:after {
+  background: #212529;
+}
+
+.btn-black:hover, .btn-black:focus {
+  color: white;
 }
 
 .home-btn {

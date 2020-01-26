@@ -56,7 +56,7 @@ export default class Nav extends Component {
   }
 
   componentDidMount() {
-    if (this.props.active)
+    if (this.props.active != null)
       this.navbarNav.current.children[this.props.active].className='nav-item active';
   }
 

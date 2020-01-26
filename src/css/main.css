@@ -8,6 +8,11 @@
   --red: linear-gradient(92deg, #ff0000 0%,#ff3a3a 100%);
 }
 
+::selection {
+  background: #ff8f8f;
+  color: #212529;
+}
+
 html, body {
   overflow-x: hidden;
   max-width: 100%;
@@ -27,10 +32,6 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-.jumbotron {
-  border-radius: 0;
 }
 
 .red-border {
@@ -61,17 +62,6 @@ p {
   height: 0;
 }
 
-::selection {
-  background: #ff8f8f;
-  color: #212529;
-}
-
-@media only screen and (min-width: 768px) {
-  .jumbotron h1 {
-    font-size: 4em;
-  }
-}
-
 /* ===== */
 /* LINKS */
 /* ===== */
@@ -82,13 +72,11 @@ p {
   background-position: center;
   display: inline-block;
   background: var(--red);
-  /* box-shadow: 0 -1px #ff3a3a inset; */
   transition: 0.3s;
   font-weight: bold;
 }
 
 .link:hover, .link:active, .link:focus {
-  /* color: white; */
   color: #ff3a3a;
   box-shadow: 0 -1px #ff3a3a inset;
   text-decoration: none;
@@ -196,12 +184,6 @@ img {
 /* NAV MENU */
 /* ======== */
 
-.navbar-fixed {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-}
-
 .nav-link {
   font-family: 'Montserrat';
   text-transform: uppercase;
@@ -227,6 +209,12 @@ img {
   background-position: center;
   display: inline-block;
   background: var(--red);
+}
+
+.navbar-fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .navbar-nav {
@@ -335,6 +323,45 @@ img {
 /* BANNERS */
 /* ======= */
 
+header {
+  position: relative;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/banner-red.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 2px #eee;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    height: 50vh;
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+}
+
+header::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  content: '';
+  border-left: 100vw solid transparent;
+  border-bottom: 5vw solid white;
+}
+
+.Cursor::after {
+  content: '|';
+  animation: blink 0.5s infinite;
+}
+
 .home {
   padding-bottom: 5vw;
   margin-bottom: 2rem;
@@ -355,16 +382,16 @@ img {
   border-bottom: 5vw solid white;
 }
 
-@media only screen and (min-width: 768px) {
-  .home h1 {
-    font-size: 4rem;
-  }
-}
-
 .home h1 {
   font-family: 'Helvetica Neue';
   font-weight: bold;
   text-shadow: 1px 1px 5px #212529;
+}
+
+@media only screen and (min-width: 768px) {
+  .home h1 {
+    font-size: 4rem;
+  }
 }
 
 .home h5 {
@@ -377,15 +404,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.home.error-404 {
-  margin: 0;
-  padding: 0;
-}
-
-.home.error-404::after {
-  content: none;
 }
 
 .home .fa-chevron-down {
@@ -403,54 +421,23 @@ img {
   color: #212529;
 }
 
-.home .row {
-  height: 100vh;
-}
-
 @media only screen and (max-width: 1199px) {
   .home .particles {
     display: none;
   }
 }
 
-header {
-  position: relative;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../images/banner-red.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  text-shadow: 1px 1px 2px #eee;
+.home .row {
+  height: 100vh;
 }
 
-
-@media only screen and (max-width: 767px) {
-  header {
-    height: 30vh;
-  }
+.home.error-404 {
+  margin: 0;
+  padding: 0;
 }
 
-header::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  content: '';
-  border-left: 100vw solid transparent;
-  border-bottom: 5vw solid white;
-}
-
-.Cursor:after {
-  content: '|';
-  animation: blink 0.5s infinite;
-}
-
-.home-bg {
-  background-image: url("../images/joshua-sortino-228788.jpg");
+.home.error-404::after {
+  content: none;
 }
 
 .projects-bg {
@@ -465,6 +452,51 @@ header::after {
 
 .workexp-bg {
   background-image: url("../images/joanna-kosinska-478198.jpg");
+}
+
+/* ============= */
+/* SMALL BANNERS */
+/* ============= */
+
+.small-banner {
+  position: relative;
+  box-sizing: content-box;
+  height: 25vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-banner h2 {
+  margin-bottom: 0;
+  user-select: none;
+}
+
+.small-banner::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  border-top: 5vw solid white;
+  border-right: 100vw solid transparent;
+}
+
+.small-banner::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  border-left: 100vw solid transparent;
+  border-bottom: 5vw solid white;
+}
+
+@media only screen and (max-width: 767px) {
+  .small-banner {
+    height: 30vh;
+  }
 }
 
 /* ======= */
@@ -664,51 +696,6 @@ footer .col-sm {
   transform: translateY(0%);
 }
 
-/* ============= */
-/* SMALL BANNERS */
-/* ============= */
-
-.small-banner {
-  position: relative;
-  box-sizing: content-box;
-  height: 25vw;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.small-banner h2 {
-  margin-bottom: 0;
-  user-select: none;
-}
-
-.small-banner::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  border-top: 5vw solid white;
-  border-right: 100vw solid transparent;
-}
-
-.small-banner::after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  border-left: 100vw solid transparent;
-  border-bottom: 5vw solid white;
-}
-
-@media only screen and (max-width: 767px) {
-  .small-banner {
-    height: 30vh;
-  }
-}
-
 /* ========== */
 /* ANIMATIONS */
 /* ========== */
@@ -739,31 +726,25 @@ footer .col-sm {
   }
 }
 
-/* ======== */
-/* 404 PAGE */
-/* ======== */
+/* ========= */
+/* HOME PAGE */
+/* ========= */
 
-.banner-404 {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transition: filter 0.5s;
-  margin: 0;
-  background: white;
+#about {
+  margin-bottom: 2rem;
 }
 
-.banner-404 div {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  max-width: 60%;
-  display: flex;
-  flex-direction: column;
+#contact {
+  margin-top: 2rem;
+  margin-bottom: 5vw;
 }
 
-.banner-404 .button {
-  margin: 1rem 0;
+/* ==================== */
+/* WORK EXPERIENCE PAGE */
+/* ==================== */
+
+#work-experience {
+  margin-bottom: 2rem;
 }
 
 /* ============= */
@@ -782,25 +763,4 @@ footer .col-sm {
   .embed-responsive {
     height: 100%;
   }
-}
-
-/* ==================== */
-/* WORK EXPERIENCE PAGE */
-/* ==================== */
-
-#work-experience {
-  margin-bottom: 2rem;
-}
-
-/* ========= */
-/* HOME PAGE */
-/* ========= */
-
-#about {
-  margin-bottom: 2rem;
-}
-
-#contact {
-  margin-top: 2rem;
-  margin-bottom: 5vw;
 }

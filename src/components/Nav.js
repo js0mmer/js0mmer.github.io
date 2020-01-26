@@ -37,9 +37,7 @@ export function Link(props) {
       document.querySelector(props.to.substring(1)).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
       return;
     }
-    document.querySelector('.transition').style.top = '-50px';
-    document.querySelector('.transition').style.bottom = 'auto';
-    document.querySelector('.transition').style.height = 'calc(100vh + 100px)';
+    document.querySelector('.transition').classList.remove('out');
 
     if (props.props) {
       props.props.transition(props.to);

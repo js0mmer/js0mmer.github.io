@@ -17,9 +17,7 @@ class WorkExperience extends Component {
     ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Work Experience | Jacob Sommer';
     window.scrollTo(0, 0);
-    document.querySelector('.transition').style.top = 'auto';
-    document.querySelector('.transition').style.bottom = '-50px';
-    document.querySelector('.transition').style.height = 0;
+    document.querySelector('.transition').classList.add('out');
     document.querySelector('body').classList.remove('menu-is-active');
   }
 

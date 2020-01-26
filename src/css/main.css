@@ -55,6 +55,12 @@ p {
   transition: 0.5s;
 }
 
+.transition.out {
+  top: auto;
+  bottom: -50px;
+  height: 0;
+}
+
 ::selection {
   background: #ff8f8f;
   color: #212529;
@@ -367,7 +373,7 @@ img {
   font-weight: bold;
 }
 
-.home .col-md-6 {
+.home .col-xl-6 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,7 +407,7 @@ img {
   height: 100vh;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1199px) {
   .home .particles {
     display: none;
   }
@@ -422,7 +428,7 @@ header {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   header {
     height: 30vh;
   }
@@ -697,7 +703,7 @@ footer .col-sm {
   border-bottom: 5vw solid white;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .small-banner {
     height: 30vh;
   }

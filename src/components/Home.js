@@ -57,9 +57,6 @@ class Home extends Component {
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Jacob Sommer';
-    document.querySelector('.transition').style.top = 'auto';
-    document.querySelector('.transition').style.bottom = '-50px';
-    document.querySelector('.transition').style.height = 0;
     document.querySelector('body').classList.remove('menu-is-active');
     window.addEventListener('scroll', this.handleScroll);
 
@@ -67,7 +64,7 @@ class Home extends Component {
       document.getElementById(window.location.href.split('#')[1]).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
     } else window.scrollTo(0, 0);
 
-    if (sessionStorage.getItem('alreadyLaunched') != null) {
+    if (sessionStorage.getItem('alreadyLaunched')) {
       this.setState({ firstLaunch: false });
     } else {
       sessionStorage.setItem('alreadyLaunched', 'true');
@@ -84,9 +81,7 @@ class Home extends Component {
       this.form = document.querySelector('form');
     }
 
-    document.querySelector('.transition').style.top = 'auto';
-    document.querySelector('.transition').style.bottom = '-50px';
-    document.querySelector('.transition').style.height = 0;
+    document.querySelector('.transition').classList.add('out');
     document.querySelector('body').classList.remove('menu-is-active');
   }
 
@@ -120,13 +115,13 @@ class Home extends Component {
         <Nav active={0} transition={this.transition} />
         <Parallax className="home">
           <div class="row">
-            <div className="col-md-6">
+            <div className="col-xl-6">
               <div className="text">
                 <h1>Jacob Sommer</h1>
                 <Typing />
               </div>
             </div>
-            <div className="col-md-6 particles">
+            <div className="col-xl-6 particles">
               <Particles height="50vh"
                 width="30vw" params={{"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#212529"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#212529","opacity":0.4,"width":1},"move":{"enable":true,"speed":3,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}} />
             </div>

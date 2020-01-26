@@ -14,9 +14,7 @@ class Error404 extends Component {
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Jacob Sommer | Page Not Found';
-    document.querySelector('.transition').style.top = 'auto';
-    document.querySelector('.transition').style.bottom = '-50px';
-    document.querySelector('.transition').style.height = 0;
+    document.querySelector('.transition').classList.add('out');
   }
 
   transition(to) {

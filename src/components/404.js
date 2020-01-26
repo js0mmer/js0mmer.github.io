@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
 import Nav, { Link } from './Nav';
 import Particles from 'react-particles-js';

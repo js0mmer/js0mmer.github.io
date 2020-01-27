@@ -13,7 +13,7 @@ import '../css/animate.min.css';
 function Typing(props) {
   if (props.firstLaunch) {
     return (
-      <h5 style={props.style}>
+      <h5>
         <Typist cursor={
           {
             show: true,
@@ -68,7 +68,6 @@ class Home extends Component {
       this.setState({ firstLaunch: false });
     } else {
       sessionStorage.setItem('firstLaunch', 'true');
-      this.setState({ firstLaunch: true });
     }
 
     this.arrow = document.querySelector('.fa-chevron-down');
@@ -117,7 +116,7 @@ class Home extends Component {
             <div className="col-xl-6">
               <div className="text">
                 <h1>Jacob Sommer</h1>
-                <Typing />
+                <Typing firstLaunch={this.state.firstLaunch} />
               </div>
             </div>
             <div className="col-xl-6 particles">

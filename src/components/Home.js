@@ -7,8 +7,8 @@ import Parallax from './Parallax';
 import Footer from './Footer';
 import me from '../images/me.jpg';
 import Particles from 'react-particles-js';
-import '../css/animate.min.css';
 import particlesConfig from '../particlesjs-config.json';
+import '../css/animate.min.css';
 
 function Typing(props) {
   if (props.firstLaunch) {
@@ -58,7 +58,6 @@ class Home extends Component {
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Jacob Sommer';
-    document.querySelector('body').classList.remove('menu-is-active');
     window.addEventListener('scroll', this.handleScroll);
 
     if (window.location.href.includes('#')) {
@@ -83,7 +82,6 @@ class Home extends Component {
     }
 
     document.querySelector('.transition').classList.add('out');
-    document.querySelector('body').classList.remove('menu-is-active');
   }
 
   componentWillUnmount() {
@@ -115,7 +113,7 @@ class Home extends Component {
       <div>
         <Nav active={0} transition={this.transition} />
         <Parallax className="home">
-          <div class="row">
+          <div className="row">
             <div className="col-xl-6">
               <div className="text">
                 <h1>Jacob Sommer</h1>
@@ -175,28 +173,5 @@ class Home extends Component {
     );
   }
 }
-
-// navActiveBar($('.nav'), (tab, width, tempMarginLeft) => {
-//   tab.mouseover(() => { // when tab is hovered over
-//     $('.active').css({width: width + '%', marginLeft: tempMarginLeft + '%'}); // adjust active bar
-//   });
-// });
-
-// function getPercentage(min, max) {
-//   return min / max * 100;
-// }
-
-// function navActiveBar(menu, callback) {
-//   var marginLeft = [];
-//   menu.children('li').each(function(index) { // Loop through nav children (li)
-//     // Dynamic width/margin calculation
-//     var width = getPercentage($(this).width() + parseInt($(this).css('marginLeft')), menu.width());
-//     var tempMarginLeft = 0;
-//     // don't modify first element's positioning
-//     if (index != 0) tempMarginLeft = marginLeft.reduce((a, b) => a + b, 0); // set temp margin of active bar to sum of widths of previous tabs
-//     callback($(this), width, tempMarginLeft); // callback
-//     marginLeft.push(width); // store width in array to use for positioning underlines on following tabs
-//   });
-// }
 
 export default Home;

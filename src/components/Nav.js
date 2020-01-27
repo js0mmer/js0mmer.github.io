@@ -33,7 +33,7 @@ export function Link(props) {
     if (props.props && props.id === props.props.active) {
       window.scroll({ top: 0, left: 0, behavior: 'smooth' });
       return;
-    } else if (props.to.startsWith('/#') && props.props.active === 0) {
+    } else if (props.to.startsWith('/#') && (!props.props || props.props.active === 0)) {
       document.querySelector(props.to.substring(1)).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
       return;
     }
@@ -65,8 +65,7 @@ export default class Nav extends Component {
       <nav class="navbar navbar-expand-lg navbar-fixed">
         <div className="container">
           <Link props={this.props} id={0} className="navbar-brand" to="/">
-            <img src="./favicon.png" width="30" height="30" class="d-inline-block align-top" alt="" />
-            {/* JS */}
+            <img src="./favicon.png" width="30" height="30" class="d-inline-block align-top" alt="JS" />
           </Link>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>

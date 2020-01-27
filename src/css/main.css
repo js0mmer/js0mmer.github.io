@@ -77,7 +77,6 @@ p {
 }
 
 .link:hover, .link:active, .link:focus {
-  color: #ff3a3a;
   box-shadow: 0 -1px #ff3a3a inset;
   text-decoration: none;
 }
@@ -409,7 +408,7 @@ header::after {
   text-decoration: none;
   left: 0;
   right: 0;
-  bottom: 18vh;
+  bottom: 5vh;
   width: 56px;
   text-align: center;
   margin: 0 auto;
@@ -439,8 +438,7 @@ header::after {
 }
 
 .projects-bg {
-  background-image: url("../images/emile-perron-190221.jpg");
-  color: white;
+  background-image: url("../images/projects-bg.png");
 }
 
 .resume-bg {
@@ -449,7 +447,7 @@ header::after {
 }
 
 .workexp-bg {
-  background-image: url("../images/joanna-kosinska-478198.jpg");
+  background-image: url("../images/workexp-bg.png");
 }
 
 /* ============= */
@@ -463,11 +461,10 @@ header::after {
 
 .small-banner {
   position: relative;
-  box-sizing: content-box;
   height: 25vw;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;

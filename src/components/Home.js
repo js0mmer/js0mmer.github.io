@@ -72,8 +72,8 @@ class Home extends Component {
       this.setState({ firstLaunch: true });
     }
 
-    // this.arrow = document.querySelector('.fa-chevron-down');
-    // this.arrow.style.opacity = document.documentElement.scrollTop > 0 ? 0 : 1;
+    this.arrow = document.querySelector('.fa-chevron-down');
+    this.arrow.style.opacity = document.documentElement.scrollTop > 0 ? 0 : 1;
 
     if (this.state.firstLaunch) {
       this.profilePic = document.querySelector('.profile-picture');
@@ -92,7 +92,7 @@ class Home extends Component {
 
   handleScroll() {
     var scrollTop = document.documentElement.scrollTop;
-    // this.arrow.style.opacity = scrollTop > 0 ? 0 : 1;
+    this.arrow.style.opacity = scrollTop > 0 ? 0 : 1;
 
     if (this.state.firstLaunch) {
       var scrollBottom = scrollTop + window.innerHeight;
@@ -126,6 +126,7 @@ class Home extends Component {
               <Particles height="50vh" width="30vw" params={particlesConfig} />
             </div>
           </div>
+          <Link to="/#about" className="fa fa-chevron-down" />
         </Parallax>
         <section id="about" className="container">
           <div className="col-md-12">
@@ -143,14 +144,14 @@ class Home extends Component {
             </div>
           </div>
         </section>
-        <Parallax className="small-banner workexp-bg" offsetY={550}>
+        <div className="small-banner workexp-bg">
           <h2>Work Experience</h2>
-          <Link to="work-experience" className="view-btn button btn-white" transition={this.transition}>Click to View</Link>
-        </Parallax>
-        <Parallax className="small-banner projects-bg" offsetY={800}>
+          <Link to="work-experience" className="view-btn button btn-black" transition={this.transition}>Click to View</Link>
+        </div>
+        <div className="small-banner projects-bg">
           <h2>Projects</h2>
-          <Link to="projects" className="view-btn button btn-white" transition={this.transition}>Click to View</Link>
-        </Parallax>
+          <Link to="projects" className="view-btn button btn-black" transition={this.transition}>Click to View</Link>
+        </div>
         <section id="contact" className="container flex-center">
           <h1>Contact</h1>
           <form className="flex-center" action="https://formspree.io/jacob.sommer@comcast.net" method="POST">
@@ -163,7 +164,7 @@ class Home extends Component {
               <span className="underline"></span>
             </div>
             <div>
-              <textarea name="Message" placeholder="Your message"></textarea>
+              <textarea name="Message" placeholder="Your message" required></textarea>
               <span className="underline"></span>
             </div>
             <SendBtn />

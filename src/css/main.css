@@ -290,8 +290,6 @@ header::after {
 
 .home::after {
   position: absolute;
-  left: 0;
-  bottom: -5vw;
   width: 100vw;
   content: '';
   border-left: 100vw solid transparent;

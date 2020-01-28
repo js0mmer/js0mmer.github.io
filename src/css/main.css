@@ -297,7 +297,7 @@ header::after {
 }
 
 .home h1 {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px 5px #212529;
 }

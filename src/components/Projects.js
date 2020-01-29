@@ -4,10 +4,34 @@ import { Redirect } from 'react-router-dom';
 import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
-import scratch from '../images/scratch.jpg';
-import projComp from '../images/project-compound.jpg';
-import aerodynamic from '../images/aerodynamic.jpg';
-import magpie from '../images/magpie.jpg';
+import scratch from './projects/scratch.json';
+import hangman from './projects/hangman.json';
+import projectCompound from './projects/project-compound.json';
+import aerodynamicDesign from './projects/aerodynamic-design.json';
+import magpie from './projects/magpie.json';
+
+class ProjectCard extends Component {
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    // TODO: View project
+  }
+
+  render() {
+    return (
+      <article className="card" onClick={this.onClick}>
+        <img className="card-img-top" src={'/images/' + this.props.id + '.' + this.props.src.imgType} alt={this.props.src.title} />
+        <div className="card-body">
+          <h5 className="card-title">{this.props.src.title}</h5>
+          <p className="card-text">{this.props.src.description}</p>
+        </div>
+      </article>
+    );
+  }
+}
 
 class Projects extends Component {
   constructor(props) {
@@ -22,10 +46,17 @@ class Projects extends Component {
     window.scrollTo(0, 0);
     document.querySelector('.transition').classList.add('out');
     document.querySelector('body').classList.remove('menu-is-active');
+    
+    this.setupCards();
   }
 
   transition(to) {
     setTimeout(() => { this.setState({ redirect: to }) }, 300);
+  }
+
+  setupCards() {
+    // TODO: setup cards so they are in order chronilogically on both desktop and mobile
+    // do enlarging and shrinking animation by changing width & height with transitions
   }
 
   render() {
@@ -36,9 +67,20 @@ class Projects extends Component {
         <Nav active={3} transition={this.transition} />
         <Header>Projects</Header>
         <section id="projects" className="container">
+          {/* <div className="row">
+            <div className="col-lg-6">
+              <ProjectCard id="scratch" src={scratch} />
+              <ProjectCard id="hangman" src={hangman} />
+              <ProjectCard id="project-compound" src={projectCompound} />
+            </div>
+            <div className="col-lg-6">
+              <ProjectCard id="aerodynamic-design" src={aerodynamicDesign} />
+              <ProjectCard id="magpie" src={magpie} />
+            </div>
+          </div> */}
           <article className="row">
             <div className="col-md-5">
-              <img className="red-border" src={scratch} alt="Scratch" />
+              <img className="red-border" src="/images/scratch.jpg" alt="Scratch" />
             </div>
             <div className="col-md-7">
               <h3>Scratch Project</h3>
@@ -62,7 +104,7 @@ class Projects extends Component {
           </article>
           <article className="row">
             <div className="col-md-5">
-              <img className="red-border" src={projComp} alt="Project Compound" />
+              <img className="red-border" src="/images/project-compound.jpg" alt="Project Compound" />
             </div>
             <div className="col-md-7">
               <h3>Project Compound</h3>
@@ -79,12 +121,12 @@ class Projects extends Component {
               <p>The objective of this project was to design paper prototypes of projectiles to understand which designs produce projectiles that fly the furthest. Each of the members in my group, including myself, was responsible for designing two projectiles and creating prototypes using only paper products and tape. The projectiles were fitted onto a PVC pipe and launched with a pressure of 75 psi. My first design was a simple design with a long paper body, a short cone, and four curved fins at the end of it. This design was not very successful, it flew a measly 7 yards. However, after analyzing what went wrong and observing other people’s launches, I was able to design a rocket that performed much better. My second design flew 122 yards. I found that a tight fit around the PVC pipe was necessary to keep the air from escaping. I also found that smaller fins were better because they were a lot sturdier and did not flop and skew the flight path. I ended up using 3 fins instead of 4 since I learned that would decrease the amount of drag. Additionally, I learned that it is necessary to keep the projectile’s centroid, center of mass, at its center of geometry. On my first design, it was too far back so it flipped and fell straight down. On my second design, I used the combination of 3 smaller fins and a layered cone, made out of card stock, to bring more mass to the front of the projectile and push the centroid forward. This way the projectile would not flip over and instead, it would fly in a nice arc. You can view the full project <a href="https://docs.google.com/document/d/1FTdER9cB3btk29j8Muf68F-MoZCXfV6ldJkELkzjiAs/edit?usp=sharing" className="link" target="_blank" rel="noopener noreferrer">documentation</a> for more information.</p>
             </div>
             <div className="col-md-5">
-              <img className="red-border" src={aerodynamic} alt="Aerodynamic Project" />
+              <img className="red-border" src="/images/aerodynamic-design.jpg" alt="Aerodynamic Project" />
             </div>
           </article>
           <article className="row">
             <div className="col-md-5">
-              <img className="red-border" src={magpie} alt="Magpie" />
+              <img className="red-border" src="/images/magpie.jpg" alt="Magpie" />
             </div>
             <div className="col-md-7">
               <h3>Magpie</h3>

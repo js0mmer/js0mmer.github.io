@@ -689,6 +689,10 @@ footer .col-sm {
   padding: 15px;
 }
 
+#projects .row .col-lg-6 {
+  padding: 0;
+}
+
 .embed-responsive {
   height: 450px;
 }
@@ -697,4 +701,34 @@ footer .col-sm {
   .embed-responsive {
     height: 100%;
   }
+}
+
+/* ===== */
+/* CARDS */
+/* ===== */
+
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border: none;
+  border-radius: 0.5em;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 1em 1.25em;
+}
+
+.card-img-top {
+  border-top-left-radius: calc(.5rem - 1px);
+  border-top-right-radius: calc(.5rem - 1px);
+}
+
+.card-title {
+  margin-bottom: 0.25em;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }

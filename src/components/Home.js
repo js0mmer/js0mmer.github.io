@@ -38,6 +38,7 @@ function Typing(props) {
 function SendBtn() {
   function handleClick() {
     if (document.querySelector('input[type=text]').value.length > 0 &&
+      document.querySelector('textarea').value.length > 0 &&
       document.querySelector('input[type=email]').value.length > 0 &&
       document.querySelector('input[type=email]').value.includes("@") &&
       document.querySelector('input[type=email]').value.split("@")[1].length > 0)

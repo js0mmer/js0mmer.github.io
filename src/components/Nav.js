@@ -3,12 +3,16 @@ import React, { Component } from 'react';
 export function Link(props) {
   function handleClick(e) {
     e.preventDefault();
-    if (props.props && props.id === props.props.active) {
+    if (props.props && props.id === props.props.active) { // if clicking the tab linking to the current page
+      if (props.props.projectId) { // if viewing a project on the projects page
+        props.props.closeProject(e); // close it, return to projects home
+        return;
+      }
       window.scroll({ top: 0, left: 0, behavior: 'smooth' });
       document.querySelector('.navbar').classList.remove('navbar-expanded');
       document.querySelector('body').style.overflowY = '';
       return;
-    } else if (props.to.startsWith('/#') && (!props.props || props.props.active === 0)) {
+    } else if (props.to.startsWith('/#') && (!props.props || props.props.active === 0)) { // if clicking an nav anchor link while on the home page or clicking a non-nav anchor link
       document.querySelector(props.to.substring(1)).scrollIntoView({ behavior: 'smooth', block: window.innerWidth <= 800 ? 'start' : 'center' });
       document.querySelector('.navbar').classList.remove('navbar-expanded');
       document.querySelector('body').style.overflowY = '';
@@ -17,7 +21,7 @@ export function Link(props) {
     
     document.querySelector('.transition').classList.remove('out');
 
-    if (props.props) {
+    if (props.props) { // nav links pass props and use props.props; other, non-nav links just pass transition
       props.props.transition(props.to);
     } else {
       props.transition(props.to);
@@ -27,18 +31,16 @@ export function Link(props) {
   return <a href={props.props && props.props.active && props.id === props.props.active ? '#' : props.to} className={props.className} onClick={handleClick}>{props.children}</a>;
 }
 
-export default class Nav extends Component {
+class Nav extends Component {
   constructor(props) {
     super(props);
-    this.navbar = React.createRef();
-    this.navbarNav = React.createRef();
     this.handleScroll = this.handleScroll.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
   }
 
   componentDidMount() {
     if (this.props.active != null) {
-      this.navbarNav.current.children[this.props.active].className = 'nav-item active';
+      document.querySelector('.navbar-nav').children[this.props.active].className = 'nav-item active';
     }
 
     window.addEventListener('scroll', this.handleScroll);
@@ -50,9 +52,9 @@ export default class Nav extends Component {
 
   handleScroll() {
     if (document.documentElement.scrollTop > 0) {
-      this.navbar.current.classList.add('navbar-white');
+      document.querySelector('.navbar').classList.add('navbar-white');
     } else {
-      this.navbar.current.classList.remove('navbar-white');
+      document.querySelector('.navbar').classList.remove('navbar-white');
     }
   }
 
@@ -64,7 +66,7 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg" ref={this.navbar}>
+      <nav className="navbar navbar-expand-lg">
         <div className="container">
           <Link props={this.props} id={0} className="navbar-brand" to="/">
             <img src="./favicon.png" width="30" height="30" className="d-inline-block align-top" alt="JS" />
@@ -73,7 +75,7 @@ export default class Nav extends Component {
             <span className="icon"></span>
           </button>
           <div className="pull-right collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
-            <ul className="navbar-nav" ref={this.navbarNav}>
+            <ul className="navbar-nav">
               <li className="nav-item">
                 <Link props={this.props} id={0} className="nav-link" to="/">Home</Link>
               </li>
@@ -96,3 +98,5 @@ export default class Nav extends Component {
     );
   }
 }
+
+export default Nav;

@@ -17,22 +17,22 @@ class Parallax extends Component {
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
-    this.updateDimensions = this.updateDimensions.bind(this);
+    this.handleResize = this.handleResize.bind(this);
     this.state = { style: {} };
   }
 
   componentDidMount() {
     this.setState({ style: parallax(this.props) });
     window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.updateDimensions);
+    window.addEventListener('resize', this.resize);
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('resize', this.updateDimensions);
+    window.removeEventListener('resize', this.handleResize);
   }
 
-  updateDimensions() {
+  handleResize() {
     this.setState({ style: parallax(this.props) });
   }
 

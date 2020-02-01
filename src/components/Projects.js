@@ -10,6 +10,56 @@ import projectCompound from './projects/project-compound.json';
 import aerodynamicDesign from './projects/aerodynamic-design.json';
 import magpie from './projects/magpie.json';
 
+const PROJECTS = [
+  {
+    id: 'scratch',
+    src: scratch
+  },
+  {
+    id: 'hangman',
+    src: hangman
+  },
+  {
+    id: 'project-compound',
+    src: projectCompound
+  },
+  {
+    id: 'aerodynamic-design',
+    src: aerodynamicDesign
+  },
+  {
+    id: 'magpie',
+    src: magpie
+  }
+]
+
+class ProjectPanel extends Component {
+  constructor(props) {
+    super(props);
+    this.content = React.createRef();
+  }
+
+  componentDidMount() {
+    this.content.current.innerHTML = this.props.src.content;
+  }
+
+  render() {
+    return (
+      <div className="row">
+        <div className="col-md-5">
+          <img className="red-border" src={'/images/' + this.props.id + '.' + this.props.src.imgType} alt={this.props.src.title} />
+        </div>
+        <div className="col-md-7">
+          <h3>{this.props.src.title}</h3>
+          {this.props.src.class ? <h5>{this.props.src.class}</h5> : null}
+          <h5>{this.props.src.date}</h5>
+          <p ref={this.content}></p>
+        </div>
+      </div>
+    );
+  }
+}
+
 class ProjectCard extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +67,7 @@ class ProjectCard extends Component {
   }
 
   onClick() {
-    // TODO: View project
+    this.props.open(this.props.id, this.props.src);
   }
 
   render() {
@@ -37,7 +87,10 @@ class Projects extends Component {
   constructor(props) {
     super(props);
     this.transition = this.transition.bind(this);
-    this.state = { redirect: false }
+    this.openProject = this.openProject.bind(this);
+    this.closeProject = this.closeProject.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+    this.state = { redirect: false, col1: [], col2: [], projectId: false, projectSrc: false, scrollTop: 0, innerWidth: window.innerWidth }
   }
 
   componentDidMount() {
@@ -45,18 +98,102 @@ class Projects extends Component {
     document.title = 'Projects | Jacob Sommer';
     window.scrollTo(0, 0);
     document.querySelector('.transition').classList.add('out');
-    document.querySelector('body').classList.remove('menu-is-active');
-    
+
+    window.addEventListener('resize', this.handleResize);
+
     this.setupCards();
+
+    // if url specifies a project i.e. /projects/hangman
+    var id = this.props.match.params.id;
+    if (id) {
+      var src = null;
+      for (var i = 0; i < PROJECTS.length; i++) {
+        if (PROJECTS[i].id === id) {
+          src = PROJECTS[i].src;
+          break;
+        }
+      }
+
+      if (!src) {
+        this.props.history.push('/projects');
+        return;
+      }
+
+      this.openProject(id, src);
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
   }
 
   transition(to) {
     setTimeout(() => { this.setState({ redirect: to }) }, 300);
   }
 
+  handleResize() {
+    var innerWidth = window.innerWidth;
+    if (innerWidth < 992 && this.state.innerWidth >= 992) {
+      this.setupCards();
+    } else if (innerWidth >= 992 && this.state.innerWidth < 992) {
+      this.setupCards();
+    }
+    this.setState({ innerWidth });
+  }
+
   setupCards() {
-    // TODO: setup cards so they are in order chronilogically on both desktop and mobile
-    // do enlarging and shrinking animation by changing width & height with transitions
+    var col1 = [];
+    var col2 = [];
+    if (window.innerWidth < 992) {
+      for (var i = 0; i < PROJECTS.length; i++) {
+        col1.push(<ProjectCard key={i} id={PROJECTS[i].id} src={PROJECTS[i].src} open={this.openProject} />);
+      }
+    } else {
+      for (var j = 0; j < PROJECTS.length; j++) {
+        if (j % 2 === 0) {
+          col1.push(<ProjectCard key={j} id={PROJECTS[j].id} src={PROJECTS[j].src} open={this.openProject} />);
+        } else {
+          col2.push(<ProjectCard key={j} id={PROJECTS[j].id} src={PROJECTS[j].src} open={this.openProject} />);
+        }
+      }
+    }
+
+    this.setState({ col1, col2 });
+  }
+
+  openProject(projectId, projectSrc) {
+    this.props.history.push('/projects/' + projectId);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    document.title = projectSrc.title + ' | Projects | Jacob Sommer';
+
+    var scrollTop = document.documentElement.scrollTop;
+    document.querySelector('.project-transition').classList.add('open');
+
+    setTimeout(() => {
+      this.setState({ projectId, projectSrc, scrollTop })
+      setTimeout(() => {
+        document.querySelector('h1').scrollIntoView();
+        document.querySelector('.project-transition').classList.remove('open');
+      }, 1);
+    }, 200);
+  }
+
+  closeProject(e) {
+    e.preventDefault();
+
+    this.props.history.push('/projects');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    document.title = 'Projects | Jacob Sommer';
+
+    document.querySelector('.project-transition').classList.add('open');
+
+    setTimeout(() => {
+      this.setState({ projectId: false, projectSrc: false });
+      setTimeout(() => {
+        window.scrollTo(0, this.state.scrollTop);
+        document.querySelector('.project-transition').classList.remove('open');
+      }, 1);
+    }, 200);
   }
 
   render() {
@@ -64,77 +201,36 @@ class Projects extends Component {
 
     return (
       <div>
-        <Nav active={3} transition={this.transition} />
+        <div className="project-transition"></div>
+        <Nav active={3} transition={this.transition} closeProject={this.closeProject} projectId={this.state.projectId} />
         <Header>Projects</Header>
         <section id="projects" className="container">
-          {/* <div className="row">
-            <div className="col-lg-6">
-              <ProjectCard id="scratch" src={scratch} />
-              <ProjectCard id="hangman" src={hangman} />
-              <ProjectCard id="project-compound" src={projectCompound} />
+          <div className="cards row" style={this.state.projectId ? { display: 'none'} : {}}>
+            <div id="col-1" className="col-lg-6">
+              {this.state.col1.map(item => item)}
             </div>
-            <div className="col-lg-6">
-              <ProjectCard id="aerodynamic-design" src={aerodynamicDesign} />
-              <ProjectCard id="magpie" src={magpie} />
+            <div id="col-2" className="col-lg-6">
+              {this.state.col2.map(item => item)}
             </div>
-          </div> */}
-          <article className="row">
-            <div className="col-md-5">
-              <img className="red-border" src="/images/scratch.jpg" alt="Scratch" />
-            </div>
-            <div className="col-md-7">
-              <h3>Scratch Project</h3>
-              <h5>CSE (Computer Science/Software Engineering)</h5>
-              <h5>August 29th - September 8th, 2017</h5>
-              <p>The objective of this project was to create a bug-free game that had level progression. My role in this project was a developer. My group and I created a game where two players had to compete to finish a maze. The mazes became more difficult as the game progressed and each one was completed. The two players gained points by collecting "gems" and finishing the mazes quickly. The winner is the player with the highest score after completing all of the mazes. We developed our brainstorming skills by coming up with ideas and using a flow chart to map them. We I also developed our logging and documentation skills by keeping a daily log of what happened each day and adding comments to our code explaining what each piece does. During this project, we had to overcome some limitations of Scratch. Scratch only allows one user at a time to be working on the same project. We solved this issue by creating copies of the game uses Scratch’s remix feature and working on different aspects and features of our game. We each coded in only certain sprites. At the end of the day, we assembled all of the code in our sprites together uses Scratch’s backpack feature. This allowed us to be more efficient as everyone in the group could contribute code to the game simultaneously. You can find the <a className="link" href="Scratch_Project.pdf" target="_blank">daily log and documentation</a>.</p>
-            </div>
-          </article>
-          <article className="row">
-            <div className="col-md-7">
-              <h3>Hangman Project</h3>
-              <h5>CSE (Computer Science/Software Engineering)</h5>
-              <h5>January 24th - February 2nd, 2018</h5>
-              <p>The objective of this project was to create a themed hangman game that was played in the terminal. My role in this project was a developer. My partner and I created a Spongebob-themed hangman game. All of the words were spongebob related and we included some ASCII art to make the game more aesthetic. We developed our problem-solving skills by finding ways around issues we had when coding our game. During this project we had to overcome limitations of Cloud 9, the main one being that it is a non-GUI environment. Everything had to be played in the terminal but we were still able to show some images using ASCII art. You can <a className="link" href="https://repl.it/@js0mmer/Hangman.zip" download="Hangman.zip">download the project</a> and take a look at it yourself. It is made for Python 2.7.</p>
-            </div>
-            <div className="col-md-5">
-              <div className="embed-responsive embed-responsive-4by3 red-border">
-                <iframe title="Hangman" className="embed-responsive-item" height="500px" width="100%" src="https://repl.it/@js0mmer/Hangman?lite=true" scrolling="no" allowtransparency="true" allowFullScreen={true} sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+          </div>
+          {this.state.projectId ? 
+            <div>
+              <ProjectPanel id={this.state.projectId} src={this.state.projectSrc} />
+              <div className="flex-center">
+                <a className="animated-arrow" href="#" onClick={this.closeProject}>
+                  <span className="arrow">
+                    <span className="shaft"></span>
+                  </span>
+                  <span className="main">
+                    <span className="text">
+                      Back to Projects
+                    </span>
+                  </span>
+                </a>
               </div>
             </div>
-          </article>
-          <article className="row">
-            <div className="col-md-5">
-              <img className="red-border" src="/images/project-compound.jpg" alt="Project Compound" />
-            </div>
-            <div className="col-md-7">
-              <h3>Project Compound</h3>
-              <h5>POE (Principles of Engineering)</h5>
-              <h5>August 30th - September 7th, 2018</h5>
-              <p>The objective of this project was to create a compound machine that performed a basic task. My role was building a 2nd class lever and helping out on documentation. My group created a machine that pours dog food into a bowl. The input was provided by spinning a wheel which acted like a crank for a simple gear train. The axle of the output gear in the gear train drove another wheel which had a string wrapped around it. This caused the wheel to pull the string when it was spun. The string ran over a pulley and connected to the far end of our lever, next to the cup of dog food. When the string was pulled, it rotated the lever 180 degrees and dumped the dog food into a bowl placed below the dropping point. During the project we ran into issues early on. We found that our small driver gear required a lot of rotations. Our solution was to replace it with a larger gear which ended up requiring us to rebuild the entire gear train because there wasn’t enough space between the bottom of the machine and the 2nd gear. You can view the full project <a className="link" href="https://drive.google.com/open?id=1XUbSIuFKQyM65QWXNIqzLKFKb0IdVRaF8hsZDxw60-I" target="_blank" rel="noopener noreferrer">documentation</a> for more information.</p>
-            </div>
-          </article>
-          <article className="row">
-            <div className="col-md-7">
-              <h3>Aerodynamic Design</h3>
-              <h5>POE (Principles of Engineering)</h5>
-              <h5>January 8th - January 28th, 2019</h5>
-              <p>The objective of this project was to design paper prototypes of projectiles to understand which designs produce projectiles that fly the furthest. Each of the members in my group, including myself, was responsible for designing two projectiles and creating prototypes using only paper products and tape. The projectiles were fitted onto a PVC pipe and launched with a pressure of 75 psi. My first design was a simple design with a long paper body, a short cone, and four curved fins at the end of it. This design was not very successful, it flew a measly 7 yards. However, after analyzing what went wrong and observing other people’s launches, I was able to design a rocket that performed much better. My second design flew 122 yards. I found that a tight fit around the PVC pipe was necessary to keep the air from escaping. I also found that smaller fins were better because they were a lot sturdier and did not flop and skew the flight path. I ended up using 3 fins instead of 4 since I learned that would decrease the amount of drag. Additionally, I learned that it is necessary to keep the projectile’s centroid, center of mass, at its center of geometry. On my first design, it was too far back so it flipped and fell straight down. On my second design, I used the combination of 3 smaller fins and a layered cone, made out of card stock, to bring more mass to the front of the projectile and push the centroid forward. This way the projectile would not flip over and instead, it would fly in a nice arc. You can view the full project <a href="https://docs.google.com/document/d/1FTdER9cB3btk29j8Muf68F-MoZCXfV6ldJkELkzjiAs/edit?usp=sharing" className="link" target="_blank" rel="noopener noreferrer">documentation</a> for more information.</p>
-            </div>
-            <div className="col-md-5">
-              <img className="red-border" src="/images/aerodynamic-design.jpg" alt="Aerodynamic Project" />
-            </div>
-          </article>
-          <article className="row">
-            <div className="col-md-5">
-              <img className="red-border" src="/images/magpie.jpg" alt="Magpie" />
-            </div>
-            <div className="col-md-7">
-              <h3>Magpie</h3>
-              <h5>CSA (AP Computer Science Applications)</h5>
-              <h5>November 4th - November 12th, 2019</h5>
-              <p>For this project, the objective was to create a functional chatbot that was as realistic as you could make it. It also had to be unique from the rest of the class in some way and be focused on a certain topic or have a certain personality. My group of three created a chatbot that mimics the speech pattern of Yoda from Star Wars. Yoda has a very unique speech pattern and we thought it would be entertaining to try and mimic that. We had a given set of requirements that we had to carry over from our template chatbot we had been developing the past few days. These included simple questions such as “How many brothers do you have?” if the user mentions their siblings. In addition we had to add many more phrases that could be recognized and appropriate reactions by recognizing certain terms in the input. To extend further on the project, I decided to incorporate the natural language processing library wit.ai. Wit.ai is able to take an input and identify the intent of it as well as other traits by training it. For this chatbot, I trained wit.ai to be able to recognize compliments. I train the bot by manually entering phrases such as “you are nice”, “you are kind”, and “how thoughtful of you” so that eventually the bot was able to recognize different phrases that were also compliments. I did this for a variety of different intents such as compliments and insults. The Java code makes a GET request to the API when no other response in the code fits and the JSON object returned tells the code the intent of the user’s input. From there, a fitting response is chosen using a switch statement. You can view the <a href="https://docs.google.com/document/d/1HeAVF-roVqSm-oUJYFKFya0-TEg_9Qk6Y3QBJNZg6l0/edit?usp=sharing" className="link" target="_blank" rel="noopener noreferrer">documentation</a> and the <a className="link" href="https://github.com/js0mmer/magpie" target="_blank" rel="noopener noreferrer">GitHub repository</a> for more information.</p>
-            </div>
-          </article>
+            : null
+          }
         </section>
         <Footer />
       </div>

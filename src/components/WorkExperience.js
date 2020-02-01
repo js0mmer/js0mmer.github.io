@@ -17,7 +17,6 @@ class WorkExperience extends Component {
     document.title = 'Work Experience | Jacob Sommer';
     window.scrollTo(0, 0);
     document.querySelector('.transition').classList.add('out');
-    document.querySelector('body').classList.remove('menu-is-active');
   }
 
   transition(to) {
@@ -38,7 +37,7 @@ class WorkExperience extends Component {
             <p>One memorable guest speaker was Dr. Maher Salloum. He talked about the two different careers he has had. In his first career, he worked on developing Magnetic Nanoparticle Hyperthermia as a way to kill cancer cells. This was really interesting because it was something I had never heard of in my life. In his second career, he worked with data compression. Being someone who is interested in Computer Science, his work with data compression interested me. I learned about the two approaches for data compression. The first one is lossless. With lossless data compression, data is fully recoverable after decompression, however, it has a low compression ratio of about 4-10. The most common example of this type of compression is zip files on Windows. The second approach for data compression is lossy. Lossy data compression has large ratios of about 10-1000, however, losses can occur in data after decompression. An example of this type of compression is wavelets, which are often used to compress images we send over social media without us even knowing. His talk was really inspiring because he showed us how you do not have to stay in just one field of engineering. Often times, you end up having multiple careers. Another inspiring talk was from co-founder of the Uber AI Labs, Jason Yosinksi. His work with artificial intelligence and machine learning is inspiring to those who are interested in Computer Science as it is a look into the future. Jason’s talk helped provide a deeper understanding of how artificial intelligence works at the basic level. In the example of image recognition, software is written to be able to recognize patterns such as edges, certain colors, stripes, outlines, and others. Certain objects are able to be recognized by recognizing a complex series of patterns that make up the object.</p>
           </div>
         </section>
-        <div className="small-banner resume-bg" offsetY={700}>
+        <div className="small-banner resume-bg">
           <h2>Resume</h2>
           <a href="Resume.pdf" className="view-btn button btn-black" target="_blank">Click to View</a>
         </div>

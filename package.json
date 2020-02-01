@@ -1,6 +1,6 @@
 {
   "name": "js0mmer.github.io",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "dependencies": {
     "react": "^16.8.4",

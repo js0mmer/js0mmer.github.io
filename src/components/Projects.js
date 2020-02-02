@@ -80,7 +80,7 @@ class ProjectCard extends Component {
 
   render() {
     return (
-      <a className="card" href={this.props.src.link ? this.props.src.link : 'projects/' + this.props.id} target="_blank" onClick={this.onClick}>
+      <a className="card" href={this.props.src.link ? this.props.src.link : 'projects/' + this.props.id} target={this.props.src.link ? 'blank' : null} onClick={this.onClick}>
         <img className="card-img-top" src={'/images/' + this.props.id + '.' + this.props.src.imgType} alt={this.props.src.title} />
         <div className="card-body">
           <h5 className="card-title">{this.props.src.title}</h5>

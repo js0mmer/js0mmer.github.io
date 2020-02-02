@@ -122,7 +122,7 @@ class Projects extends Component {
         }
       }
 
-      if (!src) {
+      if (!src || src.link) {
         this.props.history.push('/projects');
         return;
       }

@@ -9,6 +9,7 @@ import hangman from './projects/hangman.json';
 import projectCompound from './projects/project-compound.json';
 import aerodynamicDesign from './projects/aerodynamic-design.json';
 import magpie from './projects/magpie.json';
+import startracker from './projects/startracker.json';
 
 const PROJECTS = [
   {
@@ -30,6 +31,10 @@ const PROJECTS = [
   {
     id: 'magpie',
     src: magpie
+  },
+  {
+    id: 'startracker',
+    src: startracker
   }
 ]
 

@@ -731,6 +731,17 @@ footer .col-sm {
   border-radius: 0.5em;
   margin: 1rem;
   cursor: pointer;
+  color: #212529;
+}
+
+.card:active {
+  transform: translateY(7px);
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  text-decoration: none;
+  color: #212529;
 }
 
 .card-body {
@@ -746,13 +757,43 @@ footer .col-sm {
   margin-bottom: 0.25em;
 }
 
-.card:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
 /* ============== */
 /* ANIMATED ARROW */
 /* ============== */
+
+.animated-arrow {
+  position: relative;
+  display: inline-block;
+  color: #ff3a3a;
+  font-size: 1.25em;
+  text-decoration: none !important;
+  transition: all 0.2s;
+  margin: 3rem 0 5rem 0;
+}
+
+.animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  transform: translateX(40px);
+}
+
+.animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+}
+
+.animated-arrow:hover {
+  color: #ff3a3a;
+}
+
+.animated-arrow:hover > .arrow > .shaft {
+  width: 64px;
+}
+
+.animated-arrow:hover > .main {
+  transform: translateX(80px);
+}
 
 .arrow {
   position: absolute;
@@ -791,38 +832,4 @@ footer .col-sm {
 .arrow > .shaft:after {
   transform-origin: bottom left;
   transform: rotate(-40deg);
-}
-
-.animated-arrow {
-  position: relative;
-  display: inline-block;
-  color: #ff3a3a;
-  font-size: 1.25em;
-  text-decoration: none !important;
-  transition: all 0.2s;
-  margin: 3rem 0 5rem 0;
-}
-
-.animated-arrow > .main {
-  display: flex;
-  align-items: center;
-  transition: all 0.2s;
-  transform: translateX(40px);
-}
-
-.animated-arrow > .main > .text {
-  margin: 0 16px 0 0;
-  line-height: 1;
-}
-
-.animated-arrow:hover {
-  color: #ff3a3a;
-}
-
-.animated-arrow:hover > .arrow > .shaft {
-  width: 64px;
-}
-
-.animated-arrow:hover > .main {
-  transform: translateX(80px);
 }

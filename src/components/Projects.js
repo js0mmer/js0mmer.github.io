@@ -66,19 +66,22 @@ class ProjectCard extends Component {
     this.onClick = this.onClick.bind(this);
   }
 
-  onClick() {
-    this.props.open(this.props.id, this.props.src);
+  onClick(e) {
+    if (!this.props.src.link) {
+      e.preventDefault();
+      this.props.open(this.props.id, this.props.src);
+    }
   }
 
   render() {
     return (
-      <article className="card" onClick={this.onClick}>
+      <a className="card" href={this.props.src.link ? this.props.src.link : 'projects/' + this.props.id} target="_blank" onClick={this.onClick}>
         <img className="card-img-top" src={'/images/' + this.props.id + '.' + this.props.src.imgType} alt={this.props.src.title} />
         <div className="card-body">
           <h5 className="card-title">{this.props.src.title}</h5>
           <p className="card-text">{this.props.src.description}</p>
         </div>
-      </article>
+      </a>
     );
   }
 }

@@ -734,14 +734,15 @@ footer .col-sm {
   color: #212529;
 }
 
-.card:active {
-  transform: translateY(7px);
-}
-
 .card:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   text-decoration: none;
   color: #212529;
+  transform: translateY(-1px);
+}
+
+.card:hover:active {
+  transform: translateY(7px);
 }
 
 .card-body {

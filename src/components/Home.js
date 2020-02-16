@@ -99,6 +99,7 @@ class Home extends Component {
       if (scrollBottom >= this.aboutH1.offsetTop) this.aboutH1.classList.add('animated', 'fadeInDown');
       if (scrollBottom >= this.contactH1.offsetTop) this.contactH1.classList.add('animated', 'fadeInDown');
       if (scrollBottom >= this.form.offsetTop) this.form.classList.add('animated', 'fadeInLeft');
+      if (scrollBottom >= document.querySelector('#about-me-p p').offsetTop) document.querySelectorAll('#about-me-p p').forEach(el => el.classList.add('animated', 'fadeIn'));
     }
   }
 

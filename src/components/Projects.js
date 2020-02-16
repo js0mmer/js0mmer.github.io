@@ -129,6 +129,10 @@ class Projects extends Component {
 
       this.openProject(id, src);
     }
+
+    setTimeout(() => {
+      document.querySelectorAll('.card').forEach(el => el.classList.remove('animated'));
+    }, 1000);
   }
 
   componentWillUnmount() {

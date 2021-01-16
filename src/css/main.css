@@ -1,8 +1,26 @@
+/* =========  */
+/* TYPOGRAPHY */
+/* ========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Manrope', 'sans-serif';
+}
+
+p {
+  color: #666;
+}
+
 /* ======= */
 /* GENERAL */
 /* ======= */
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 ::selection {
   background: #ff8f8f;
@@ -12,10 +30,6 @@
 html, body {
   overflow-x: hidden;
   max-width: 100%;
-}
-
-p {
-  color: #666;
 }
 
 .center {
@@ -269,6 +283,7 @@ header {
   background-position: center;
   color: white;
   text-shadow: 1px 1px 2px #eee;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) {
@@ -277,7 +292,7 @@ header {
   }
 
   header h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -313,21 +328,21 @@ header::after {
 }
 
 .home h1 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: 700;
   text-shadow: 1px 1px 5px #212529;
 }
 
 @media only screen and (min-width: 768px) {
   .home h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
 .home h5 {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .home .col-xl-6 {
@@ -482,6 +497,7 @@ header::after {
   margin-top: 10px;
   padding: 10px 18px;
   font-size: 11px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   letter-spacing: 0.8px;
   line-height: 100%;
@@ -596,7 +612,8 @@ footer {
 }
 
 footer p {
-  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   padding-top: 7px;
   color: #212529;
 }

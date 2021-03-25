@@ -8,6 +8,7 @@ import scratch from './projects/scratch.json';
 import hangman from './projects/hangman.json';
 import projectCompound from './projects/project-compound.json';
 import aerodynamicDesign from './projects/aerodynamic-design.json';
+import eduGameDesign from './projects/edu-game-design.json';
 import magpie from './projects/magpie.json';
 import startracker from './projects/startracker.json';
 
@@ -27,6 +28,10 @@ const PROJECTS = [
   {
     id: 'aerodynamic-design',
     src: aerodynamicDesign
+  },
+  {
+    id: 'edu-game-design',
+    src: eduGameDesign
   },
   {
     id: 'magpie',

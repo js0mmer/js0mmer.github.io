@@ -83,7 +83,7 @@ class Nav extends Component {
                 <Link props={this.props} id={1} className="nav-link" to="/#about">About</Link>
               </li>
               <li className="nav-item">
-                <Link props={this.props} id={2} className="nav-link" to="work-experience">Work Experience</Link>
+                <Link props={this.props} id={2} className="nav-link" to="/work-experience">Work Experience</Link>
               </li>
               <li className="nav-item">
                 <Link props={this.props} id={3} className="nav-link" to="projects">Projects</Link>

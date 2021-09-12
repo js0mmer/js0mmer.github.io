@@ -2,7 +2,7 @@
 /* TYPOGRAPHY */
 /* ========== */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
@@ -114,8 +114,8 @@ img {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  border: 5px solid #ff3a3a;
-  background: #ff3a3a;
+  position: relative;
+  top: -75px;
 }
 
 /* ========== */
@@ -211,7 +211,7 @@ img {
   color: #212529;
   font-family: 'Montserrat';
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
 
@@ -312,19 +312,25 @@ header::after {
 }
 
 .home {
-  padding-bottom: 5vw;
-  margin-bottom: 2rem;
-  background-image: url("../images/banner-white.svg");
+  background-image: url("../images/banner-red.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  place-items: center;
 }
 
-.home::after {
-  position: absolute;
-  width: 100vw;
-  content: '';
-  border-left: 100vw solid transparent;
-  border-bottom: 5vw solid white;
+.home .wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.home .card .container {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: -55px;
 }
 
 .home h1 {
@@ -339,50 +345,18 @@ header::after {
   }
 }
 
-.home h5 {
+.home h4 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
 
-.home .col-xl-6 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home .fa-chevron-down {
-  position: absolute;
-  text-decoration: none;
-  left: 0;
-  right: 0;
-  bottom: 5vh;
-  width: 56px;
-  text-align: center;
-  margin: 0 auto;
-  transition: 0.5s linear all;
-  animation: bounce 2.5s infinite;
-  font-size: 3.5rem;
-  color: #212529;
-}
-
-@media only screen and (max-width: 1199px) {
-  .home .particles {
-    display: none;
-  }
-}
-
-.home .row {
-  height: 100vh;
-}
-
-.home.error-404 {
-  margin: 0;
-  padding: 0;
-}
-
-.home.error-404::after {
-  content: none;
+.home .subheading {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .jumbotron {
@@ -639,7 +613,7 @@ footer .col-sm {
 }
 
 .fa-github, .fa-envelope {
-  color: black;
+  color: #212529;
 }
 
 .fa-stack  {
@@ -747,18 +721,21 @@ footer .col-sm {
   border: none;
   border-radius: 0.5em;
   margin: 1rem;
-  cursor: pointer;
   color: #212529;
 }
 
-.card:hover {
+.card.i {
+  cursor: pointer;
+}
+
+.card.i:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   text-decoration: none;
   color: #212529;
   transform: translateY(-1px);
 }
 
-.card:hover:active {
+.card.i:hover:active {
   transform: translateY(7px);
 }
 

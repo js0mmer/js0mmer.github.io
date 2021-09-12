@@ -80,16 +80,13 @@ class Nav extends Component {
                 <Link props={this.props} id={0} className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link props={this.props} id={1} className="nav-link" to="/#about">About</Link>
+                <Link props={this.props} id={1} className="nav-link" to="/projects">Projects</Link>
               </li>
               <li className="nav-item">
-                <Link props={this.props} id={2} className="nav-link" to="/work-experience">Work Experience</Link>
+                <a props={this.props} id={2} className="nav-link" href="/Resume.pdf" target="_blank">Resume</a>
               </li>
               <li className="nav-item">
-                <Link props={this.props} id={3} className="nav-link" to="projects">Projects</Link>
-              </li>
-              <li className="nav-item">
-                <Link props={this.props} id={4} className="nav-link" to="/#contact">Contact</Link>
+                <Link props={this.props} id={3} className="nav-link" to="/contact">Contact</Link>
               </li>
             </ul>
           </div>

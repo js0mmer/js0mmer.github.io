@@ -40,8 +40,8 @@ class Home extends Component {
               <img className="profile-picture center" src={me} alt="Me" />
               <div className="container">
                 <h4 className="center">Jacob Sommer</h4>
-                <p className="center subheading">Student / Developer</p>
-                <p>Hi, I'm Jacob. I am a freshman at UC Irvine majoring in Computer Science and Engineering.</p>
+                <p className="center subheading">Student / Full-Stack Developer</p>
+                <p>Hi, I'm Jacob. I'm a full-stack developer from the San Francisco Bay Area who's constantly learning new technologies. Outside of coding, I enjoy photography, PC gaming, and watching YouTube videos. Currently, I am a freshman at UC Irvine pursuing a BS in Computer Science and Engineering.</p>
                 <div className="col-sm icons">
                 {/* eslint-disable-next-line */}
                 <a className="fa-stack fa-2x" href="mailto:jacob.sommer@comcast.net" target="_blank">

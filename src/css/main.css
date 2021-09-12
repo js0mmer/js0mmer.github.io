@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5 {
 
 body {
   font-family: 'Manrope', 'sans-serif';
+  /* background-image: url("../images/banner-red.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
 p {
@@ -215,11 +219,15 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-.nav-item a:hover {
-  color: #ff3a3a;
+.nav-item a:hover, .nav-item.active a {
+  color: white;
 }
 
-.nav-item.active a {
+.navbar-white .nav-item a {
+  color: #212529;
+}
+
+.navbar-white .nav-item a:hover, .navbar-white .nav-item.active a {
   color: #ff3a3a;
 }
 
@@ -250,6 +258,10 @@ img {
 
   .navbar-collapse .nav-link {
     font-size: 2rem;
+  }
+
+  .nav-item a:hover, .nav-item.active a {
+    color: #ff3a3a;
   }
 }
 

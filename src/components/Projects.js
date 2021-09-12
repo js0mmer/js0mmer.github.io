@@ -219,7 +219,7 @@ class Projects extends Component {
     return (
       <div>
         <div className="project-transition"></div>
-        <Nav active={3} transition={this.transition} closeProject={this.closeProject} projectId={this.state.projectId} />
+        <Nav active={1} transition={this.transition} closeProject={this.closeProject} projectId={this.state.projectId} />
         <Header>Projects</Header>
         <section id="projects" className="container">
           <div className="cards row" style={this.state.projectId ? { display: 'none'} : {}}>

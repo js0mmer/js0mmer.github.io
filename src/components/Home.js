@@ -34,26 +34,26 @@ class Home extends Component {
     return (
       <div>
         <Nav active={0} transition={this.transition} />
-        <div className="jumbotron home">
+        <div className="jumbotron full home">
           <div className="container wrapper">
             <div class="card col-md-7">
               <img className="profile-picture center" src={me} alt="Me" />
               <div className="container">
                 <h4 className="center">Jacob Sommer</h4>
                 <p className="center subheading">Student / Full-Stack Developer</p>
-                <p>Hi, I'm Jacob. I'm a full-stack developer from the San Francisco Bay Area who's constantly learning new technologies. Outside of coding, I enjoy photography, PC gaming, and watching YouTube videos. Currently, I am a freshman at UC Irvine pursuing a BS in Computer Science and Engineering.</p>
-                <div className="col-sm icons">
-                {/* eslint-disable-next-line */}
-                <a className="fa-stack fa-2x" href="mailto:jacob.sommer@comcast.net" target="_blank">
-                  <span className="fa fa-circle fa-stack-2x"></span>
-                  <span className="fa fa-envelope fa-stack-1x"></span>
-                </a>
-                {/* eslint-disable-next-line */}
-                <a className="fa-stack fa-2x" href="https://github.com/js0mmer" target="_blank">
-                  <span className="fa fa-circle fa-stack-2x"></span>
-                  <span className="fab fa-github fa-stack-1x"></span>
-                </a>
-              </div>
+                <p className="center">Hi, I'm Jacob. I'm a full-stack developer from the San Francisco Bay Area who's constantly learning new technologies. Outside of coding, I enjoy photography, PC gaming, and watching YouTube videos. Currently, I am a freshman at UC Irvine pursuing a BS in Computer Science and Engineering.</p>
+                <div className="col-sm icons center">
+                  {/* eslint-disable-next-line */}
+                  <a className="fa-stack fa-2x" href="mailto:jacob.sommer@comcast.net" target="_blank">
+                    <span className="fa fa-circle fa-stack-2x"></span>
+                    <span className="fa fa-envelope fa-stack-1x"></span>
+                  </a>
+                  {/* eslint-disable-next-line */}
+                  <a className="fa-stack fa-2x" href="https://github.com/js0mmer" target="_blank">
+                    <span className="fa fa-circle fa-stack-2x"></span>
+                    <span className="fab fa-github fa-stack-1x"></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

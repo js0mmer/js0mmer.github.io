@@ -323,7 +323,7 @@ header::after {
   animation: blink 0.5s infinite;
 }
 
-.home {
+.full {
   background-image: url("../images/banner-red.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -333,38 +333,44 @@ header::after {
   place-items: center;
 }
 
-.home .wrapper {
+.full .wrapper {
   display: flex;
   justify-content: center;
 }
 
+.contact .card .container {
+  margin: 3em auto;
+}
+
+.contact h4 {
+  margin-bottom: 1em;
+}
+
 .home .card .container {
-  margin: 0 auto;
-  text-align: center;
   position: relative;
   top: -55px;
 }
 
-.home h1 {
+.full h1 {
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: 1px 1px 5px #212529;
 }
 
 @media only screen and (min-width: 768px) {
-  .home h1 {
+  .full h1 {
     font-size: 3.5rem;
   }
 }
 
-.home h4 {
+.full h4 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 3px;
 }
 
-.home .subheading {
+.full .subheading {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -564,7 +570,8 @@ input, textarea {
 }
 
 textarea {
-  min-height: 51px;
+  min-height: 60px;
+  max-height: 40vh;
   resize: vertical;
 }
 
@@ -679,25 +686,17 @@ footer .col-sm {
   }
 }
 
-/* ========= */
-/* HOME PAGE */
-/* ========= */
+/* ============ */
+/* CONTACT PAGE */
+/* ============ */
 
-#about {
-  margin-bottom: 2rem;
+.contact .fa, .contact .fab {
+  margin-right: 2px;
 }
 
-#contact {
-  margin-top: 2rem;
-  margin-bottom: 5vw;
-}
-
-/* ==================== */
-/* WORK EXPERIENCE PAGE */
-/* ==================== */
-
-#work-experience {
-  margin-bottom: 2rem;
+.contact .fa:hover, .contact .fab:hover {
+  color: #212529;
+  text-decoration: none;
 }
 
 /* ============= */

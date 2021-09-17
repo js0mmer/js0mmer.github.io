@@ -74,6 +74,11 @@ class ProjectCard extends Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
+    this.content = React.createRef();
+  }
+
+  componentDidMount() {
+    this.content.current.innerHTML = this.props.src.content || '';
   }
 
   onClick(e) {
@@ -85,13 +90,25 @@ class ProjectCard extends Component {
 
   render() {
     return (
-      <a className="card i animated zoomIn" href={this.props.src.link ? this.props.src.link : 'projects/' + this.props.id} target={this.props.src.link ? 'blank' : null} onClick={this.onClick}>
-        <img className="card-img-top" src={'/images/' + this.props.id + '.' + this.props.src.imgType} alt={this.props.src.title} />
-        <div className="card-body">
-          <h5 className="card-title">{this.props.src.title}</h5>
-          <p className="card-text">{this.props.src.description}</p>
+      // <a className="card i animated zoomIn" href={this.props.src.link ? this.props.src.link : 'projects/' + this.props.id} target={this.props.src.link ? 'blank' : null} onClick={this.onClick}>
+      //   <img className="card-img-top" src={'/images/' + this.props.id + '.' + this.props.src.imgType} alt={this.props.src.title} />
+      //   <div className="card-body">
+      //     <h5 className="card-title">{this.props.src.title}</h5>
+      //     <p className="card-text">{this.props.src.description}</p>
+      //   </div>
+      // </a>
+      <div className="card project container">
+        <div className="row">
+          <div className="col-xl-6">
+            <h4>{this.props.src.title}</h4>
+            <p className="subheading">{this.props.src.description}</p>
+            <p ref={this.content}></p>
+          </div>
+          <div className="col-xl-6">
+            <img src={'/images/' + this.props.id + '.' + this.props.src.imgType} alt={this.props.src.title} />
+          </div>
         </div>
-      </a>
+      </div>
     );
   }
 }
@@ -161,19 +178,22 @@ class Projects extends Component {
   setupCards() {
     var col1 = [];
     var col2 = [];
-    if (window.innerWidth < 992) {
-      for (var i = 0; i < PROJECTS.length; i++) {
-        col1.push(<ProjectCard key={i} id={PROJECTS[i].id} src={PROJECTS[i].src} open={this.openProject} />);
-      }
-    } else {
-      for (var j = 0; j < PROJECTS.length; j++) {
-        if (j % 2 === 0) {
-          col1.push(<ProjectCard key={j} id={PROJECTS[j].id} src={PROJECTS[j].src} open={this.openProject} />);
-        } else {
-          col2.push(<ProjectCard key={j} id={PROJECTS[j].id} src={PROJECTS[j].src} open={this.openProject} />);
-        }
-      }
+    for (var i = 0; i < PROJECTS.length; i++) {
+      col1.push(<ProjectCard key={i} id={PROJECTS[i].id} src={PROJECTS[i].src} open={this.openProject} />);
     }
+    // if (window.innerWidth < 992) {
+    //   for (var i = 0; i < PROJECTS.length; i++) {
+    //     col1.push(<ProjectCard key={i} id={PROJECTS[i].id} src={PROJECTS[i].src} open={this.openProject} />);
+    //   }
+    // } else {
+    //   for (var j = 0; j < PROJECTS.length; j++) {
+    //     if (j % 2 === 0) {
+    //       col1.push(<ProjectCard key={j} id={PROJECTS[j].id} src={PROJECTS[j].src} open={this.openProject} />);
+    //     } else {
+    //       col2.push(<ProjectCard key={j} id={PROJECTS[j].id} src={PROJECTS[j].src} open={this.openProject} />);
+    //     }
+    //   }
+    // }
 
     this.setState({ col1, col2 });
   }
@@ -222,13 +242,8 @@ class Projects extends Component {
         <Nav active={1} transition={this.transition} closeProject={this.closeProject} projectId={this.state.projectId} />
         <Header>Projects</Header>
         <section id="projects" className="container">
-          <div className="cards row" style={this.state.projectId ? { display: 'none'} : {}}>
-            <div id="col-1" className="col-lg-6">
-              {this.state.col1.map(item => item)}
-            </div>
-            <div id="col-2" className="col-lg-6">
-              {this.state.col2.map(item => item)}
-            </div>
+          <div className="cards" style={this.state.projectId ? { display: 'none'} : {}}>
+            {this.state.col1.map(item => item)}
           </div>
           {this.state.projectId ? 
             <div>

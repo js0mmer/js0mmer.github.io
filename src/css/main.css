@@ -735,19 +735,32 @@ footer .col-sm {
   color: #212529;
 }
 
-.card.i {
-  cursor: pointer;
+.card.project {
+  padding-top: 1em;
+  display: block;
+  margin-top: 40px;
 }
 
-.card.i:hover {
+.card.project img {
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 1183px) {
+  .card.project img {
+    position: relative;
+    top: -40px;
+    right: -40px;
+    width: 100%;
+    border-radius: 0.5em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+}
+
+.card.project:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   text-decoration: none;
   color: #212529;
   transform: translateY(-1px);
-}
-
-.card.i:hover:active {
-  transform: translateY(7px);
 }
 
 .card-body {

@@ -1,8 +1,6 @@
 {
   "title": "Hangman",
-  "description": "CSE Jan 24th - Feb 2nd, 2018",
   "date": "January 24th - February 2nd, 2018",
-  "class": "CSE (Computer Science/Software Engineering)",
   "imgType": "png",
   "content": "This project was completed in my Computer Science/Software Engineering class. The objective of it was to create a themed hangman game that was played in the terminal. My role in this project was a developer. My partner and I created a Spongebob-themed hangman game. All of the words were spongebob related and we included some ASCII art to make the game more aesthetic. We developed our problem-solving skills by finding ways around issues we had when coding our game. During this project we had to overcome limitations of Cloud 9, the main one being that it is a non-GUI environment. Everything had to be played in the terminal but we were still able to show some images using ASCII art. You can <a class=\"link\" href=\"https://repl.it/@js0mmer/Hangman.zip\" download=\"Hangman.zip\">download the project</a> and take a look at it yourself. It is made for Python 2.7."
 }

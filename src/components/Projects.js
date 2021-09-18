@@ -14,33 +14,33 @@ import startracker from './projects/startracker.json';
 
 const PROJECTS = [
   {
-    id: 'scratch',
-    src: scratch
-  },
-  {
-    id: 'hangman',
-    src: hangman
-  },
-  {
-    id: 'project-compound',
-    src: projectCompound
-  },
-  {
-    id: 'aerodynamic-design',
-    src: aerodynamicDesign
-  },
-  {
-    id: 'edu-game-design',
-    src: eduGameDesign
+    id: 'startracker',
+    src: startracker
   },
   {
     id: 'magpie',
     src: magpie
   },
   {
-    id: 'startracker',
-    src: startracker
-  }
+    id: 'edu-game-design',
+    src: eduGameDesign
+  },
+  {
+    id: 'aerodynamic-design',
+    src: aerodynamicDesign
+  },
+  {
+    id: 'project-compound',
+    src: projectCompound
+  },
+  {
+    id: 'hangman',
+    src: hangman
+  },
+  {
+    id: 'scratch',
+    src: scratch
+  },
 ]
 
 class ProjectPanel extends Component {

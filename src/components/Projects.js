@@ -73,19 +73,11 @@ class ProjectPanel extends Component {
 class ProjectCard extends Component {
   constructor(props) {
     super(props);
-    this.onClick = this.onClick.bind(this);
     this.content = React.createRef();
   }
 
   componentDidMount() {
     this.content.current.innerHTML = this.props.src.content || '';
-  }
-
-  onClick(e) {
-    if (!this.props.src.link) {
-      e.preventDefault();
-      this.props.open(this.props.id, this.props.src);
-    }
   }
 
   render() {
@@ -102,10 +94,13 @@ class ProjectCard extends Component {
           <div className="col-xl-6">
             <h4>{this.props.src.title}</h4>
             <p className="subheading">{this.props.src.description}</p>
-            <p ref={this.content}></p>
+            <p ref={this.content} />
+            {this.props.src.links ?
+              <p>{this.props.src.links.map(item => <a className={`${item.icon} fa-lg`} href={item.href} target="_blank"></a>)}</p>
+            : null }
           </div>
           <div className="col-xl-6">
-            <img src={'/images/' + this.props.id + '.' + this.props.src.imgType} alt={this.props.src.title} />
+            <img src={`/images/${this.props.id}.${this.props.src.imgType}`} alt={this.props.src.title} />
           </div>
         </div>
       </div>

@@ -745,6 +745,16 @@ footer .col-sm {
   margin-bottom: 1em;
 }
 
+.card.project .fa-lg {
+  color: #212529;
+  text-decoration: none;
+}
+
+.card.project .fa-lg:hover {
+  color: #ff3a3a;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 1183px) {
   .card.project img {
     position: relative;

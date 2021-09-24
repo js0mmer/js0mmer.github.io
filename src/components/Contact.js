@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
 import Nav from './Nav';
-import '../css/animate.min.css';
 
 function SendBtn() {
   function handleClick() {
@@ -47,7 +46,9 @@ class Contact extends Component {
                 <h4 className="center">Let's get in touch</h4>
                 <div className="row">
                   <div className="col-md-6">
+                    { /* eslint-disable-next-line */ }
                     <p><a className="fa fa-envelope fa-lg" href="mailto:jacob.sommer@comcast.net" target="_blank"></a> jacob.sommer@comcast.net</p>
+                    { /* eslint-disable-next-line */ }
                     <p><a className="fab fa-github fa-lg" href="https://github.com/js0mmer" target="_blank"></a> js0mmer</p>
                   </div>
                   <div className="col-md-6">

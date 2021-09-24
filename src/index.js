@@ -4,7 +4,6 @@ import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import Home from './components/Home';
-import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Error404 from './components/404';
@@ -18,8 +17,6 @@ const AppRouter = () => (
       <div className="transition"></div>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/work-experience" component={WorkExperience} />
-        <Route path="/projects/:id" component={Projects} />
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
         <Route component={Error404} />

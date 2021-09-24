@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import { Redirect } from 'react-router-dom';
-import Nav, { Link } from './Nav';
+import Nav from './Nav';
 import me from '../images/me.jpg';
-import '../css/animate.min.css';
 
 class Home extends Component {
   constructor(props) {

@@ -61,7 +61,7 @@ class ProjectCard extends Component {
             <h4>{this.props.src.title}</h4>
             <p className="subheading">{this.props.src.date}</p>
             <p ref={this.content} />
-            {this.props.src.links ?
+            {this.props.src.links ? /* eslint-disable-next-line */
               <p>{this.props.src.links.map(item => <a className={`${item.icon} fa-lg`} href={item.href} target="_blank"></a>)}</p>
             : null }
           </div>

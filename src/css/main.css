@@ -12,10 +12,6 @@ h1, h2, h3, h4, h5 {
 
 body {
   font-family: 'Manrope', 'sans-serif';
-  /* background-image: url("../images/banner-red.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
 }
 
 p {
@@ -46,28 +42,6 @@ html, body {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-.red-border {
-  background: #ff3a3a;
-  border: 15px solid #ff3a3a;
-  border-radius: 1%;
-}
-
-.project-transition {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: white;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  z-index: 0;
-}
-
-.project-transition.open {
-  transition: opacity 0.2s ease;
-  z-index: 10;
-  opacity: 1;
 }
 
 .transition {
@@ -318,11 +292,6 @@ header::after {
   border-bottom: 5vw solid white;
 }
 
-.Cursor::after {
-  content: '|';
-  animation: blink 0.5s infinite;
-}
-
 .full {
   background-image: url("../images/banner-red.svg");
   background-size: cover;
@@ -379,19 +348,6 @@ header::after {
 
 .jumbotron {
   border-radius: 0;
-}
-
-.projects-bg {
-  background-image: url("../images/projects-bg.png");
-}
-
-.resume-bg {
-  background-image: url("../images/resume-bg.png");
-  margin-bottom: 4rem;
-}
-
-.workexp-bg {
-  background-image: url("../images/workexp-bg.png");
 }
 
 /* ============= */
@@ -660,24 +616,6 @@ footer .col-sm {
 /* ANIMATIONS */
 /* ========== */
 
-@keyframes blink {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  } 50% {
-    transform: translateY(-25px);
-  } 100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -697,28 +635,6 @@ footer .col-sm {
 .contact .fa:hover, .contact .fab:hover {
   color: #212529;
   text-decoration: none;
-}
-
-/* ============= */
-/* PROJECTS PAGE */
-/* ============= */
-
-#projects .row .col-md-7 {
-  padding: 15px;
-}
-
-#projects .row .col-lg-6 {
-  padding: 0;
-}
-
-.embed-responsive {
-  height: 450px;
-}
-
-@media only screen and (min-width: 768px) {
-  .embed-responsive {
-    height: 100%;
-  }
 }
 
 /* ===== */

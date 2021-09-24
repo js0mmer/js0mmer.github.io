@@ -402,19 +402,6 @@ header::after {
 /* BUTTONS */
 /* ======= */
 
-.btn-black {
-  border: 3px solid #212529;
-  color: #212529
-}
-
-.btn-black::after {
-  background: #212529;
-}
-
-.btn-black:hover, .btn-black:focus {
-  color: white;
-}
-
 .btn-red {
   border: 3px solid #ff3a3a;
   color: #ff3a3a
@@ -426,19 +413,6 @@ header::after {
 
 .btn-red:hover, .btn-red:focus {
   color: white;
-}
-
-.btn-white {
-  border: 3px solid white;
-  color: white
-}
-
-.btn-white::after {
-  background: white;
-}
-
-.btn-white:hover, .btn-white:focus {
-  color: #212529;
 }
 
 .button {
@@ -483,10 +457,6 @@ header::after {
   width: 120%;
 }
 
-.home-btn {
-  width: 130px;
-}
-
 .send-btn {
   width: 75px;
 }
@@ -504,10 +474,6 @@ header::after {
 
 .sending::after {
   background: white;
-}
-
-.view-btn {
-  width: 120px;
 }
 
 /* ===== */

@@ -11,9 +11,13 @@ import aerodynamicDesign from './projects/aerodynamic-design.json';
 import eduGameDesign from './projects/edu-game-design.json';
 import magpie from './projects/magpie.json';
 import startracker from './projects/startracker.json';
+import playpic from './projects/playpic.json';
 
 const PROJECTS = [
   {
+    id: 'playpic',
+    src: playpic
+  },{
     id: 'startracker',
     src: startracker
   },

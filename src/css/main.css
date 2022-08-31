@@ -549,11 +549,11 @@ footer .col-sm {
   }
 }
 
-.fa.fa-heart, .fa.fa-circle {
+.fa-heart, .fa-circle {
   color: white;
 }
 
-.fa, .fab {
+.fa-envelope, .fa-github, .fa-linkedin {
   color: #212529;
 }
 

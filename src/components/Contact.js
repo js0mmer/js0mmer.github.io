@@ -50,6 +50,8 @@ class Contact extends Component {
                     <p><a className="fa fa-envelope fa-lg" href="mailto:jacob.sommer@comcast.net" target="_blank"></a> jacob.sommer@comcast.net</p>
                     { /* eslint-disable-next-line */ }
                     <p><a className="fab fa-github fa-lg" href="https://github.com/js0mmer" target="_blank"></a> js0mmer</p>
+                    { /* eslint-disable-next-line */ }
+                    <p><a className="fab fa-linkedin fa-lg" href="https://www.linkedin.com/in/js0mmer" target="_blank"></a> js0mmer</p>
                   </div>
                   <div className="col-md-6">
                     <form className="flex-center" action="https://formspree.io/jacob.sommer@comcast.net" method="POST">

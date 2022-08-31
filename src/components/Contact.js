@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Nav from './Nav';
 
 function SendBtn() {
@@ -34,14 +34,14 @@ class Contact extends Component {
   }
 
   render() {
-    if (this.state.redirect) return <Redirect push to={this.state.redirect} />;
+    if (this.state.redirect) return <Navigate to={this.state.redirect} />;
 
     return (
       <div>
         <Nav active={3} transition={this.transition} />
         <div className="jumbotron full contact">
           <div className="container wrapper">
-            <div class="card col-md-7">
+            <div className="card col-md-7">
               <div className="container">
                 <h4 className="center">Let's get in touch</h4>
                 <div className="row">

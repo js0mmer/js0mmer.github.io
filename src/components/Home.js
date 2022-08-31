@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Nav from './Nav';
 import me from '../images/me.jpg';
 
@@ -28,14 +28,14 @@ class Home extends Component {
   }
 
   render() {
-    if (this.state.redirect) return <Redirect push to={this.state.redirect} />;
+    if (this.state.redirect) return <Navigate push to={this.state.redirect} />;
 
     return (
       <div>
         <Nav active={0} transition={this.transition} />
         <div className="jumbotron full home">
           <div className="container wrapper">
-            <div class="card col-md-7">
+            <div className="card col-md-7">
               <img className="profile-picture center" src={me} alt="Me" />
               <div className="container">
                 <h4 className="center">Jacob Sommer</h4>

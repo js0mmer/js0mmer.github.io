@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import ReactGA from 'react-ga';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import Home from './components/Home';
 import Projects from './components/Projects';
@@ -11,23 +11,25 @@ import './css/bootstrap.min.css';
 import './css/main.css';
 import './css/all.min.css';
 
-const AppRouter = () => (
-  <Router>
-    <div className="app">
-      <div className="transition"></div>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/contact" component={Contact} />
-        <Route component={Error404} />
-      </Switch>
-    </div>
-  </Router>
-);
+function AppRouter() {
+  return (
+    <BrowserRouter>
+      <div className="app">
+        <div className="transition"></div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
+          <Route element={Error404} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+}
 
 ReactGA.initialize('UA-133013455-2');
-ReactDOM.render(<AppRouter />, document.getElementById('root'));
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<AppRouter />); 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

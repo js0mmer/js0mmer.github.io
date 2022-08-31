@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Nav, { Link } from './Nav';
 
 class Error404 extends Component {
@@ -19,7 +19,7 @@ class Error404 extends Component {
   }
 
   render() {
-    if (this.state.redirect) return <Redirect push to={this.state.redirect} />;
+    if (this.state.redirect) return <Navigate to={this.state.redirect} />;
 
     return (
       <div>

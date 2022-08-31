@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
@@ -66,7 +66,7 @@ class ProjectCard extends Component {
             <p className="subheading">{this.props.src.date}</p>
             <p ref={this.content} />
             {this.props.src.links ? /* eslint-disable-next-line */
-              <p>{this.props.src.links.map(item => <a className={`${item.icon} fa-lg`} href={item.href} target="_blank"></a>)}</p>
+              <p>{this.props.src.links.map(item => <a key={this.props.id} className={`${item.icon} fa-lg`} href={item.href} target="_blank"></a>)}</p>
             : null }
           </div>
           <div className="col-xl-6">
@@ -101,7 +101,7 @@ class Projects extends Component {
   }
 
   render() {
-    if (this.state.redirect) return <Redirect push to={this.state.redirect} />;
+    if (this.state.redirect) return <Navigate to={this.state.redirect} />;
 
     return (
       <div>
@@ -110,7 +110,7 @@ class Projects extends Component {
         <Header>Projects</Header>
         <section id="projects" className="container">
           <div className="cards" style={this.state.projectId ? { display: 'none'} : {}}>
-            {PROJECTS.map(project => <ProjectCard id={project.id} src={project.src} />)}
+            {PROJECTS.map(project => <ProjectCard key={project.id} id={project.id} src={project.src} />)}
           </div>
         </section>
         <Footer />

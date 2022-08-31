@@ -52,6 +52,11 @@ class Home extends Component {
                     <span className="fa fa-circle fa-stack-2x"></span>
                     <span className="fab fa-github fa-stack-1x"></span>
                   </a>
+                  {/* eslint-disable-next-line */}
+                  <a className="fa-stack fa-2x" href="https://www.linkedin.com/in/js0mmer/" target="_blank">
+                    <span className="fa fa-circle fa-stack-2x"></span>
+                    <span className="fab fa-linkedin fa-stack-1x"></span>
+                  </a>
                 </div>
               </div>
             </div>

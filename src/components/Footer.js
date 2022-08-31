@@ -25,6 +25,14 @@ function Footer() {
                 <span className="fab fa-github fa-stack-1x"></span>
               </span>
             </a>
+            {/* eslint-disable-next-line */}
+            <a className="fa-stack fa-lg" href="https://www.linkedin.com/in/js0mmer/" target="_blank">
+              <span className="fa fa-circle fa-stack-2x"></span>
+              <span className="slide-up-effect">
+                <span className="fab fa-linkedin fa-stack-1x"></span>
+                <span className="fab fa-linkedin fa-stack-1x"></span>
+              </span>
+            </a>
           </div>
         </div>
       </div>

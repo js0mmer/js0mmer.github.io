@@ -20,7 +20,7 @@ function AppRouter() {
           <Route path="/" element={<Home />} />
           <Route path="projects" element={<Projects />} />
           <Route path="contact" element={<Contact />} />
-          <Route element={Error404} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
     </BrowserRouter>

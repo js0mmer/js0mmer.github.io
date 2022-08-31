@@ -4,12 +4,7 @@ import { Navigate } from 'react-router-dom';
 import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
-import scratch from './projects/scratch.json';
 import hangman from './projects/hangman.json';
-import projectCompound from './projects/project-compound.json';
-import aerodynamicDesign from './projects/aerodynamic-design.json';
-import eduGameDesign from './projects/edu-game-design.json';
-import magpie from './projects/magpie.json';
 import startracker from './projects/startracker.json';
 import playpic from './projects/playpic.json';
 
@@ -17,33 +12,14 @@ const PROJECTS = [
   {
     id: 'playpic',
     src: playpic
-  },{
-    id: 'startracker',
-    src: startracker
-  },
-  {
-    id: 'magpie',
-    src: magpie
-  },
-  {
-    id: 'edu-game-design',
-    src: eduGameDesign
-  },
-  {
-    id: 'aerodynamic-design',
-    src: aerodynamicDesign
-  },
-  {
-    id: 'project-compound',
-    src: projectCompound
   },
   {
     id: 'hangman',
     src: hangman
   },
   {
-    id: 'scratch',
-    src: scratch
+    id: 'startracker',
+    src: startracker
   },
 ]
 

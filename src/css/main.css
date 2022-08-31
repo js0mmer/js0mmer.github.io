@@ -613,7 +613,6 @@ footer .col-sm {
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   border: none;
   border-radius: 0.5em;
-  margin: 1rem;
   color: #212529;
 }
 

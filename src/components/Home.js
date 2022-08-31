@@ -40,7 +40,7 @@ class Home extends Component {
               <div className="container">
                 <h4 className="center">Jacob Sommer</h4>
                 <p className="center subheading">Student / Full-Stack Developer</p>
-                <p className="center">Hi, I'm Jacob. I'm a full-stack developer from the San Francisco Bay Area with 9 years of coding experience. Outside of coding, I enjoy photography, PC gaming, and watching YouTube videos. Currently, I am a first-year at UC Irvine pursuing a BS in Computer Science.</p>
+                <p className="center">Hi, I'm Jacob. I'm a full-stack developer from the San Francisco Bay Area with 9 years of coding experience. Outside of coding, I enjoy photography, PC gaming, and watching YouTube videos. Currently, I am a second-year at UC Irvine pursuing a BS in Computer Science.</p>
                 <div className="col-sm icons center">
                   {/* eslint-disable-next-line */}
                   <a className="fa-stack fa-2x" href="mailto:jacob.sommer@comcast.net" target="_blank">

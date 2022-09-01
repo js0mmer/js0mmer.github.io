@@ -57,13 +57,9 @@ class Projects extends Component {
     document.title = 'Projects | Jacob Sommer';
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  }
-
   render() {
     return (
-      <div>
+      <>
         <div className="project-transition"></div>
         <Nav active={1} />
         <Header>Projects</Header>
@@ -73,7 +69,7 @@ class Projects extends Component {
           </div>
         </section>
         <Footer />
-      </div>
+      </>
     );
   }
 }

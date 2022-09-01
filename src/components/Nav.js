@@ -48,7 +48,7 @@ const NAV_LINKS = [
     href: "/contact",
     title: "Contact"
   }
-]
+];
 
 class Nav extends Component {
   constructor(props) {

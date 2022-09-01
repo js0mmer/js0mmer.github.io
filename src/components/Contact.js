@@ -7,8 +7,9 @@ function SendBtn() {
       document.querySelector('textarea').value.length > 0 &&
       document.querySelector('input[type=email]').value.length > 0 &&
       document.querySelector('input[type=email]').value.includes("@") &&
-      document.querySelector('input[type=email]').value.split("@")[1].length > 0)
-      document.querySelector('.send-btn').classList.add('sending');
+      document.querySelector('input[type=email]').value.split("@")[1].length > 0) {
+        document.querySelector('.send-btn').classList.add('sending');
+    }
   }
 
   return <button type="submit" className="send-btn button btn-red" onClick={handleClick}>Send <span className="fa fa-paper-plane"></span></button>;
@@ -21,7 +22,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Nav active={3} />
         <div className="jumbotron full contact">
           <div className="container wrapper">
@@ -59,7 +60,7 @@ class Contact extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

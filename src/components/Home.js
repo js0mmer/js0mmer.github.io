@@ -9,8 +9,8 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <Nav active={0} transition={this.transition} />
+      <>
+        <Nav active={0} />
         <div className="jumbotron full home">
           <div className="container wrapper">
             <div className="card col-md-7">
@@ -40,7 +40,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

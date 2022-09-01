@@ -4,12 +4,11 @@ import Nav, { Link } from './Nav';
 class Error404 extends Component {
   componentDidMount() {
     document.title = '404 | Jacob Sommer';
-    document.querySelector('.transition').classList.add('out');
   }
 
   render() {
     return (
-      <div>
+      <>
         <Nav />
         <div className="jumbotron full contact">
           <div className="container wrapper">
@@ -31,7 +30,7 @@ class Error404 extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

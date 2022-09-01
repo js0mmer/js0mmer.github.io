@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
-import { Navigate } from 'react-router-dom';
 import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
@@ -55,37 +53,22 @@ class ProjectCard extends Component {
 }
 
 class Projects extends Component {
-  constructor(props) {
-    super(props);
-    this.transition = this.transition.bind(this);
-    this.state = { redirect: false }
-  }
-
   componentDidMount() {
-    ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Projects | Jacob Sommer';
-    window.scrollTo(0, 0);
-    document.querySelector('.transition').classList.add('out');
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  transition(to) {
-    setTimeout(() => { this.setState({ redirect: to }) }, 300);
-  }
-
   render() {
-    if (this.state.redirect) return <Navigate to={this.state.redirect} />;
-
     return (
       <div>
         <div className="project-transition"></div>
-        <Nav active={1} transition={this.transition} closeProject={this.closeProject} projectId={this.state.projectId} />
+        <Nav active={1} />
         <Header>Projects</Header>
         <section id="projects" className="container">
-          <div className="cards" style={this.state.projectId ? { display: 'none'} : {}}>
+          <div className="cards">
             {PROJECTS.map(project => <ProjectCard key={project.id} id={project.id} src={project.src} />)}
           </div>
         </section>

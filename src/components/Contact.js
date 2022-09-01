@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
-import { Navigate } from 'react-router-dom';
 import Nav from './Nav';
 
 function SendBtn() {
@@ -17,28 +15,14 @@ function SendBtn() {
 }
 
 class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.transition = this.transition.bind(this);
-    this.state = { redirect: false, firstLaunch: true }
-  }
-
   componentDidMount() {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-    document.title = 'Jacob Sommer | Contact';
-    document.querySelector('.transition').classList.add('out');
-  }
-
-  transition(to) {
-    setTimeout(() => { this.setState({ redirect: to }) }, 300);
+    document.title = 'Contact | Jacob Sommer';
   }
 
   render() {
-    if (this.state.redirect) return <Navigate to={this.state.redirect} />;
-
     return (
       <div>
-        <Nav active={3} transition={this.transition} />
+        <Nav active={3} />
         <div className="jumbotron full contact">
           <div className="container wrapper">
             <div className="card col-md-7">

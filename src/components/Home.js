@@ -1,35 +1,13 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
-import { Navigate } from 'react-router-dom';
 import Nav from './Nav';
 import me from '../images/me.jpg';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.transition = this.transition.bind(this);
-    this.state = { redirect: false, firstLaunch: true }
-  }
-
   componentDidMount() {
-    ReactGA.pageview(window.location.pathname + window.location.search);
     document.title = 'Jacob Sommer';
-
-    if (sessionStorage.getItem('firstLaunch') != null) {
-      this.setState({ firstLaunch: false });
-    } else {
-      sessionStorage.setItem('firstLaunch', 'true');
-    }
-    document.querySelector('.transition').classList.add('out');
-  }
-
-  transition(to) {
-    setTimeout(() => { this.setState({ redirect: to }) }, 300);
   }
 
   render() {
-    if (this.state.redirect) return <Navigate push to={this.state.redirect} />;
-
     return (
       <div>
         <Nav active={0} transition={this.transition} />

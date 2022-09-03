@@ -40,7 +40,7 @@ const NAV_LINKS = [
     title: "Projects"
   },
   {
-    href: "/resume.pdf",
+    href: "/Resume.pdf",
     title: "Resume",
     external: true
   },

@@ -18,7 +18,7 @@ class Home extends Component {
               <div className="container">
                 <h4 className="center">Jacob Sommer</h4>
                 <p className="center subheading">Student / Full-Stack Developer</p>
-                <p className="center">Hi, I'm Jacob. I'm a full-stack developer from the San Francisco Bay Area with 9 years of coding experience. Outside of coding, I enjoy photography, PC gaming, and watching YouTube videos. Currently, I am a second-year at UC Irvine pursuing a BS in Computer Science.</p>
+                <p className="center">Hi, I'm Jacob! I'm a second-year at UC Irvine pursuing a BS in Computer Science. I've had a passion for technology ever since I was a child, first learning how to code at 11 years old by developing mods for Minecraft. Since then, I've learned many different programming languages and technologies through the hobby projects and school projects I've worked on over the past 9 years. Aside from coding, my other hobbies include photography, playing video games, building computers, and recently, playing the guitar. I am always eager to learn!</p>
                 <div className="col-sm icons center">
                   {/* eslint-disable-next-line */}
                   <a className="fa-stack fa-2x" href="mailto:jacob.sommer@comcast.net" target="_blank">

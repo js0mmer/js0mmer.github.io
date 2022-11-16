@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nav, { Link } from './Nav';
+import Nav, { Link } from '../components/Nav';
 
 class Error404 extends Component {
   componentDidMount() {

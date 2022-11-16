@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Nav from './Nav';
-import Header from './Header';
-import Footer from './Footer';
+import Nav from '../components/Nav';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import hangman from './projects/hangman.json';
 import startracker from './projects/startracker.json';
 import playpic from './projects/playpic.json';

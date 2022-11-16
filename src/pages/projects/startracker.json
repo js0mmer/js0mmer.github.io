@@ -6,7 +6,8 @@
   "links": [
     {
       "icon": "fas fa-external-link-alt",
-      "href": "https://github.com/js0mmer/startracker"
+      "href": "https://github.com/js0mmer/startracker",
+      "label": "github repository"
     }
   ]
 }

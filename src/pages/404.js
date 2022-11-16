@@ -14,8 +14,8 @@ class Error404 extends Component {
           <div className="container wrapper">
             <div class="card col-md-7">
               <div className="container">
-                <h4>Whoops!</h4>
-                <p className="subheading">We couldn't find that page</p>
+                <h1>Whoops!</h1>
+                <p>We couldn't find that page</p>
                 <Link className="animated-arrow" to="/" title="Home">
                   <span className="arrow">
                     <span className="shaft"></span>

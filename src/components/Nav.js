@@ -93,9 +93,9 @@ class Nav extends Component {
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            <img src="./favicon.png" width="30" height="30" className="d-inline-block align-top" alt="JS" />
+            <img src="./favicon.png" width="30" height="30" className="d-inline-block align-top" alt="home" />
           </Link>
-          <button className="nav-toggle" onClick={this.toggleNav}>
+          <button className="nav-toggle" onClick={this.toggleNav} aria-label="menu">
             <span className="icon"></span>
           </button>
           <div className="pull-right collapse navbar-collapse d-flex flex-row-reverse">

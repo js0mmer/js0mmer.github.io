@@ -16,22 +16,22 @@ class Home extends Component {
             <div className="card col-md-7">
               <img className="profile-picture center" src={me} alt="Me" />
               <div className="container">
-                <h4 className="center">Jacob Sommer</h4>
-                <p className="center subheading">Student / Full-Stack Developer</p>
+                <h1 className="center">Jacob Sommer</h1>
+                <h2 className="center">Student / Software Developer</h2>
                 <p className="center">Hi, I'm Jacob! I'm a second-year at UC Irvine pursuing a BS in Computer Science. I've had a passion for technology ever since I was a child, first learning how to code at 11 years old by developing mods for Minecraft. Since then, I've learned many different programming languages and technologies through the hobby projects and school projects I've worked on over the past 9 years. Aside from coding, my other hobbies include photography, playing video games, building computers, and recently, playing the guitar. I am always eager to learn!</p>
                 <div className="col-sm icons center">
                   {/* eslint-disable-next-line */}
-                  <a className="fa-stack fa-2x" href="mailto:jacob.sommer@comcast.net" target="_blank">
+                  <a className="fa-stack fa-2x" href="mailto:jacob.sommer@comcast.net" target="_blank" aria-label="email">
                     <span className="fa fa-circle fa-stack-2x"></span>
                     <span className="fa fa-envelope fa-stack-1x"></span>
                   </a>
                   {/* eslint-disable-next-line */}
-                  <a className="fa-stack fa-2x" href="https://github.com/js0mmer" target="_blank">
+                  <a className="fa-stack fa-2x" href="https://github.com/js0mmer" target="_blank" aria-label="github">
                     <span className="fa fa-circle fa-stack-2x"></span>
                     <span className="fab fa-github fa-stack-1x"></span>
                   </a>
                   {/* eslint-disable-next-line */}
-                  <a className="fa-stack fa-2x" href="https://www.linkedin.com/in/js0mmer/" target="_blank">
+                  <a className="fa-stack fa-2x" href="https://www.linkedin.com/in/js0mmer/" target="_blank" aria-label="linkedin">
                     <span className="fa fa-circle fa-stack-2x"></span>
                     <span className="fab fa-linkedin fa-stack-1x"></span>
                   </a>

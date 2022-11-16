@@ -1,4 +1,4 @@
-/* =========  */
+/* ========== */
 /* TYPOGRAPHY */
 /* ========== */
 
@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5 {
 }
 
 body {
-  font-family: 'Manrope', 'sans-serif';
+  font-family: 'Manrope', sans-serif;
 }
 
 p {
@@ -30,6 +30,12 @@ p {
 html, body {
   overflow-x: hidden;
   max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  user-select: none;
 }
 
 .center {
@@ -78,23 +84,6 @@ html, body {
   text-decoration: none;
 }
 
-/* ====== */
-/* IMAGES */
-/* ====== */
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  user-select: none;
-}
-
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  position: relative;
-  top: -75px;
-}
 
 /* ========== */
 /* NAV BUTTON */
@@ -254,7 +243,7 @@ img {
 }
 
 /* ======= */
-/* BANNERS */
+/* HEADERS */
 /* ======= */
 
 header {
@@ -292,11 +281,15 @@ header::after {
   border-bottom: 5vw solid white;
 }
 
+/* =================== */
+/* FULL PAGE JUMBOTRON */
+/* =================== */
+
 .full {
   background-image: url("../images/banner-red.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   display: flex;
   place-items: center;
@@ -307,23 +300,9 @@ header::after {
   justify-content: center;
 }
 
-.contact .card .container {
-  margin: 3em auto;
-}
-
-.contact h4 {
-  margin-bottom: 1em;
-}
-
-.home .card .container {
-  position: relative;
-  top: -55px;
-}
-
 .full h1 {
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: 1px 1px 5px #212529;
 }
 
 @media only screen and (min-width: 768px) {
@@ -332,69 +311,50 @@ header::after {
   }
 }
 
-.full h4 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 3px;
-}
-
-.full .subheading {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
 .jumbotron {
   border-radius: 0;
 }
 
-/* ============= */
-/* SMALL BANNERS */
-/* ============= */
+/* ========= */
+/* HOME PAGE */
+/* ========= */
 
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
+.home h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  text-shadow: none;
 }
 
-.small-banner {
+.home h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.home .card .container {
   position: relative;
-  height: 25vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  top: -55px;
 }
 
-.small-banner h2 {
-  margin-bottom: 0;
-  user-select: none;
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  position: relative;
+  top: -75px;
 }
 
-.small-banner::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  border-top: 5vw solid white;
-  border-right: 100vw solid transparent;
-}
-
-.small-banner::after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  border-left: 100vw solid transparent;
-  border-bottom: 5vw solid white;
-}
-
-@media only screen and (max-width: 767px) {
-  .small-banner {
-    height: 30vh;
+@media only screen and (max-width: 465px) {
+  .home .wrapper {
+    margin-top: 100px;
   }
 }
 
@@ -480,10 +440,14 @@ header::after {
 /* FORMS */
 /* ===== */
 
+form div {
+  width: 100%;
+}
+
 input, textarea {
   display: block;
   padding: 5px;
-  width: 300px;
+  width: 100%;
   border: none;
   border-bottom: 1px solid #757575;
   max-width: 100%;
@@ -557,10 +521,6 @@ footer .col-sm {
   color: #212529;
 }
 
-/* .fab.fa-linkedin {
-  color: #0077B5;
-} */
-
 .fa-stack  {
   overflow: hidden;
   clip-path: circle(1em);
@@ -598,6 +558,20 @@ footer .col-sm {
 /* CONTACT PAGE */
 /* ============ */
 
+.contact h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-shadow: none;
+  margin-bottom: 1em;
+}
+
+.contact .card .container {
+  margin: 3em auto;
+}
+
 .contact .fa, .contact .fab {
   margin-right: 2px;
 }
@@ -618,6 +592,10 @@ footer .col-sm {
   border: none;
   border-radius: 0.5em;
   color: #212529;
+}
+
+.card.project h2 {
+  font-size: 1.5rem;
 }
 
 .card.project {
@@ -656,19 +634,6 @@ footer .col-sm {
   text-decoration: none;
   color: #212529;
   transform: translateY(-1px);
-}
-
-.card-body {
-  padding: 1em 1.25em;
-}
-
-.card-img-top {
-  border-top-left-radius: calc(.5rem - 1px);
-  border-top-right-radius: calc(.5rem - 1px);
-}
-
-.card-title {
-  margin-bottom: 0.25em;
 }
 
 /* ============== */

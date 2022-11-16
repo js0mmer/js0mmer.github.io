@@ -28,27 +28,30 @@ class Contact extends Component {
           <div className="container wrapper">
             <div className="card col-md-7">
               <div className="container">
-                <h4 className="center">Let's get in touch</h4>
+                <h1 className="center">Let's get in touch</h1>
                 <div className="row">
                   <div className="col-md-6">
                     { /* eslint-disable-next-line */ }
-                    <p><a className="fa fa-envelope fa-lg" href="mailto:jacob.sommer@comcast.net" target="_blank"></a> jacob.sommer@comcast.net</p>
+                    <p><a className="fa fa-envelope fa-lg" href="mailto:jacob.sommer@comcast.net" target="_blank" aria-label="email"></a> jacob.sommer@comcast.net</p>
                     { /* eslint-disable-next-line */ }
-                    <p><a className="fab fa-github fa-lg" href="https://github.com/js0mmer" target="_blank"></a> js0mmer</p>
+                    <p><a className="fab fa-github fa-lg" href="https://github.com/js0mmer" target="_blank" aria-label="github"></a> js0mmer</p>
                     { /* eslint-disable-next-line */ }
-                    <p><a className="fab fa-linkedin fa-lg" href="https://www.linkedin.com/in/js0mmer" target="_blank"></a> js0mmer</p>
+                    <p><a className="fab fa-linkedin fa-lg" href="https://www.linkedin.com/in/js0mmer" target="_blank" aria-label="linkedin"></a> js0mmer</p>
                   </div>
                   <div className="col-md-6">
                     <form className="flex-center" action="https://formspree.io/jacob.sommer@comcast.net" method="POST">
                       <div>
+                        <label for="name" class="sr-only">Your name</label>
                         <input type="text" name="Name" placeholder="Your name" required />
                         <span className="underline"></span>
                       </div>
                       <div>
+                        <label for="email" class="sr-only">Your email</label>
                         <input type="email" name="Mail" placeholder="Your email" required />
                         <span className="underline"></span>
                       </div>
                       <div>
+                        <label for="message" class="sr-only">Your message</label>
                         <textarea name="Message" placeholder="Your message" required></textarea>
                         <span className="underline"></span>
                       </div>

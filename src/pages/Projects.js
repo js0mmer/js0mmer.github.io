@@ -33,21 +33,21 @@ class ProjectCard extends Component {
 
   render() {
     return (
-      <div className="card project container">
+      <article className="card project container">
         <div className="row">
           <div className="col-xl-6">
-            <h4>{this.props.src.title}</h4>
-            <p className="subheading">{this.props.src.date}</p>
+            <h2>{this.props.src.title}</h2>
+            <p>{this.props.src.date}</p>
             <p ref={this.content} />
             {this.props.src.links ? /* eslint-disable-next-line */
-              <p>{this.props.src.links.map(item => <a key={this.props.id} className={`${item.icon} fa-lg`} href={item.href} target="_blank"></a>)}</p>
+              <p>{this.props.src.links.map(item => <a key={this.props.id} className={`${item.icon} fa-lg`} href={item.href} target="_blank" aria-label={item.label}></a>)}</p>
             : null }
           </div>
           <div className="col-xl-6">
             <img src={`/images/${this.props.id}.${this.props.src.imgType}`} alt={this.props.src.title} />
           </div>
         </div>
-      </div>
+      </article>
     );
   }
 }
@@ -63,11 +63,11 @@ class Projects extends Component {
         <div className="project-transition"></div>
         <Nav active={1} />
         <Header>Projects</Header>
-        <section id="projects" className="container">
+        <main id="projects" className="container">
           <div className="cards">
             {PROJECTS.map(project => <ProjectCard key={project.id} id={project.id} src={project.src} />)}
           </div>
-        </section>
+        </main>
         <Footer />
       </>
     );

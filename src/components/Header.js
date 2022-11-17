@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-
-export default class Header extends Component {
-  render() {
+function Header({ children }) {
     return (
       <header className="jumbotron">
-        <h1>{this.props.children}</h1>
+        <h1>{children}</h1>
       </header>
     );
-  }
 };
+
+export default Header;

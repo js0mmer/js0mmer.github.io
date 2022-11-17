@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Nav, { Link } from '../components/Nav';
 
 class Error404 extends Component {

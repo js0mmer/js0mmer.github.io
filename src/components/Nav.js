@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const TRANSITION_TIME = 300; // ms

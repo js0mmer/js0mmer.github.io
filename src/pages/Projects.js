@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -34,7 +34,6 @@ class Projects extends Component {
   render() {
     return (
       <>
-        <div className="project-transition"></div>
         <Nav active={1} />
         <Header>Projects</Header>
         <main id="projects" className="container">

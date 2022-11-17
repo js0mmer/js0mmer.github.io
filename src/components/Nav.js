@@ -103,7 +103,7 @@ class Nav extends Component {
               {NAV_LINKS.map(link => 
                 <li key={link.href} className={'nav-item' + (this.isActive(link) ? ' active' : '')}>
                   {link.external ? 
-                    <a active={this.isActive(link)} className="nav-link" href={link.href} target="_blank" rel="noreferrer">{link.title}</a>
+                    <a className="nav-link" href={link.href} target="_blank" rel="noreferrer">{link.title}</a>
                   : 
                     <Link active={this.isActive(link)} className="nav-link" to={link.href} title={link.title}>{link.title}</Link>
                   }

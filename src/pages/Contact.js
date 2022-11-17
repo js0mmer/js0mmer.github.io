@@ -41,17 +41,17 @@ class Contact extends Component {
                   <div className="col-md-6">
                     <form className="flex-center" action="https://formspree.io/jacob.sommer@comcast.net" method="POST">
                       <div>
-                        <label for="name" class="sr-only">Your name</label>
+                        <label htmlFor="name" className="sr-only">Your name</label>
                         <input type="text" name="Name" placeholder="Your name" required />
                         <span className="underline"></span>
                       </div>
                       <div>
-                        <label for="email" class="sr-only">Your email</label>
+                        <label htmlFor="email" className="sr-only">Your email</label>
                         <input type="email" name="Mail" placeholder="Your email" required />
                         <span className="underline"></span>
                       </div>
                       <div>
-                        <label for="message" class="sr-only">Your message</label>
+                        <label htmlFor="message" className="sr-only">Your message</label>
                         <textarea name="Message" placeholder="Your message" required></textarea>
                         <span className="underline"></span>
                       </div>

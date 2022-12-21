@@ -44,29 +44,11 @@ img {
   margin-right: auto;
 }
 
-.flex-center {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.transition {
-  position: fixed;
-  top: -50px;
-  bottom: auto;
-  width: 100%;
-  height: calc(100vh + 100px);
-  background: white;
-  z-index: 20;
-  transform: skewY(-3deg);
-  transition: 0.5s;
-}
-
-.transition.out {
-  top: auto;
-  bottom: -50px;
-  height: 0;
-}
+body {
+  background-image: url("../images/banner-red-large-repeating.svg");
+  background-size: 100%;
+  background-repeat: repeat-y;
+ }
 
 /* ===== */
 /* LINKS */
@@ -248,49 +230,37 @@ img {
 
 header {
   position: relative;
-  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../images/banner-red.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   color: white;
-  text-shadow: 1px 1px 2px #eee;
   text-transform: uppercase;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+header h1 {
+  letter-spacing: 3px;
 }
 
 @media only screen and (min-width: 768px) {
-  header {
-    height: 50vh;
-  }
-
   header h1 {
     font-size: 3.5rem;
   }
+
+  header {
+    padding: 5em;
+    margin-top: 0em;
+  }
 }
 
-header::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  content: '';
-  border-left: 100vw solid transparent;
-  border-bottom: 5vw solid white;
-}
 
-/* =================== */
-/* FULL PAGE JUMBOTRON */
-/* =================== */
+/* ============= */
+/* FULL PAGE DIV */
+/* ============= */
 
 .full {
-  background-image: url("../images/banner-red.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height: 100vh;
-  margin: 0;
   display: flex;
   place-items: center;
 }
@@ -300,28 +270,16 @@ header::after {
   justify-content: center;
 }
 
-.full h1 {
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-@media only screen and (min-width: 768px) {
-  .full h1 {
-    font-size: 3.5rem;
-  }
-}
-
-.jumbotron {
-  border-radius: 0;
-}
-
 /* ========= */
 /* HOME PAGE */
 /* ========= */
 
-.home h1 {
+.home h1, .home h2 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+}
+
+.home h1 {
   font-weight: 600;
   letter-spacing: 3px;
   font-size: 1.5rem;
@@ -329,8 +287,6 @@ header::after {
 }
 
 .home h2 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
   color: #666;
@@ -358,125 +314,24 @@ header::after {
   }
 }
 
-/* ======= */
-/* BUTTONS */
-/* ======= */
-
-.btn-red {
-  border: 3px solid #ff3a3a;
-  color: #ff3a3a
-}
-
-.btn-red::after {
-  background: #ff3a3a;
-}
-
-.btn-red:hover, .btn-red:focus {
-  color: white;
-}
-
-.button {
-  margin-top: 10px;
-  padding: 10px 18px;
-  font-size: 11px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  line-height: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: 0.3s;
-  box-sizing: content-box;
-  border-radius: 25px;
-  background: none;
-  cursor: pointer;
-  position: relative;
-  user-select: none;
-  z-index: 1;
-}
-
-.button::after {
+.home .fa-chevron-down {
   position: absolute;
-  transition: 0.3s;
-  content: '';
-  width: 0;
-  height: 120%;
-  left: -10%;
-  bottom: -1px;
-  transform: skewX(15deg);
-  z-index: -1;
-}
-
-.button:hover, .button:focus {
-  text-decoration: none;
-  outline: none;
-}
-
-.button:hover::after, .button:focus::after {
-  width: 120%;
-}
-
-.send-btn {
-  width: 75px;
-}
-
-.sending {
-  width: 20px;
-  padding-left: 0;
-  padding-right: 0;
-  border-color: #bbb;
-  border-width: 3px;
-  font-size: 0;
-  border-left-color: #ff3a3a;
-  animation: rotate 2s 0.25s linear infinite;
-}
-
-.sending::after {
-  background: white;
-}
-
-/* ===== */
-/* FORMS */
-/* ===== */
-
-form div {
-  width: 100%;
-}
-
-input, textarea {
-  display: block;
-  padding: 5px;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #757575;
-  max-width: 100%;
-  outline: none;
-  color: #666;
-}
-
-textarea {
-  min-height: 60px;
-  max-height: 40vh;
-  resize: vertical;
-}
-
-input:focus ~ .underline, textarea:focus ~ .underline {
-  width: 100%;
-  left: 0;
-}
-
-.underline {
-  display: block;
-  position: relative;
-  margin-bottom: 10px;
-  width: 0;
-  max-width: 100%;
-  height: 2px;
-  margin-top: -2px;
-  background: #ff3a3a;
-  transition: 0.3s;
+  bottom: 2.5em;
   left: 50%;
+  transform: translateX(-50%);
+  animation: 1.5s linear 0s infinite alternate bounce;
+  transition: all 0.5s ease-in-out;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-50%) translateY(-0.5em);
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* ====== */
@@ -484,10 +339,8 @@ input:focus ~ .underline, textarea:focus ~ .underline {
 /* ====== */
 
 footer {
-  background: #ff3a3a;
   padding-top: 28px;
   padding-bottom: 20px;
-  margin-top: 20px;
 }
 
 footer p {
@@ -513,7 +366,11 @@ footer .col-sm {
   }
 }
 
-.fa-heart, .fa-circle {
+.fa-heart {
+  color: white;
+}
+
+.fa-circle {
   color: white;
 }
 
@@ -542,45 +399,6 @@ footer .col-sm {
   transform: translateY(0%);
 }
 
-/* ========== */
-/* ANIMATIONS */
-/* ========== */
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  } to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ============ */
-/* CONTACT PAGE */
-/* ============ */
-
-.contact h1 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.5rem;
-  letter-spacing: 3px;
-  text-shadow: none;
-  margin-bottom: 1em;
-}
-
-.contact .card .container {
-  margin: 3em auto;
-}
-
-.contact .fa, .contact .fab {
-  margin-right: 2px;
-}
-
-.contact .fa:hover, .contact .fab:hover {
-  color: #212529;
-  text-decoration: none;
-}
-
 /* ===== */
 /* CARDS */
 /* ===== */
@@ -592,6 +410,10 @@ footer .col-sm {
   border: none;
   border-radius: 0.5em;
   color: #212529;
+}
+
+.card.project {
+  margin-bottom: 4em;
 }
 
 .card.project h2 {
@@ -634,81 +456,4 @@ footer .col-sm {
   text-decoration: none;
   color: #212529;
   transform: translateY(-1px);
-}
-
-/* ============== */
-/* ANIMATED ARROW */
-/* ============== */
-
-.animated-arrow {
-  position: relative;
-  display: inline-block;
-  color: #ff3a3a;
-  font-size: 1.25em;
-  text-decoration: none !important;
-  transition: all 0.2s;
-  margin: 3em 0 0 0;
-}
-
-.animated-arrow > .main {
-  display: flex;
-  align-items: center;
-  transition: all 0.2s;
-  transform: translateX(40px);
-}
-
-.animated-arrow > .main > .text {
-  margin: 0 16px 0 0;
-  line-height: 1;
-}
-
-.animated-arrow:hover {
-  color: #ff3a3a;
-}
-
-.animated-arrow:hover > .arrow > .shaft {
-  width: 64px;
-}
-
-.animated-arrow:hover > .main {
-  transform: translateX(80px);
-}
-
-.arrow {
-  position: absolute;
-  top: 60%;
-  left: 0;
-  width: 64px;
-  transition: all 0.2s;
-}
-
-.arrow > .shaft {
-  position: relative;
-  display: block;
-  height: 1px;
-  width: 30px;
-  background-color: #ff3a3a;
-  transition: all 0.2s;
-}
-
-.arrow > .shaft:before, .arrow > .shaft:after {
-  position: absolute;
-  display: block;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 1px;
-  background-color: #ff3a3a;
-  transition: all 0.2s;
-}
-
-.arrow > .shaft:before {
-  transform-origin: top left;
-  transform: rotate(40deg);
-}
-
-.arrow > .shaft:after {
-  transform-origin: bottom left;
-  transform: rotate(-40deg);
 }

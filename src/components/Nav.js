@@ -51,8 +51,7 @@ class Nav extends Component {
     return (
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          {/* eslint-disable-next-line */}
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, left: 0, behavior: 'smooth'}) }} href="/">
             <img src="./favicon.png" width="30" height="30" className="d-inline-block align-top" alt="home" />
           </a>
           <button className="nav-toggle" onClick={this.toggleNav} aria-label="menu">

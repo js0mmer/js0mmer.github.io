@@ -3,6 +3,7 @@ import ReactGA from 'react-ga';
 import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { ThemeContext } from './theme-context';
 import me from './images/me.jpg';
 
 // 1 = fixed
@@ -29,9 +30,23 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
+  // dark theme
+  const darkPref = localStorage.getItem('theme') ? localStorage.getItem('theme') === 'true' : window.matchMedia("(prefers-color-scheme: dark)").matches; // use stored pref or system pref by default
+  const [darkMode, setDarkMode] = useState(darkPref);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.querySelector('body').classList.add('dark');
+    } else {
+      document.querySelector('body').classList.remove('dark');
+    }
+
+    localStorage.setItem('theme', darkMode ? 'true' : 'false');
+  }, [darkMode])
+
   return (
-    <>
-      <Nav active={0} />
+    <ThemeContext.Provider value={{ theme: darkMode, toggleTheme: () => setDarkMode(!darkMode) }}>
+      <Nav />
       <div id="about" className="full home">
         <div className="container wrapper">
           <div className="card col-md-7">
@@ -43,12 +58,10 @@ function App() {
               <div className="col-sm icons center">
                 {/* eslint-disable-next-line */}
                 <a className="fa-stack fa-2x" href="https://github.com/js0mmer" target="_blank" aria-label="github">
-                  <span className="fa fa-circle fa-stack-2x"></span>
                   <span className="fab fa-github fa-stack-1x"></span>
                 </a>
                 {/* eslint-disable-next-line */}
                 <a className="fa-stack fa-2x" href="https://www.linkedin.com/in/js0mmer/" target="_blank" aria-label="linkedin">
-                  <span className="fa fa-circle fa-stack-2x"></span>
                   <span className="fab fa-linkedin fa-stack-1x"></span>
                 </a>
               </div>
@@ -59,7 +72,7 @@ function App() {
       </div>
       <Projects />
       <Footer />
-    </>
+    </ThemeContext.Provider>
   );
 }
 

@@ -4,6 +4,7 @@ import ReactGA from 'react-ga';
 import App from './App';
 import './css/bootstrap.min.css';
 import './css/main.css';
+import './css/dark-theme.css';
 import './css/all.min.css';
 
 ReactGA.initialize('UA-133013455-2');

@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { themes, ThemeContext } from '../theme-context';
 
 export function Link({href, children}) {
   function handleClick(e) {
@@ -35,9 +36,9 @@ class Nav extends Component {
 
   handleScroll() {
     if (document.documentElement.scrollTop > 0) {
-      document.querySelector('.navbar').classList.add('navbar-white');
+      document.querySelector('.navbar').classList.add('navbar-opaque');
     } else {
-      document.querySelector('.navbar').classList.remove('navbar-white');
+      document.querySelector('.navbar').classList.remove('navbar-opaque');
     }
   }
 
@@ -49,23 +50,30 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg">
-        <div className="container">
-          <a className="navbar-brand" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, left: 0, behavior: 'smooth'}) }} href="/">
-            <img src="./favicon.png" width="30" height="30" className="d-inline-block align-top" alt="home" />
-          </a>
-          <button className="nav-toggle" onClick={this.toggleNav} aria-label="menu">
-            <span className="icon"></span>
-          </button>
-          <div className="pull-right collapse navbar-collapse d-flex flex-row-reverse">
-            <ul className="navbar-nav">
-              <Link href="#about">About</Link>
-              <Link href="#projects">Projects</Link>
-              <Link href="resume.pdf">Resume</Link>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <ThemeContext.Consumer>
+        {({theme, toggleTheme}) => (
+          <nav className="navbar navbar-expand-lg">
+            <div className="container">
+              <a className="navbar-brand" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, left: 0, behavior: 'smooth'}) }} href="/">
+                <img src={theme === themes.light ? './favicon.png' : './favicon-white.png' } width="30" height="30" className="d-inline-block align-top" alt="home" />
+              </a>
+              <button className="nav-toggle" onClick={this.toggleNav} aria-label="menu">
+                <span className="icon"></span>
+              </button>
+              <div className="pull-right collapse navbar-collapse d-flex flex-row-reverse">
+                <ul className="navbar-nav">
+                  <Link href="#about">About</Link>
+                  <Link href="#projects">Projects</Link>
+                  <Link href="resume.pdf">Resume</Link>
+                  <li className="nav-item theme-toggle">
+                    <span className={'fa fa-lg ' + (theme === themes.light ? 'fa-sun' : 'fa-moon')} onClick={toggleTheme}></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }

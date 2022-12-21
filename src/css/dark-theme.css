@@ -1,0 +1,88 @@
+:root {
+  --white-primary: #e1e1e1;
+  --white-secondary: #e3e3e3;
+  --gray-primary: #121212;
+  --gray-secondary: #1e1e1e;
+}
+
+/* ==== */
+/* TEXT */
+/* ==== */
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5 {
+  color: var(--white-primary);
+}
+
+.dark p {
+  color: var(--white-secondary);
+}
+
+/* ======= */
+/* GENERAL */
+/* ======= */
+
+body.dark {
+  background-image: url('../images/banner-dark-large-repeating.svg');
+}
+
+/* === */
+/* NAV */
+/* === */
+
+.dark .nav-item a:hover, .dark .nav-item.theme-toggle span:hover {
+  color: #ff3a3a;
+}
+
+.dark .navbar-opaque {
+  background: var(--gray-secondary);
+  box-shadow: 0 1px 10px #0f0f0f;
+}
+
+.dark .navbar-expanded {
+  background: var(--gray-secondary);
+}
+
+.dark .icon, .dark .navbar .icon::before, .dark .navbar .icon::after {
+  background: var(--white-primary);
+}
+
+.dark .navbar .nav-link, .dark .nav-item.theme-toggle {
+  color: var(--white-primary);
+}
+
+
+/* ========= */
+/* HOME PAGE */
+/* ========= */
+
+.dark .home h2 {
+  color: #aaa;
+}
+
+.dark .home .fa-github, .dark .home .fa-linkedin {
+  color: var(--white-primary);
+}
+
+/* ===== */
+/* CARDS */
+/* ===== */
+
+.dark .card {
+  background: var(--gray-secondary);
+}
+
+.dark .card.project .fa-lg:hover {
+  color: #ff3a3a;
+}
+
+.dark .card.project .fa-lg {
+  color: var(--white-primary);
+}
+
+/* ====== */
+/* FOOTER */
+/* ====== */
+
+.dark footer p, .dark .fa-heart {
+  color: var(--white-primary);
+}

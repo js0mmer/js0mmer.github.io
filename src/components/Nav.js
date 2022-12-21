@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { themes, ThemeContext } from '../theme-context';
 
-export function Link({href, children}) {
+function Link({href, children}) {
   function handleClick(e) {
     e.preventDefault();
     document.querySelector(href).scrollIntoView({ behavior: 'smooth' });

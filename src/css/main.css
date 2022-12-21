@@ -327,7 +327,7 @@ header h1 {
 
 .home .fa-chevron-down {
   position: absolute;
-  bottom: 2.5em;
+  bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
   animation: 1.5s linear 0s infinite alternate bounce;

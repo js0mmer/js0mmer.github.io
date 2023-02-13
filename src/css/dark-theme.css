@@ -23,6 +23,7 @@
 
 body.dark {
   background-image: url('../images/banner-dark-large-repeating.svg');
+  background-color: #121212;
 }
 
 /* === */

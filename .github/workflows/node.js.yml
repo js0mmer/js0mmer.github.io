@@ -48,4 +48,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy GitHub Pages site
+        id: deployment
         uses: actions/deploy-pages@v1.2.4

@@ -10,25 +10,27 @@ import me from './images/me.jpg';
 const PARALLAX_AMOUNT = 4;
 
 function App() {
-  // google analytics
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
   // background parallax
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
-    const onScroll = e => {
-      setScrollTop(e.target.documentElement.scrollTop);
+    // google analytics
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
-      document.querySelector('body').style.backgroundPositionY = scrollTop / PARALLAX_AMOUNT + 'px';
+    // background parallax scroll listener
+    const onScroll = e => {
+      setScrollTop(window.scrollY);
     };
 
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
+  }, []);
+
+  // background parallax
+  useEffect(() => {
+      document.querySelector('body').style.backgroundPositionY = -scrollTop / PARALLAX_AMOUNT + 'px';
+  }, [scrollTop])
 
   // dark theme
   const darkPref = localStorage.getItem('theme') ? localStorage.getItem('theme') === 'true' : window.matchMedia("(prefers-color-scheme: dark)").matches; // use stored pref or system pref by default

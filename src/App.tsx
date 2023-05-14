@@ -9,7 +9,7 @@ import me from './images/me.jpg';
 // 1 = fixed
 const PARALLAX_AMOUNT = 4;
 
-function App() {
+const App = () => {
   // background parallax
   const [scrollTop, setScrollTop] = useState(0);
 
@@ -18,7 +18,7 @@ function App() {
     ReactGA.pageview(window.location.pathname + window.location.search);
 
     // background parallax scroll listener
-    const onScroll = e => {
+    const onScroll = (e: Event) => {
       setScrollTop(window.scrollY);
     };
 
@@ -29,7 +29,7 @@ function App() {
 
   // background parallax
   useEffect(() => {
-      document.querySelector('body').style.backgroundPositionY = -scrollTop / PARALLAX_AMOUNT + 'px';
+      document.querySelector('body')!.style.backgroundPositionY = -scrollTop / PARALLAX_AMOUNT + 'px';
   }, [scrollTop])
 
   // dark theme
@@ -38,9 +38,9 @@ function App() {
 
   useEffect(() => {
     if (darkMode) {
-      document.querySelector('body').classList.add('dark');
+      document.querySelector('body')!.classList.add('dark');
     } else {
-      document.querySelector('body').classList.remove('dark');
+      document.querySelector('body')!.classList.remove('dark');
     }
 
     localStorage.setItem('theme', darkMode ? 'true' : 'false');
@@ -70,7 +70,7 @@ function App() {
             </div>
           </div>
         </div>
-        <span className="fa fa-chevron-down fa-2x" aria-hidden="true" onClick={() => document.querySelector('#projects').scrollIntoView({ behavior: 'smooth'})}></span>
+        <span className="fa fa-chevron-down fa-2x" aria-hidden="true" onClick={() => document.querySelector('#projects')!.scrollIntoView({ behavior: 'smooth'})}></span>
       </div>
       <Projects />
       <Footer />

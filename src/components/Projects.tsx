@@ -2,7 +2,19 @@ import playpicImg from '../images/playpic.png';
 import hangmanImg from '../images/hangman.png';
 import startrackerImg from '../images/startracker.jpg';
 
-function Project({ title, date, img, content, links }) {
+type ProjectProps = {
+  title: string;
+  date: string;
+  img: string;
+  content: string;
+  links: {
+    icon: string;
+    href: string;
+    label: string
+  }[];
+};
+
+const Project = ({ title, date, img, content, links }: ProjectProps) => {
   return (
     <article className="card project container">
       <div className="row">
@@ -10,7 +22,7 @@ function Project({ title, date, img, content, links }) {
           <h2>{title}</h2>
           <p>{date}</p>
           <p>{content}</p>
-          {links ? /* eslint-disable-next-line */
+          {links ? // eslint-disable-next-line
             <p>{links.map(link => <a key={link.href} className={`${link.icon} fa-lg`} href={link.href} target="_blank" aria-label={link.label}></a>)}</p>
           : null }
         </div>
@@ -22,7 +34,7 @@ function Project({ title, date, img, content, links }) {
   );
 }
 
-function Projects () {
+const Projects = () => {
   return (
     <div id="projects" className="container">
       <header>
@@ -35,9 +47,9 @@ function Projects () {
         content="A website that creates a Spotify playlist that matches the mood of the image you upload."
         links={[
           {
-            "icon": "fas fa-external-link-alt",
-            "href": "https://devpost.com/software/hackuci-jwe3al",
-            "label": "devpost"
+            icon: "fas fa-external-link-alt",
+            href: "https://devpost.com/software/hackuci-jwe3al",
+            label: "devpost"
           }
         ]}
       />
@@ -48,9 +60,9 @@ function Projects () {
         content="An online multiplayer game of hangman. Written using React + Socket.IO."
         links={[
           {
-            "icon": "fas fa-external-link-alt",
-            "href": "https://github.com/js0mmer/hangman",
-            "label": "github repository"
+            icon: "fas fa-external-link-alt",
+            href: "https://github.com/js0mmer/hangman",
+            label: "github repository"
           }
         ]}
       />
@@ -61,9 +73,9 @@ function Projects () {
         content="A barn door star tracker enabling you to take longer exposures of the night sky and capture deep sky objects with a DSLR. Runs on a Raspberry Pi connected to a WiFi network, controlled from the Blynk app."
         links={[
           {
-            "icon": "fas fa-external-link-alt",
-            "href": "https://github.com/js0mmer/startracker",
-            "label": "github repository"
+            icon: "fas fa-external-link-alt",
+            href: "https://github.com/js0mmer/startracker",
+            label: "github repository"
           }
         ]}
       />

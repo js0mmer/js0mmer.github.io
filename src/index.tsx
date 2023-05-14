@@ -8,7 +8,9 @@ import './css/dark-theme.css';
 import './css/all.min.css';
 
 ReactGA.initialize('UA-133013455-2');
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <App />
-); 
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

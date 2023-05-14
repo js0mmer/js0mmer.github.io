@@ -1,12 +1,17 @@
-import { Component } from 'react';
+import { Component, MouseEvent } from 'react';
 import { themes, ThemeContext } from '../theme-context';
 
-function Link({href, children}) {
-  function handleClick(e) {
+type LinkProps = {
+  href: string;
+  children?: React.ReactNode;
+};
+
+const Link = ({ href, children }: LinkProps) => {
+  function handleClick(e: MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
-    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-    document.querySelector('.navbar').classList.remove('navbar-expanded');
-    document.querySelector('body').style.overflowY = '';
+    document.querySelector(href)!.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.navbar')!.classList.remove('navbar-expanded');
+    document.querySelector('body')!.style.overflowY = '';
   }
   
   return (
@@ -20,7 +25,7 @@ function Link({href, children}) {
 }
 
 class Nav extends Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
@@ -36,16 +41,16 @@ class Nav extends Component {
 
   handleScroll() {
     if (document.documentElement.scrollTop > 0) {
-      document.querySelector('.navbar').classList.add('navbar-opaque');
+      document.querySelector('.navbar')!.classList.add('navbar-opaque');
     } else {
-      document.querySelector('.navbar').classList.remove('navbar-opaque');
+      document.querySelector('.navbar')!.classList.remove('navbar-opaque');
     }
   }
 
-  toggleNav(e) {
+  toggleNav(e: MouseEvent) {
     e.preventDefault();
-    document.querySelector('.navbar').classList.toggle('navbar-expanded');
-    document.querySelector('body').style.overflowY = document.querySelector('.navbar').classList.contains('.navbar-expanded') ? 'hidden' : '';
+    document.querySelector('.navbar')!.classList.toggle('navbar-expanded');
+    document.querySelector('body')!.style.overflowY = document.querySelector('.navbar')!.classList.contains('.navbar-expanded') ? 'hidden' : '';
   }
 
   render() {

@@ -72,11 +72,11 @@ body.dark {
   background: var(--gray-secondary);
 }
 
-.dark .card.project .fa-lg:hover {
+.dark .card.project .fa-2x:hover {
   color: #ff3a3a;
 }
 
-.dark .card.project .fa-lg {
+.dark .card.project .fa-2x {
   color: var(--white-primary);
 }
 

@@ -443,13 +443,13 @@ footer .col-sm {
   margin-bottom: 1em;
 }
 
-.card.project .fa-lg {
+.card.project .fa-2x {
   color: #212529;
   text-decoration: none;
   margin-right: 0.5em;
 }
 
-.card.project .fa-lg:hover {
+.card.project .fa-2x:hover {
   color: #ff3a3a;
   text-decoration: none;
 }

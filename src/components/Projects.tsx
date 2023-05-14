@@ -1,6 +1,7 @@
 import playpicImg from '../images/playpic.png';
 import hangmanImg from '../images/hangman.png';
 import startrackerImg from '../images/startracker.jpg';
+import peterportalImg from '../images/peterportal.png';
 
 type ProjectProps = {
   title: string;
@@ -41,6 +42,24 @@ const Projects = () => {
         <h1>Projects</h1>
       </header>
       <Project
+        title="PeterPortal"
+        date="January 2023 - Present"
+        img={peterportalImg}
+        content="A website for UC Irvine students to browse classes and create their 4-year plans. Features include: a drag and drop planner with automatic prerequisite checking and unit counting, browsing course and professor catalogues, reviewing/rating courses & professors, and viewing past grade distributions. Developed alongside 10 peers as a project under UC Irvine's Information & Computer Sciences Student Council."
+        links={[
+          {
+            icon: "fas fa-external-link-alt",
+            href: "https://peterportal.org",
+            label: "peterportal"
+          },
+          {
+            icon: "fab fa-github",
+            href: "https://github.com/icssc/peterportal-client",
+            label: "github repository"
+          }
+        ]}
+      />
+      <Project
         title="PlayPic"
         date="February 2022"
         img={playpicImg}
@@ -50,6 +69,11 @@ const Projects = () => {
             icon: "fas fa-external-link-alt",
             href: "https://devpost.com/software/hackuci-jwe3al",
             label: "devpost"
+          },
+          {
+            icon: "fab fa-github",
+            href: "https://github.com/js0mmer/hackuci2022",
+            label: "github repository"
           }
         ]}
       />
@@ -60,7 +84,7 @@ const Projects = () => {
         content="An online multiplayer game of hangman. Written using React + Socket.IO."
         links={[
           {
-            icon: "fas fa-external-link-alt",
+            icon: "fab fa-github",
             href: "https://github.com/js0mmer/hangman",
             label: "github repository"
           }
@@ -73,7 +97,7 @@ const Projects = () => {
         content="A barn door star tracker enabling you to take longer exposures of the night sky and capture deep sky objects with a DSLR. Runs on a Raspberry Pi connected to a WiFi network, controlled from the Blynk app."
         links={[
           {
-            icon: "fas fa-external-link-alt",
+            icon: "fab fa-github",
             href: "https://github.com/js0mmer/startracker",
             label: "github repository"
           }

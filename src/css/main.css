@@ -446,6 +446,7 @@ footer .col-sm {
 .card.project .fa-lg {
   color: #212529;
   text-decoration: none;
+  margin-right: 0.5em;
 }
 
 .card.project .fa-lg:hover {

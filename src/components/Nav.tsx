@@ -69,6 +69,7 @@ class Nav extends Component {
                 <ul className="navbar-nav">
                   <Link href="#about">About</Link>
                   <Link href="#projects">Projects</Link>
+                  <Link href="#photos">Photos</Link>
                   <Link href="Resume.pdf">Resume</Link>
                   <li className="nav-item theme-toggle">
                     <span className={'fa fa-lg ' + (theme === themes.light ? 'fa-sun' : 'fa-moon')} onClick={toggleTheme}></span>

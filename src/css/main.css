@@ -471,3 +471,11 @@ footer .col-sm {
   color: #212529;
   transform: translateY(-1px);
 }
+
+/* ====== */
+/* PHOTOS */
+/* ====== */
+
+#photos img {
+  padding: 15px 0;
+}

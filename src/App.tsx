@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import { ThemeContext } from './theme-context';
 import me from './images/me.jpg';
+import Photos from './components/Photos';
 
 // 1 = fixed
 const PARALLAX_AMOUNT = 4;
@@ -73,6 +74,7 @@ const App = () => {
         <span className="fa fa-chevron-down fa-2x" aria-hidden="true" onClick={() => document.querySelector('#projects')!.scrollIntoView({ behavior: 'smooth'})}></span>
       </div>
       <Projects />
+      <Photos />
       <Footer />
     </ThemeContext.Provider>
   );

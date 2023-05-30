@@ -7,7 +7,7 @@ import './css/main.css';
 import './css/dark-theme.css';
 import './css/all.min.css';
 
-ReactGA.initialize('UA-133013455-2');
+ReactGA.initialize('G-JJ45TLL9SR');
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>

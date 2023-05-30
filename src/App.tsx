@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import ReactGA from 'react-ga';
 import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
@@ -15,9 +14,6 @@ const App = () => {
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
-    // google analytics
-    ReactGA.pageview(window.location.pathname + window.location.search);
-
     // background parallax scroll listener
     const onScroll = (e: Event) => {
       setScrollTop(window.scrollY);

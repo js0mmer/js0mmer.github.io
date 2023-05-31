@@ -325,6 +325,10 @@ header h1 {
   .home .wrapper {
     margin-top: 100px;
   }
+
+  .home .fa-chevron-down {
+    display: none;
+  }
 }
 
 .home .fa-chevron-down {

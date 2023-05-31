@@ -1,0 +1,84 @@
+[data-theme='dark'] {
+  // Body background
+  background-image: url('../images/banner-dark-large-repeating.svg');
+  background-color: #121212;
+
+  // Variables
+  --white-primary: #e1e1e1;
+  --white-secondary: #e3e3e3;
+  --gray-primary: #121212;
+  --gray-secondary: #1e1e1e;
+
+  /* ==== */
+  /* TEXT */
+  /* ==== */
+
+  h1, h2, h3, h4, h5 {
+    color: var(--white-primary);
+  }
+
+  p {
+    color: var(--white-secondary);
+  }
+
+  /* === */
+  /* NAV */
+  /* === */
+
+  .nav-item a:hover, .nav-item.theme-toggle span:hover {
+    color: #ff3a3a;
+  }
+
+  .navbar-opaque {
+    background: var(--gray-secondary);
+    box-shadow: 0 1px 10px #0f0f0f;
+  }
+
+  .navbar-expanded {
+    background: var(--gray-secondary);
+  }
+
+  .icon, .navbar .icon::before, .navbar .icon::after {
+    background: var(--white-primary);
+  }
+
+  .navbar .nav-link, .nav-item.theme-toggle {
+    color: var(--white-primary);
+  }
+
+  /* ========= */
+  /* HOME PAGE */
+  /* ========= */
+
+  .home h2 {
+    color: #aaa;
+  }
+
+  .home .fa-github, .home .fa-linkedin {
+    color: var(--white-primary);
+  }
+
+  /* ===== */
+  /* CARDS */
+  /* ===== */
+
+  .card {
+    background: var(--gray-secondary);
+  }
+
+  .card.project .fa-2x:hover {
+    color: #ff3a3a;
+  }
+
+  .card.project .fa-2x {
+    color: var(--white-primary);
+  }
+
+  /* ====== */
+  /* FOOTER */
+  /* ====== */
+
+  footer p, .fa-heart {
+    color: var(--white-primary);
+  }
+}

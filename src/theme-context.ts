@@ -1,11 +1,8 @@
 import React from 'react';
 
-export const themes = {
-  light: false,
-  dark: true
-};
-
-export const ThemeContext = React.createContext({
-  theme: themes.light,
+const ThemeContext = React.createContext<{ theme: 'light' | 'dark', toggleTheme: () => void }>({
+  theme: 'light',
   toggleTheme: () => {}
 });
+
+export default ThemeContext;

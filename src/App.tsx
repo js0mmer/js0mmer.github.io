@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
-import { ThemeContext } from './theme-context';
+import ThemeContext from './theme-context';
 import me from './images/me.jpg';
 import Photos from './components/Photos';
 
@@ -30,21 +30,16 @@ const App = () => {
   }, [scrollTop])
 
   // dark theme
-  const darkPref = localStorage.getItem('theme') ? localStorage.getItem('theme') === 'true' : window.matchMedia("(prefers-color-scheme: dark)").matches; // use stored pref or system pref by default
+  const darkPref = localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : window.matchMedia("(prefers-color-scheme: dark)").matches; // use stored pref or system pref by default
   const [darkMode, setDarkMode] = useState(darkPref);
 
   useEffect(() => {
-    if (darkMode) {
-      document.querySelector('body')!.classList.add('dark');
-    } else {
-      document.querySelector('body')!.classList.remove('dark');
-    }
-
-    localStorage.setItem('theme', darkMode ? 'true' : 'false');
+    document.querySelector('body')!.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode])
 
   return (
-    <ThemeContext.Provider value={{ theme: darkMode, toggleTheme: () => setDarkMode(!darkMode) }}>
+    <ThemeContext.Provider value={{ theme: darkMode ? 'dark' : 'light', toggleTheme: () => setDarkMode(!darkMode) }}>
       <Nav />
       <div id="about" className="full home">
         <div className="container wrapper">

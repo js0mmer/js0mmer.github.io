@@ -3,7 +3,7 @@ import hangmanImg from '../images/hangman.png';
 import startrackerImg from '../images/startracker.jpg';
 import peterportalImg from '../images/peterportal.png';
 
-type ProjectProps = {
+interface ProjectProps {
   title: string;
   date: string;
   img: string;
@@ -13,7 +13,7 @@ type ProjectProps = {
     href: string;
     label: string
   }[];
-};
+}
 
 const Project = ({ title, date, img, content, links }: ProjectProps) => {
   return (

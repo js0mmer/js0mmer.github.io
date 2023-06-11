@@ -10,24 +10,16 @@ import Photos from './components/Photos';
 const PARALLAX_AMOUNT = 4;
 
 const App = () => {
-  // background parallax
-  const [scrollTop, setScrollTop] = useState(0);
-
   useEffect(() => {
     // background parallax scroll listener
     const onScroll = (e: Event) => {
-      setScrollTop(window.scrollY);
+      document.querySelector('body')!.style.backgroundPositionY = -window.scrollY / PARALLAX_AMOUNT + 'px';
     };
 
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  // background parallax
-  useEffect(() => {
-      document.querySelector('body')!.style.backgroundPositionY = -scrollTop / PARALLAX_AMOUNT + 'px';
-  }, [scrollTop])
 
   // dark theme
   const darkPref = localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : window.matchMedia("(prefers-color-scheme: dark)").matches; // use stored pref or system pref by default

@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     // background parallax scroll listener
     const onScroll = () => {
-      document.querySelector('body')!.style.backgroundPositionY = -window.scrollY / PARALLAX_AMOUNT + 'px';
+      (document.querySelector('body') as HTMLBodyElement).style.backgroundPositionY = -window.scrollY / PARALLAX_AMOUNT + 'px';
     };
 
     window.addEventListener("scroll", onScroll);
@@ -26,7 +26,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(darkPref);
 
   useEffect(() => {
-    document.querySelector('body')!.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    (document.querySelector('body') as HTMLBodyElement).setAttribute('data-theme', darkMode ? 'dark' : 'light');
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode])
 

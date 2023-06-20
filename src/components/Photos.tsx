@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
-
 const PHOTOS_BASE_URL = 'https://js0mmer.github.io/photos/';
 
 const Photos = () => {

@@ -12,7 +12,7 @@ const PARALLAX_AMOUNT = 4;
 const App = () => {
   useEffect(() => {
     // background parallax scroll listener
-    const onScroll = (e: Event) => {
+    const onScroll = () => {
       document.querySelector('body')!.style.backgroundPositionY = -window.scrollY / PARALLAX_AMOUNT + 'px';
     };
 

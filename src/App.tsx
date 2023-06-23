@@ -26,7 +26,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(darkPref);
 
   useEffect(() => {
-    (document.querySelector('body') as HTMLBodyElement).setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    (document.querySelector('html') as HTMLHtmlElement).setAttribute('data-theme', darkMode ? 'dark' : 'light');
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode])
 

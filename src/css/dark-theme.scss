@@ -1,13 +1,17 @@
 [data-theme='dark'] {
-  // Body background
-  background-image: url('../images/banner-dark-large-repeating.svg');
-  background-color: #121212;
-
   // Variables
   --white-primary: #e1e1e1;
   --white-secondary: #e3e3e3;
   --gray-primary: #121212;
   --gray-secondary: #1e1e1e;
+
+  // will change scrollbar to dark
+  color-scheme: dark;
+
+  body {
+    background-image: url('../images/banner-dark-large-repeating.svg');
+    background-color: #121212;
+  }
 
   /* ==== */
   /* TEXT */

@@ -23,7 +23,7 @@ const Project = ({ title, date, img, content, links }: ProjectProps) => {
           <h2>{title}</h2>
           <p>{date}</p>
           <p>{content}</p>
-          {links ? // eslint-disable-next-line
+          {links ?
             <p>{links.map(link => <a key={link.href} className={`${link.icon} fa-2x`} href={link.href} target="_blank" aria-label={link.label}></a>)}</p>
           : null }
         </div>

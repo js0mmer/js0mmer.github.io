@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     // background parallax scroll listener
     const onScroll = () => {
-      (document.querySelector('body') as HTMLBodyElement).style.backgroundPositionY = -window.scrollY / PARALLAX_AMOUNT + 'px';
+      document.body.style.backgroundPositionY = -window.scrollY / PARALLAX_AMOUNT + 'px';
     };
 
     window.addEventListener("scroll", onScroll);
@@ -26,7 +26,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(darkPref);
 
   useEffect(() => {
-    (document.querySelector('html') as HTMLHtmlElement).setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode])
 
@@ -54,7 +54,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <span className="fa fa-chevron-down fa-2x" aria-hidden="true" onClick={() => document.querySelector('#projects')!.scrollIntoView({ behavior: 'smooth'})}></span>
+        <span className="fa fa-chevron-down fa-2x" aria-hidden="true" onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth'})}></span>
       </div>
       <Projects />
       <Photos />

@@ -27,9 +27,8 @@ p {
   color: #212529;
 }
 
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
+:root {
+  scroll-behavior: smooth;
 }
 
 img {

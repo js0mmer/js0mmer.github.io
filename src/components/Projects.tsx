@@ -1,7 +1,7 @@
-import playpicImg from '../images/playpic.png';
-import hangmanImg from '../images/hangman.png';
-import startrackerImg from '../images/startracker.jpg';
-import peterportalImg from '../images/peterportal.png';
+import playpicImg from '../images/playpic.webp';
+import hangmanImg from '../images/hangman.webp';
+import startrackerImg from '../images/startracker.webp';
+import peterportalImg from '../images/peterportal.webp';
 
 interface ProjectProps {
   title: string;

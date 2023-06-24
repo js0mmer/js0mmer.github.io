@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import ThemeContext from './theme-context';
-import me from './images/me.jpg';
+import me from './images/me.webp';
 import Photos from './components/Photos';
 
 // 1 = fixed

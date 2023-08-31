@@ -40,7 +40,7 @@ const App = () => {
             <div className="container">
               <h1 className="center">Jacob Sommer</h1>
               <h2 className="center">Student / Software Developer</h2>
-              <p className="center">Hi, I'm Jacob. I'm a second-year at UC Irvine pursuing a BS in Computer Science. I've had a passion for technology ever since I was a child, first learning how to code at 11 years old by developing mods for Minecraft. Since then, I've learned many different programming languages and technologies through hobby projects and school projects I've worked on. Aside from coding, my other hobbies include photography, playing video games, building computers, and playing the guitar. I am always eager to learn!</p>
+              <p className="center">Hi, I'm Jacob. I'm a third-year at UC Irvine pursuing a BS in Computer Science. I've had a passion for technology ever since I was a child, first learning how to code at 11 years old by developing mods for Minecraft. Since then, I've learned many different programming languages and technologies through hobby projects and school projects I've worked on. Aside from coding, my other hobbies include photography, playing video games, building computers, and playing the guitar. I am always eager to learn!</p>
               <div className="col-sm icons center">
                 <a className="fa-stack fa-2x" href="https://github.com/js0mmer" target="_blank" aria-label="github">
                   <span className="fab fa-github fa-stack-1x"></span>

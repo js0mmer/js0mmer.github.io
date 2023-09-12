@@ -64,7 +64,7 @@ const Projects = () => {
         title="UCI Grade Status"
         date="June 2023"
         img={uciGradeStatusImg}
-        content="An alternative to UCI's WebGrades submission status site, offering better search/filterting functionality. Allows students to view the status of grade submissions for a particular professor and/or class. Built with Svelte and SvelteKit."
+        content="An alternative to UCI's WebGrades submission status site, offering better search/filtering functionality. Allows students to view the status of grade submissions for a particular professor and/or class. Built with Svelte and SvelteKit."
         links={[
           {
             icon: "fas fa-external-link-alt",

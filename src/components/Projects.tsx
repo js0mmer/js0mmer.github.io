@@ -44,7 +44,7 @@ const Projects = () => {
       </header>
       <Project
         title="PeterPortal"
-        date="January 2023 - Present"
+        date="November 2022 - Present"
         img={peterportalImg}
         content="A website for UC Irvine students to browse classes and create their 4-year plans. Features include: a drag and drop planner with automatic prerequisite checking and unit counting, browsing course and professor catalogues, reviewing/rating courses & professors, and viewing past grade distributions. Developed alongside 10 peers as a project under UC Irvine's Information & Computer Sciences Student Council."
         links={[

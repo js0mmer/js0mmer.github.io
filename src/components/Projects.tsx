@@ -46,7 +46,7 @@ const Projects = () => {
         title="PeterPortal"
         date="November 2022 - Present"
         img={peterportalImg}
-        content="A website for UC Irvine students to browse classes and create their 4-year plans. Features include: a drag and drop planner with automatic prerequisite checking and unit counting, browsing course and professor catalogues, reviewing/rating courses & professors, and viewing past grade distributions. Developed alongside 10 peers as a project under UC Irvine's Information & Computer Sciences Student Council."
+        content="A website for UC Irvine students to browse classes and create their 4-year plans. Features include: a drag and drop planner with automatic prerequisite checking and unit counting, browsing course and professor catalogues, reviewing/rating courses & professors, and viewing past grade distributions. Developed alongside 5-10 peers as a project under UC Irvine's Information & Computer Sciences Student Council. Built with TypeScript, React, Express, and MongoDB. Deployed on AWS."
         links={[
           {
             icon: "fas fa-external-link-alt",
@@ -82,7 +82,7 @@ const Projects = () => {
         title="PlayPic"
         date="February 2022"
         img={playpicImg}
-        content="A website that creates a Spotify playlist that matches the mood of the image you upload."
+        content="A website that creates a Spotify playlist that matches the mood of the image you upload. Built with React and Express."
         links={[
           {
             icon: "fas fa-external-link-alt",

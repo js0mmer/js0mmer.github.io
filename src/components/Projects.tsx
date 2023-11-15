@@ -2,7 +2,6 @@ import playpicImg from '../images/playpic.webp';
 import hangmanImg from '../images/hangman.webp';
 import startrackerImg from '../images/startracker.webp';
 import peterportalImg from '../images/peterportal.webp';
-import uciGradeStatusImg from '../images/ucigradestatus.webp';
 
 interface ProjectProps {
   title: string;
@@ -56,24 +55,6 @@ const Projects = () => {
           {
             icon: "fab fa-github",
             href: "https://github.com/icssc/peterportal-client",
-            label: "github repository"
-          }
-        ]}
-      />
-      <Project
-        title="UCI Grade Status"
-        date="June 2023"
-        img={uciGradeStatusImg}
-        content="An alternative to UCI's WebGrades submission status site, offering better search/filtering functionality. Allows students to view the status of grade submissions for a particular professor and/or class. Built with Svelte and SvelteKit."
-        links={[
-          {
-            icon: "fas fa-external-link-alt",
-            href: "https://ucigradestatus.vercel.app",
-            label: "uci grade status"
-          },
-          {
-            icon: "fab fa-github",
-            href: "https://github.com/js0mmer/ucigradestatus",
             label: "github repository"
           }
         ]}

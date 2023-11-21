@@ -8,19 +8,31 @@ interface LinkProps {
 
 const Link = ({ href, children }: LinkProps) => {
   const { setExpanded } = useContext(NavContext);
-  
+
   return (
     <li className="nav-item">
-      {href.startsWith('#') ?
-        <a className="nav-link" href={href} onClick={() => setExpanded(false)}>{children}</a>
-      :
-        <a className="nav-link" href={href} target="_blank">{children}</a>
-      }
+      {href.startsWith('#') ? (
+        <a className="nav-link" href={href} onClick={() => setExpanded(false)}>
+          {children}
+        </a>
+      ) : (
+        <a className="nav-link" href={href} target="_blank">
+          {children}
+        </a>
+      )}
     </li>
   );
-}
+};
 
-const NavContext = React.createContext<{ expanded: boolean, setExpanded: (expanded: boolean) => void }>({ expanded: false, setExpanded: () => { return; } });
+const NavContext = React.createContext<{
+  expanded: boolean;
+  setExpanded: (expanded: boolean) => void;
+}>({
+  expanded: false,
+  setExpanded: () => {
+    return;
+  }
+});
 
 const Nav = () => {
   const [expanded, setExpanded] = useState(false);
@@ -28,7 +40,8 @@ const Nav = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
-    const handleScroll = () => setOpaque(document.documentElement.scrollTop > 0);
+    const handleScroll = () =>
+      setOpaque(document.documentElement.scrollTop > 0);
 
     window.addEventListener('scroll', handleScroll);
 
@@ -37,15 +50,32 @@ const Nav = () => {
 
   const toggleNav = (e: MouseEvent) => {
     e.preventDefault();
-    setExpanded(expanded => !expanded);
+    setExpanded((expanded) => !expanded);
   };
 
   return (
-    <NavContext.Provider value={{ expanded: expanded, setExpanded: (expanded) => setExpanded(expanded) }}>
-      <nav className={"navbar navbar-expand-lg" + (expanded ? ' navbar-expanded' : '') + (opaque ? ' navbar-opaque' : '')}>
+    <NavContext.Provider
+      value={{
+        expanded: expanded,
+        setExpanded: (expanded) => setExpanded(expanded)
+      }}
+    >
+      <nav
+        className={
+          'navbar navbar-expand-lg' +
+          (expanded ? ' navbar-expanded' : '') +
+          (opaque ? ' navbar-opaque' : '')
+        }
+      >
         <div className="container">
           <a className="navbar-brand" href="#">
-            <img src={theme === 'light' ? './favicon.png' : './favicon-white.png' } width="30" height="30" className="d-inline-block align-top" alt="home" />
+            <img
+              src={theme === 'light' ? './favicon.png' : './favicon-white.png'}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="home"
+            />
           </a>
           <button className="nav-toggle" onClick={toggleNav} aria-label="menu">
             <span className="icon"></span>
@@ -57,7 +87,12 @@ const Nav = () => {
               <Link href="#photos">Photos</Link>
               <Link href="Resume.pdf">Resume</Link>
               <li className="nav-item theme-toggle">
-                <span className={'fa fa-lg ' + (theme === 'light' ? 'fa-sun' : 'fa-moon')} onClick={toggleTheme}></span>
+                <span
+                  className={
+                    'fa fa-lg ' + (theme === 'light' ? 'fa-sun' : 'fa-moon')
+                  }
+                  onClick={toggleTheme}
+                ></span>
               </li>
             </ul>
           </div>
@@ -65,6 +100,6 @@ const Nav = () => {
       </nav>
     </NavContext.Provider>
   );
-}
+};
 
 export default Nav;

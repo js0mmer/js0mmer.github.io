@@ -13,25 +13,36 @@ const App = () => {
   useEffect(() => {
     // background parallax scroll listener
     const onScroll = () => {
-      document.body.style.backgroundPositionY = -window.scrollY / PARALLAX_AMOUNT + 'px';
+      document.body.style.backgroundPositionY =
+        -window.scrollY / PARALLAX_AMOUNT + 'px';
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   // dark theme
-  const darkPref = localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : window.matchMedia("(prefers-color-scheme: dark)").matches; // use stored pref or system pref by default
+  const darkPref = localStorage.getItem('theme')
+    ? localStorage.getItem('theme') === 'dark'
+    : window.matchMedia('(prefers-color-scheme: dark)').matches; // use stored pref or system pref by default
   const [darkMode, setDarkMode] = useState(darkPref);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    document.documentElement.setAttribute(
+      'data-theme',
+      darkMode ? 'dark' : 'light'
+    );
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-  }, [darkMode])
+  }, [darkMode]);
 
   return (
-    <ThemeContext.Provider value={{ theme: darkMode ? 'dark' : 'light', toggleTheme: () => setDarkMode(!darkMode) }}>
+    <ThemeContext.Provider
+      value={{
+        theme: darkMode ? 'dark' : 'light',
+        toggleTheme: () => setDarkMode(!darkMode)
+      }}
+    >
       <Nav />
       <div id="about" className="full home">
         <div className="container wrapper">
@@ -40,25 +51,53 @@ const App = () => {
             <div className="container">
               <h1 className="center">Jacob Sommer</h1>
               <h2 className="center">Student / Software Developer</h2>
-              <p className="center">Hi, I'm Jacob. I'm a third-year at UC Irvine pursuing a BS in Computer Science. I've had a passion for technology ever since I was a child, first learning how to code at 11 years old by developing mods for Minecraft. Since then, I've learned many different programming languages and technologies through hobby projects and school projects I've worked on. Aside from coding, my other hobbies include photography, playing video games, building computers, and playing the guitar. I am always eager to learn!</p>
+              <p className="center">
+                Hi, I'm Jacob. I'm a third-year at UC Irvine pursuing a BS in
+                Computer Science. I've had a passion for technology ever since I
+                was a child, first learning how to code at 11 years old by
+                developing mods for Minecraft. Since then, I've learned many
+                different programming languages and technologies through hobby
+                projects and school projects I've worked on. Aside from coding,
+                my other hobbies include photography, playing video games,
+                building computers, and playing the guitar. I am always eager to
+                learn!
+              </p>
               <div className="col-sm icons center">
-                <a className="fa-stack fa-2x" href="https://github.com/js0mmer" target="_blank" aria-label="github">
+                <a
+                  className="fa-stack fa-2x"
+                  href="https://github.com/js0mmer"
+                  target="_blank"
+                  aria-label="github"
+                >
                   <span className="fab fa-github fa-stack-1x"></span>
                 </a>
-                <a className="fa-stack fa-2x" href="https://www.linkedin.com/in/js0mmer/" target="_blank" aria-label="linkedin">
+                <a
+                  className="fa-stack fa-2x"
+                  href="https://www.linkedin.com/in/js0mmer/"
+                  target="_blank"
+                  aria-label="linkedin"
+                >
                   <span className="fab fa-linkedin fa-stack-1x"></span>
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <span className="fa fa-chevron-down fa-2x" aria-hidden="true" onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth'})}></span>
+        <span
+          className="fa fa-chevron-down fa-2x"
+          aria-hidden="true"
+          onClick={() =>
+            document
+              .querySelector('#projects')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
+        ></span>
       </div>
       <Projects />
       <Photos />
       <Footer />
     </ThemeContext.Provider>
   );
-}
+};
 
 export default App;

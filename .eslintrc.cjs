@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('eslint').Linter.Config} */
+const config = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
@@ -12,3 +13,5 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
   },
 }
+
+module.exports = config;

@@ -12,7 +12,7 @@
     "start": "vite",
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "prettier src/*.{ts,tsx} --check && eslint .",
+    "lint": "prettier ./**/*.{ts,tsx} --check && eslint .",
     "preview": "vite preview",
     "format": "prettier ./**/*.{ts,tsx} --write"
   },

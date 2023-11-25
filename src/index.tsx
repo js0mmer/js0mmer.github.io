@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/main.css';
 import './css/dark-theme.scss';
 import './css/all.min.css';

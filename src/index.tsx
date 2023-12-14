@@ -6,9 +6,7 @@ import './css/main.css';
 import './css/dark-theme.scss';
 import './css/all.min.css';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <App />

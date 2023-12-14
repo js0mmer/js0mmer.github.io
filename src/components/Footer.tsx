@@ -9,12 +9,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-sm icons">
-            <a
-              className="fa-stack fa-lg"
-              href="https://github.com/js0mmer"
-              target="_blank"
-              aria-label="github"
-            >
+            <a className="fa-stack fa-lg" href="https://github.com/js0mmer" target="_blank" aria-label="github">
               <span className="fa fa-circle fa-stack-2x"></span>
               <span className="slide-up-effect">
                 <span className="fab fa-github fa-stack-1x"></span>

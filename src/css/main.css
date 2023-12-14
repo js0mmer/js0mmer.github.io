@@ -338,8 +338,12 @@ header h1 {
   animation: 1.5s linear 0s infinite alternate bounce;
   transition: all 0.5s ease-in-out;
   color: white;
-  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
+
 
 @keyframes bounce {
   from {

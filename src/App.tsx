@@ -70,11 +70,11 @@ const App = () => {
             </div>
           </div>
         </div>
-        <span
+        <a
           className="fa fa-chevron-down fa-2x"
           aria-hidden="true"
-          onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-        ></span>
+          href="#projects"
+        ></a>
       </div>
       <Projects />
       <Photos />

@@ -70,11 +70,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <a
-          className="fa fa-chevron-down fa-2x"
-          aria-hidden="true"
-          href="#projects"
-        ></a>
+        <a className="fa fa-chevron-down fa-2x" aria-hidden="true" href="#projects"></a>
       </div>
       <Projects />
       <Photos />

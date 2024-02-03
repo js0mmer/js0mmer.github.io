@@ -13,8 +13,7 @@ const App = () => {
   useEffect(() => {
     // background parallax scroll listener
     const onScroll = () => {
-      document.body.style.backgroundPositionY =
-        -window.scrollY / PARALLAX_AMOUNT + 'px';
+      document.body.style.backgroundPositionY = -window.scrollY / PARALLAX_AMOUNT + 'px';
     };
 
     window.addEventListener('scroll', onScroll);
@@ -29,10 +28,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(darkPref);
 
   useEffect(() => {
-    document.documentElement.setAttribute(
-      'data-theme',
-      darkMode ? 'dark' : 'light'
-    );
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
@@ -52,23 +48,14 @@ const App = () => {
               <h1 className="center">Jacob Sommer</h1>
               <h2 className="center">Student / Software Developer</h2>
               <p className="center">
-                Hi, I'm Jacob. I'm a third-year at UC Irvine pursuing a BS in
-                Computer Science. I've had a passion for technology ever since I
-                was a child, first learning how to code at 11 years old by
-                developing mods for Minecraft. Since then, I've learned many
-                different programming languages and technologies through hobby
-                projects and school projects I've worked on. Aside from coding,
-                my other hobbies include photography, playing video games,
-                building computers, and playing the guitar. I am always eager to
-                learn!
+                Hi, I'm Jacob. I'm a third-year at UC Irvine pursuing a BS in Computer Science. I've had a passion for
+                technology ever since I was a child, first learning how to code at 11 years old by developing mods for
+                Minecraft. Since then, I've learned many different programming languages and technologies through hobby
+                projects and school projects I've worked on. Aside from coding, my other hobbies include photography,
+                playing video games, building computers, and playing the guitar. I am always eager to learn!
               </p>
               <div className="col-sm icons center">
-                <a
-                  className="fa-stack fa-2x"
-                  href="https://github.com/js0mmer"
-                  target="_blank"
-                  aria-label="github"
-                >
+                <a className="fa-stack fa-2x" href="https://github.com/js0mmer" target="_blank" aria-label="github">
                   <span className="fab fa-github fa-stack-1x"></span>
                 </a>
                 <a
@@ -83,15 +70,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <span
-          className="fa fa-chevron-down fa-2x"
-          aria-hidden="true"
-          onClick={() =>
-            document
-              .querySelector('#projects')
-              ?.scrollIntoView({ behavior: 'smooth' })
-          }
-        ></span>
+        <a className="fa fa-chevron-down fa-2x" aria-hidden="true" href="#projects"></a>
       </div>
       <Projects />
       <Photos />

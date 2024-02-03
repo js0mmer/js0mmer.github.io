@@ -40,8 +40,7 @@ const Nav = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
-    const handleScroll = () =>
-      setOpaque(document.documentElement.scrollTop > 0);
+    const handleScroll = () => setOpaque(document.documentElement.scrollTop > 0);
 
     window.addEventListener('scroll', handleScroll);
 
@@ -61,11 +60,7 @@ const Nav = () => {
       }}
     >
       <nav
-        className={
-          'navbar navbar-expand-lg' +
-          (expanded ? ' navbar-expanded' : '') +
-          (opaque ? ' navbar-opaque' : '')
-        }
+        className={'navbar navbar-expand-lg' + (expanded ? ' navbar-expanded' : '') + (opaque ? ' navbar-opaque' : '')}
       >
         <div className="container">
           <a className="navbar-brand" href="#">
@@ -87,12 +82,7 @@ const Nav = () => {
               <Link href="#photos">Photos</Link>
               <Link href="Resume.pdf">Resume</Link>
               <li className="nav-item theme-toggle">
-                <span
-                  className={
-                    'fa fa-lg ' + (theme === 'light' ? 'fa-sun' : 'fa-moon')
-                  }
-                  onClick={toggleTheme}
-                ></span>
+                <span className={'fa fa-lg ' + (theme === 'light' ? 'fa-sun' : 'fa-moon')} onClick={toggleTheme}></span>
               </li>
             </ul>
           </div>

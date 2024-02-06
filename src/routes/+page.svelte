@@ -26,7 +26,7 @@
 	}
 
 	.about {
-		background-color: var(--gray-secondary);
+		background-color: var(--overlay1);
 		padding: 1em;
 		border-radius: 0.5em;
 		margin-top: 3rem;

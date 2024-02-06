@@ -20,7 +20,7 @@
 
 <style>
 	article {
-		background-color: var(--gray-secondary);
+		background-color: var(--overlay1);
 		padding: 0.25em 1em;
 		border-radius: 0.5em;
 	}

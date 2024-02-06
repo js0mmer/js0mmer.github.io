@@ -15,6 +15,8 @@
 		expanded = false;
 		document.body.style.overflow = 'auto';
 	}
+
+	// document.body.dataset.theme = 'dark';
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -55,7 +57,7 @@
 		z-index: 1;
 
 		&.scrolled {
-			background-color: var(--gray-secondary);
+			background-color: var(--overlay1);
 			box-shadow: 0 1px 10px #0f0f0f;
 			padding: 5px 0;
 		}
@@ -72,7 +74,7 @@
 		margin: auto 0;
 		font-family: 'Montserrat';
 		font-weight: bold;
-		color: var(--white-primary);
+		color: var(--text1);
 		text-decoration: none;
 	}
 
@@ -95,7 +97,7 @@
 	}
 
 	li a {
-		color: var(--white-secondary);
+		color: var(--text2);
 		text-decoration: none;
 
 		&:hover,
@@ -116,7 +118,7 @@
 			content: '';
 			width: 1.5em;
 			height: 2px;
-			background-color: var(--white-secondary);
+			background-color: var(--text2);
 			transition: 0.3s;
 		}
 
@@ -161,7 +163,7 @@
 		.expanded {
 			height: 100vh;
 			width: 100%;
-			background-color: var(--gray-secondary);
+			background-color: var(--text2);
 		}
 
 		.expanded nav {

@@ -31,13 +31,13 @@
 
 <style>
 	article {
-		background-color: var(--gray-secondary);
+		background-color: var(--overlay1);
 		padding: 0 1em;
 		border-radius: 0.5em;
 	}
 
 	a {
-		color: var(--white-secondary);
+		color: var(--text2);
 		text-decoration: none;
 		margin-right: 0.5em;
 

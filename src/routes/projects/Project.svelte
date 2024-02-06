@@ -51,16 +51,19 @@
 		display: flex;
 	}
 
-	img {
-		margin-left: auto;
-	}
-
-	@media screen and (min-width: 1183px) {
+	@media screen and (min-width: 1200px) {
 		img {
 			position: relative;
 			top: -1.5rem;
 			right: -3rem;
 			width: 100%;
+			margin-left: auto;
+		}
+	}
+
+	@media screen and (max-width: 1199px) {
+		img {
+			margin: 1rem auto;
 		}
 	}
 </style>

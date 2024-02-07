@@ -1,6 +1,16 @@
 <script lang="ts">
+	import { getContext } from 'svelte';
+	import { get, type Writable } from 'svelte/store';
+	import type { Theme } from './types';
+
 	let y: number;
 	let expanded = false;
+
+	const theme: Writable<Theme> = getContext('theme');
+	let darkMode = get(theme) === 'dark';
+	theme.subscribe((value) => {
+		darkMode = value === 'dark';
+	});
 
 	function toggleExpand() {
 		expanded = !expanded;
@@ -16,7 +26,11 @@
 		document.body.style.overflow = 'auto';
 	}
 
-	// document.body.dataset.theme = 'dark';
+	function toggleTheme() {
+		theme.update((value) => {
+			return value === 'light' ? 'dark' : 'light';
+		});
+	}
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -24,7 +38,9 @@
 <header class:expanded class:scrolled={y}>
 	<nav class="container">
 		<div class="header">
-			<a class="icon" href="/"><img src="favicon-white.png" alt="js" /></a>
+			<a class="icon" href="/"
+				><img src={darkMode ? 'favicon-white.png' : 'favicon.png'} alt="js" /></a
+			>
 			<button class="hamburger" on:click={toggleExpand}></button>
 		</div>
 		<ul>
@@ -43,6 +59,9 @@
 			<li>
 				<a href="/photos" on:click={close}>photos</a>
 			</li>
+			<li>
+				<button class="theme-toggle" on:click={toggleTheme}><span class={'fas ' + (darkMode ? 'fa-moon' : 'fa-sun')}></span></button>
+			</li>
 		</ul>
 	</nav>
 </header>
@@ -58,28 +77,33 @@
 
 		&.scrolled {
 			background-color: var(--overlay1);
-			box-shadow: 0 1px 10px #0f0f0f;
+			box-shadow: 0 1px 10px var(--box-shadow);
 			padding: 5px 0;
 		}
 	}
 
 	nav {
 		display: flex;
-		flex-direction: row;
 	}
 
 	.icon {
 		display: flex;
-		font-size: 1.5em;
 		margin: auto 0;
-		font-family: 'Montserrat';
-		font-weight: bold;
-		color: var(--text1);
-		text-decoration: none;
 	}
 
 	.icon img {
 		height: 2rem;
+	}
+
+	.theme-toggle {
+		border: none;
+		background: none;
+		cursor: pointer;
+		display: flex;
+	}
+
+	.theme-toggle span:hover {
+		color: var(--text1);
 	}
 
 	ul {
@@ -163,7 +187,7 @@
 		.expanded {
 			height: 100vh;
 			width: 100%;
-			background-color: var(--text2);
+			background-color: var(--overlay1);
 		}
 
 		.expanded nav {
@@ -178,10 +202,6 @@
 			gap: 1.5rem;
 			height: 100%;
 		}
-
-		/* .expanded .icon {
-			margin: 0.25rem;
-		} */
 
 		.expanded ul a {
 			font-size: x-large;

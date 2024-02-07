@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Experience - Jacob Sommer</title>
+</svelte:head>
+
 <div class="container">
 	<h1>Experience</h1>
 	<article>

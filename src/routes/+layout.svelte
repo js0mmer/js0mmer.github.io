@@ -12,7 +12,7 @@
 	setContext('theme', theme);
 	theme.set('light');
 	onMount(() => {
-		theme.set(localStorage.getItem('theme') as Theme ?? 'light');
+		theme.set((localStorage.getItem('theme') as Theme) ?? 'light');
 		theme.subscribe((value) => {
 			document.querySelector('html')!.dataset.theme = value;
 			localStorage.setItem('theme', value);
@@ -23,6 +23,10 @@
 		}
 	});
 </script>
+
+<svelte:head>
+	<meta name="description" content="Jacob Sommer's portfolio" />
+</svelte:head>
 
 <div class="site">
 	<Nav />

@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Photos - Jacob Sommer</title>
+</svelte:head>
+
 <div class="container">
 	<h1>Photos</h1>
 	<img src="/photos/IMG_0015_stitch0.webp" alt="crater lake" />

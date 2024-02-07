@@ -60,7 +60,9 @@
 				<a href="/photos" on:click={close}>photos</a>
 			</li>
 			<li>
-				<button class="theme-toggle" on:click={toggleTheme}><span class={'fas ' + (darkMode ? 'fa-moon' : 'fa-sun')}></span></button>
+				<button class="theme-toggle" on:click={toggleTheme} aria-label="theme toggle">
+					<span class={'fas ' + (darkMode ? 'fa-moon' : 'fa-sun')}></span>
+				</button>
 			</li>
 		</ul>
 	</nav>

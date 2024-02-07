@@ -2,6 +2,10 @@
 	import Project from './Project.svelte';
 </script>
 
+<svelte:head>
+	<title>Projects - Jacob Sommer</title>
+</svelte:head>
+
 <div class="container">
 	<h1>Projects</h1>
 	<div class="projects">

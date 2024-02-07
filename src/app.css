@@ -39,12 +39,12 @@ h5 {
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: var(--background);
-	background-image: url('background-light.svg');
+	background-image: url('/background-light.svg');
 	color: var(--text2);
 }
 
 [data-theme='dark'] body {
-	background-image: url('background.svg');
+ background-image: url('/background.svg');
 }
 
 img {

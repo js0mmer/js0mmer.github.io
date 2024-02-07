@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>About Me | Jacob Sommer</title>
+	<title>About Me - Jacob Sommer</title>
 </svelte:head>
 <div class="container">
 	<div class="about">

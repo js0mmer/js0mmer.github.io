@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
+	import { getContext, setContext } from 'svelte';
 	import { get, type Writable } from 'svelte/store';
-	import type { Theme } from './types';
+	import type { Theme } from '../types';
+	import Link from './Link.svelte';
 
 	let y: number;
 	let expanded = false;
@@ -26,6 +27,8 @@
 		document.body.style.overflow = 'auto';
 	}
 
+	setContext('closeNav', close);
+
 	function toggleTheme() {
 		theme.update((value) => {
 			return value === 'light' ? 'dark' : 'light';
@@ -44,21 +47,11 @@
 			<button class="hamburger" on:click={toggleExpand}></button>
 		</div>
 		<ul>
-			<li>
-				<a href="/" on:click={close}>about me</a>
-			</li>
-			<li>
-				<a href="/experience" on:click={close}>experience</a>
-			</li>
-			<li>
-				<a href="/projects" on:click={close}>projects</a>
-			</li>
-			<li>
-				<a href="/resume.pdf" target="_blank">resume</a>
-			</li>
-			<li>
-				<a href="/photos" on:click={close}>photos</a>
-			</li>
+			<Link href="/">about me</Link>
+			<Link href="/experience">experience</Link>
+			<Link href="/projects">projects</Link>
+			<Link href="/resume.pdf" target="_blank">resume</Link>
+			<Link href="/photos">photos</Link>
 			<li>
 				<button class="theme-toggle" on:click={toggleTheme} aria-label="theme toggle">
 					<span class={'fas ' + (darkMode ? 'fa-moon' : 'fa-sun')}></span>
@@ -120,16 +113,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	}
-
-	li a {
-		color: var(--text2);
-		text-decoration: none;
-
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
 	}
 
 	.hamburger {

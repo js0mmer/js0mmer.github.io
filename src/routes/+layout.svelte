@@ -2,7 +2,7 @@
 	import '../app.css';
 	import 'normalize.css/normalize.css';
 	import '@fortawesome/fontawesome-free/css/all.min.css';
-	import Nav from '$lib/Nav.svelte';
+	import Nav from '$lib/nav/Nav.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import { writable } from 'svelte/store';
 	import { onMount, setContext } from 'svelte';

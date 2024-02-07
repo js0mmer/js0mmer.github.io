@@ -12,7 +12,12 @@
 	setContext('theme', theme);
 	theme.set('light');
 	onMount(() => {
-		theme.set((localStorage.getItem('theme') as Theme) ?? 'light');
+		theme.set(
+			(localStorage.getItem('theme') as Theme) ??
+				window.matchMedia('(prefers-color-scheme: dark)').matches
+				? 'dark'
+				: 'light'
+		);
 		theme.subscribe((value) => {
 			document.querySelector('html')!.dataset.theme = value;
 			localStorage.setItem('theme', value);

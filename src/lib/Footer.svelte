@@ -1,65 +1,45 @@
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm text">
-				<p>
-					Made with <span class="fa fa-heart fa-lg"></span> by Jacob
-				</p>
-			</div>
-			<div class="col-sm icons">
-				<a
-					class="fa-stack fa-lg"
-					href="https://github.com/js0mmer"
-					target="_blank"
-					aria-label="github"
-				>
-					<span class="fa fa-circle fa-stack-2x"></span>
-					<span class="slide-up-effect">
-						<span class="fab fa-github fa-stack-1x"></span>
-						<span class="fab fa-github fa-stack-1x"></span>
-					</span>
-				</a>
-				<a
-					class="fa-stack fa-lg"
-					href="https://www.linkedin.com/in/js0mmer/"
-					target="_blank"
-					aria-label="linkedin"
-				>
-					<span class="fa fa-circle fa-stack-2x"></span>
-					<span class="slide-up-effect">
-						<span class="fab fa-linkedin fa-stack-1x"></span>
-						<span class="fab fa-linkedin fa-stack-1x"></span>
-					</span>
-				</a>
-			</div>
-		</div>
+<footer class="container">
+	<p>
+		Made with <span class="fa fa-heart fa-lg"></span> by Jacob
+	</p>
+	<div class="icons">
+		<a class="fa-stack fa-lg" href="https://github.com/js0mmer" target="_blank" aria-label="github">
+			<span class="fa fa-circle fa-stack-2x"></span>
+			<span class="slide-up-effect">
+				<span class="fab fa-github fa-stack-1x"></span>
+				<span class="fab fa-github fa-stack-1x"></span>
+			</span>
+		</a>
+		<a
+			class="fa-stack fa-lg"
+			href="https://www.linkedin.com/in/js0mmer/"
+			target="_blank"
+			aria-label="linkedin"
+		>
+			<span class="fa fa-circle fa-stack-2x"></span>
+			<span class="slide-up-effect">
+				<span class="fab fa-linkedin fa-stack-1x"></span>
+				<span class="fab fa-linkedin fa-stack-1x"></span>
+			</span>
+		</a>
 	</div>
 </footer>
 
 <style>
 	footer {
-		padding-top: 28px;
-		padding-bottom: 20px;
-    margin-top: auto;
-	}
-
-	footer p {
-		font-weight: bold;
-		padding-top: 7px;
-	}
-
-	footer .col-sm {
 		display: flex;
+		padding-top: 1.75rem;
+		padding-bottom: 1.25rem;
+		margin-top: auto;
 	}
 
-	@media only screen and (min-width: 768px) {
-		footer .text {
-			justify-content: flex-start;
-		}
+	p {
+		font-weight: bold;
+	}
 
-		footer .icons {
-			justify-content: flex-end;
-		}
+	.icons {
+		display: flex;
+		margin-left: auto;
 	}
 
 	.fa-heart {
@@ -78,7 +58,7 @@
 	.fa-stack {
 		overflow: hidden;
 		clip-path: circle(1em);
-    margin: auto 0;
+		margin: auto 0;
 	}
 
 	.slide-up-effect span {

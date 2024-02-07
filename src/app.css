@@ -49,5 +49,19 @@ body {
 
 img {
 	max-width: 100%;
+	object-fit: contain;
 	border-radius: 0.5em;
+}
+
+.container {
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 0.75rem;
+}
+
+@media screen and (max-width: 1199px) {
+	.container {
+		width: 960px;
+	}
 }

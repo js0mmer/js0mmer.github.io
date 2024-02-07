@@ -3,10 +3,10 @@
 </svelte:head>
 <div class="container">
 	<div class="about">
-		<div class="col-lg-2">
+		<div class="image">
 			<img src="me.webp" alt="Jacob Sommer" />
 		</div>
-		<div class="col-lg-10">
+		<div class="content">
 			<h1>Jacob Sommer</h1>
 			<p>
 				Hi, I'm Jacob. I'm a third-year at UC Irvine pursuing a BS in Computer Science. I've had a
@@ -35,13 +35,21 @@
 		flex-wrap: wrap;
 	}
 
+	.image {
+		flex: 1;
+	}
+
+	.content {
+		flex: 5;
+	}
+
 	@media screen and (min-width: 992px) {
 		.about {
 			margin-top: 3rem;
 			margin-left: 2rem;
 		}
 
-		.col-lg-10 {
+		.content {
 			margin-left: -1rem;
 		}
 
@@ -53,6 +61,10 @@
 	}
 
 	@media screen and (max-width: 991px) {
+		.about {
+			display: block;
+		}
+
 		img {
 			max-height: 10rem;
 		}

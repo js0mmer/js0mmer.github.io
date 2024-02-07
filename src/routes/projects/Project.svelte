@@ -13,33 +13,33 @@
 </script>
 
 <article>
-	<div class="row">
-		<div class="col-xl-6">
-			<h2>{title}</h2>
-			<p>{date}</p>
-			<p>{content}</p>
-			{#each links as link}
-				<a class={`${link.icon} fa-2x`} href={link.href} target="_blank" aria-label={link.label}
-				></a>
-			{/each}
-		</div>
-		<div class="col-xl-6 image-col">
-			<img src={img} alt={title} />
-		</div>
+	<div class="content">
+		<h2>{title}</h2>
+		<p>{date}</p>
+		<p>{content}</p>
+		{#each links as link}
+			<a class={`${link.icon} fa-2x`} href={link.href} target="_blank" aria-label={link.label}></a>
+		{/each}
+	</div>
+	<div class="image">
+		<img src={img} alt={title} />
 	</div>
 </article>
 
 <style>
 	article {
+		display: flex;
+		flex-wrap: wrap;
 		background-color: var(--overlay1);
-		padding: 0 1em;
-		border-radius: 0.5em;
+		padding: 0 1rem;
+		border-radius: 0.5rem;
 	}
 
 	a {
 		color: var(--text2);
 		text-decoration: none;
 		margin-right: 0.5em;
+		margin-bottom: 1rem;
 
 		&:hover,
 		&:focus {
@@ -47,11 +47,16 @@
 		}
 	}
 
-	.image-col {
-		display: flex;
+	.content {
+		flex: 3;
 	}
 
-	@media screen and (min-width: 1200px) {
+	.image {
+		/* display: flex; */
+		flex: 2;
+	}
+
+	@media screen and (min-width: 992px) {
 		img {
 			position: relative;
 			top: -1.5rem;
@@ -61,9 +66,13 @@
 		}
 	}
 
-	@media screen and (max-width: 1199px) {
+	@media screen and (max-width: 991px) {
 		img {
 			margin: 1rem auto;
+		}
+
+		article {
+			display: block;
 		}
 	}
 </style>

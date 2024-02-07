@@ -69,11 +69,13 @@
 		transform: translateY(100%);
 	}
 
-	.slide-up-effect:hover span:first-child {
+	.slide-up-effect:hover span:first-child,
+	a:focus .slide-up-effect span:first-child {
 		transform: translateY(-100%);
 	}
 
-	.slide-up-effect:hover span:last-child {
+	.slide-up-effect:hover span:last-child,
+	a:focus .slide-up-effect span:last-child {
 		transform: translateY(0%);
 	}
 </style>

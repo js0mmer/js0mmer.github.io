@@ -44,7 +44,7 @@ body {
 }
 
 [data-theme='dark'] body {
- background-image: url('/background.svg');
+	background-image: url('/background.svg');
 }
 
 img {
@@ -58,10 +58,4 @@ img {
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 0.75rem;
-}
-
-@media screen and (max-width: 1199px) {
-	.container {
-		width: 960px;
-	}
 }

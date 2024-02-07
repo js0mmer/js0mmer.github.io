@@ -7,25 +7,20 @@
 	import { writable } from 'svelte/store';
 	import { onMount, setContext } from 'svelte';
 	import { type Theme } from '$lib/types';
+	import { browser } from '$app/environment';
 
-	const theme = writable<Theme>('light');
+	const theme = writable<Theme>(
+		(browser && (localStorage.getItem('theme') as Theme)) ??
+			window.matchMedia('(prefers-color-scheme: dark)').matches
+			? 'dark'
+			: 'light'
+	);
 	setContext('theme', theme);
-	theme.set('light');
 	onMount(() => {
-		theme.set(
-			(localStorage.getItem('theme') as Theme) ??
-				window.matchMedia('(prefers-color-scheme: dark)').matches
-				? 'dark'
-				: 'light'
-		);
 		theme.subscribe((value) => {
 			document.querySelector('html')!.dataset.theme = value;
 			localStorage.setItem('theme', value);
 		});
-		const savedTheme = localStorage.getItem('theme') as Theme;
-		if (savedTheme) {
-			theme.set(savedTheme);
-		}
 	});
 </script>
 

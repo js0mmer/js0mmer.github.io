@@ -42,7 +42,7 @@
   <nav class="container">
     <div class="header">
       <a class="icon" href="/"><img src={darkMode ? 'favicon-white.png' : 'favicon.png'} alt="js" /></a>
-      <button class="hamburger" on:click={toggleExpand}></button>
+      <button class="hamburger" on:click={toggleExpand} aria-label="nav menu"></button>
     </div>
     <ul>
       <Link href="/">about me</Link>

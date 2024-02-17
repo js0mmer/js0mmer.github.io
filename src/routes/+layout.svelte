@@ -5,22 +5,22 @@
   import Nav from '$lib/nav/Nav.svelte';
   import Footer from '$lib/Footer.svelte';
   import { writable } from 'svelte/store';
-  import { onMount, setContext } from 'svelte';
+  import { setContext } from 'svelte';
   import { type Theme } from '$lib/types';
   import { browser } from '$app/environment';
 
-  const theme = writable<Theme>(
-    (browser && (localStorage.getItem('theme') as Theme)) ?? window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
-  );
+  const theme = writable<Theme>('light');
   setContext('theme', theme);
-  onMount(() => {
+
+  if (browser) {
+    const themePref =
+      (localStorage.getItem('theme') as Theme) ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
+    theme.set(themePref);
     theme.subscribe((value) => {
       document.querySelector('html')!.dataset.theme = value;
       localStorage.setItem('theme', value);
     });
-  });
+  }
 </script>
 
 <svelte:head>

@@ -14,7 +14,8 @@
 
   if (browser) {
     const themePref =
-      (localStorage.getItem('theme') as Theme) ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
+      (localStorage.getItem('theme') as Theme) ??
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     theme.set(themePref);
     theme.subscribe((value) => {
       document.documentElement.dataset.theme = value;
@@ -28,8 +29,7 @@
   <script>
     // set using script in head to avoid light theme flash
     const themePref =
-      localStorage.getItem('theme') ??
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.dataset.theme = themePref;
   </script>
 </svelte:head>

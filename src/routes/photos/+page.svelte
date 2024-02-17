@@ -39,7 +39,7 @@
   .row {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
   }
 
   .col {

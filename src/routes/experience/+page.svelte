@@ -17,6 +17,7 @@
         Automatically calculated importance measures and identified safety-critical components under Nuclear Regulatory
         Commission guidelines, saving significant amounts of time compared to performing manually.
       </li>
+      <li>Utilized in-house software for performing calculations and pandas for data analysis.</li>
     </ul>
   </article>
 </div>

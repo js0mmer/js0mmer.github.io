@@ -7,6 +7,16 @@
   <article>
     <h2>Student Software Developer</h2>
     <h3>Electric Power Research Institute (EPRI)</h3>
+    <p>July 2024 - Present</p>
+    <ul>
+      <li>Provided technical support for EPRI Integrated Risk Technologies (IRT) software to customers.</li>
+      <li>Fixed bugs and tested new features for IRT software (.NET/Visual Basic).</li>
+      <li>Developed a Python script to automate entry of technical support email inquiries into a database, saving hours of manual entry.</li>
+    </ul>
+  </article>
+  <article>
+    <h2>Student Software Developer</h2>
+    <h3>Electric Power Research Institute (EPRI)</h3>
     <p>July 2023 - September 2023</p>
     <ul>
       <li>
@@ -27,5 +37,6 @@
     background-color: var(--overlay1);
     padding: 0.25em 1em;
     border-radius: 0.5em;
+    margin-bottom: 2em;
   }
 </style>

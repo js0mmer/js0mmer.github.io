@@ -12,6 +12,7 @@
       <li>Provided technical support for EPRI Integrated Risk Technologies (IRT) software to customers.</li>
       <li>Fixed bugs and tested new features for IRT software (.NET/Visual Basic).</li>
       <li>Developed a Python script to automate entry of technical support email inquiries into a database, saving hours of manual entry.</li>
+      <li>Developed a cross-platform GUI application with Python Tkinter for EPRI's Modular Accident Analysis Program, enabling users to efficiently manage and view statuses of runs of the program.</li>
     </ul>
   </article>
   <article>

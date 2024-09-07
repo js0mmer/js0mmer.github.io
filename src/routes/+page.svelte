@@ -9,7 +9,7 @@
     <div class="content">
       <h1>Jacob Sommer</h1>
       <p>
-        Hi, I'm Jacob. I'm a third-year at UC Irvine pursuing a BS in Computer Science. I've had a passion for
+        Hi, I'm Jacob. I'm a fourth-year at UC Irvine pursuing a BS in Computer Science. I've had a passion for
         technology ever since I was a child, first learning how to code at 11 years old by developing mods for
         Minecraft. Since then, I've learned many different programming languages and technologies through hobby projects
         and school projects I've worked on. Aside from coding, my other hobbies include photography, playing video

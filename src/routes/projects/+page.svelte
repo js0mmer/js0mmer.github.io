@@ -13,7 +13,7 @@
       title="PeterPortal"
       date="November 2022 - Present"
       img="peterportal.webp"
-      content="A website for UC Irvine students to browse classes and create their 4-year plans. Features include: a drag and drop planner with automatic prerequisite checking and unit counting, browsing course and professor catalogues, reviewing/rating courses & professors, and viewing past grade distributions. Developed alongside 5-10 peers as a project under UC Irvine's Information & Computer Sciences Student Council. Built with TypeScript, React, Express, and MongoDB. Deployed on AWS."
+      content="A website for UC Irvine students to browse classes and create their 4-year plans. Features include: a drag and drop planner with automatic prerequisite checking and unit counting, browsing course and professor catalogues, reviewing/rating courses & professors, and viewing past grade distributions. Developed alongside 5-10 peers as a project under UC Irvine's Information & Computer Sciences Student Council. Built with TypeScript, React, Express, and MongoDB. Deployed on AWS. Leading the project as of September 2023."
       links={[
         {
           icon: 'fas fa-external-link-alt',

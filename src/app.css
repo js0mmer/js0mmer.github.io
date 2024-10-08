@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --text1: #212529;
+  --text2: #666;
+  --tag: #212529;
+  --tag-hover: #474747;
+  --background: white;
+  --card: white;
+}
+
+[data-theme=dark]:root {
+  --text1: #e1e1e1;
+  --text2: #e3e3e3;
+  --tag: #292929;
+  --background: #121212;
+  --card: #1e1e1e;
+}
+
+::selection {
+  background: #ff8f8f;
+  color: #212529;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text1);
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text2);
+  background: url('./assets/background-light.svg');
+}
+
+[data-theme=dark] body {
+  background: url('./assets/background-dark.svg');
+}
+
+img {
+  max-width: 100%;
+}
+
+.button {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--text2);
+  transition: 0.25s all;
+}
+
+.button:hover {
+  border-color: transparent;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #444;
+}
+
+[data-theme=dark] .button {
+  border-color: #292929;
+}
+
+[data-theme=dark] .button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text2);
+}

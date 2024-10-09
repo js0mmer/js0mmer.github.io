@@ -9,7 +9,7 @@
   --text2: #666;
   --tag: #212529;
   --tag-hover: #474747;
-  --background: white;
+  --background: #efefef;
   --card: white;
 }
 
@@ -47,6 +47,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--text2);
   background: url('./assets/background-light.svg');
+  background-color: var(--background);
 }
 
 [data-theme=dark] body {

@@ -37,10 +37,10 @@
         <Project
           title="PeterPortal"
           img="peterportal.webp"
-          content="An enhanced course catalogue and 4-year planner for UC Irvine students, by UC Irvine students. Developed alongside 5-10 peers under UC Irvine's Information & Computer Sciences Student Council. Leading the project as of September 2023."
+          content="An enhanced course catalogue and 4-year planner for UC Irvine students, by UC Irvine students. Developed alongside 3-10 peers under UC Irvine's Information & Computer Sciences Student Council. Leading the project as of September 2023."
           links={[
             {
-              title: 'peterportal.org',
+              title: 'Live Site',
               url: 'https://peterportal.org',
               icon: 'fa-solid fa-arrow-up-right-from-square'
             },
@@ -50,13 +50,36 @@
               icon: 'fa-brands fa-github'
             }
           ]}
-          tags={['TypeScript', 'React', 'Express', 'MongoDB', 'AWS']}
+          tags={['TypeScript', 'React', 'Express', 'tRPC', 'PostgreSQL', 'Drizzle ORM', 'AWS', 'SST', 'AWS CDK']}
+        />
+        <Project
+          title="UCI Syllabus Finder"
+          img="syllabusfinder.webp"
+          content="A web application to search and access syllabi from previous offerings of a course, assisting in making informed course selections."
+          links={[
+            {
+              title: 'Live Site',
+              url: 'https://uci-syllabus-finder.vercel.app/',
+              icon: 'fa-solid fa-arrow-up-right-from-square'
+            },
+            {
+              title: 'GitHub',
+              url: 'https://github.com/js0mmer/uci-syllabus-finder',
+              icon: 'fa-brands fa-github'
+            }
+          ]}
+          tags={['TypeScript', 'SvelteKit', 'PostgreSQL', 'Drizzle ORM']}
         />
         <Project
           title="PlayPic"
           img="playpic.webp"
           content="A website that creates a Spotify playlist that matches the mood of the image you upload. Developed with a team of 3 peers at the HackUCI 2022 hackathon."
           links={[
+            {
+              title: 'Live Site',
+              url: 'https://playpic-demo.vercel.app/',
+              icon: 'fa-solid fa-arrow-up-right-from-square'
+            },
             {
               title: 'DevPost',
               url: 'https://devpost.com/software/hackuci-jwe3al',
@@ -141,7 +164,6 @@
 
   @media screen and (max-width: 768px) {
     .about {
-      /* flex-direction: column; */
       flex-flow: column-reverse;
       gap: 0;
     }
